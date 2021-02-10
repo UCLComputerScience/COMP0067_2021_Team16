@@ -1,14 +1,15 @@
 import './Image.css';
-import porpita from './images/porpitaprunella.png';
 
 interface ContainerProps {
+  key: number;
+  id: number;
   image: string;
 }
 
 const Image: React.FC<ContainerProps> = ({ image }) => {
   return (
     <div className="container">
-        <img src={porpita} className="spinner rotate" />
+        <img src={image} className="spinner rotate" />
     </div>
   );
 };
