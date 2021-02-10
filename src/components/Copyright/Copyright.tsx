@@ -1,13 +1,10 @@
 import './Copyright.css';
 
-interface ContainerProps {
-  Copyright: string;
-}
 
-const Copyright: React.FC<ContainerProps> = ({ Copyright }) => {
+const Copyright: React.FC = () => {
   return (
     <div className="container">
-        <h1>{Copyright}</h1>
+        <h6>© 2016 Dr Iya Whiteley</h6>
     </div>
   );
 };

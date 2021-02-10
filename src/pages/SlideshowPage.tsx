@@ -5,8 +5,7 @@ import EditButton from '../components/EditButton/EditButton';
 import AddSlideshowButton from '../components/AddSlideshowButton/AddSlideshowButton';
 import RadioButton from '../components/RadioButton/RadioButton';
 import Checkbox from '../components/Checkbox/Checkbox';
-// import TitleBar from '../components/Titlebar/TitleBar';
-// import Copyright from '../components/Copyright/Copyright';
+import Slider from '../components/Slider/Slider';
 
 const SlideshowPage: React.FC = () => {
   return (
