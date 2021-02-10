@@ -2,6 +2,7 @@ import './Slideshow.css';
 import porpitaprunella from '../../images/porpitaprunella.png';
 import images from '../../images.json';
 import Image from '../Image/Image';
+import { IonSlides, IonSlide, IonContent } from '@ionic/react';
 
 interface ContainerProps {
   name: string;
