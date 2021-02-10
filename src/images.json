@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "name": "ASTEROBLASTUS STELLATUS",
+        "image": "./images/asteroblastusstellatus.png"
+    },
+    {
+        "id": 2,
+        "name": "PORPITA PRUNELLA",
+        "image": "./images/porpitaprunella.png"
+    },
+    {
+        "id": 3,
+        "name": "POLIOPOGON AMADOU",
+        "image": "./images/poliopogonamadou.png"
+    },
+    {
+        "id": 4,
+        "name": "BOTRYLLUS SCHLOSSERI",
+        "image": "./images/botryllusschlosseri.png"
+    },
+    {
+        "id": 5,
+        "name": "CASSIOPEA ANDROMEDA",
+        "image": "./images/cassiopeaandromeda.png"
+    },
+    {
+        "id": 6,
+        "name": "HEMIPHOLIS CORDIFERA",
+        "image": "./images/hemipholiscordifera.png"
+    },
+    {
+        "id": 7,
+        "name": "CENTROSTEPHANUS LONGISPINUS",
+        "image": "./images/centrostephanuslongispinus.png"
+    },
+    {
+        "id": 8,
+        "name": "NAUTILUS POMPILIUS",
+        "image": "./images/nautiluspompilius.png"
+    },
+    {
+        "id": 9,
+        "name": "HAECKELIANA PORCELLANA",
+        "image": "./images/haeckelianaporcellana.png"
+    },
+    {
+        "id": 10,
+        "name": "CANNORRHIZA CONNEXA",
+        "image": "./images/cannorrhizaconnexa.png"
+    },
+    {
+        "id": 11,
+        "name": "NAUSITHOE CHALLENGERI",
+        "image": "./images/nausithoechallengeri.png"
+    },
+    {
+        "id": 12,
+        "name": "SOLMARIS",
+        "image": "./images/solmaris.png"
+    }
+]

@@ -1,5 +1,5 @@
 import './Slideshow.css';
-import porpita from '../../slides/porpita.png';
+import porpita from '../../images/porpita.png';
 
 interface ContainerProps {
   name: string;
