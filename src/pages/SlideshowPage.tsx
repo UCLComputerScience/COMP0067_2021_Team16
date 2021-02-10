@@ -2,6 +2,7 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/rea
 import Slideshow from '../components/Slideshow/Slideshow';
 import './SlideshowPage.css';
 
+
 const SlideshowPage: React.FC = () => {
   return (
     <IonPage>

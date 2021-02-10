@@ -2,61 +2,61 @@
     {
         "id": 1,
         "name": "ASTEROBLASTUS STELLATUS",
-        "image": "./images/asteroblastusstellatus.png"
+        "image": "asteroblastusstellatus.png"
     },
     {
         "id": 2,
         "name": "PORPITA PRUNELLA",
-        "image": "./images/porpitaprunella.png"
+        "image": "porpitaprunella.png"
     },
     {
         "id": 3,
         "name": "POLIOPOGON AMADOU",
-        "image": "./images/poliopogonamadou.png"
+        "image": "poliopogonamadou.png"
     },
     {
         "id": 4,
         "name": "BOTRYLLUS SCHLOSSERI",
-        "image": "./images/botryllusschlosseri.png"
+        "image": "botryllusschlosseri.png"
     },
     {
         "id": 5,
         "name": "CASSIOPEA ANDROMEDA",
-        "image": "./images/cassiopeaandromeda.png"
+        "image": "cassiopeaandromeda.png"
     },
     {
         "id": 6,
         "name": "HEMIPHOLIS CORDIFERA",
-        "image": "./images/hemipholiscordifera.png"
+        "image": "hemipholiscordifera.png"
     },
     {
         "id": 7,
         "name": "CENTROSTEPHANUS LONGISPINUS",
-        "image": "./images/centrostephanuslongispinus.png"
+        "image": "centrostephanuslongispinus.png"
     },
     {
         "id": 8,
         "name": "NAUTILUS POMPILIUS",
-        "image": "./images/nautiluspompilius.png"
+        "image": "nautiluspompilius.png"
     },
     {
         "id": 9,
         "name": "HAECKELIANA PORCELLANA",
-        "image": "./images/haeckelianaporcellana.png"
+        "image": "haeckelianaporcellana.png"
     },
     {
         "id": 10,
         "name": "CANNORRHIZA CONNEXA",
-        "image": "./images/cannorrhizaconnexa.png"
+        "image": "cannorrhizaconnexa.png"
     },
     {
         "id": 11,
         "name": "NAUSITHOE CHALLENGERI",
-        "image": "./images/nausithoechallengeri.png"
+        "image": "nausithoechallengeri.png"
     },
     {
         "id": 12,
         "name": "SOLMARIS",
-        "image": "./images/solmaris.png"
+        "image": "solmaris.png"
     }
 ]

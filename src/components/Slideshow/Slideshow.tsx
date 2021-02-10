@@ -1,5 +1,7 @@
 import './Slideshow.css';
-import porpita from '../../images/porpita.png';
+import porpitaprunella from '../../images/porpitaprunella.png';
+import images from '../../images.json';
+import Image from '../Image/Image';
 
 interface ContainerProps {
   name: string;
@@ -8,7 +10,11 @@ interface ContainerProps {
 const Slideshow: React.FC<ContainerProps> = ({ name }) => {
   return (
     <div className="container">
-      <img src={porpita} className="spinner rotate" />
+      {images.map(image => (
+      <Image 
+      {...image} 
+      />
+      ))}
     </div>
   );
 };
