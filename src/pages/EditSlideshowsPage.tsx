@@ -1,6 +1,5 @@
-import { IonContent, IonHeader, IonItemDivider, IonPage, IonTitle, IonToolbar, IonList, IonReorderGroup, IonItem, IonLabel } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonList, IonReorderGroup} from '@ionic/react';
 import Slideshow_Item from '../components/Slideshow_Item/Slideshow_Item';
-import Nav_Bar from '../components/Nav_Bar/Nav_Bar';
 import { ItemReorderEventDetail } from '@ionic/core';
 
 let myitems = ['one', 'two', 'three', 'four', 'five'];
@@ -37,7 +36,6 @@ const EditSlideshowsPage: React.FC = () => (
         </IonReorderGroup>
       </IonList >
     </IonContent >
-    <Nav_Bar name = 'test'/>
     </IonPage >
 );
 
