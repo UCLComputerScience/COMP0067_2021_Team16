@@ -11,7 +11,6 @@ import {
 import { IonReactRouter } from '@ionic/react-router';
 import { ellipse, square, triangle } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
-import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
 import SlideshowPage from './pages/SlideshowPage';
 
@@ -33,6 +32,9 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import React from 'react';
+import SelectionPage from './pages/SelectionPage';
+import EditSlideshowsPage from './pages/EditSlideshowsPage'
 
 const App: React.FC = () => (
   <IonApp>
@@ -42,8 +44,8 @@ const App: React.FC = () => (
           <Route exact path="/tab1">
             <Tab1 />
           </Route>
-          <Route exact path="/tab2">
-            <Tab2 />
+          <Route exact path="/SelectionPage">
+            <SelectionPage />
           </Route>
           <Route path="/tab3">
             <Tab3 />
@@ -52,7 +54,10 @@ const App: React.FC = () => (
             <SlideshowPage />
           </Route>
           <Route exact path="/">
-            <Redirect to="/tab1" />
+            <Redirect to="/slideshowpage" />
+          </Route>
+          <Route exact path="/EditSlideshowsPage">
+            <EditSlideshowsPage />
           </Route>
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
@@ -64,13 +69,17 @@ const App: React.FC = () => (
             <IonIcon icon={triangle} />
             <IonLabel>Tab 1</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
+          <IonTabButton tab="selectionpage" href="/SelectionPage">
             <IonIcon icon={ellipse} />
-            <IonLabel>Tab 2</IonLabel>
+            <IonLabel>Select your slideshow</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab3" href="/tab3">
             <IonIcon icon={square} />
             <IonLabel>Tab 3</IonLabel>
+          </IonTabButton>
+          <IonTabButton tab="EditSlideshowsPage" href="/EditSlideshowsPage">
+            <IonIcon icon={square} />
+            <IonLabel>Edit Slideshows</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
