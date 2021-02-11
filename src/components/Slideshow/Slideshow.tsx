@@ -101,10 +101,16 @@ const Slideshow: React.FC = () => {
       <IonSlides pager={false} options={slideOpts}>
         {images.map(({ id, name, image }, i) => (
           <IonSlide>
+            <div>
             <TitleBar name={name} />
+            </div>
+            <div>
             <img src={image} className="spinner rotate" />
             {/* <Image key={i} id={id} image={image} /> */}
+            </div>
+            <div>
             <Copyright />
+            </div>
           </IonSlide>
         ))}
       </IonSlides>

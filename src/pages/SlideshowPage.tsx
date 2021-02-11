@@ -11,7 +11,11 @@ const SlideshowPage: React.FC = () => {
   return (
     <IonPage>
       <IonContent fullscreen>
-        <Slideshow />
+        {/* <Slideshow /> */}
+        <EditButton />
+        <AddSlideshowButton />
+        <RadioButton />
+        <Checkbox />
       </IonContent>
     </IonPage>
   );
