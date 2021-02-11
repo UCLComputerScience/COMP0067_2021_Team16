@@ -1,22 +1,21 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import Slideshow from '../components/Slideshow/Slideshow';
 import './SlideshowPage.css';
+import EditButton from '../components/EditButton/EditButton';
+import AddSlideshowButton from '../components/AddSlideshowButton/AddSlideshowButton';
+import RadioButton from '../components/RadioButton/RadioButton';
+import Checkbox from '../components/Checkbox/Checkbox';
+import Slider from '../components/Slider/Slider';
 
 const SlideshowPage: React.FC = () => {
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Slideshow</IonTitle>
-        </IonToolbar>
-      </IonHeader>
       <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Slideshow</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <Slideshow name="Slideshow" />
+        {/* <Slideshow /> */}
+        <EditButton />
+        <AddSlideshowButton />
+        <RadioButton />
+        <Checkbox />
       </IonContent>
     </IonPage>
   );

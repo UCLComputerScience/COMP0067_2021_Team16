@@ -14,6 +14,7 @@ import Tab1 from './pages/Tab1';
 import Tab3 from './pages/Tab3';
 import SlideshowPage from './pages/SlideshowPage';
 
+
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
 
@@ -35,6 +36,7 @@ import './theme/variables.css';
 import React from 'react';
 import SelectionPage from './pages/SelectionPage';
 import EditSlideshowsPage from './pages/EditSlideshowsPage'
+
 
 const App: React.FC = () => (
   <IonApp>
