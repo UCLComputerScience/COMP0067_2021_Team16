@@ -1,6 +1,7 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonList, IonReorderGroup} from '@ionic/react';
 import Slideshow_Item from '../components/Slideshow_Item/Slideshow_Item';
 import { ItemReorderEventDetail } from '@ionic/core';
+import Audio_Player from '../components/Audio_Player/Audio_Player';
 
 let myitems = ['one', 'two', 'three', 'four', 'five'];
 /*<Slideshow_Item name={{ item }}*/
