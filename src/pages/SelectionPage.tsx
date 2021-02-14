@@ -11,7 +11,7 @@ const SelectionPage: React.FC = () => (
             </IonToolbar>
         </IonHeader>
         <IonContent fullscreen>
-          {myitems.map(item => <Slideshow_Button name={item} />)}
+      {myitems.map(item => <Slideshow_Button name={item} key={item}/>)}
         </IonContent>);
     </IonPage>
 );
