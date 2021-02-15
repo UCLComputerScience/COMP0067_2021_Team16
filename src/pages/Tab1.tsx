@@ -1,18 +1,20 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
 import BackButton from '../components/BackButton/BackButton';
+import InputSettings from '../components/SettingsCard/SettingsCard';
 import './Tab1.css';
 
 const Tab1: React.FC = () => {
   return (
     <IonPage>
+      <BackButton/>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Tab 1</IonTitle>
+          <IonTitle>Go Team 16!</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen>
-        <BackButton/>
+      <IonContent>
+        <InputSettings/>
       </IonContent>
     </IonPage>
   );
