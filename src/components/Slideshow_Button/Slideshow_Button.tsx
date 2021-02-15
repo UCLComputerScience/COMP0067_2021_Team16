@@ -8,7 +8,7 @@ interface ContainerProps {
 }
 
 const Slideshow_Button: React.FC<ContainerProps> = ({ name }) => (
-    <IonButton expand='block' fill='outline' size='large' href = '/slideshowpage'>{ name }</IonButton>
+  <IonButton expand='block' fill='outline' size='large' routerLink='/slideshowpage'>{name}</IonButton>
 );
 
 export default Slideshow_Button;
