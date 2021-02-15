@@ -1,18 +1,6 @@
-import { Redirect, Route } from 'react-router-dom';
-import {
-  IonApp,
-  IonIcon,
-  IonLabel,
-  IonRouterOutlet,
-  IonTabBar,
-  IonTabButton,
-  IonTabs,
-} from '@ionic/react';
-import { IonReactRouter } from '@ionic/react-router';
-import { ellipse, square, triangle } from 'ionicons/icons';
-import Tab1 from './pages/Tab1';
-import Tab3 from './pages/Tab3';
-import SlideshowPage from './pages/SlideshowPage';
+import {IonApp, IonButton, IonHeader} from '@ionic/react';
+import Nav_Bar from './components/Nav_Bar/Nav_Bar';
+import App_Router from './components/App_Router/App_Router';
 
 
 /* Core CSS required for Ionic components to work properly */
@@ -34,59 +22,14 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 import React from 'react';
-import SelectionPage from './pages/SelectionPage';
-import EditSlideshowsPage from './pages/EditSlideshowsPage'
 
 
-const App: React.FC = () => (
-  <IonApp>
-    <IonReactRouter>
-      <IonTabs>
-        <IonRouterOutlet>
-          <Route exact path="/tab1">
-            <Tab1 />
-          </Route>
-          <Route exact path="/SelectionPage">
-            <SelectionPage />
-          </Route>
-          <Route path="/tab3">
-            <Tab3 />
-          </Route>
-          <Route path="/slideshowpage">
-            <SlideshowPage />
-          </Route>
-          <Route exact path="/">
-            <Redirect to="/slideshowpage" />
-          </Route>
-          <Route exact path="/EditSlideshowsPage">
-            <EditSlideshowsPage />
-          </Route>
-        </IonRouterOutlet>
-        <IonTabBar slot="bottom">
-        <IonTabButton tab="slideshowpage" href="/slideshowpage">
-            <IonIcon icon={square} />
-            <IonLabel>Slideshow Page</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="tab1" href="/tab1">
-            <IonIcon icon={triangle} />
-            <IonLabel>Tab 1</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="selectionpage" href="/SelectionPage">
-            <IonIcon icon={ellipse} />
-            <IonLabel>Select your slideshow</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon icon={square} />
-            <IonLabel>Tab 3</IonLabel>
-          </IonTabButton>
-          <IonTabButton tab="EditSlideshowsPage" href="/EditSlideshowsPage">
-            <IonIcon icon={square} />
-            <IonLabel>Edit Slideshows</IonLabel>
-          </IonTabButton>
-        </IonTabBar>
-      </IonTabs>
-    </IonReactRouter>
-  </IonApp>
-);
+const App: React.FC = () => {
+  return (
+    <IonApp>
+      <Nav_Bar />
+    </IonApp>
+  );
+}
 
 export default App;
