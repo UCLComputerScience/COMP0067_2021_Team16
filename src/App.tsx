@@ -1,4 +1,4 @@
-import {IonApp} from '@ionic/react';
+import {IonApp, IonButton, IonHeader} from '@ionic/react';
 import Nav_Bar from './components/Nav_Bar/Nav_Bar';
 
 
@@ -25,7 +25,7 @@ import React from 'react';
 
 const App: React.FC = () => (
   <IonApp>
-    <Nav_Bar name='main'/>
+    <Nav_Bar/>
   </IonApp>
 );
 
