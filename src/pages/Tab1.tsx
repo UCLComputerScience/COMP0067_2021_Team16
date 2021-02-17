@@ -2,6 +2,7 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/rea
 import ExploreContainer from '../components/ExploreContainer';
 import BackButton from '../components/BackButton/BackButton';
 import InputSettings from '../components/SettingsCard/SettingsCard';
+import RateAppButton from '../components/RateApp/RateApp';
 import './Tab1.css';
 
 const Tab1: React.FC = () => {
@@ -15,6 +16,7 @@ const Tab1: React.FC = () => {
       </IonHeader>
       <IonContent>
         <InputSettings/>
+        <RateAppButton/>
       </IonContent>
     </IonPage>
   );
