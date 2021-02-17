@@ -18,9 +18,9 @@ const InputSettings: React.FC = () => {
           <IonItem>
             <IonInput type="number" value={number} placeholder="Set slide duration (0 - 20s)" onIonChange={e => setNumber(parseInt(e.detail.value!, 10))}></IonInput>
           </IonItem>
-          <IonItemDivider>Slide duration</IonItemDivider>
+          <IonItemDivider>Animation speed</IonItemDivider>
           <IonItem>
-            <IonInput type="number" value={number} placeholder="Set slide duration (0 - 20s)" onIonChange={e => setNumber(parseInt(e.detail.value!, 10))}></IonInput>
+            <IonInput type="number" value={number} placeholder="Set slide speed (0 - 1.5x)" onIonChange={e => setNumber(parseInt(e.detail.value!, 10))}></IonInput>
           </IonItem>
         </IonList>
       </IonContent>
