@@ -1,0 +1,17 @@
+.ion-grid {
+    text-align: center;
+    position: center;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: nowrap;
+}
+
+
+.ion-column {
+    justify-content: space-evenly;
+}
+
+.ion-button {
+    position: center;
+    align-items: stretch;
+}

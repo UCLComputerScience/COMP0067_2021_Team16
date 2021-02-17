@@ -1,20 +1,14 @@
-import { IonButton, IonFooter, IonPage, IonToolbar, IonButtons, IonTabBar} from '@ionic/react';
-import { IonReactRouter } from '@ionic/react-router';
+import { IonButton, IonFooter, IonPage} from '@ionic/react';
+import Edit_Bar from "../components/Edit_Bar/Edit_Bar";
+import Nav_Bar_New from "../components/Nav_Bar/Nav_Bar_New";
 
 const NewTestPage: React.FC = () => {
   return (
     <IonPage>
       <IonButton routerLink='/EditSlideshowsPage'>GO BACK</IonButton>
-      <IonFooter>
-        <IonToolbar>
-          <IonButtons slot="start">
-            <IonButton fill="solid" size="large">Check All</IonButton>
-            <IonButton fill="solid" size="large">Uncheck All</IonButton>
-            <IonButton fill="solid" size="large">Add Images</IonButton>
-            <IonButton fill="solid" size="large">Record</IonButton>
-            <IonButton fill="solid" size="large">Delete</IonButton>
-          </IonButtons>
-        </IonToolbar>
+      <IonFooter no-padding no-margin>
+        <Nav_Bar_New no-padding no-margin/>
+        <Edit_Bar no-padding no-margin />
       </IonFooter>
     </IonPage>
       );
