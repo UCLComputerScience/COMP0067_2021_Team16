@@ -21,7 +21,7 @@ const Nav_Bar: React.FC = () => {
         <IonRouterOutlet>
           <App_Router/>
         </IonRouterOutlet>
-        <IonTabBar slot="bottom">
+        <IonTabBar slot="bottom" className="main_tab_bar">
           <IonTabButton tab="slideshowpage" href="/slideshowpage">
             <IonIcon icon={square} />
             <IonLabel>Slideshow Page</IonLabel>
