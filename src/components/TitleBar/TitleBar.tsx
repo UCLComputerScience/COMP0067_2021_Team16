@@ -1,5 +1,4 @@
 import "./TitleBar.css";
-import { IonToolbar, IonTitle } from "@ionic/react";
 
 interface ContainerProps {
   name: string;
@@ -7,11 +6,7 @@ interface ContainerProps {
 
 const TitleBar: React.FC<ContainerProps> = ({ name }) => {
   return (
-    <div className="container">
-      <IonToolbar>
-        <IonTitle>{name}</IonTitle>
-      </IonToolbar>
-    </div>
+      <h1>{name}</h1>
   );
 };
 
