@@ -1,38 +1,36 @@
+.rotate {
+  animation: rotate 200.5s linear infinite;
+}
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
 
-.container {
+
+#title {
+  position: fixed;
+  top: 0;
   text-align: center;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.container strong {
-  font-size: 20px;
-  line-height: 26px;
+#image {
+  position: relative;
+  text-align: center;
+  float: clear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.container p {
-  font-size: 16px;
-  line-height: 22px;
-  color: #8c8c8c;
-  margin: 0;
-}
-
-.container a {
-  text-decoration: none;
-}
-
-.rotate{
-  animation: rotate 200.5s linear infinite; 
-}
-@keyframes rotate{
-  to{ transform: rotate(360deg); }
-}
-
-
-/* SPINNER JUST FOR DEMO */
-.spinner{
-  display:inline-block; 
+#copyright {
+  position: fixed;
+  bottom: 0;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
