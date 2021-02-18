@@ -24,7 +24,7 @@ const Nav_Bar: React.FC = () => {
         <IonTabBar slot="bottom" className="main_tab_bar">
           <IonTabButton tab="slideshowpage" href="/slideshowpage">
             <IonIcon icon={square} />
-            <IonLabel>Slideshow Page</IonLabel>
+            <IonLabel>Slideshow</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab1" href="/tab1">
             <IonIcon icon={triangle} />
@@ -32,7 +32,7 @@ const Nav_Bar: React.FC = () => {
           </IonTabButton>
           <IonTabButton tab="selectionpage" href="/SelectionPage">
             <IonIcon icon={ellipse} />
-            <IonLabel>Select your slideshow</IonLabel>
+            <IonLabel>Select</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab3" href="/tab3">
             <IonIcon icon={square} />
@@ -40,7 +40,7 @@ const Nav_Bar: React.FC = () => {
           </IonTabButton>
           <IonTabButton tab="EditSlideshowsPage" href="/EditSlideshowsPage">
             <IonIcon icon={square} />
-            <IonLabel>Edit Slideshows</IonLabel>
+            <IonLabel>Edit</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>

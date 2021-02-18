@@ -11,11 +11,11 @@ const Edit_Bar: React.FC = () => {
   return (
     <IonGrid className="ion-grid">
       <IonRow>
-        <IonCol className="ion-column"><IonButton fill="clear" className="ion-button"><IonIcon icon={checkmarkCircle} size="large" /></IonButton></IonCol>
-        <IonCol className="ion-column"><IonButton fill="clear"><IonIcon icon={checkmarkCircleOutline} size="large" /></IonButton></IonCol>
-        <IonCol className="ion-column"><IonButton fill="clear" onClick={() => setShowAddMenu(true)}><IonIcon icon={addCircleSharp} size="large" /></IonButton></IonCol>
-        <IonCol className="ion-column"><IonButton fill="clear"><IonIcon icon={micSharp} size="large" /></IonButton></IonCol>
-        <IonCol className="ion-column"><IonButton fill="clear" onClick={() => setDeleteAlert(true)}><IonIcon icon={trash} size="large" /></IonButton></IonCol>
+        <IonCol className="ion-column"><IonButton fill="clear" className="ion-button"><IonIcon icon={checkmarkCircle} size="medium" /></IonButton></IonCol>
+        <IonCol className="ion-column"><IonButton fill="clear"><IonIcon icon={checkmarkCircleOutline} size="medium" /></IonButton></IonCol>
+        <IonCol className="ion-column"><IonButton fill="clear" onClick={() => setShowAddMenu(true)}><IonIcon icon={addCircleSharp} size="medium" /></IonButton></IonCol>
+        <IonCol className="ion-column"><IonButton fill="clear"><IonIcon icon={micSharp} size="medium" /></IonButton></IonCol>
+        <IonCol className="ion-column"><IonButton fill="clear" onClick={() => setDeleteAlert(true)}><IonIcon icon={trash} size="medium" /></IonButton></IonCol>
       </IonRow>
       <IonAlert
         isOpen={deletealert}
