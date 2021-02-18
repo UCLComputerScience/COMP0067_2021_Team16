@@ -1,5 +1,5 @@
 import "./Slideshow.css";
-import { IonSlides, IonSlide } from "@ionic/react";
+import { IonGrid, IonRow, IonSlides, IonSlide } from "@ionic/react";
 // import { IonRangeSlider } from 'react-ion-slider'
 import TitleBar from "../TitleBar/TitleBar";
 import Copyright from "../Copyright/Copyright";
@@ -19,7 +19,7 @@ import twelve from "../Image/images/solmaris.png";
 const slideOpts = {
   initialSlide: 0,
   speed: 400,
-  autoplay: true
+  autoplay: true,
 };
 
 const images = [
@@ -100,23 +100,25 @@ const images = [
 const Slideshow: React.FC = () => {
   return (
     <div>
-      <IonSlides pager={false} options={slideOpts}>
-        {images.map(({ id, name, image }, i) => (
-          <IonSlide>
-            <div id="title">
-            <TitleBar name={name} />
-            </div>
-            <div id="image" >
-            <img src={image} className="spinner rotate" />
-            {/* <Image key={i} id={id} image={image} /> */}
-            {/* <IonRangeSlider type={"single"} min={10} max={100} from={0} to={10} step={1} values={[]} keyboard={true} /> */}
-            </div>
-            <div id="copyright">
-            <Copyright />
-            </div>
-          </IonSlide>
-        ))}
-      </IonSlides>
+      <IonGrid>
+        <IonSlides pager={false} options={slideOpts}>
+          {images.map(({ id, name, image }, i) => (
+            <IonSlide>
+              <IonRow>
+                <TitleBar name={name} />
+              </IonRow>
+              <IonRow>
+                <img src={image} className="spinner rotate" />
+                {/* <Image key={i} id={id} image={image} /> */}
+                {/* <IonRangeSlider type={"single"} min={10} max={100} from={0} to={10} step={1} values={[]} keyboard={true} /> */}
+              </IonRow>
+              <IonRow>
+                <Copyright />
+              </IonRow>
+            </IonSlide>
+          ))}
+        </IonSlides>
+      </IonGrid>
     </div>
   );
 };

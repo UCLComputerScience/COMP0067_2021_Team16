@@ -7,20 +7,30 @@
   }
 }
 
+
 #title {
   position: fixed;
   top: 0;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #image {
   position: relative;
   text-align: center;
   float: clear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #copyright {
   position: fixed;
   bottom: 0;
   text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

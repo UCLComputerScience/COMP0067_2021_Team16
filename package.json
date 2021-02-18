@@ -18,7 +18,7 @@
     "@types/react-router": "^5.1.11",
     "@types/react-router-dom": "^5.1.7",
     "cordova-plugin-nativeaudio": "^3.0.9",
-    "ionicons": "^5.4.0",
+    "ionicons": "^5.5.0",
     "react": "^17.0.1",
     "react-audio-player": "^0.14.0",
     "react-dom": "^17.0.1",

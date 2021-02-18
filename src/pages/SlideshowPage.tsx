@@ -16,6 +16,7 @@ const SlideshowPage: React.FC = () => {
         <AddSlideshowButton />
         <RadioButton />
         <Checkbox /> */}
+        <Slider />
       </IonContent>
     </IonPage>
   );
