@@ -3,6 +3,7 @@ import BackButton from '../components/BackButton/BackButton';
 import InputSettings from '../components/SettingsCard/SettingsCard';
 import RateAppButton from '../components/RateApp/RateApp';
 import ToggleButton from '../components/ShuffleToggle/ShuffleToggle';
+import AudioTab from '../components/AudioTab/AudioTab';
 import './Tab1.css';
 
 const Tab1: React.FC = () => {
@@ -12,6 +13,7 @@ const Tab1: React.FC = () => {
       <IonContent>
         <InputSettings />
         <ToggleButton />
+        <AudioTab />
       </IonContent>
       <RateAppButton />
     </IonPage>
