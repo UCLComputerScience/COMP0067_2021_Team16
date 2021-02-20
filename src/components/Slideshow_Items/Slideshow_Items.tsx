@@ -16,15 +16,14 @@ interface EditMode {
 const Slideshow_Item: React.FC<ContainerProps> = ({ name, editing }) => (
   <IonItem routerLink='/slideshowpage'>
     <IonLabel>
-      <IonGrid>
+      <IonGrid no_padding no_margin>
         <IonRow>
-          <IonCol>{editing ? <IonCheckbox checked={true}/>: null}</IonCol>
+          <IonCol className='checkcontainer'>{editing ? <IonCheckbox checked={true} className='checkbox'/>: null}</IonCol>
           <IonCol className='slidename'>{name}</IonCol>
-          <IonCol>{editing ? <IonReorder></IonReorder>: null}</IonCol>
+          <IonCol className='reordergrabber'>{editing ? <IonReorder className='grabicon'/>: null}</IonCol>
         </IonRow>
       </IonGrid>
-    </IonLabel>
-    
+    </IonLabel>  
   </IonItem>
   )
 
