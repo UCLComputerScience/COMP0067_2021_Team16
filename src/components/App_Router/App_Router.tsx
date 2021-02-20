@@ -6,7 +6,6 @@ import {IonRouterOutlet} from '@ionic/react';
 import Tab1 from '../../pages/Tab1';
 import Tab3 from '../../pages/Tab3';
 import SlideshowPage from '../../pages/SlideshowPage';
-import SelectionPage from '../../pages/SelectionPage';
 import EditSlideshowsPage from '../../pages/EditSlideshowsPage';
 import NewTestPage from '../../pages/Newtestpage';
 import SlideshowListingPage from '../../pages/SlideshowListingPage';
