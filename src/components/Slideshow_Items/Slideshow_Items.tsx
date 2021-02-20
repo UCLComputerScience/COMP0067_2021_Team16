@@ -9,7 +9,7 @@ interface ContainerProps {
 }
 
 const Slideshow_Item: React.FC<ContainerProps> = ({ name }) => (
-  <IonItem>
+  <IonItem routerLink='/slideshowpage'>
     <IonLabel>
       <IonGrid>
         <IonRow>
@@ -26,6 +26,7 @@ const Slideshow_Item: React.FC<ContainerProps> = ({ name }) => (
 const Slideshow_Items: React.FC = () => {
 
   let myitems = ['one', 'two', 'three', 'four', 'five'];
+  const [ReOrderModeDisabled, setReOrderModeDisabled] = useState(true);
 
   function doReorder(event: CustomEvent<ItemReorderEventDetail>) {
     //console.log(myitems);
@@ -40,7 +41,7 @@ const Slideshow_Items: React.FC = () => {
 
   return (
     <IonList>
-      <IonReorderGroup disabled={false} onIonItemReorder={doReorder}>
+      <IonReorderGroup disabled={ReOrderModeDisabled} onIonItemReorder={doReorder}>
         {myitems.map(item => <Slideshow_Item name={item} key={item} />)}
       </IonReorderGroup>
     </IonList >
