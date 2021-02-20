@@ -11,8 +11,6 @@ const SelectionPage: React.FC = () => {
     
     const[editMode,setEditMode] = useState(false);
 
-    const RenderSlideshowItems = () => {return <Slideshow_Items Editing={editMode}/>}
-
     return(
         <IonPage>
             <IonHeader>
@@ -20,7 +18,7 @@ const SelectionPage: React.FC = () => {
                     <IonGrid>
                         <IonRow>
                             <IonCol className='editbutton'><Edit_Button toggleEdit={setEditMode}/></IonCol>
-                            <IonCol className='title'><IonTitle>Select Slideshow</IonTitle></IonCol>
+                            <IonCol className='title'><IonTitle>{editMode ? 'Edit Slideshows':'Select Slideshow'}</IonTitle></IonCol>
                             <IonCol></IonCol>
                         </IonRow>
                     </IonGrid>
