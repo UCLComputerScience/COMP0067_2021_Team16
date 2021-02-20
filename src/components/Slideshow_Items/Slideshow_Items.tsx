@@ -1,32 +1,39 @@
 import './Slideshow_Items.css';
 import '@ionic/react'
 import { IonItem, IonLabel, IonReorder, IonList, IonReorderGroup, IonCheckbox, IonGrid, IonRow, IonCol } from '@ionic/react';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ItemReorderEventDetail } from '@ionic/core';
 
 interface ContainerProps {
   name: string;
+  editing: boolean;
 }
 
-const Slideshow_Item: React.FC<ContainerProps> = ({ name }) => (
+interface EditMode {
+  Editing: boolean;
+}
+
+const Slideshow_Item: React.FC<ContainerProps> = ({ name, editing }) => (
   <IonItem routerLink='/slideshowpage'>
     <IonLabel>
       <IonGrid>
         <IonRow>
-          <IonCol><IonCheckbox checked={true}/></IonCol>
+          <IonCol>{editing ? <IonCheckbox checked={true}/>: null}</IonCol>
           <IonCol className='slidename'>{name}</IonCol>
-          <IonCol></IonCol>
+          <IonCol>{editing ? <IonReorder></IonReorder>: null}</IonCol>
         </IonRow>
       </IonGrid>
     </IonLabel>
-    <IonReorder></IonReorder>
+    
   </IonItem>
   )
 
-const Slideshow_Items: React.FC = () => {
+const Slideshow_Items: React.FC<EditMode> = (props) => {
 
   let myitems = ['one', 'two', 'three', 'four', 'five'];
-  const [ReOrderModeDisabled, setReOrderModeDisabled] = useState(true);
+  const [ReOrderModeDisabled, setReOrderModeDisabled] = useState<boolean>(!props.Editing);
+
+  useEffect(()=>{setReOrderModeDisabled(!props.Editing)},[props.Editing])
 
   function doReorder(event: CustomEvent<ItemReorderEventDetail>) {
     //console.log(myitems);
@@ -42,7 +49,7 @@ const Slideshow_Items: React.FC = () => {
   return (
     <IonList>
       <IonReorderGroup disabled={ReOrderModeDisabled} onIonItemReorder={doReorder}>
-        {myitems.map(item => <Slideshow_Item name={item} key={item} />)}
+        {myitems.map(item => <Slideshow_Item name={item} key={item} editing={props.Editing}/>)}
       </IonReorderGroup>
     </IonList >
   );
