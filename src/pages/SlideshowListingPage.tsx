@@ -1,10 +1,8 @@
 import { IonCol, IonContent, IonFooter, IonGrid, IonHeader, IonPage, IonRow, IonTitle, IonToolbar } from '@ionic/react';
-import Slideshow_Button from '../components/Slideshow_Button/Slideshow_Button';
 import Nav_Bar from '../components/Nav_Bar/Nav_Bar_New';
 import Edit_Button from '../components/EditButton/EditButton';
 import './SlideshowListingPage.css';
-
-let myitems = ['one', 'two', 'three'];
+import Slideshow_Items from '../components/Slideshow_Items/Slideshow_Items';
 
 const SelectionPage: React.FC = () => (
     <IonPage>
@@ -20,7 +18,7 @@ const SelectionPage: React.FC = () => (
             </IonToolbar>
         </IonHeader>
         <IonContent fullscreen>
-            {myitems.map(item => <Slideshow_Button name={item} key={item}/>)}
+            <Slideshow_Items/>
         </IonContent>);
         <IonFooter>
             <Nav_Bar/>
