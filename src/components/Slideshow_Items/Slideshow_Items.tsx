@@ -3,29 +3,12 @@ import '@ionic/react'
 import { IonItem, IonLabel, IonReorder, IonList, IonReorderGroup, IonCheckbox, IonGrid, IonRow, IonCol } from '@ionic/react';
 import React, { useState, useEffect } from 'react';
 import { ItemReorderEventDetail } from '@ionic/core';
+import Slideshow_Item from '../Slideshow_Item/Slideshow_Item';
 
-interface ContainerProps {
-  name: string;
-  editing: boolean;
-}
 
 interface EditMode {
   Editing: boolean;
 }
-
-const Slideshow_Item: React.FC<ContainerProps> = ({ name, editing }) => (
-  <IonItem routerLink='/slideshowpage'>
-    <IonLabel>
-      <IonGrid no_padding no_margin>
-        <IonRow>
-          <IonCol className='checkcontainer'>{editing ? <IonCheckbox checked={true} className='checkbox'/>: null}</IonCol>
-          <IonCol className='slidename'>{name}</IonCol>
-          <IonCol className='reordergrabber'>{editing ? <IonReorder className='grabicon'/>: null}</IonCol>
-        </IonRow>
-      </IonGrid>
-    </IonLabel>  
-  </IonItem>
-  )
 
 const Slideshow_Items: React.FC<EditMode> = (props) => {
 
