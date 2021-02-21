@@ -1,13 +1,15 @@
 import { IonContent, IonHeader, IonItem, IonList, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
 import ToggleButton from '../components/ShuffleToggle/ShuffleToggle';
 import InputSettings from '../components/SettingsCard/SettingsCard';
+import BackButton from '../components/BackButton/BackButton';
+
 import './Tab3.css';
 
 const Tab3: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
+        <BackButton />
         <IonToolbar>
           <IonTitle>Video Settings</IonTitle>
         </IonToolbar>
@@ -18,7 +20,6 @@ const Tab3: React.FC = () => {
             <IonTitle size="large">Video Settings</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Video Settings" />
         <IonList>
           <IonItem>
             <InputSettings />
