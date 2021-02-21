@@ -9,7 +9,7 @@ interface ContainerProps {
 }
 
 const Slideshow_Item: React.FC<ContainerProps> = ({ name, editing }) => (
-  <IonItem routerLink='/slideshowpage'>
+  <IonItem>
     <IonLabel>
       <IonGrid>
         <IonRow>
