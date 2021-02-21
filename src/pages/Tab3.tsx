@@ -14,12 +14,7 @@ const Tab3: React.FC = () => {
           <IonTitle>Video Settings</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Video Settings</IonTitle>
-          </IonToolbar>
-        </IonHeader>
+      <IonContent>
         <IonList>
           <IonItem>
             <InputSettings />
