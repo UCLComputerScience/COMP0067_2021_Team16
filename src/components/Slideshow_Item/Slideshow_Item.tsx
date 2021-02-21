@@ -8,18 +8,23 @@ interface ContainerProps {
   editing: boolean;
 }
 
-const Slideshow_Item: React.FC<ContainerProps> = (props) => (
+const Slideshow_Item: React.FC<ContainerProps> = (props) => {
+  function toggleslideshow(){
+    props.item.enabled = !props.item.enabled; 
+  }
+  
+  return(
   <IonItem>
     <IonLabel>
       <IonGrid>
         <IonRow>
-          <IonCol className='checkcontainer'>{props.editing ? <IonCheckbox checked={props.item.enabled} className='checkbox'/>: null}</IonCol>
+          <IonCol className='checkcontainer'>{props.editing ? <IonCheckbox checked={props.item.enabled} className='checkbox' onIonChange={toggleslideshow}/>: null}</IonCol>
           <IonCol className='slidename'><IonButton fill='clear' routerLink='slideshowpage'>{props.item.name}</IonButton></IonCol>
           <IonCol className='reordergrabber'>{props.editing ? <IonReorder className='grabicon'/>: null}</IonCol>
         </IonRow>
       </IonGrid>
     </IonLabel>  
-  </IonItem>
-)
+  </IonItem>);
+}
 
 export default Slideshow_Item;
