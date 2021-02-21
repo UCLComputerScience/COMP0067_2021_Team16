@@ -1,6 +1,6 @@
 import './Slideshow_Items.css';
 import '@ionic/react'
-import { IonItem, IonLabel, IonReorder, IonList, IonReorderGroup, IonCheckbox, IonGrid, IonRow, IonCol } from '@ionic/react';
+import { IonList, IonReorderGroup } from '@ionic/react';
 import React, { useState, useEffect } from 'react';
 import { ItemReorderEventDetail } from '@ionic/core';
 import Slideshow_Item from '../Slideshow_Item/Slideshow_Item';

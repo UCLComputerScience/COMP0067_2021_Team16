@@ -1,6 +1,6 @@
 import './Slideshow_Item.css';
 import '@ionic/react'
-import { IonItem, IonLabel, IonReorder, IonList, IonReorderGroup, IonCheckbox, IonGrid, IonRow, IonCol, IonButton } from '@ionic/react';
+import { IonItem, IonLabel, IonReorder, IonCheckbox, IonGrid, IonRow, IonCol, IonButton } from '@ionic/react';
 import React from 'react';
 
 interface ContainerProps {
