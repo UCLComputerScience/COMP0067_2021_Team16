@@ -8,7 +8,7 @@ import Tab3 from '../../pages/Tab3';
 import SlideshowPage from '../../pages/SlideshowPage';
 import EditSlideshowsPage from '../../pages/EditSlideshowsPage';
 import NewTestPage from '../../pages/Newtestpage';
-import SlideshowListingPage from '../../pages/SlideshowListingPage';
+import SlideshowListingPage from '../../pages/SlideshowListingPage/SlideshowListingPage';
 
 //below are all the routes with their URLs (denoted by 'path') and the actual page component (child to each Route component)
 const App_Router: React.FC = () => {
