@@ -14,13 +14,20 @@
     justify-content: center;
     align-self: center;
     align-content: center;
+    height:fit-content;
+    padding: 10px;
 }
 
 .buttoncontainer{
     justify-content: center;
     align-content: center;
+    height: fit-content;
 }
 
 .addicon{
-    font-size: 52px;
+    font-size: 56px;
+}
+
+.bar-footer{
+	height: auto;
 }

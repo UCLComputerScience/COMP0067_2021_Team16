@@ -34,12 +34,10 @@ const SelectionPage: React.FC = () => {
             <IonContent fullscreen>
                 <Slideshow_Items Editing={editMode}/>
             </IonContent>);
-            <IonFooter>
+            <IonFooter className='bar-footer'>
                 <IonGrid>
                     {editMode ? <IonRow className='buttoncontainer'><AddButton/></IonRow>:null}
-                    <IonRow>
-                        <Nav_Bar/>
-                    </IonRow>
+                    {editMode ? null:<IonRow><Nav_Bar/></IonRow>}
                 </IonGrid>
             </IonFooter>
         </IonPage>
