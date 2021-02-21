@@ -4,18 +4,18 @@ import { IonItem, IonLabel, IonReorder, IonCheckbox, IonGrid, IonRow, IonCol, Io
 import React from 'react';
 
 interface ContainerProps {
-  name: string;
+  item: object;
   editing: boolean;
 }
 
-const Slideshow_Item: React.FC<ContainerProps> = ({ name, editing }) => (
+const Slideshow_Item: React.FC<ContainerProps> = (props) => (
   <IonItem>
     <IonLabel>
       <IonGrid>
         <IonRow>
-          <IonCol className='checkcontainer'>{editing ? <IonCheckbox checked={true} className='checkbox'/>: null}</IonCol>
-          <IonCol className='slidename'><IonButton fill='clear' routerLink='slideshowpage'>{name}</IonButton></IonCol>
-          <IonCol className='reordergrabber'>{editing ? <IonReorder className='grabicon'/>: null}</IonCol>
+          <IonCol className='checkcontainer'>{props.editing ? <IonCheckbox checked={props.item.enabled} className='checkbox'/>: null}</IonCol>
+          <IonCol className='slidename'><IonButton fill='clear' routerLink='slideshowpage'>{props.item.name}</IonButton></IonCol>
+          <IonCol className='reordergrabber'>{props.editing ? <IonReorder className='grabicon'/>: null}</IonCol>
         </IonRow>
       </IonGrid>
     </IonLabel>  

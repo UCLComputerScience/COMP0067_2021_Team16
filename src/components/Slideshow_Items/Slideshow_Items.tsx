@@ -4,6 +4,7 @@ import { IonList, IonReorderGroup } from '@ionic/react';
 import React, { useState, useEffect } from 'react';
 import { ItemReorderEventDetail } from '@ionic/core';
 import Slideshow_Item from '../Slideshow_Item/Slideshow_Item';
+import SlideshowObj from './Slideshow_Class';
 
 
 interface EditMode {
@@ -12,7 +13,13 @@ interface EditMode {
 
 const Slideshow_Items: React.FC<EditMode> = (props) => {
 
-  let myitems = ['one', 'two', 'three', 'four', 'five'];
+  let one = new SlideshowObj('one',0,true);
+  let two = new SlideshowObj('two',1,false);
+  let three = new SlideshowObj('three',2,true);
+  let four = new SlideshowObj('four',3,true);
+  let five = new SlideshowObj('five',4,true);
+
+  let myitems = [one,two,three,four,five];
   const [ReOrderModeDisabled, setReOrderModeDisabled] = useState<boolean>(!props.Editing);
 
   useEffect(()=>{setReOrderModeDisabled(!props.Editing)},[props.Editing])
@@ -24,6 +31,8 @@ const Slideshow_Items: React.FC<EditMode> = (props) => {
     let itemtomove = myitems.splice(event.detail.from, 1)[0];
     myitems.splice(event.detail.to, 0, itemtomove);
 
+    myitems.forEach(function(item,index){item.position = index});
+
     //console.log(myitems)
     event.detail.complete();
   }
@@ -31,7 +40,8 @@ const Slideshow_Items: React.FC<EditMode> = (props) => {
   return (
     <IonList>
       <IonReorderGroup disabled={ReOrderModeDisabled} onIonItemReorder={doReorder}>
-        {myitems.map(item => <Slideshow_Item name={item} key={item} editing={props.Editing}/>)}
+        {myitems.map(item => item.enabled && !props.Editing ? <Slideshow_Item item={item} key={item.name} editing={props.Editing}/>:null)}
+        {myitems.map(item => props.Editing ? <Slideshow_Item item={item} key={item.name} editing={props.Editing}/>: null)}
       </IonReorderGroup>
     </IonList >
   );
