@@ -4,7 +4,15 @@ import Edit_Button from '../../components/EditButton/EditButton';
 import './SlideshowListingPage.css';
 import Slideshow_Items from '../../components/Slideshow_Items/Slideshow_Items';
 import React, { useState } from 'react';
+import { addCircleSharp} from 'ionicons/icons';
 
+const AddButton: React.FC = () =>{
+    return(
+        <IonButton fill='clear' className='addbutton'>
+            <IonIcon icon={addCircleSharp} className='addicon'/>
+        </IonButton>
+    );
+}
 
 const SelectionPage: React.FC = () => {
     
@@ -27,7 +35,12 @@ const SelectionPage: React.FC = () => {
                 <Slideshow_Items Editing={editMode}/>
             </IonContent>);
             <IonFooter>
-                <Nav_Bar/>
+                <IonGrid>
+                    {editMode ? <IonRow className='buttoncontainer'><AddButton/></IonRow>:null}
+                    <IonRow>
+                        <Nav_Bar/>
+                    </IonRow>
+                </IonGrid>
             </IonFooter>
         </IonPage>
 );

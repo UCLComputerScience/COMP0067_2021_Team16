@@ -9,3 +9,18 @@
     align-items: flex-start;
 
 }
+
+.addbutton{
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+}
+
+.buttoncontainer{
+    justify-content: center;
+    align-content: center;
+}
+
+.addicon{
+    font-size: 52px;
+}
