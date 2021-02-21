@@ -6,26 +6,8 @@ const InputSettings: React.FC = () => {
   const [number, setNumber] = useState<number>();
 
   return (
-    <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Video Settings  </IonTitle>
-        </IonToolbar>
-      </IonHeader>
-      <IonContent>
-        <IonList>
-          <IonItemDivider>Slide duration</IonItemDivider>
-          <IonItem>
-            <IonInput type="number" value={number} placeholder="Set slide duration (0 - 20s)" onIonChange={e => setNumber(parseInt(e.detail.value!, 10))}></IonInput>
-          </IonItem>
-          <IonItemDivider>Animation speed</IonItemDivider>
-          <IonItem>
-            <IonInput type="number" value={number} placeholder="Set slide speed (0 - 1.5x)" onIonChange={e => setNumber(parseInt(e.detail.value!, 10))}></IonInput>
-          </IonItem>
-        </IonList>
-      </IonContent>
-    </IonPage>
-  );
+  <IonInput type="number" value={number} placeholder="Set slide duration (0 - 20s)" onIonChange={e => setNumber(parseInt(e.detail.value!, 10))}></IonInput>
+  )
 };
 
 export default InputSettings;

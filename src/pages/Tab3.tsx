@@ -1,5 +1,7 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonContent, IonHeader, IonItem, IonList, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import ExploreContainer from '../components/ExploreContainer';
+import ToggleButton from '../components/ShuffleToggle/ShuffleToggle';
+import InputSettings from '../components/SettingsCard/SettingsCard';
 import './Tab3.css';
 
 const Tab3: React.FC = () => {
@@ -7,16 +9,27 @@ const Tab3: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Tab 3</IonTitle>
+          <IonTitle>Video Settings</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonTitle size="large">Tab 3</IonTitle>
+            <IonTitle size="large">Video Settings</IonTitle>
           </IonToolbar>
         </IonHeader>
-        <ExploreContainer name="Tab 3 page" />
+        <ExploreContainer name="Video Settings" />
+        <IonList>
+          <IonItem>
+            <InputSettings />
+          </IonItem>
+          <IonItem>
+            <InputSettings />
+          </IonItem>
+          <IonItem>
+            <ToggleButton />
+          </IonItem>
+        </IonList>
       </IonContent>
     </IonPage>
   );
