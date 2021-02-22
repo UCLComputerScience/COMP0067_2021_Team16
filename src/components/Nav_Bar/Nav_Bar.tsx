@@ -1,5 +1,5 @@
 import { IonButton, IonGrid, IonRow, IonCol, IonIcon} from '@ionic/react';
-import "./Nav_Bar_New.css";
+import "./Nav_Bar.css";
 import { person, musicalNotes, desktop, informationCircle } from 'ionicons/icons';
 
 

@@ -1,5 +1,5 @@
 import { IonCol, IonContent, IonFooter, IonGrid, IonHeader, IonPage, IonRow, IonTitle, IonToolbar,IonButton,IonIcon} from '@ionic/react';
-import Nav_Bar from '../../components/Nav_Bar/Nav_Bar_New';
+import Nav_Bar from '../../components/Nav_Bar/Nav_Bar';
 import Edit_Button from '../../components/EditButton/EditButton';
 import './SlideshowListingPage.css';
 import Slideshow_Items from '../../components/Slideshow_Items/Slideshow_Items';

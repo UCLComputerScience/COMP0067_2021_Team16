@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { IonContent, IonPage } from "@ionic/react";
-import BackButton from "../components/BackButton/BackButton";
-import TitleBar from "../components/TitleBar/TitleBar";
-import RateApp from "../components/RateApp/RateApp";
+import BackButton from "../../components/BackButton/BackButton";
+import TitleBar from "../../components/TitleBar/TitleBar";
+import RateApp from "../../components/RateApp/RateApp";
 
 const SupportPage: React.FC = () => {
   const [checked, setChecked] = useState(false);

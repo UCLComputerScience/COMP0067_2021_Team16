@@ -6,9 +6,9 @@ import {
   IonCheckbox,
   IonPage,
 } from "@ionic/react";
-import BackButton from "../components/BackButton/BackButton";
-import TitleBar from "../components/TitleBar/TitleBar";
-import User_Input from "../components/User_Input/User_Input";
+import BackButton from "../../components/BackButton/BackButton";
+import TitleBar from "../../components/TitleBar/TitleBar";
+import User_Input from "../../components/User_Input/User_Input";
 
 const SubscribePage: React.FC = () => {
   const [checked, setChecked] = useState(false);

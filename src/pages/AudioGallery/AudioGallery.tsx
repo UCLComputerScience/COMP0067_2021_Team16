@@ -1,6 +1,6 @@
 import { IonContent, IonHeader, IonItem, IonList, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import BackButton from '../components/BackButton/BackButton';
-import Audio_Player from '../components/Audio_Player/Audio_Player';
+import BackButton from '../../components/BackButton/BackButton';
+import Audio_Player from '../../components/Audio_Player/Audio_Player';
 
 const AudioGallery: React.FC = () => {
   return (

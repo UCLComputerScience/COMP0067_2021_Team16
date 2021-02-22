@@ -1,7 +1,7 @@
 import { IonContent, IonHeader, IonItem, IonList, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ToggleButton from '../components/ShuffleToggle/ShuffleToggle';
-import InputSettings from '../components/SettingsCard/SettingsCard';
-import BackButton from '../components/BackButton/BackButton';
+import ToggleButton from '../../components/ShuffleToggle/ShuffleToggle';
+import InputSettings from '../../components/SettingsCard/SettingsCard';
+import BackButton from '../../components/BackButton/BackButton';
 import './VideoSettings.css';
 
 const VideoSettings: React.FC = () => {
