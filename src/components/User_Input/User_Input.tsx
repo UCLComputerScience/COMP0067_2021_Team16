@@ -16,7 +16,7 @@ const User_Input: React.FC<ContainerProps> = ({ name }) => {
   let valueRef = useRef <HTMLIonInputElement>(null);
 
   return (
-    <IonItem>
+    <IonItem className='ionlabel'>
       <IonLabel position="stacked">{name}</IonLabel>
       <IonInput id="input" ref={valueRef}> </IonInput>
     </IonItem>

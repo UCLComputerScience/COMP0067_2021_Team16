@@ -1,4 +1,4 @@
-import { IonBackButton, IonHeader, IonToolbar, IonButtons, IonMenuButton, IonContent } from '@ionic/react';
+import { IonBackButton} from '@ionic/react';
 import "./BackButton.css";
 
 const BackButton: React.FC = () => (

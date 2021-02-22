@@ -5,9 +5,11 @@
 }
 
 .backbutton{
-    justify-content: flex-start;
-    align-items: flex-start;
-
+    justify-content: self-start;
+    justify-self: self-start;
+    justify-items: self-start;
+    align-items: center;
+    align-content: center;
 }
 
 .addbutton{
