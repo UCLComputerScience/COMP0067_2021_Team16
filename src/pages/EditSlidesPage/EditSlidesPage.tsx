@@ -37,7 +37,7 @@ let twelve = new Slides("solmaris",imgtwelve,11,1,1);
 
 //creating array of slide objects
 
-let items = [one,two,three,four,five,six,seven,eight,nine,ten,eleven,twelve];
+let myitems = [one,two,three,four,five,six,seven,eight,nine,ten,eleven,twelve];
 
 const EditSlidesPage: React.FC = () => {
 
@@ -61,7 +61,9 @@ const EditSlidesPage: React.FC = () => {
                                 <User_Input name='Please enter a slideshow name:'/>
                             </IonToolbar>
                         </IonRow>
-                        <IonRow></IonRow>
+                        <IonRow>
+                        {myitems.map(item => <img src={item.src}/>)}
+                        </IonRow>
                     </IonGrid>
             </IonContent>);
             <IonFooter className='bar-footer'>
