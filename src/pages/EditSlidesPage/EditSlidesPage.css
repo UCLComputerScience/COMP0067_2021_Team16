@@ -24,6 +24,13 @@
     position:fixed;
 }
 
+.checkbox{
+    align-self:flex-start;
+    align-content: flex-start;
+    position: absolute;
+    z-index: 0;
+}
+
 .buttoncontainer{
     justify-content: center;
     align-content: center;
@@ -36,4 +43,36 @@
 
 .bar-footer{
 	height: auto;
+    background-color: white;
+}
+
+.slidecontainer{
+    border: 1px solid black;
+    display:inline-block;
+    margin: 10px;
+    width: 100px;
+    height:100px;
+    position: relative;
+}
+
+.userinput{
+    border-top: 1px solid black;
+}
+
+.music{
+    color: tomato;
+    align-content: flex-end;
+    justify-self: flex-end;
+    justify-content: flex-end;
+    position: absolute;
+    left: 80px;
+    top: 80px;
+    z-index: 1;
+}
+
+.image{
+    height:100px;
+    width: 100px;
+    position: absolute;
+    z-index: -1;
 }
