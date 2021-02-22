@@ -1,17 +1,18 @@
 import { IonContent, IonPage } from '@ionic/react';
 import BackButton from '../components/BackButton/BackButton';
 import TitleBar from '../components/TitleBar/TitleBar';
+import RadioButton from '../components/RadioButton/RadioButton';
 
-
-const SlideshowPage: React.FC = () => {
+const AudioSettingsPage: React.FC = () => {
   return (
     <IonPage>
-      <IonContent fullscreen>
+     <IonContent fullscreen>
         <BackButton />
         <TitleBar name={"Audio Settings"}/>
-      </IonContent>
+        <RadioButton />
+     </IonContent>
     </IonPage>
   );
 };
 
-export default SlideshowPage;
+export default AudioSettingsPage;
