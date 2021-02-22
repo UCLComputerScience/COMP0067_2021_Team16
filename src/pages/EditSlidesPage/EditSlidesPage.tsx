@@ -24,10 +24,10 @@ import imgeleven from "../../components/Image/images/nausithoechallengeri.png";
 import imgtwelve from "../../components/Image/images/solmaris.png";
 
 //creating slide objects (replace when we have our DB)
-let one = new Slides("asteroblastusstellatus",imgone,0,1,1)
+let one = new Slides("asteroblastusstellatus",imgone,0,0,0)
 let two = new Slides("porpitaprunella",imgtwo,1,1,1);
 let three = new Slides("poliopogonamadou",imgthree,2,1,1);
-let four = new Slides("botryllusschlosseri",imgfour,3,1,1);
+let four = new Slides("botryllusschlosseri",imgfour,3,0,0);
 let five = new Slides("cassiopeaandromeda",imgfive,4,1,1);
 let six = new Slides("hemipholiscordifera",imgsix,5,1,1);
 let seven = new Slides("centrostephanuslongispinus",imgseven,6,1,1);
