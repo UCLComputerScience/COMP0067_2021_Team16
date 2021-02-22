@@ -99,27 +99,26 @@ const images = [
 
 const Slideshow: React.FC = () => {
   return (
-    <div>
-      <IonGrid>
+      
         <IonSlides pager={false} options={slideOpts}>
           {images.map(({ id, name, image }, i) => (
             <IonSlide>
-              <IonRow>
-                <TitleBar name={name} />
-              </IonRow>
-              <IonRow>
-                <img key={i} src={image} className="spinner rotate" />
-                {/* <Image key={i} id={id} image={image} /> */}
-                {/* <IonRangeSlider type={"single"} min={10} max={100} from={0} to={10} step={1} values={[]} keyboard={true} /> */}
-              </IonRow>
-              <IonRow>
-                <Copyright />
-              </IonRow>
+              <IonGrid>
+                <IonRow>
+                  <TitleBar name={name} />
+                </IonRow>
+                <IonRow>
+                  <img key={i} src={image} className="spinner rotate" />
+                  {/* <Image key={i} id={id} image={image} /> */}
+                  {/* <IonRangeSlider type={"single"} min={10} max={100} from={0} to={10} step={1} values={[]} keyboard={true} /> */}
+                </IonRow>
+                <IonRow>
+                  <Copyright />
+                </IonRow>
+              </IonGrid>
             </IonSlide>
           ))}
         </IonSlides>
-      </IonGrid>
-    </div>
   );
 };
 
