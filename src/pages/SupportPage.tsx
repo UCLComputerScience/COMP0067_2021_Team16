@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import { IonContent } from "@ionic/react";
+import { IonContent, IonPage } from "@ionic/react";
 import BackButton from "../components/BackButton/BackButton";
 import TitleBar from "../components/TitleBar/TitleBar";
 import RateApp from "../components/RateApp/RateApp";
 
-const SlideshowPage: React.FC = () => {
+const SupportPage: React.FC = () => {
   const [checked, setChecked] = useState(false);
   return (
-    <div>
+    <IonPage>
       <IonContent fullscreen>
         <BackButton />
         <TitleBar name={"Support"} />
@@ -65,15 +65,9 @@ const SlideshowPage: React.FC = () => {
           Kevin Fong presenter, BBC Astronauts: Do you have what it takes?'. Iya
           runs workshops for public and academic.
         </p>
-        <h1>Contact</h1>
-        <p>
-          Let’s make this category, Contact. It would generate an email
-          cosmicbabybooks@gmail.com or can be a form that they complete and
-          sent. It would have a tick mark for subscribe.
-        </p>
       </IonContent>
-    </div>
+    </IonPage>
   );
 };
 
-export default SlideshowPage;
+export default SupportPage;
