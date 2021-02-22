@@ -20,6 +20,10 @@
     padding: 10px;
 }
 
+.toolbarfixed{
+    position:fixed;
+}
+
 .buttoncontainer{
     justify-content: center;
     align-content: center;

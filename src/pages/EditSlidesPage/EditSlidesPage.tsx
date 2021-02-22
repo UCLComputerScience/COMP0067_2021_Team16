@@ -8,18 +8,18 @@ import React, { useState } from 'react';
 
 //importing images
 
-import imgone from "../../../public/assets/images/asteroblastusstellatus.png";
-import imgtwo from "../../../public/assets/images/porpitaprunella.png";
-import imgthree from "../../../public/assets/images/poliopogonamadou.png";
-import imgfour from "../../../public/assets/images/botryllusschlosseri.png";
-import imgfive from "../../../public/assets/images/cassiopeaandromeda.png";
-import imgsix from "../../../public/assets/images/hemipholiscordifera.png";
-import imgseven from "../../../public/assets/images/centrostephanuslongispinus.png";
-import imgeight from "../../../public/assets/images/nautiluspompilius.png";
-import imgnine from "../../../public/assets/images/haeckelianaporcellana.png";
-import imgten from "../../../public/assets/images/cannorrhizaconnexa.png";
-import imgeleven from "../../../public/assets/images/nausithoechallengeri.png";
-import imgtwelve from "../../../public/assets/images/solmaris.png";
+import imgone from "../../components/Image/images/asteroblastusstellatus.png";
+import imgtwo from "../../components/Image/images/porpitaprunella.png";
+import imgthree from "../../components/Image/images/poliopogonamadou.png";
+import imgfour from "../../components/Image/images/botryllusschlosseri.png";
+import imgfive from "../../components/Image/images/cassiopeaandromeda.png";
+import imgsix from "../../components/Image/images/hemipholiscordifera.png";
+import imgseven from "../../components/Image/images/centrostephanuslongispinus.png";
+import imgeight from "../../components/Image/images/nautiluspompilius.png";
+import imgnine from "../../components/Image/images/haeckelianaporcellana.png";
+import imgten from "../../components/Image/images/cannorrhizaconnexa.png";
+import imgeleven from "../../components/Image/images/nausithoechallengeri.png";
+import imgtwelve from "../../components/Image/images/solmaris.png";
 
 //creating slide objects
 let one = new Slides("asteroblastusstellatus",imgone,0,1,1)
@@ -51,20 +51,16 @@ const EditSlidesPage: React.FC = () => {
                             <IonCol className='title'><IonTitle>Edit Slides</IonTitle></IonCol>
                             <IonCol></IonCol>
                         </IonRow>
-                    </IonGrid>
-                </IonToolbar>
-            </IonHeader>
-            <IonContent fullscreen>
-                    <IonGrid>
                         <IonRow>
                             <IonToolbar>
                                 <User_Input name='Please enter a slideshow name:'/>
                             </IonToolbar>
                         </IonRow>
-                        <IonRow>
-                        {myitems.map(item => <img src={item.src}/>)}
-                        </IonRow>
                     </IonGrid>
+                </IonToolbar>
+            </IonHeader>
+            <IonContent fullscreen>
+                {myitems.map(item => <img src={item.src} key={item.name} width='100px' height='100px'/>)}
             </IonContent>);
             <IonFooter className='bar-footer'>
                 <Edit_Bar/>
