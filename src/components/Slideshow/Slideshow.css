@@ -7,6 +7,22 @@
   }
 }
 
+.titlerow{
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.imagerow{
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.copyrightrow{
+  align-content: center;
+  justify-content: flex-end;
+}
 
 #title {
   position: fixed;

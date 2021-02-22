@@ -104,15 +104,15 @@ const Slideshow: React.FC = () => {
           {images.map(({ id, name, image }, i) => (
             <IonSlide>
               <IonGrid>
-                <IonRow>
+                <IonRow className='titlerow'>
                   <TitleBar name={name} />
                 </IonRow>
-                <IonRow>
+                <IonRow className='imagerow'>
                   <img key={i} src={image} className="spinner rotate" />
                   {/* <Image key={i} id={id} image={image} /> */}
                   {/* <IonRangeSlider type={"single"} min={10} max={100} from={0} to={10} step={1} values={[]} keyboard={true} /> */}
                 </IonRow>
-                <IonRow>
+                <IonRow className='copyrightrow'>
                   <Copyright />
                 </IonRow>
               </IonGrid>
