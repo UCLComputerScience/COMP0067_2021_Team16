@@ -1,11 +1,8 @@
 import { IonContent, IonHeader, IonItem, IonList, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import ToggleButton from '../components/ShuffleToggle/ShuffleToggle';
 import InputSettings from '../components/SettingsCard/SettingsCard';
-import BackButton from '../components/BackButton/BackButton';
 
-import './Tab3.css';
-
-const Tab3: React.FC = () => {
+const Tab5: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
@@ -30,4 +27,4 @@ const Tab3: React.FC = () => {
   );
 };
 
-export default Tab3;
+export default Tab5;
