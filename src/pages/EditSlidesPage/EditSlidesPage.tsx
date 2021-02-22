@@ -1,12 +1,11 @@
-import { IonCol, IonContent, IonFooter, IonGrid, IonHeader, IonPage, IonRow, IonTitle, IonToolbar,IonButton,IonIcon, IonItem, IonItemGroup, IonCheckbox} from '@ionic/react';
+import { IonCol, IonContent, IonFooter, IonGrid, IonHeader, IonPage, IonRow, IonTitle, IonToolbar} from '@ionic/react';
 import './EditSlidesPage.css';
 import Edit_Bar from '../../components/Edit_Bar/Edit_Bar';
 import Back_Button from '../../components/BackButton/BackButton';
 import User_Input from '../../components/User_Input/User_Input';
 import Slides from './Slides_Class';
-import React, { useState } from 'react';
-import {musicalNotes} from 'ionicons/icons';
-
+import Editableslide from '../../components/EditableSlides/EditableSlides';
+import React from 'react';
 
 //importing images (replace when we have our DB)
 
@@ -40,21 +39,6 @@ let twelve = new Slides("solmaris",imgtwelve,11,1,1);
 //creating array of slide objects (replace when we have our DB)
 
 let myitems = [one,two,three,four,five,six,seven,eight,nine,ten,eleven,twelve];
-
-interface ContainerProps {
-    slide: object;
-}
-
-const Editableslide: React.FC<ContainerProps> = (props) => {
-    return(
-        <span className='slidecontainer'>
-            <IonCheckbox checked={props.slide.selected} className='checkbox'/>
-            {props.slide.recording || props.slide.default_recording ? <IonIcon icon={musicalNotes} className='music'/>:null}
-            <img src={props.slide.src} key={props.slide.name} className='image'/>
-        </span>
-    );
-
-}
 
 const EditSlidesPage: React.FC = () => {
 

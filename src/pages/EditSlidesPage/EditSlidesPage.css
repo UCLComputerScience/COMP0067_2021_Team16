@@ -12,16 +12,13 @@
     align-content: center;
 }
 
-.addbutton{
-    justify-content: center;
-    align-self: center;
-    align-content: center;
-    height:fit-content;
-    padding: 10px;
+.bar-footer{
+	height: auto;
+    background-color: white;
 }
 
-.toolbarfixed{
-    position:fixed;
+.userinput{
+    border-top: 1px solid black;
 }
 
 .checkbox{
@@ -31,21 +28,6 @@
     z-index: 0;
 }
 
-.buttoncontainer{
-    justify-content: center;
-    align-content: center;
-    height: fit-content;
-}
-
-.addicon{
-    font-size: 56px;
-}
-
-.bar-footer{
-	height: auto;
-    background-color: white;
-}
-
 .slidecontainer{
     border: 1px solid black;
     display:inline-block;
@@ -53,10 +35,6 @@
     width: 100px;
     height:100px;
     position: relative;
-}
-
-.userinput{
-    border-top: 1px solid black;
 }
 
 .music{

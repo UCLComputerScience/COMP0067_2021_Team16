@@ -1,4 +1,4 @@
-import {IonApp, IonButton, IonHeader, IonRouterOutlet} from '@ionic/react';
+import {IonApp, IonRouterOutlet} from '@ionic/react';
 import App_Router from './components/App_Router/App_Router';
 import { IonReactRouter } from '@ionic/react-router';
 
