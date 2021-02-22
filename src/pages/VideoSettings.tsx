@@ -2,15 +2,15 @@ import { IonContent, IonHeader, IonItem, IonList, IonPage, IonTitle, IonToolbar 
 import ToggleButton from '../components/ShuffleToggle/ShuffleToggle';
 import InputSettings from '../components/SettingsCard/SettingsCard';
 import BackButton from '../components/BackButton/BackButton';
+import './VideoSettings.css';
 
-import './Tab3.css';
-
-const Tab3: React.FC = () => {
+const VideoSettings: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
           <IonTitle>Video Settings</IonTitle>
+          <BackButton/>
         </IonToolbar>
       </IonHeader>
       <IonContent>
@@ -30,4 +30,4 @@ const Tab3: React.FC = () => {
   );
 };
 
-export default Tab3;
+export default VideoSettings;

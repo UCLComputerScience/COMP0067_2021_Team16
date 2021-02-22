@@ -1,5 +1,4 @@
 import {IonApp, IonButton, IonHeader, IonRouterOutlet} from '@ionic/react';
-import Nav_Bar from './components/Nav_Bar/Nav_Bar';
 import App_Router from './components/App_Router/App_Router';
 import { IonReactRouter } from '@ionic/react-router';
 
