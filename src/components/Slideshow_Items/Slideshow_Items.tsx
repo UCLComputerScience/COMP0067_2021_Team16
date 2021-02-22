@@ -11,15 +11,16 @@ interface EditMode {
   Editing: boolean;
 }
 
+let one = new SlideshowObj('one',0,true);
+let two = new SlideshowObj('two',1,true);
+let three = new SlideshowObj('three',2,true);
+let four = new SlideshowObj('four',3,true);
+let five = new SlideshowObj('five',4,true);
+
+let myitems = [one,two,three,four,five];
+
 const Slideshow_Items: React.FC<EditMode> = (props) => {
 
-  let one = new SlideshowObj('one',0,true);
-  let two = new SlideshowObj('two',1,false);
-  let three = new SlideshowObj('three',2,true);
-  let four = new SlideshowObj('four',3,true);
-  let five = new SlideshowObj('five',4,true);
-
-  let myitems = [one,two,three,four,five];
   const [ReOrderModeDisabled, setReOrderModeDisabled] = useState<boolean>(!props.Editing);
 
   useEffect(()=>{setReOrderModeDisabled(!props.Editing)},[props.Editing])
@@ -30,7 +31,6 @@ const Slideshow_Items: React.FC<EditMode> = (props) => {
 
     let itemtomove = myitems.splice(event.detail.from, 1)[0];
     myitems.splice(event.detail.to, 0, itemtomove);
-
     myitems.forEach(function(item,index){item.position = index});
 
     //console.log(myitems)
