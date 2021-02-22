@@ -11,8 +11,8 @@ const SupportPage: React.FC = () => {
       <IonContent fullscreen>
         <BackButton />
         <TitleBar name={"Support"} />
-        <iframe src="https://www.youtube.com/embed/e7yg0A-PCTI"></iframe>
-        {/* <iframe src="https://www.youtube.com/embed/ylrelG3QQ4s"></iframe> */}
+        <iframe src="https://www.youtube.com/embed/ylrelG3QQ4s"></iframe>
+        {/* <iframe src="https://www.youtube.com/embed/e7yg0A-PCTI"></iframe> */}
         <RateApp />
         <h1>Science Behind Images</h1>
         <p>
