@@ -1,6 +1,7 @@
-import {IonApp, IonButton, IonHeader} from '@ionic/react';
+import {IonApp, IonButton, IonHeader, IonRouterOutlet} from '@ionic/react';
 import Nav_Bar from './components/Nav_Bar/Nav_Bar';
 import App_Router from './components/App_Router/App_Router';
+import { IonReactRouter } from '@ionic/react-router';
 
 
 /* Core CSS required for Ionic components to work properly */
@@ -26,8 +27,11 @@ import React from 'react';
 
 const App: React.FC = () => {
   return (
+    
     <IonApp>
-      <Nav_Bar />
+      <IonReactRouter>
+        <IonRouterOutlet><App_Router /></IonRouterOutlet>
+      </IonReactRouter>
     </IonApp>
   );
 }

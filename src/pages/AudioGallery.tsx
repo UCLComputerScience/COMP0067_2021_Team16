@@ -8,6 +8,7 @@ const AudioGallery: React.FC = () => {
       <IonHeader>
         <IonToolbar>
           <IonTitle>Audio Gallery</IonTitle>
+          <BackButton/>
         </IonToolbar>
       </IonHeader>
       <IonContent>

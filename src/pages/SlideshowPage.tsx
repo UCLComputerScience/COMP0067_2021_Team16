@@ -1,4 +1,4 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton } from '@ionic/react';
 import Slideshow from '../components/Slideshow/Slideshow';
 import Slider from '../components/Slider/Slider';
 
@@ -8,6 +8,7 @@ const SlideshowPage: React.FC = () => {
       <IonContent fullscreen>
         <Slideshow />
         <Slider />
+        <IonButton routerLink='/SelectionPage'>press to unlock</IonButton>
       </IonContent>
     </IonPage>
   );

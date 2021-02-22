@@ -26,9 +26,9 @@ const Nav_Bar: React.FC = () => {
             <IonIcon icon={square} />
             <IonLabel>Slideshow</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab1" href="/tab1">
+          <IonTabButton tab="VideoSettings" href="/VideoSettings">
             <IonIcon icon={triangle} />
-            <IonLabel>Tab 1</IonLabel>
+            <IonLabel>Video Settings</IonLabel>
           </IonTabButton>
           <IonTabButton tab="selectionpage" href="/SelectionPage">
             <IonIcon icon={ellipse} />

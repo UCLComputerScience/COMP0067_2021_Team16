@@ -19,7 +19,7 @@ const Slideshow_Item: React.FC<ContainerProps> = (props) => {
       <IonGrid>
         <IonRow>
           <IonCol className='checkcontainer'>{props.editing ? <IonCheckbox checked={props.item.enabled} className='checkbox' onIonChange={toggleslideshow}/>: null}</IonCol>
-          <IonCol className='slidename'><IonButton fill='clear' routerLink='slideshowpage'>{props.item.name}</IonButton></IonCol>
+          <IonCol className='slidename'><IonButton fill='clear' routerLink='slideshowpage'><h2>{props.item.name}</h2></IonButton></IonCol>
           <IonCol className='reordergrabber'>{props.editing ? <IonReorder className='grabicon'/>: null}</IonCol>
         </IonRow>
       </IonGrid>
