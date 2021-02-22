@@ -2,15 +2,7 @@ import { IonBackButton, IonHeader, IonToolbar, IonButtons, IonMenuButton, IonCon
 import "./BackButton.css";
 
 const BackButton: React.FC = () => (
-  <IonContent>
-    <IonHeader>
-      <IonToolbar>
-        <IonButtons slot="start">
-          <IonBackButton defaultHref="./slideshowpage"> </IonBackButton>
-        </IonButtons>
-      </IonToolbar>
-    </IonHeader>
-  </IonContent>
+  <IonBackButton defaultHref="./slideshowpage"> </IonBackButton>
   );
 
 export default BackButton;

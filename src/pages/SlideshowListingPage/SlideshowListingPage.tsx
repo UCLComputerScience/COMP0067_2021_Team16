@@ -8,7 +8,7 @@ import { addCircleSharp} from 'ionicons/icons';
 
 const AddButton: React.FC = () =>{
     return(
-        <IonButton fill='clear' className='addbutton'>
+        <IonButton fill='clear' className='addbutton' routerLink='/EditSlidesPage'>
             <IonIcon icon={addCircleSharp} className='addicon'/>
         </IonButton>
     );

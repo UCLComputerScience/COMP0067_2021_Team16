@@ -1,0 +1,33 @@
+.title {
+    text-align: center;
+    align-items: center;
+    align-self: center;
+}
+
+.backbutton{
+    justify-content: flex-start;
+    align-items: flex-start;
+
+}
+
+.addbutton{
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+    height:fit-content;
+    padding: 10px;
+}
+
+.buttoncontainer{
+    justify-content: center;
+    align-content: center;
+    height: fit-content;
+}
+
+.addicon{
+    font-size: 56px;
+}
+
+.bar-footer{
+	height: auto;
+}
