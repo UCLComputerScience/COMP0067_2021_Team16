@@ -108,7 +108,7 @@ const Slideshow: React.FC = () => {
                 <TitleBar name={name} />
               </IonRow>
               <IonRow>
-                <img src={image} className="spinner rotate" />
+                <img key={i} src={image} className="spinner rotate" />
                 {/* <Image key={i} id={id} image={image} /> */}
                 {/* <IonRangeSlider type={"single"} min={10} max={100} from={0} to={10} step={1} values={[]} keyboard={true} /> */}
               </IonRow>
