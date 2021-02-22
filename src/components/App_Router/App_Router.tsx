@@ -5,6 +5,8 @@ import {IonRouterOutlet} from '@ionic/react';
 //Import all your pages here
 import Tab1 from '../../pages/Tab1';
 import Tab3 from '../../pages/Tab3';
+import Tab4 from '../../pages/Tab4';
+import Tab5 from '../../pages/Tab5';
 import SlideshowPage from '../../pages/SlideshowPage';
 import EditSlideshowsPage from '../../pages/EditSlideshowsPage';
 import NewTestPage from '../../pages/Newtestpage';
@@ -23,6 +25,8 @@ const App_Router: React.FC = () => {
       <Route exact path="/" component={SlideshowPage} />
       <Route exact path="/EditSlideshowsPage" component={EditSlideshowsPage} />
       <Route exact path="/NewTestPage" component={NewTestPage} beforeEnter={() => console.log('entering')} beforeLeave={() => console.log('leaving')} />
+      <Route exact path="/tab4" component={Tab4} />
+      <Route exact path="/tab5" component={Tab5} />
     </IonRouterOutlet>
   );
 }
