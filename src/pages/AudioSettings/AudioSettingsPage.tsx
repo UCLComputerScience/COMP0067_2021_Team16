@@ -1,4 +1,4 @@
-import { IonContent, IonPage } from '@ionic/react';
+import { IonContent, IonPage, IonButton } from '@ionic/react';
 import BackButton from '../../components/BackButton/BackButton';
 import TitleBar from '../../components/TitleBar/TitleBar';
 import RadioButton from '../../components/RadioButton/RadioButton';
@@ -10,6 +10,7 @@ const AudioSettingsPage: React.FC = () => {
         <BackButton />
         <TitleBar name={"Audio Settings"}/>
         <RadioButton />
+        <IonButton routerLink='/AudioGallery'>See Audio Gallery</IonButton>
      </IonContent>
     </IonPage>
   );

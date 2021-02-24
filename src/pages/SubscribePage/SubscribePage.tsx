@@ -5,6 +5,7 @@ import {
   IonLabel,
   IonCheckbox,
   IonPage,
+  IonButton
 } from "@ionic/react";
 import BackButton from "../../components/BackButton/BackButton";
 import TitleBar from "../../components/TitleBar/TitleBar";
@@ -25,6 +26,7 @@ const SubscribePage: React.FC = () => {
             onIonChange={(e) => setChecked(e.detail.checked)}
           />
         </IonItem>
+        <IonButton>Submit</IonButton>
       </IonContent>
     </IonPage>
   );
