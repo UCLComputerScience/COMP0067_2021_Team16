@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonInput, IonItem, IonList, IonItemDivider } from '@ionic/react';
+import {IonInput} from '@ionic/react';
 
-const InputSettings: React.FC = () => {
+const SlideDuration: React.FC = () => {
 
   const [number, setNumber] = useState<number>();
 
@@ -10,4 +10,13 @@ const InputSettings: React.FC = () => {
   )
 };
 
-export default InputSettings;
+const AnimationSpeed: React.FC = () => {
+
+  const [number, setNumber] = useState<number>();
+
+  return (
+  <IonInput type="number" value={number} placeholder="Set animation speed (0 - 1.5x)" onIonChange={e => setNumber(parseInt(e.detail.value!, 10))}></IonInput>
+  )
+};
+
+export {SlideDuration, AnimationSpeed};

@@ -1,6 +1,6 @@
 import { IonContent, IonHeader, IonItem, IonList, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import ToggleButton from '../../components/ShuffleToggle/ShuffleToggle';
-import InputSettings from '../../components/SettingsCard/SettingsCard';
+import {SlideDuration, AnimationSpeed} from '../../components/SettingsCard/SettingsCard';
 import BackButton from '../../components/BackButton/BackButton';
 import './VideoSettings.css';
 
@@ -16,10 +16,10 @@ const VideoSettings: React.FC = () => {
       <IonContent>
         <IonList>
           <IonItem>
-            <InputSettings />
+            <SlideDuration />
           </IonItem>
           <IonItem>
-            <InputSettings />
+            <AnimationSpeed />
           </IonItem>
           <IonItem>
             <ToggleButton />
