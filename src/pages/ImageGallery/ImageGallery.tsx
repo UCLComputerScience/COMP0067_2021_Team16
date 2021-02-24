@@ -55,7 +55,14 @@ const EditSlidesPage: React.FC = () => {
                 </IonToolbar>
             </IonHeader>
             <IonContent fullscreen>
-                {myitems.map(item => <Editableslide slide={item} key={item.name}/>)}
+                Default images
+                <IonRow>
+                    {myitems.slice(0, myitems.length/2).map(item => <Editableslide slide={item} key={item.name}/>)}
+                </IonRow>
+                Uploaded images
+                <IonRow>
+                    {myitems.slice(myitems.length/2).map(item => <Editableslide slide={item} key={item.name}/>)}
+                </IonRow>
             </IonContent>);
             <IonFooter className='bar-footer'>
                 <AddBar/>
