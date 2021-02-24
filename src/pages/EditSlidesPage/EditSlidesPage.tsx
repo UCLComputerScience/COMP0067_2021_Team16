@@ -55,7 +55,7 @@ const EditSlidesPage: React.FC = () => {
                         </IonRow>
                         <IonRow>
                             <IonToolbar className='userinput'>
-                                <User_Input name='Please enter a slideshow name:'/>
+                                <User_Input_Slideshow name='Please enter a slideshow name:'/>
                             </IonToolbar>
                         </IonRow>
                     </IonGrid>

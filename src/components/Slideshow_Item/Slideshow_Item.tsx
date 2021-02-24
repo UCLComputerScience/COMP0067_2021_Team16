@@ -2,6 +2,7 @@ import './Slideshow_Item.css';
 import '@ionic/react'
 import { IonItem, IonLabel, IonReorder, IonCheckbox, IonGrid, IonRow, IonCol, IonButton } from '@ionic/react';
 import React,{useState, useEffect} from 'react';
+import {Update_Selected_Slideshow_Context} from '../../pages/Selected_Slideshow_Context';
 
 interface ContainerProps {
   item: object;
@@ -12,6 +13,8 @@ let itemlinks = ['/slideshowpage','EditSlidesPage'];
 
 const Slideshow_Item: React.FC<ContainerProps> = (props) => {
   const [link,setLink] = useState<string>(itemlinks[0]);
+  const slideshow_updater = Update_Selected_Slideshow_Context();
+  
   
   function toggleslideshow(){
     props.item.enabled = !props.item.enabled; 
@@ -26,7 +29,7 @@ const Slideshow_Item: React.FC<ContainerProps> = (props) => {
       <IonGrid>
         <IonRow>
           <IonCol className='checkcontainer'>{props.editing ? <IonCheckbox checked={props.item.enabled} className='checkbox' onIonChange={toggleslideshow}/>: null}</IonCol>
-          <IonCol className='slidename'><IonButton fill='clear' routerLink={link}><h2>{props.item.name}</h2></IonButton></IonCol>
+          <IonCol className='slidename'><IonButton fill='clear' routerLink={link} onClick={()=>slideshow_updater(props.item)}><h2>{props.item.name}</h2></IonButton></IonCol>
           <IonCol className='reordergrabber'>{props.editing ? <IonReorder className='grabicon'/>: null}</IonCol>
         </IonRow>
       </IonGrid>
