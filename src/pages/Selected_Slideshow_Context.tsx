@@ -22,7 +22,7 @@ export const SelectedSlideshowProvider: React.FC<ContainerProps> = ({children}) 
     const [SelectedSlideshow,UpdateSelectedSlideshow] = useState<Object>(new Slideshow_Class(null,null,true));
 
     function updateSelectedSlideshow(Slideshow:object){
-        //console.log("Selected Slideshow: ", Slideshow);
+        console.log("Selected Slideshow: ", Slideshow);
         UpdateSelectedSlideshow(Slideshow);
     }
 

@@ -1,18 +1,11 @@
-import { IonCol, IonContent, IonFooter, IonGrid, IonHeader, IonPage, IonRow, IonTitle, IonToolbar,IonButton,IonIcon} from '@ionic/react';
+import { IonCol, IonContent, IonFooter, IonGrid, IonHeader, IonPage, IonRow, IonTitle, IonToolbar,} from '@ionic/react';
 import Nav_Bar from '../../components/Nav_Bar/Nav_Bar';
 import Edit_Button from '../../components/EditButton/EditButton';
 import './SlideshowListingPage.css';
 import Slideshow_Items from '../../components/Slideshow_Items/Slideshow_Items';
 import React, { useState } from 'react';
-import { addCircleSharp} from 'ionicons/icons';
+import AddNewSlideshow from '../../components/AddNewSlideshow/AddNewSlideshow';
 
-const AddButton: React.FC = () =>{
-    return(
-        <IonButton fill='clear' className='addbutton' routerLink='/EditSlidesPage'>
-            <IonIcon icon={addCircleSharp} className='addicon'/>
-        </IonButton>
-    );
-}
 
 const SelectionPage: React.FC = () => {
     
@@ -36,7 +29,7 @@ const SelectionPage: React.FC = () => {
             </IonContent>);
             <IonFooter className='bar-footer'>
                 <IonGrid>
-                    {editMode ? <IonRow className='buttoncontainer'><AddButton/></IonRow>:null}
+                    {editMode ? <IonRow className='buttoncontainer'><AddNewSlideshow/></IonRow>:null}
                     {editMode ? null:<IonRow><Nav_Bar/></IonRow>}
                 </IonGrid>
             </IonFooter>
