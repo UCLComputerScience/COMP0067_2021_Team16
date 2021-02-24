@@ -6,6 +6,7 @@ import User_Input from '../../components/User_Input/User_Input';
 import Slides from './Slides_Class';
 import Editableslide from '../../components/EditableSlides/EditableSlides';
 import React from 'react';
+import User_Input_Slideshow from '../../components/User_Input Slideshow/User_Input_Slideshow';
 
 //importing images (replace when we have our DB)
 
