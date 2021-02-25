@@ -11,6 +11,8 @@ import SupportPage from '../../pages/SupportPage/SupportPage';
 import AudioSettings from '../../pages/AudioSettings/AudioSettingsPage';
 import SubscribePage from '../../pages/SubscribePage/SubscribePage';
 import VideoSettings from '../../pages/VideoSettings/VideoSettings';
+import ImageGallery from '../../pages/ImageGallery/ImageGallery';
+import RecordAudio from '../../pages/RecordAudio/RecordAudio';
 
 //below are all the routes with their URLs (denoted by 'path') and the actual page component (child to each Route component)
 const App_Router: React.FC = () => {
@@ -23,6 +25,8 @@ const App_Router: React.FC = () => {
       <Route exact path="/SupportPage" component={SupportPage} />
       <Route exact path="/EditSlidesPage" component={EditSlidesPage} />
       <Route exact path="/SelectionPage" component={SlideshowListingPage} />
+      <Route exact path="/ImageGallery" component={ImageGallery} />
+      <Route exact path="/RecordAudio" component={RecordAudio} />
       <Route path="/slideshowpage" component={SlideshowPage} />
       <Route exact path="/" component={SlideshowPage} />
     </IonRouterOutlet>
