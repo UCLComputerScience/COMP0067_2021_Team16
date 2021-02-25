@@ -25,16 +25,19 @@ import React from 'react';
 
 /* Context variables*/
 import {SelectedSlideshowProvider} from './contexts/Selected_Slideshow_Context';
+import {SettingsProvider} from './contexts/Settings_Context';
 
 
 const App: React.FC = () => {
   return (
     <IonApp>
-      <SelectedSlideshowProvider>
-        <IonReactRouter>
-          <IonRouterOutlet><App_Router /></IonRouterOutlet>
-        </IonReactRouter>
-      </SelectedSlideshowProvider>
+      <SettingsProvider>
+        <SelectedSlideshowProvider>
+          <IonReactRouter>
+            <IonRouterOutlet><App_Router /></IonRouterOutlet>
+          </IonReactRouter>
+        </SelectedSlideshowProvider>
+      </SettingsProvider>
     </IonApp>
   );
 }
