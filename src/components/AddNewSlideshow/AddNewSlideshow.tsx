@@ -1,6 +1,6 @@
 import {IonButton,IonIcon} from '@ionic/react';
 import {addCircleSharp} from 'ionicons/icons';
-import {Update_Selected_Slideshow_Context} from '../../pages/Selected_Slideshow_Context';
+import {Update_Selected_Slideshow_Context} from '../../contexts/Selected_Slideshow_Context';
 import Slideshow_Class from '../../classes/Slideshow_Class';
 
 const AddNewSlideshow: React.FC = () =>{

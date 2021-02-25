@@ -2,7 +2,7 @@ import './Slideshow_Item.css';
 import '@ionic/react'
 import { IonItem, IonLabel, IonReorder, IonCheckbox, IonGrid, IonRow, IonCol, IonButton } from '@ionic/react';
 import React,{useState, useEffect} from 'react';
-import {Update_Selected_Slideshow_Context} from '../../pages/Selected_Slideshow_Context';
+import {Update_Selected_Slideshow_Context} from '../../contexts/Selected_Slideshow_Context';
 
 interface ContainerProps {
   item: object;

@@ -24,7 +24,7 @@ import './theme/variables.css';
 import React from 'react';
 
 /* Context variables*/
-import {SelectedSlideshowProvider} from './pages/Selected_Slideshow_Context';
+import {SelectedSlideshowProvider} from './contexts/Selected_Slideshow_Context';
 
 
 const App: React.FC = () => {

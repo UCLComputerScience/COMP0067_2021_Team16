@@ -2,7 +2,7 @@ import './User_Input_Slideshow.css';
 import '@ionic/react'
 import { IonItem, IonLabel, IonInput } from '@ionic/react';
 import React, { useRef } from 'react';
-import {Selected_Slideshow_Context} from '../../pages/Selected_Slideshow_Context';
+import {Selected_Slideshow_Context} from '../../contexts/Selected_Slideshow_Context';
 
 interface ContainerProps {
   name: string;
