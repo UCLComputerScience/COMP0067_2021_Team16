@@ -1,7 +1,8 @@
-import { IonContent, IonHeader, IonItem, IonList, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonContent, IonFooter, IonHeader, IonItem, IonList, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import ToggleButton from '../../components/ShuffleToggle/ShuffleToggle';
 import {SlideDuration, AnimationSpeed} from '../../components/SettingsCard/SettingsCard';
 import BackButton from '../../components/BackButton/BackButton';
+import ImageBar from '../../components/ImageBar/ImageBar';
 import './VideoSettings.css';
 
 const VideoSettings: React.FC = () => {
@@ -26,6 +27,9 @@ const VideoSettings: React.FC = () => {
           </IonItem>
         </IonList>
       </IonContent>
+      <IonFooter>
+          <ImageBar/>
+      </IonFooter>
     </IonPage>
   );
 };
