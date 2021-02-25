@@ -1,8 +1,18 @@
 import React, { useState } from "react";
-import { IonModal, IonButton, IonContent, IonPage, IonRow } from "@ionic/react";
+import {
+  IonModal,
+  IonCol,
+  IonButton,
+  IonContent,
+  IonPage,
+  IonRow,
+  IonHeader,
+  IonToolbar,
+} from "@ionic/react";
 import BackButton from "../../components/BackButton/BackButton";
 import TitleBar from "../../components/TitleBar/TitleBar";
 import RateApp from "../../components/RateApp/RateApp";
+import "./SupportPage.css";
 
 const SupportPage: React.FC = () => {
   const [checked, setChecked] = useState(false);
@@ -13,9 +23,17 @@ const SupportPage: React.FC = () => {
   return (
     <IonPage>
       <IonContent fullscreen>
-        <BackButton />
-        <TitleBar name={"Support"} />
-        <IonRow className="modalrow">
+        <IonHeader>
+          <IonToolbar>
+            <IonRow>
+              <BackButton />
+              <IonCol className="ion-align-items-center ion-justify-content-center">
+                <TitleBar name={"Support"} />
+              </IonCol>
+            </IonRow>
+          </IonToolbar>
+        </IonHeader>
+        <IonRow className="modalrow ion-align-items-center ion-justify-content-center">
           <IonModal isOpen={showModal} cssClass="my-custom-class">
             <iframe src="https://www.youtube.com/embed/ylrelG3QQ4s"></iframe>
             <IonButton onClick={() => setShowModal(false)}>
@@ -24,7 +42,7 @@ const SupportPage: React.FC = () => {
           </IonModal>
           <IonButton onClick={() => setShowModal(true)}>Tutorial</IonButton>
         </IonRow>
-        <IonRow className="modalrow">
+        <IonRow className="modalrow ion-align-items-center ion-justify-content-center">
           <IonModal isOpen={showModal1} cssClass="my-custom-class">
             <p>
               Images developed based on the current scientific findings on
@@ -56,7 +74,7 @@ const SupportPage: React.FC = () => {
             Science Behind Images
           </IonButton>
         </IonRow>
-        <IonRow className="modalrow">
+        <IonRow className="modalrow ion-align-items-center ion-justify-content-center">
           <IonModal isOpen={showModal2} cssClass="my-custom-class">
             <p>
               This app is based on the Best Sellers and most gifted books for
@@ -81,7 +99,7 @@ const SupportPage: React.FC = () => {
             Cosmic Baby Books
           </IonButton>
         </IonRow>
-        <IonRow className="modalrow">
+        <IonRow className="modalrow ion-align-items-center ion-justify-content-center">
           <IonModal isOpen={showModal3} cssClass="my-custom-class">
             <p>
               Space Psychologist, Director of the Centre of Space Medicine,
