@@ -4,7 +4,7 @@ import { IonList, IonReorderGroup } from '@ionic/react';
 import React, { useState, useEffect } from 'react';
 import { ItemReorderEventDetail } from '@ionic/core';
 import Slideshow_Item from '../Slideshow_Item/Slideshow_Item';
-import SlideshowObj from './Slideshow_Class';
+import SlideshowObj from '../../classes/Slideshow_Class';
 
 
 interface EditMode {

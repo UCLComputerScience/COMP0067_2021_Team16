@@ -1,4 +1,4 @@
-import Slideshow_Class from '../components/Slideshow_Items/Slideshow_Class';
+import Slideshow_Class from '../classes/Slideshow_Class';
 import React,{useState,useContext} from 'react';
 
 const Selected_Slideshow = React.createContext(null);
