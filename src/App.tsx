@@ -24,7 +24,7 @@ import './theme/variables.css';
 import React from 'react';
 
 /* Context variables*/
-import {SelectedSlideshowProvider} from './contexts/Selected_Slideshow_Context';
+import {SlideshowProvider} from './contexts/Slideshow_Context';
 import {SettingsProvider} from './contexts/Settings_Context';
 
 
@@ -32,11 +32,11 @@ const App: React.FC = () => {
   return (
     <IonApp>
       <SettingsProvider>
-        <SelectedSlideshowProvider>
+        <SlideshowProvider>
           <IonReactRouter>
-            <IonRouterOutlet><App_Router /></IonRouterOutlet>
+            <IonRouterOutlet><App_Router/></IonRouterOutlet>
           </IonReactRouter>
-        </SelectedSlideshowProvider>
+        </SlideshowProvider>
       </SettingsProvider>
     </IonApp>
   );
