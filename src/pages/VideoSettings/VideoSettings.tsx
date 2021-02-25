@@ -1,7 +1,8 @@
-import { IonContent, IonHeader, IonItem, IonList, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonRow, IonCol, IonContent, IonFooter, IonHeader, IonItem, IonList, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import ToggleButton from '../../components/ShuffleToggle/ShuffleToggle';
-import InputSettings from '../../components/SettingsCard/SettingsCard';
+import {SlideDuration, AnimationSpeed} from '../../components/SettingsCard/SettingsCard';
 import BackButton from '../../components/BackButton/BackButton';
+import ImageBar from '../../components/ImageBar/ImageBar';
 import './VideoSettings.css';
 
 const VideoSettings: React.FC = () => {
@@ -9,23 +10,29 @@ const VideoSettings: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Video Settings</IonTitle>
-          <BackButton/>
+          <IonRow>
+              <IonCol className='backbutton'><BackButton ion-no-padding ion-no-margin/></IonCol>
+              <IonCol className='title'><IonTitle>Video Settings</IonTitle></IonCol>
+              <IonCol></IonCol>
+          </IonRow>
         </IonToolbar>
       </IonHeader>
       <IonContent>
         <IonList>
           <IonItem>
-            <InputSettings />
+            <SlideDuration />
           </IonItem>
           <IonItem>
-            <InputSettings />
+            <AnimationSpeed />
           </IonItem>
           <IonItem>
             <ToggleButton />
           </IonItem>
         </IonList>
       </IonContent>
+      <IonFooter>
+          <ImageBar/>
+      </IonFooter>
     </IonPage>
   );
 };
