@@ -23,14 +23,21 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 import React from 'react';
 
+/* Context variables*/
+import {SlideshowProvider} from './contexts/Slideshow_Context';
+import {SettingsProvider} from './contexts/Settings_Context';
+
 
 const App: React.FC = () => {
   return (
-    
     <IonApp>
-      <IonReactRouter>
-        <IonRouterOutlet><App_Router /></IonRouterOutlet>
-      </IonReactRouter>
+      <SettingsProvider>
+        <SlideshowProvider>
+          <IonReactRouter>
+            <IonRouterOutlet><App_Router/></IonRouterOutlet>
+          </IonReactRouter>
+        </SlideshowProvider>
+      </SettingsProvider>
     </IonApp>
   );
 }

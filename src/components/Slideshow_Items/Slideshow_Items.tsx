@@ -4,36 +4,27 @@ import { IonList, IonReorderGroup } from '@ionic/react';
 import React, { useState, useEffect } from 'react';
 import { ItemReorderEventDetail } from '@ionic/core';
 import Slideshow_Item from '../Slideshow_Item/Slideshow_Item';
-import SlideshowObj from './Slideshow_Class';
+import {Access_Slideshow_List} from '../../contexts/Slideshow_Context';
 
 
 interface EditMode {
   Editing: boolean;
 }
 
-let one = new SlideshowObj('one',0,true);
-let two = new SlideshowObj('two',1,true);
-let three = new SlideshowObj('three',2,true);
-let four = new SlideshowObj('four',3,true);
-let five = new SlideshowObj('five',4,true);
-
-let myitems = [one,two,three,four,five];
-
 const Slideshow_Items: React.FC<EditMode> = (props) => {
+
+  const myitems = Access_Slideshow_List();
 
   const [ReOrderModeDisabled, setReOrderModeDisabled] = useState<boolean>(!props.Editing);
 
   useEffect(()=>{setReOrderModeDisabled(!props.Editing)},[props.Editing])
 
   function doReorder(event: CustomEvent<ItemReorderEventDetail>) {
-    //console.log(myitems);
-    //console.log('Dragged from index', event.detail.from, 'to', event.detail.to);
 
     let itemtomove = myitems.splice(event.detail.from, 1)[0];
     myitems.splice(event.detail.to, 0, itemtomove);
     myitems.forEach(function(item,index){item.position = index});
 
-    //console.log(myitems)
     event.detail.complete();
   }
 

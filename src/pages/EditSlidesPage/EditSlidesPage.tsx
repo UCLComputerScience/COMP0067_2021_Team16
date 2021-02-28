@@ -2,10 +2,11 @@ import { IonCol, IonContent, IonFooter, IonGrid, IonHeader, IonPage, IonRow, Ion
 import './EditSlidesPage.css';
 import Edit_Bar from '../../components/Edit_Bar/Edit_Bar';
 import Back_Button from '../../components/BackButton/BackButton';
-import User_Input from '../../components/User_Input/User_Input';
-import Slides from './Slides_Class';
+import Slides from '../../classes/Slides_Class';
 import Editableslide from '../../components/EditableSlides/EditableSlides';
 import React from 'react';
+import User_Input_Slideshow from '../../components/User_Input Slideshow/User_Input_Slideshow';
+import {useState} from 'react';
 
 //importing images (replace when we have our DB)
 
@@ -40,7 +41,25 @@ let twelve = new Slides("solmaris",imgtwelve,11,1,1);
 
 let myitems = [one,two,three,four,five,six,seven,eight,nine,ten,eleven,twelve];
 
+
 const EditSlidesPage: React.FC = () => {
+    const [Slides,UpdateSlides] = useState(()=>{return myitems});
+    const [reRender,SetRerender] = useState(false);  //had to create this state var to force rerender certain components 
+
+    function check_all(){
+        const temp = Slides;
+        temp.forEach(function(item){item.selected=true});
+        UpdateSlides(temp);
+        SetRerender(!reRender);
+    }
+    
+    function uncheck_all(){
+        const temp = Slides;
+        temp.forEach(function(item){item.selected=false});
+        UpdateSlides(temp);
+        SetRerender(!reRender);
+    }
+
 
     return(
         <IonPage>
@@ -54,17 +73,17 @@ const EditSlidesPage: React.FC = () => {
                         </IonRow>
                         <IonRow>
                             <IonToolbar className='userinput'>
-                                <User_Input name='Please enter a slideshow name:'/>
+                                <User_Input_Slideshow name='Please enter a slideshow name:'/>
                             </IonToolbar>
                         </IonRow>
                     </IonGrid>
                 </IonToolbar>
             </IonHeader>
             <IonContent fullscreen>
-                {myitems.map(item => <Editableslide slide={item} key={item.name}/>)}
+                {Slides.map(item => <Editableslide slide={item} key={item.name} rerender={reRender}/>)}
             </IonContent>);
             <IonFooter className='bar-footer'>
-                <Edit_Bar/>
+                <Edit_Bar slides={Slides} check_all={check_all} uncheck_all={uncheck_all}/>
             </IonFooter>
         </IonPage>
 );
