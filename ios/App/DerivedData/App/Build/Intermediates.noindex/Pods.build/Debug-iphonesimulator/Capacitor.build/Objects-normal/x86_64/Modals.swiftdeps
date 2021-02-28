@@ -1,0 +1,790 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "CAPModalsPlugin"
+provides-nominal:
+- "9Capacitor15CAPModalsPluginC"
+provides-member:
+- ["9Capacitor15CAPModalsPluginC", ""]
+provides-dynamic-lookup:
+- "alert"
+- "buildActionSheet"
+- "confirm"
+- "prompt"
+- "showActions"
+depends-top-level:
+- !private "=="
+- "??"
+- !private "Array"
+- "AssignmentPrecedence"
+- !private "BooleanLiteralType"
+- "CAPModalsPlugin"
+- "CAPPlugin"
+- "CAPPluginCall"
+- "CastingPrecedence"
+- !private "Dictionary"
+- !private "DispatchQueue"
+- "FloatLiteralType"
+- "IntegerLiteralType"
+- "JSArray"
+- !private "JSObject"
+- "String"
+- !private "StringLiteralType"
+- "UIAlertAction"
+- "UIAlertController"
+- "UITextField"
+- "Void"
+depends-member:
+- !private ["Sa", "enumerated"]
+- !private ["Sa", "subscript"]
+- !private ["SK", ""]
+- !private ["SK", "enumerated"]
+- !private ["SK", "subscript"]
+- !private ["So15CALayerDelegateP", ""]
+- !private ["So15CALayerDelegateP", "placeholder"]
+- !private ["So15CALayerDelegateP", "text"]
+- !private ["9Capacitor9CAPBridgeC", "viewController"]
+- ["9Capacitor15CAPModalsPluginC", "CAPPluginCall"]
+- !private ["9Capacitor15CAPModalsPluginC", "DispatchQueue"]
+- ["9Capacitor15CAPModalsPluginC", "JSArray"]
+- !private ["9Capacitor15CAPModalsPluginC", "JSObject"]
+- ["9Capacitor15CAPModalsPluginC", "String"]
+- !private ["9Capacitor15CAPModalsPluginC", "UIAlertAction"]
+- ["9Capacitor15CAPModalsPluginC", "UIAlertController"]
+- !private ["9Capacitor15CAPModalsPluginC", "UITextField"]
+- !private ["9Capacitor15CAPModalsPluginC", "Void"]
+- ["9Capacitor15CAPModalsPluginC", ""]
+- ["9Capacitor15CAPModalsPluginC", "alert"]
+- !private ["9Capacitor15CAPModalsPluginC", "bridge"]
+- ["9Capacitor15CAPModalsPluginC", "buildActionSheet"]
+- ["9Capacitor15CAPModalsPluginC", "confirm"]
+- ["9Capacitor15CAPModalsPluginC", "deinit"]
+- ["9Capacitor15CAPModalsPluginC", "init"]
+- ["9Capacitor15CAPModalsPluginC", "prompt"]
+- !private ["9Capacitor15CAPModalsPluginC", "setCenteredPopover"]
+- ["9Capacitor15CAPModalsPluginC", "showActions"]
+- ["So9CAPPluginC", "CAPPluginCall"]
+- !private ["So9CAPPluginC", "DispatchQueue"]
+- ["So9CAPPluginC", "JSArray"]
+- !private ["So9CAPPluginC", "JSObject"]
+- ["So9CAPPluginC", "String"]
+- !private ["So9CAPPluginC", "UIAlertAction"]
+- ["So9CAPPluginC", "UIAlertController"]
+- !private ["So9CAPPluginC", "UITextField"]
+- !private ["So9CAPPluginC", "Void"]
+- ["So9CAPPluginC", ""]
+- ["So9CAPPluginC", "alert"]
+- !private ["So9CAPPluginC", "bridge"]
+- ["So9CAPPluginC", "buildActionSheet"]
+- ["So9CAPPluginC", "confirm"]
+- ["So9CAPPluginC", "init"]
+- ["So9CAPPluginC", "prompt"]
+- !private ["So9CAPPluginC", "setCenteredPopover"]
+- ["So9CAPPluginC", "showActions"]
+- !private ["So13CAPPluginCallC", "error"]
+- !private ["So13CAPPluginCallC", "getArray"]
+- !private ["So13CAPPluginCallC", "options"]
+- !private ["So13CAPPluginCallC", "success"]
+- !private ["s7CVarArgP", "DispatchQueue"]
+- !private ["s7CVarArgP", "JSObject"]
+- !private ["s7CVarArgP", "Style"]
+- !private ["s7CVarArgP", "UIAlertAction"]
+- !private ["s7CVarArgP", "UIAlertController"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "addAction"]
+- !private ["s7CVarArgP", "addTextField"]
+- !private ["s7CVarArgP", "async"]
+- !private ["s7CVarArgP", "bridge"]
+- !private ["s7CVarArgP", "buildActionSheet"]
+- !private ["s7CVarArgP", "enumerated"]
+- !private ["s7CVarArgP", "error"]
+- !private ["s7CVarArgP", "getArray"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "main"]
+- !private ["s7CVarArgP", "options"]
+- !private ["s7CVarArgP", "placeholder"]
+- !private ["s7CVarArgP", "present"]
+- !private ["s7CVarArgP", "setCenteredPopover"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "success"]
+- !private ["s7CVarArgP", "text"]
+- !private ["s7CVarArgP", "textFields"]
+- !private ["s7CVarArgP", "viewController"]
+- !private ["Sl", ""]
+- !private ["Sl", "enumerated"]
+- !private ["Sl", "subscript"]
+- !private ["SL", ""]
+- !private ["10Foundation15ContiguousBytesP", "enumerated"]
+- !private ["10Foundation15ContiguousBytesP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "DispatchQueue"]
+- !private ["s28CustomDebugStringConvertibleP", "JSObject"]
+- !private ["s28CustomDebugStringConvertibleP", "Style"]
+- !private ["s28CustomDebugStringConvertibleP", "UIAlertAction"]
+- !private ["s28CustomDebugStringConvertibleP", "UIAlertController"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "addAction"]
+- !private ["s28CustomDebugStringConvertibleP", "addTextField"]
+- !private ["s28CustomDebugStringConvertibleP", "async"]
+- !private ["s28CustomDebugStringConvertibleP", "bridge"]
+- !private ["s28CustomDebugStringConvertibleP", "buildActionSheet"]
+- !private ["s28CustomDebugStringConvertibleP", "enumerated"]
+- !private ["s28CustomDebugStringConvertibleP", "error"]
+- !private ["s28CustomDebugStringConvertibleP", "getArray"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "main"]
+- !private ["s28CustomDebugStringConvertibleP", "options"]
+- !private ["s28CustomDebugStringConvertibleP", "placeholder"]
+- !private ["s28CustomDebugStringConvertibleP", "present"]
+- !private ["s28CustomDebugStringConvertibleP", "setCenteredPopover"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "success"]
+- !private ["s28CustomDebugStringConvertibleP", "text"]
+- !private ["s28CustomDebugStringConvertibleP", "textFields"]
+- !private ["s28CustomDebugStringConvertibleP", "viewController"]
+- !private ["s17CustomReflectableP", "enumerated"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s17CustomReflectableP", "viewController"]
+- !private ["s23CustomStringConvertibleP", "DispatchQueue"]
+- !private ["s23CustomStringConvertibleP", "JSObject"]
+- !private ["s23CustomStringConvertibleP", "Style"]
+- !private ["s23CustomStringConvertibleP", "UIAlertAction"]
+- !private ["s23CustomStringConvertibleP", "UIAlertController"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "addAction"]
+- !private ["s23CustomStringConvertibleP", "addTextField"]
+- !private ["s23CustomStringConvertibleP", "async"]
+- !private ["s23CustomStringConvertibleP", "bridge"]
+- !private ["s23CustomStringConvertibleP", "buildActionSheet"]
+- !private ["s23CustomStringConvertibleP", "enumerated"]
+- !private ["s23CustomStringConvertibleP", "error"]
+- !private ["s23CustomStringConvertibleP", "getArray"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "main"]
+- !private ["s23CustomStringConvertibleP", "options"]
+- !private ["s23CustomStringConvertibleP", "placeholder"]
+- !private ["s23CustomStringConvertibleP", "present"]
+- !private ["s23CustomStringConvertibleP", "setCenteredPopover"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "success"]
+- !private ["s23CustomStringConvertibleP", "text"]
+- !private ["s23CustomStringConvertibleP", "textFields"]
+- !private ["s23CustomStringConvertibleP", "viewController"]
+- !private ["10Foundation12DataProtocolP", ""]
+- !private ["10Foundation12DataProtocolP", "enumerated"]
+- !private ["10Foundation12DataProtocolP", "subscript"]
+- !private ["Se", "enumerated"]
+- !private ["Se", "subscript"]
+- !private ["Se", "viewController"]
+- !private ["SD", "subscript"]
+- !private ["So18OS_dispatch_objectC", "async"]
+- !private ["So18OS_dispatch_objectC", "main"]
+- !private ["So17OS_dispatch_queueC", "async"]
+- !private ["So17OS_dispatch_queueC", "main"]
+- !private ["SE", "enumerated"]
+- !private ["SE", "subscript"]
+- !private ["SE", "viewController"]
+- !private ["SQ", "DispatchQueue"]
+- !private ["SQ", "JSObject"]
+- !private ["SQ", "Style"]
+- !private ["SQ", "UIAlertAction"]
+- !private ["SQ", "UIAlertController"]
+- ["SQ", ""]
+- !private ["SQ", "actionSheet"]
+- !private ["SQ", "addAction"]
+- !private ["SQ", "addTextField"]
+- !private ["SQ", "alert"]
+- !private ["SQ", "async"]
+- !private ["SQ", "bridge"]
+- !private ["SQ", "buildActionSheet"]
+- !private ["SQ", "cancel"]
+- !private ["SQ", "default"]
+- !private ["SQ", "destructive"]
+- !private ["SQ", "enumerated"]
+- !private ["SQ", "error"]
+- !private ["SQ", "getArray"]
+- !private ["SQ", "init"]
+- !private ["SQ", "main"]
+- !private ["SQ", "options"]
+- !private ["SQ", "placeholder"]
+- !private ["SQ", "present"]
+- !private ["SQ", "setCenteredPopover"]
+- !private ["SQ", "subscript"]
+- !private ["SQ", "success"]
+- !private ["SQ", "text"]
+- !private ["SQ", "textFields"]
+- !private ["SQ", "viewController"]
+- !private ["s25ExpressibleByArrayLiteralP", ""]
+- !private ["s25ExpressibleByArrayLiteralP", "enumerated"]
+- !private ["s25ExpressibleByArrayLiteralP", "init"]
+- !private ["s25ExpressibleByArrayLiteralP", "subscript"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "Key"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "Value"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "init"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", ""]
+- !private ["s23ExpressibleByNilLiteralP", "subscript"]
+- !private ["s23ExpressibleByNilLiteralP", "viewController"]
+- !private ["s32ExpressibleByStringInterpolationP", ""]
+- !private ["s26ExpressibleByStringLiteralP", ""]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", ""]
+- !private ["SH", "DispatchQueue"]
+- !private ["SH", "JSObject"]
+- !private ["SH", "Style"]
+- !private ["SH", "UIAlertAction"]
+- !private ["SH", "UIAlertController"]
+- ["SH", ""]
+- !private ["SH", "actionSheet"]
+- !private ["SH", "addAction"]
+- !private ["SH", "addTextField"]
+- !private ["SH", "alert"]
+- !private ["SH", "async"]
+- !private ["SH", "bridge"]
+- !private ["SH", "buildActionSheet"]
+- !private ["SH", "cancel"]
+- !private ["SH", "default"]
+- !private ["SH", "destructive"]
+- !private ["SH", "enumerated"]
+- !private ["SH", "error"]
+- !private ["SH", "getArray"]
+- !private ["SH", "init"]
+- !private ["SH", "main"]
+- !private ["SH", "options"]
+- !private ["SH", "placeholder"]
+- !private ["SH", "present"]
+- !private ["SH", "setCenteredPopover"]
+- !private ["SH", "subscript"]
+- !private ["SH", "success"]
+- !private ["SH", "text"]
+- !private ["SH", "textFields"]
+- !private ["SH", "viewController"]
+- !private ["s25LosslessStringConvertibleP", ""]
+- !private ["SM", ""]
+- !private ["SM", "enumerated"]
+- !private ["SM", "subscript"]
+- !private ["10Foundation19MutableDataProtocolP", "enumerated"]
+- !private ["10Foundation19MutableDataProtocolP", "subscript"]
+- !private ["So8NSCodingP", "Style"]
+- !private ["So8NSCodingP", ""]
+- !private ["So8NSCodingP", "addAction"]
+- !private ["So8NSCodingP", "addTextField"]
+- !private ["So8NSCodingP", "addTextFieldWithConfigurationHandler"]
+- !private ["So8NSCodingP", "alertControllerWithTitle"]
+- !private ["So8NSCodingP", "init"]
+- !private ["So8NSCodingP", "placeholder"]
+- !private ["So8NSCodingP", "present"]
+- !private ["So8NSCodingP", "text"]
+- !private ["So8NSCodingP", "textFields"]
+- !private ["So9NSCopyingP", "Style"]
+- !private ["So9NSCopyingP", "init"]
+- !private ["So26NSExtensionRequestHandlingP", "Style"]
+- !private ["So26NSExtensionRequestHandlingP", ""]
+- !private ["So26NSExtensionRequestHandlingP", "addAction"]
+- !private ["So26NSExtensionRequestHandlingP", "addTextField"]
+- !private ["So26NSExtensionRequestHandlingP", "addTextFieldWithConfigurationHandler"]
+- !private ["So26NSExtensionRequestHandlingP", "alertControllerWithTitle"]
+- !private ["So26NSExtensionRequestHandlingP", "init"]
+- !private ["So26NSExtensionRequestHandlingP", "present"]
+- !private ["So26NSExtensionRequestHandlingP", "textFields"]
+- ["So8NSObjectC", "CAPPluginCall"]
+- !private ["So8NSObjectC", "DispatchQueue"]
+- ["So8NSObjectC", "JSArray"]
+- !private ["So8NSObjectC", "JSObject"]
+- ["So8NSObjectC", "String"]
+- !private ["So8NSObjectC", "Style"]
+- !private ["So8NSObjectC", "UIAlertAction"]
+- ["So8NSObjectC", "UIAlertController"]
+- !private ["So8NSObjectC", "UITextField"]
+- !private ["So8NSObjectC", "Void"]
+- ["So8NSObjectC", ""]
+- !private ["So8NSObjectC", "actionWithTitle"]
+- !private ["So8NSObjectC", "addAction"]
+- !private ["So8NSObjectC", "addTextField"]
+- !private ["So8NSObjectC", "addTextFieldWithConfigurationHandler"]
+- ["So8NSObjectC", "alert"]
+- !private ["So8NSObjectC", "alertControllerWithTitle"]
+- !private ["So8NSObjectC", "async"]
+- !private ["So8NSObjectC", "bridge"]
+- ["So8NSObjectC", "buildActionSheet"]
+- ["So8NSObjectC", "confirm"]
+- !private ["So8NSObjectC", "error"]
+- !private ["So8NSObjectC", "getArray"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "main"]
+- !private ["So8NSObjectC", "options"]
+- !private ["So8NSObjectC", "placeholder"]
+- !private ["So8NSObjectC", "present"]
+- !private ["So8NSObjectC", "presentViewController"]
+- ["So8NSObjectC", "prompt"]
+- !private ["So8NSObjectC", "setCenteredPopover"]
+- ["So8NSObjectC", "showActions"]
+- !private ["So8NSObjectC", "success"]
+- !private ["So8NSObjectC", "text"]
+- !private ["So8NSObjectC", "textFields"]
+- !private ["So8NSObjectC", "viewController"]
+- !private ["So8NSObjectP", "DispatchQueue"]
+- !private ["So8NSObjectP", "JSObject"]
+- !private ["So8NSObjectP", "Style"]
+- !private ["So8NSObjectP", "UIAlertAction"]
+- ["So8NSObjectP", "UIAlertController"]
+- !private ["So8NSObjectP", "UITextField"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "actionWithTitle"]
+- !private ["So8NSObjectP", "addAction"]
+- !private ["So8NSObjectP", "addTextField"]
+- !private ["So8NSObjectP", "addTextFieldWithConfigurationHandler"]
+- ["So8NSObjectP", "alert"]
+- !private ["So8NSObjectP", "alertControllerWithTitle"]
+- !private ["So8NSObjectP", "async"]
+- !private ["So8NSObjectP", "bridge"]
+- ["So8NSObjectP", "buildActionSheet"]
+- ["So8NSObjectP", "confirm"]
+- !private ["So8NSObjectP", "error"]
+- !private ["So8NSObjectP", "getArray"]
+- ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "main"]
+- !private ["So8NSObjectP", "options"]
+- !private ["So8NSObjectP", "placeholder"]
+- !private ["So8NSObjectP", "present"]
+- !private ["So8NSObjectP", "presentViewController"]
+- ["So8NSObjectP", "prompt"]
+- !private ["So8NSObjectP", "setCenteredPopover"]
+- ["So8NSObjectP", "showActions"]
+- !private ["So8NSObjectP", "success"]
+- !private ["So8NSObjectP", "text"]
+- !private ["So8NSObjectP", "textFields"]
+- !private ["So8NSObjectP", "viewController"]
+- !private ["So9OS_objectC", "async"]
+- !private ["So9OS_objectC", "main"]
+- !private ["Sq", "subscript"]
+- !private ["Sq", "viewController"]
+- !private ["Sk", ""]
+- !private ["Sk", "enumerated"]
+- !private ["Sk", "subscript"]
+- !private ["Sm", ""]
+- !private ["Sm", "enumerated"]
+- !private ["Sm", "subscript"]
+- !private ["SY", "actionSheet"]
+- !private ["SY", "alert"]
+- !private ["SY", "cancel"]
+- !private ["SY", "default"]
+- !private ["SY", "destructive"]
+- !private ["7Combine9SchedulerP", "async"]
+- !private ["7Combine9SchedulerP", "main"]
+- !private ["ST", "Element"]
+- !private ["ST", "Iterator"]
+- !private ["ST", ""]
+- !private ["ST", "enumerated"]
+- !private ["ST", "subscript"]
+- !private ["So22UIAlertControllerStyleV", "actionSheet"]
+- !private ["So22UIAlertControllerStyleV", "alert"]
+- !private ["So18UIAlertActionStyleV", "cancel"]
+- !private ["So18UIAlertActionStyleV", "default"]
+- !private ["So18UIAlertActionStyleV", "destructive"]
+- !private ["s16TextOutputStreamP", ""]
+- !private ["s20TextOutputStreamableP", ""]
+- !private ["So29UIAccessibilityIdentificationP", "Style"]
+- !private ["So29UIAccessibilityIdentificationP", ""]
+- !private ["So29UIAccessibilityIdentificationP", "init"]
+- !private ["So29UIAccessibilityIdentificationP", "placeholder"]
+- !private ["So29UIAccessibilityIdentificationP", "text"]
+- !private ["So13UIAlertActionC", "Style"]
+- !private ["So13UIAlertActionC", "init"]
+- !private ["So17UIAlertControllerC", "Style"]
+- !private ["So17UIAlertControllerC", "addAction"]
+- !private ["So17UIAlertControllerC", "addTextField"]
+- !private ["So17UIAlertControllerC", "init"]
+- !private ["So17UIAlertControllerC", "textFields"]
+- !private ["So12UIAppearanceP", ""]
+- !private ["So12UIAppearanceP", "placeholder"]
+- !private ["So12UIAppearanceP", "text"]
+- !private ["So21UIAppearanceContainerP", "Style"]
+- !private ["So21UIAppearanceContainerP", ""]
+- !private ["So21UIAppearanceContainerP", "addAction"]
+- !private ["So21UIAppearanceContainerP", "addTextField"]
+- !private ["So21UIAppearanceContainerP", "addTextFieldWithConfigurationHandler"]
+- !private ["So21UIAppearanceContainerP", "alertControllerWithTitle"]
+- !private ["So21UIAppearanceContainerP", "init"]
+- !private ["So21UIAppearanceContainerP", "placeholder"]
+- !private ["So21UIAppearanceContainerP", "present"]
+- !private ["So21UIAppearanceContainerP", "text"]
+- !private ["So21UIAppearanceContainerP", "textFields"]
+- !private ["So18UIContentContainerP", "Style"]
+- !private ["So18UIContentContainerP", ""]
+- !private ["So18UIContentContainerP", "addAction"]
+- !private ["So18UIContentContainerP", "addTextField"]
+- !private ["So18UIContentContainerP", "addTextFieldWithConfigurationHandler"]
+- !private ["So18UIContentContainerP", "alertControllerWithTitle"]
+- !private ["So18UIContentContainerP", "init"]
+- !private ["So18UIContentContainerP", "present"]
+- !private ["So18UIContentContainerP", "textFields"]
+- !private ["So30UIContentSizeCategoryAdjustingP", "placeholder"]
+- !private ["So30UIContentSizeCategoryAdjustingP", "text"]
+- !private ["So32UIContextMenuInteractionDelegateP", ""]
+- !private ["So32UIContextMenuInteractionDelegateP", "placeholder"]
+- !private ["So32UIContextMenuInteractionDelegateP", "text"]
+- ["So9UIControlC", ""]
+- !private ["So9UIControlC", "placeholder"]
+- !private ["So9UIControlC", "text"]
+- !private ["So17UICoordinateSpaceP", ""]
+- !private ["So17UICoordinateSpaceP", "placeholder"]
+- !private ["So17UICoordinateSpaceP", "text"]
+- !private ["So13UIDynamicItemP", ""]
+- !private ["So13UIDynamicItemP", "placeholder"]
+- !private ["So13UIDynamicItemP", "text"]
+- !private ["So18UIFocusEnvironmentP", "Style"]
+- !private ["So18UIFocusEnvironmentP", ""]
+- !private ["So18UIFocusEnvironmentP", "addAction"]
+- !private ["So18UIFocusEnvironmentP", "addTextField"]
+- !private ["So18UIFocusEnvironmentP", "addTextFieldWithConfigurationHandler"]
+- !private ["So18UIFocusEnvironmentP", "alertControllerWithTitle"]
+- !private ["So18UIFocusEnvironmentP", "init"]
+- !private ["So18UIFocusEnvironmentP", "placeholder"]
+- !private ["So18UIFocusEnvironmentP", "present"]
+- !private ["So18UIFocusEnvironmentP", "text"]
+- !private ["So18UIFocusEnvironmentP", "textFields"]
+- !private ["So11UIFocusItemP", ""]
+- !private ["So11UIFocusItemP", "placeholder"]
+- !private ["So11UIFocusItemP", "text"]
+- !private ["So20UIFocusItemContainerP", ""]
+- !private ["So20UIFocusItemContainerP", "placeholder"]
+- !private ["So20UIFocusItemContainerP", "text"]
+- !private ["So10UIKeyInputP", ""]
+- !private ["So10UIKeyInputP", "placeholder"]
+- !private ["So10UIKeyInputP", "text"]
+- !private ["So24UILargeContentViewerItemP", ""]
+- !private ["So24UILargeContentViewerItemP", "placeholder"]
+- !private ["So24UILargeContentViewerItemP", "text"]
+- !private ["So30UIPasteConfigurationSupportingP", "Style"]
+- !private ["So30UIPasteConfigurationSupportingP", ""]
+- !private ["So30UIPasteConfigurationSupportingP", "addAction"]
+- !private ["So30UIPasteConfigurationSupportingP", "addTextField"]
+- !private ["So30UIPasteConfigurationSupportingP", "addTextFieldWithConfigurationHandler"]
+- !private ["So30UIPasteConfigurationSupportingP", "alertControllerWithTitle"]
+- !private ["So30UIPasteConfigurationSupportingP", "init"]
+- !private ["So30UIPasteConfigurationSupportingP", "placeholder"]
+- !private ["So30UIPasteConfigurationSupportingP", "present"]
+- !private ["So30UIPasteConfigurationSupportingP", "presentViewController"]
+- !private ["So30UIPasteConfigurationSupportingP", "text"]
+- !private ["So30UIPasteConfigurationSupportingP", "textFields"]
+- !private ["So11UIResponderC", "Style"]
+- ["So11UIResponderC", ""]
+- !private ["So11UIResponderC", "addAction"]
+- !private ["So11UIResponderC", "addTextField"]
+- !private ["So11UIResponderC", "addTextFieldWithConfigurationHandler"]
+- !private ["So11UIResponderC", "alertControllerWithTitle"]
+- !private ["So11UIResponderC", "init"]
+- !private ["So11UIResponderC", "placeholder"]
+- !private ["So11UIResponderC", "present"]
+- !private ["So11UIResponderC", "presentViewController"]
+- !private ["So11UIResponderC", "text"]
+- !private ["So11UIResponderC", "textFields"]
+- !private ["So30UIResponderStandardEditActionsP", "Style"]
+- !private ["So30UIResponderStandardEditActionsP", ""]
+- !private ["So30UIResponderStandardEditActionsP", "addAction"]
+- !private ["So30UIResponderStandardEditActionsP", "addTextField"]
+- !private ["So30UIResponderStandardEditActionsP", "addTextFieldWithConfigurationHandler"]
+- !private ["So30UIResponderStandardEditActionsP", "alertControllerWithTitle"]
+- !private ["So30UIResponderStandardEditActionsP", "init"]
+- !private ["So30UIResponderStandardEditActionsP", "placeholder"]
+- !private ["So30UIResponderStandardEditActionsP", "present"]
+- !private ["So30UIResponderStandardEditActionsP", "presentViewController"]
+- !private ["So30UIResponderStandardEditActionsP", "text"]
+- !private ["So30UIResponderStandardEditActionsP", "textFields"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "Style"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "addAction"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "addTextField"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "init"]
+- !private ["So35UISpringLoadedInteractionSupportingP", "textFields"]
+- !private ["So16UIStateRestoringP", "Style"]
+- !private ["So16UIStateRestoringP", ""]
+- !private ["So16UIStateRestoringP", "addAction"]
+- !private ["So16UIStateRestoringP", "addTextField"]
+- !private ["So16UIStateRestoringP", "addTextFieldWithConfigurationHandler"]
+- !private ["So16UIStateRestoringP", "alertControllerWithTitle"]
+- !private ["So16UIStateRestoringP", "init"]
+- !private ["So16UIStateRestoringP", "present"]
+- !private ["So16UIStateRestoringP", "textFields"]
+- !private ["So15UITextDraggableP", "placeholder"]
+- !private ["So15UITextDraggableP", "text"]
+- !private ["So15UITextDroppableP", "placeholder"]
+- !private ["So15UITextDroppableP", "text"]
+- !private ["So11UITextFieldC", "placeholder"]
+- !private ["So11UITextFieldC", "text"]
+- !private ["So11UITextInputP", ""]
+- !private ["So11UITextInputP", "placeholder"]
+- !private ["So11UITextInputP", "text"]
+- !private ["So17UITextInputTraitsP", ""]
+- !private ["So17UITextInputTraitsP", "placeholder"]
+- !private ["So17UITextInputTraitsP", "text"]
+- !private ["So34UITextPasteConfigurationSupportingP", ""]
+- !private ["So34UITextPasteConfigurationSupportingP", "placeholder"]
+- !private ["So34UITextPasteConfigurationSupportingP", "text"]
+- !private ["So18UITraitEnvironmentP", "Style"]
+- !private ["So18UITraitEnvironmentP", ""]
+- !private ["So18UITraitEnvironmentP", "addAction"]
+- !private ["So18UITraitEnvironmentP", "addTextField"]
+- !private ["So18UITraitEnvironmentP", "addTextFieldWithConfigurationHandler"]
+- !private ["So18UITraitEnvironmentP", "alertControllerWithTitle"]
+- !private ["So18UITraitEnvironmentP", "init"]
+- !private ["So18UITraitEnvironmentP", "placeholder"]
+- !private ["So18UITraitEnvironmentP", "present"]
+- !private ["So18UITraitEnvironmentP", "text"]
+- !private ["So18UITraitEnvironmentP", "textFields"]
+- !private ["So23UIUserActivityRestoringP", "Style"]
+- !private ["So23UIUserActivityRestoringP", ""]
+- !private ["So23UIUserActivityRestoringP", "addAction"]
+- !private ["So23UIUserActivityRestoringP", "addTextField"]
+- !private ["So23UIUserActivityRestoringP", "addTextFieldWithConfigurationHandler"]
+- !private ["So23UIUserActivityRestoringP", "alertControllerWithTitle"]
+- !private ["So23UIUserActivityRestoringP", "init"]
+- !private ["So23UIUserActivityRestoringP", "placeholder"]
+- !private ["So23UIUserActivityRestoringP", "present"]
+- !private ["So23UIUserActivityRestoringP", "presentViewController"]
+- !private ["So23UIUserActivityRestoringP", "text"]
+- !private ["So23UIUserActivityRestoringP", "textFields"]
+- ["So6UIViewC", ""]
+- !private ["So6UIViewC", "placeholder"]
+- !private ["So6UIViewC", "text"]
+- !private ["So16UIViewControllerC", "Style"]
+- ["So16UIViewControllerC", ""]
+- !private ["So16UIViewControllerC", "addAction"]
+- !private ["So16UIViewControllerC", "addTextField"]
+- !private ["So16UIViewControllerC", "addTextFieldWithConfigurationHandler"]
+- !private ["So16UIViewControllerC", "alertControllerWithTitle"]
+- !private ["So16UIViewControllerC", "init"]
+- !private ["So16UIViewControllerC", "present"]
+- !private ["So16UIViewControllerC", "textFields"]
+- !private ["s14_ArrayProtocolP", "enumerated"]
+- !private ["s14_ArrayProtocolP", "subscript"]
+- !private ["s24_DestructorSafeContainerP", "enumerated"]
+- !private ["s24_DestructorSafeContainerP", "subscript"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "init"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", ""]
+- !private ["s35_ExpressibleByBuiltinIntegerLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", ""]
+- !private ["s19_HasContiguousBytesP", "enumerated"]
+- !private ["s19_HasContiguousBytesP", "subscript"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "enumerated"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "DispatchQueue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "JSObject"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "Style"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIAlertAction"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIAlertController"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "addAction"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "addTextField"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "async"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "bridge"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "buildActionSheet"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "error"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "getArray"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "main"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "options"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "placeholder"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "present"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "setCenteredPopover"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "success"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "text"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "textFields"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "viewController"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "DispatchQueue"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "JSObject"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "Style"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIAlertAction"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIAlertController"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "addAction"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "addTextField"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "async"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "bridge"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "buildActionSheet"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "error"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "getArray"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "main"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "options"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "placeholder"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "present"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "setCenteredPopover"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "success"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "text"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "textFields"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "viewController"]
+- !private ["s21_ObjectiveCBridgeableP", "enumerated"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+- !private ["s21_ObjectiveCBridgeableP", "viewController"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "placeholder"]
+- !private ["s38__DefaultCustomPlaygroundQuickLookableP", "text"]
+depends-nominal:
+- !private "Sa"
+- !private "SK"
+- !private "So15CALayerDelegateP"
+- !private "9Capacitor9CAPBridgeC"
+- "9Capacitor15CAPModalsPluginC"
+- "So9CAPPluginC"
+- !private "So13CAPPluginCallC"
+- "s7CVarArgP"
+- !private "Sl"
+- !private "SL"
+- !private "10Foundation15ContiguousBytesP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "10Foundation12DataProtocolP"
+- !private "Se"
+- !private "SD"
+- !private "So18OS_dispatch_objectC"
+- !private "So17OS_dispatch_queueC"
+- !private "SE"
+- "SQ"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- !private "s32ExpressibleByStringInterpolationP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- "SH"
+- !private "s25LosslessStringConvertibleP"
+- !private "SM"
+- !private "10Foundation19MutableDataProtocolP"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- !private "So26NSExtensionRequestHandlingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "So9OS_objectC"
+- !private "Sq"
+- !private "Sk"
+- !private "Sm"
+- !private "SY"
+- !private "7Combine9SchedulerP"
+- !private "ST"
+- !private "So22UIAlertControllerStyleV"
+- !private "So18UIAlertActionStyleV"
+- !private "s16TextOutputStreamP"
+- !private "s20TextOutputStreamableP"
+- !private "So29UIAccessibilityIdentificationP"
+- !private "So13UIAlertActionC"
+- !private "So17UIAlertControllerC"
+- !private "So12UIAppearanceP"
+- !private "So21UIAppearanceContainerP"
+- !private "So18UIContentContainerP"
+- !private "So30UIContentSizeCategoryAdjustingP"
+- !private "So32UIContextMenuInteractionDelegateP"
+- "So9UIControlC"
+- !private "So17UICoordinateSpaceP"
+- !private "So13UIDynamicItemP"
+- !private "So18UIFocusEnvironmentP"
+- !private "So11UIFocusItemP"
+- !private "So20UIFocusItemContainerP"
+- !private "So10UIKeyInputP"
+- !private "So24UILargeContentViewerItemP"
+- !private "So30UIPasteConfigurationSupportingP"
+- "So11UIResponderC"
+- !private "So30UIResponderStandardEditActionsP"
+- !private "So35UISpringLoadedInteractionSupportingP"
+- !private "So16UIStateRestoringP"
+- !private "So15UITextDraggableP"
+- !private "So15UITextDroppableP"
+- !private "So11UITextFieldC"
+- !private "So11UITextInputP"
+- !private "So17UITextInputTraitsP"
+- !private "So34UITextPasteConfigurationSupportingP"
+- !private "So18UITraitEnvironmentP"
+- !private "So23UIUserActivityRestoringP"
+- "So6UIViewC"
+- "So16UIViewControllerC"
+- !private "s14_ArrayProtocolP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s35_ExpressibleByBuiltinIntegerLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s19_HasContiguousBytesP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s38__DefaultCustomPlaygroundQuickLookableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMIDI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMedia.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/simd.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreLocation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/AVFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreAudio.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Photos.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UniformTypeIdentifiers.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/WebKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDV.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/ios/App/Pods/Target Support Files/CapacitorCordova/CapacitorCordova-umbrella.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/ios/App/Pods/Target Support Files/Capacitor/Capacitor-umbrella.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVInvokedUrlCommand.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPPluginMethod.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/Capacitor/Capacitor/Plugins/Keyboard.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVCommandDelegate.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVScreenOrientationDelegate.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/AppDelegate.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVUIWebViewDelegate.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVUserAgentUtil.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPPluginCall.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVURLProtocol.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVCommandDelegateImpl.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPPlugin.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPlugin.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPBridgedPlugin.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPluginManager.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVViewController.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVConfigParser.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/Capacitor/Capacitor/Capacitor.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/NSDictionary+CordovaPreferences.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPlugin+Resources.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/Capacitor/Capacitor/Plugins/DefaultPlugins.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPluginResult.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVAvailability.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/ios/App/DerivedData/App/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/unextended-module.modulemap"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/ios/App/DerivedData/App/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorCordova.build/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Photos.framework/Headers/Photos.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "3358b9b4ead2f6ce579b6e64007b84ab"

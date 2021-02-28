@@ -1,0 +1,462 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "CAPHapticsPlugin"
+provides-nominal:
+- "9Capacitor16CAPHapticsPluginC"
+provides-member:
+- ["9Capacitor16CAPHapticsPluginC", ""]
+provides-dynamic-lookup:
+- "impact"
+- "notification"
+- "selectionChanged"
+- "selectionEnd"
+- "selectionFeedbackGenerator"
+- "selectionStart"
+- "vibrate"
+depends-top-level:
+- "=="
+- !private "AssignmentPrecedence"
+- "AudioServicesPlayAlertSound"
+- "CAPHapticsPlugin"
+- "CAPPlugin"
+- "CAPPluginCall"
+- !private "CastingPrecedence"
+- !private "DispatchQueue"
+- "String"
+- "StringLiteralType"
+- "UIImpactFeedbackGenerator"
+- "UINotificationFeedbackGenerator"
+- "UISelectionFeedbackGenerator"
+- "kSystemSoundID_Vibrate"
+depends-member:
+- !private ["9Capacitor16CAPHapticsPluginC", "AudioServicesPlayAlertSound"]
+- ["9Capacitor16CAPHapticsPluginC", "CAPPluginCall"]
+- !private ["9Capacitor16CAPHapticsPluginC", "DispatchQueue"]
+- !private ["9Capacitor16CAPHapticsPluginC", "String"]
+- !private ["9Capacitor16CAPHapticsPluginC", "UIImpactFeedbackGenerator"]
+- !private ["9Capacitor16CAPHapticsPluginC", "UINotificationFeedbackGenerator"]
+- ["9Capacitor16CAPHapticsPluginC", "UISelectionFeedbackGenerator"]
+- ["9Capacitor16CAPHapticsPluginC", ""]
+- ["9Capacitor16CAPHapticsPluginC", "deinit"]
+- ["9Capacitor16CAPHapticsPluginC", "impact"]
+- ["9Capacitor16CAPHapticsPluginC", "init"]
+- !private ["9Capacitor16CAPHapticsPluginC", "kSystemSoundID_Vibrate"]
+- ["9Capacitor16CAPHapticsPluginC", "notification"]
+- ["9Capacitor16CAPHapticsPluginC", "selectionChanged"]
+- ["9Capacitor16CAPHapticsPluginC", "selectionEnd"]
+- ["9Capacitor16CAPHapticsPluginC", "selectionFeedbackGenerator"]
+- ["9Capacitor16CAPHapticsPluginC", "selectionStart"]
+- ["9Capacitor16CAPHapticsPluginC", "vibrate"]
+- !private ["So9CAPPluginC", "AudioServicesPlayAlertSound"]
+- ["So9CAPPluginC", "CAPPluginCall"]
+- !private ["So9CAPPluginC", "DispatchQueue"]
+- !private ["So9CAPPluginC", "String"]
+- !private ["So9CAPPluginC", "UIImpactFeedbackGenerator"]
+- !private ["So9CAPPluginC", "UINotificationFeedbackGenerator"]
+- ["So9CAPPluginC", "UISelectionFeedbackGenerator"]
+- ["So9CAPPluginC", ""]
+- ["So9CAPPluginC", "impact"]
+- ["So9CAPPluginC", "init"]
+- !private ["So9CAPPluginC", "kSystemSoundID_Vibrate"]
+- ["So9CAPPluginC", "notification"]
+- ["So9CAPPluginC", "selectionChanged"]
+- ["So9CAPPluginC", "selectionEnd"]
+- ["So9CAPPluginC", "selectionFeedbackGenerator"]
+- ["So9CAPPluginC", "selectionStart"]
+- ["So9CAPPluginC", "vibrate"]
+- !private ["So13CAPPluginCallC", "options"]
+- !private ["s7CVarArgP", "AudioServicesPlayAlertSound"]
+- !private ["s7CVarArgP", "DispatchQueue"]
+- !private ["s7CVarArgP", "FeedbackStyle"]
+- !private ["s7CVarArgP", "FeedbackType"]
+- !private ["s7CVarArgP", "UIImpactFeedbackGenerator"]
+- !private ["s7CVarArgP", "UINotificationFeedbackGenerator"]
+- !private ["s7CVarArgP", "UISelectionFeedbackGenerator"]
+- ["s7CVarArgP", ""]
+- !private ["s7CVarArgP", "async"]
+- !private ["s7CVarArgP", "impact"]
+- !private ["s7CVarArgP", "impactOccurred"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "kSystemSoundID_Vibrate"]
+- !private ["s7CVarArgP", "main"]
+- !private ["s7CVarArgP", "notification"]
+- !private ["s7CVarArgP", "notificationOccurred"]
+- !private ["s7CVarArgP", "options"]
+- !private ["s7CVarArgP", "prepare"]
+- !private ["s7CVarArgP", "selectionChanged"]
+- !private ["s7CVarArgP", "selectionEnd"]
+- !private ["s7CVarArgP", "selectionFeedbackGenerator"]
+- !private ["s7CVarArgP", "selectionStart"]
+- !private ["s7CVarArgP", "subscript"]
+- !private ["s7CVarArgP", "vibrate"]
+- !private ["Sl", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "AudioServicesPlayAlertSound"]
+- !private ["s28CustomDebugStringConvertibleP", "DispatchQueue"]
+- !private ["s28CustomDebugStringConvertibleP", "FeedbackStyle"]
+- !private ["s28CustomDebugStringConvertibleP", "FeedbackType"]
+- !private ["s28CustomDebugStringConvertibleP", "UIImpactFeedbackGenerator"]
+- !private ["s28CustomDebugStringConvertibleP", "UINotificationFeedbackGenerator"]
+- !private ["s28CustomDebugStringConvertibleP", "UISelectionFeedbackGenerator"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s28CustomDebugStringConvertibleP", "async"]
+- !private ["s28CustomDebugStringConvertibleP", "impact"]
+- !private ["s28CustomDebugStringConvertibleP", "impactOccurred"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "kSystemSoundID_Vibrate"]
+- !private ["s28CustomDebugStringConvertibleP", "main"]
+- !private ["s28CustomDebugStringConvertibleP", "notification"]
+- !private ["s28CustomDebugStringConvertibleP", "notificationOccurred"]
+- !private ["s28CustomDebugStringConvertibleP", "options"]
+- !private ["s28CustomDebugStringConvertibleP", "prepare"]
+- !private ["s28CustomDebugStringConvertibleP", "selectionChanged"]
+- !private ["s28CustomDebugStringConvertibleP", "selectionEnd"]
+- !private ["s28CustomDebugStringConvertibleP", "selectionFeedbackGenerator"]
+- !private ["s28CustomDebugStringConvertibleP", "selectionStart"]
+- !private ["s28CustomDebugStringConvertibleP", "subscript"]
+- !private ["s28CustomDebugStringConvertibleP", "vibrate"]
+- !private ["s17CustomReflectableP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "AudioServicesPlayAlertSound"]
+- !private ["s23CustomStringConvertibleP", "DispatchQueue"]
+- !private ["s23CustomStringConvertibleP", "FeedbackStyle"]
+- !private ["s23CustomStringConvertibleP", "FeedbackType"]
+- !private ["s23CustomStringConvertibleP", "UIImpactFeedbackGenerator"]
+- !private ["s23CustomStringConvertibleP", "UINotificationFeedbackGenerator"]
+- !private ["s23CustomStringConvertibleP", "UISelectionFeedbackGenerator"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "async"]
+- !private ["s23CustomStringConvertibleP", "impact"]
+- !private ["s23CustomStringConvertibleP", "impactOccurred"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "kSystemSoundID_Vibrate"]
+- !private ["s23CustomStringConvertibleP", "main"]
+- !private ["s23CustomStringConvertibleP", "notification"]
+- !private ["s23CustomStringConvertibleP", "notificationOccurred"]
+- !private ["s23CustomStringConvertibleP", "options"]
+- !private ["s23CustomStringConvertibleP", "prepare"]
+- !private ["s23CustomStringConvertibleP", "selectionChanged"]
+- !private ["s23CustomStringConvertibleP", "selectionEnd"]
+- !private ["s23CustomStringConvertibleP", "selectionFeedbackGenerator"]
+- !private ["s23CustomStringConvertibleP", "selectionStart"]
+- !private ["s23CustomStringConvertibleP", "subscript"]
+- !private ["s23CustomStringConvertibleP", "vibrate"]
+- !private ["Se", "subscript"]
+- !private ["SD", "subscript"]
+- !private ["So18OS_dispatch_objectC", "async"]
+- !private ["So18OS_dispatch_objectC", "main"]
+- !private ["So17OS_dispatch_queueC", "async"]
+- !private ["So17OS_dispatch_queueC", "main"]
+- !private ["SE", "subscript"]
+- !private ["SQ", "AudioServicesPlayAlertSound"]
+- !private ["SQ", "DispatchQueue"]
+- !private ["SQ", "FeedbackStyle"]
+- !private ["SQ", "FeedbackType"]
+- !private ["SQ", "UIImpactFeedbackGenerator"]
+- !private ["SQ", "UINotificationFeedbackGenerator"]
+- !private ["SQ", "UISelectionFeedbackGenerator"]
+- ["SQ", ""]
+- !private ["SQ", "async"]
+- !private ["SQ", "error"]
+- !private ["SQ", "heavy"]
+- !private ["SQ", "impact"]
+- !private ["SQ", "impactOccurred"]
+- !private ["SQ", "init"]
+- !private ["SQ", "kSystemSoundID_Vibrate"]
+- !private ["SQ", "light"]
+- !private ["SQ", "main"]
+- !private ["SQ", "medium"]
+- !private ["SQ", "notification"]
+- !private ["SQ", "notificationOccurred"]
+- !private ["SQ", "options"]
+- !private ["SQ", "prepare"]
+- !private ["SQ", "selectionChanged"]
+- !private ["SQ", "selectionEnd"]
+- !private ["SQ", "selectionFeedbackGenerator"]
+- !private ["SQ", "selectionStart"]
+- !private ["SQ", "subscript"]
+- !private ["SQ", "success"]
+- !private ["SQ", "vibrate"]
+- !private ["SQ", "warning"]
+- !private ["s30ExpressibleByDictionaryLiteralP", "subscript"]
+- !private ["s23ExpressibleByNilLiteralP", "subscript"]
+- !private ["So21UIImpactFeedbackStyleV", "heavy"]
+- !private ["So21UIImpactFeedbackStyleV", "light"]
+- !private ["So21UIImpactFeedbackStyleV", "medium"]
+- !private ["So26UINotificationFeedbackTypeV", "error"]
+- !private ["So26UINotificationFeedbackTypeV", "success"]
+- !private ["So26UINotificationFeedbackTypeV", "warning"]
+- !private ["SH", "AudioServicesPlayAlertSound"]
+- !private ["SH", "DispatchQueue"]
+- !private ["SH", "FeedbackStyle"]
+- !private ["SH", "FeedbackType"]
+- !private ["SH", "UIImpactFeedbackGenerator"]
+- !private ["SH", "UINotificationFeedbackGenerator"]
+- !private ["SH", "UISelectionFeedbackGenerator"]
+- ["SH", ""]
+- !private ["SH", "async"]
+- !private ["SH", "error"]
+- !private ["SH", "heavy"]
+- !private ["SH", "impact"]
+- !private ["SH", "impactOccurred"]
+- !private ["SH", "init"]
+- !private ["SH", "kSystemSoundID_Vibrate"]
+- !private ["SH", "light"]
+- !private ["SH", "main"]
+- !private ["SH", "medium"]
+- !private ["SH", "notification"]
+- !private ["SH", "notificationOccurred"]
+- !private ["SH", "options"]
+- !private ["SH", "prepare"]
+- !private ["SH", "selectionChanged"]
+- !private ["SH", "selectionEnd"]
+- !private ["SH", "selectionFeedbackGenerator"]
+- !private ["SH", "selectionStart"]
+- !private ["SH", "subscript"]
+- !private ["SH", "success"]
+- !private ["SH", "vibrate"]
+- !private ["SH", "warning"]
+- !private ["So8NSCodingP", ""]
+- !private ["So8NSObjectC", "AudioServicesPlayAlertSound"]
+- ["So8NSObjectC", "CAPPluginCall"]
+- !private ["So8NSObjectC", "DispatchQueue"]
+- !private ["So8NSObjectC", "FeedbackStyle"]
+- !private ["So8NSObjectC", "FeedbackType"]
+- !private ["So8NSObjectC", "String"]
+- !private ["So8NSObjectC", "UIImpactFeedbackGenerator"]
+- !private ["So8NSObjectC", "UINotificationFeedbackGenerator"]
+- ["So8NSObjectC", "UISelectionFeedbackGenerator"]
+- ["So8NSObjectC", ""]
+- !private ["So8NSObjectC", "async"]
+- ["So8NSObjectC", "impact"]
+- !private ["So8NSObjectC", "impactOccurred"]
+- !private ["So8NSObjectC", "impactOccurredWithIntensity"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "kSystemSoundID_Vibrate"]
+- !private ["So8NSObjectC", "main"]
+- ["So8NSObjectC", "notification"]
+- !private ["So8NSObjectC", "notificationOccurred"]
+- !private ["So8NSObjectC", "options"]
+- !private ["So8NSObjectC", "prepare"]
+- ["So8NSObjectC", "selectionChanged"]
+- ["So8NSObjectC", "selectionEnd"]
+- ["So8NSObjectC", "selectionFeedbackGenerator"]
+- ["So8NSObjectC", "selectionStart"]
+- ["So8NSObjectC", "vibrate"]
+- !private ["So8NSObjectP", "AudioServicesPlayAlertSound"]
+- !private ["So8NSObjectP", "DispatchQueue"]
+- !private ["So8NSObjectP", "FeedbackStyle"]
+- !private ["So8NSObjectP", "FeedbackType"]
+- !private ["So8NSObjectP", "UIImpactFeedbackGenerator"]
+- !private ["So8NSObjectP", "UINotificationFeedbackGenerator"]
+- ["So8NSObjectP", "UISelectionFeedbackGenerator"]
+- ["So8NSObjectP", ""]
+- !private ["So8NSObjectP", "async"]
+- ["So8NSObjectP", "impact"]
+- !private ["So8NSObjectP", "impactOccurred"]
+- !private ["So8NSObjectP", "impactOccurredWithIntensity"]
+- ["So8NSObjectP", "init"]
+- !private ["So8NSObjectP", "kSystemSoundID_Vibrate"]
+- !private ["So8NSObjectP", "main"]
+- ["So8NSObjectP", "notification"]
+- !private ["So8NSObjectP", "notificationOccurred"]
+- !private ["So8NSObjectP", "options"]
+- !private ["So8NSObjectP", "prepare"]
+- ["So8NSObjectP", "selectionChanged"]
+- ["So8NSObjectP", "selectionEnd"]
+- ["So8NSObjectP", "selectionFeedbackGenerator"]
+- ["So8NSObjectP", "selectionStart"]
+- ["So8NSObjectP", "vibrate"]
+- !private ["So9OS_objectC", "async"]
+- !private ["So9OS_objectC", "main"]
+- !private ["Sq", "subscript"]
+- !private ["SY", "error"]
+- !private ["SY", "heavy"]
+- !private ["SY", "light"]
+- !private ["SY", "medium"]
+- !private ["SY", "success"]
+- !private ["SY", "warning"]
+- !private ["7Combine9SchedulerP", "async"]
+- !private ["7Combine9SchedulerP", "main"]
+- !private ["ST", ""]
+- !private ["ST", "subscript"]
+- !private ["So19UIFeedbackGeneratorC", "FeedbackStyle"]
+- !private ["So19UIFeedbackGeneratorC", "FeedbackType"]
+- ["So19UIFeedbackGeneratorC", ""]
+- !private ["So19UIFeedbackGeneratorC", "impactOccurred"]
+- !private ["So19UIFeedbackGeneratorC", "impactOccurredWithIntensity"]
+- !private ["So19UIFeedbackGeneratorC", "init"]
+- !private ["So19UIFeedbackGeneratorC", "notificationOccurred"]
+- !private ["So19UIFeedbackGeneratorC", "prepare"]
+- !private ["So19UIFeedbackGeneratorC", "selectionChanged"]
+- !private ["So25UIImpactFeedbackGeneratorC", "FeedbackStyle"]
+- !private ["So25UIImpactFeedbackGeneratorC", "impactOccurred"]
+- !private ["So25UIImpactFeedbackGeneratorC", "init"]
+- !private ["So31UINotificationFeedbackGeneratorC", "FeedbackType"]
+- !private ["So31UINotificationFeedbackGeneratorC", "init"]
+- !private ["So31UINotificationFeedbackGeneratorC", "notificationOccurred"]
+- !private ["So28UISelectionFeedbackGeneratorC", "init"]
+- !private ["So28UISelectionFeedbackGeneratorC", "prepare"]
+- !private ["So28UISelectionFeedbackGeneratorC", "selectionChanged"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s35_HasCustomAnyHashableRepresentationP", "subscript"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "AudioServicesPlayAlertSound"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "DispatchQueue"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "FeedbackStyle"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "FeedbackType"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UIImpactFeedbackGenerator"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UINotificationFeedbackGenerator"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "UISelectionFeedbackGenerator"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "async"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "impact"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "impactOccurred"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "kSystemSoundID_Vibrate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "main"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "notification"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "notificationOccurred"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "options"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "prepare"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "selectionChanged"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "selectionEnd"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "selectionFeedbackGenerator"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "selectionStart"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "vibrate"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "AudioServicesPlayAlertSound"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "DispatchQueue"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "FeedbackStyle"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "FeedbackType"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UIImpactFeedbackGenerator"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UINotificationFeedbackGenerator"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "UISelectionFeedbackGenerator"]
+- ["10Foundation37_KeyValueCodingAndObservingPublishingP", ""]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "async"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "impact"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "impactOccurred"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "init"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "kSystemSoundID_Vibrate"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "main"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "notification"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "notificationOccurred"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "options"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "prepare"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "selectionChanged"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "selectionEnd"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "selectionFeedbackGenerator"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "selectionStart"]
+- !private ["10Foundation37_KeyValueCodingAndObservingPublishingP", "vibrate"]
+- !private ["s21_ObjectiveCBridgeableP", "subscript"]
+depends-nominal:
+- "9Capacitor16CAPHapticsPluginC"
+- "So9CAPPluginC"
+- !private "So13CAPPluginCallC"
+- "s7CVarArgP"
+- !private "Sl"
+- "s28CustomDebugStringConvertibleP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "Se"
+- !private "SD"
+- !private "So18OS_dispatch_objectC"
+- !private "So17OS_dispatch_queueC"
+- !private "SE"
+- "SQ"
+- !private "s30ExpressibleByDictionaryLiteralP"
+- !private "s23ExpressibleByNilLiteralP"
+- !private "So21UIImpactFeedbackStyleV"
+- !private "So26UINotificationFeedbackTypeV"
+- "SH"
+- !private "So8NSCodingP"
+- "So8NSObjectC"
+- "So8NSObjectP"
+- !private "So9OS_objectC"
+- !private "Sq"
+- !private "SY"
+- !private "7Combine9SchedulerP"
+- !private "ST"
+- "So19UIFeedbackGeneratorC"
+- !private "So25UIImpactFeedbackGeneratorC"
+- !private "So31UINotificationFeedbackGeneratorC"
+- !private "So28UISelectionFeedbackGeneratorC"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s35_HasCustomAnyHashableRepresentationP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- "10Foundation37_KeyValueCodingAndObservingPublishingP"
+- !private "s21_ObjectiveCBridgeableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/ObjectiveC.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMIDI.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreMedia.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/simd.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreImage.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Combine.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/QuartzCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Dispatch.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Metal.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Darwin.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreLocation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Foundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/AVFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreFoundation.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreAudio.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/CoreGraphics.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Photos.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UniformTypeIdentifiers.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/Swift.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/UIKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/WebKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/prebuilt-modules/SwiftOnoneSupport.swiftmodule/x86_64-apple-ios-simulator.swiftmodule"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDV.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/ios/App/Pods/Target Support Files/CapacitorCordova/CapacitorCordova-umbrella.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/ios/App/Pods/Target Support Files/Capacitor/Capacitor-umbrella.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVInvokedUrlCommand.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPPluginMethod.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/Capacitor/Capacitor/Plugins/Keyboard.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVCommandDelegate.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVScreenOrientationDelegate.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/AppDelegate.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVUIWebViewDelegate.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVUserAgentUtil.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPPluginCall.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVURLProtocol.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVCommandDelegateImpl.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPPlugin.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPlugin.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/Capacitor/Capacitor/CAPBridgedPlugin.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPluginManager.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVViewController.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVConfigParser.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/Capacitor/Capacitor/Capacitor.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/NSDictionary+CordovaPreferences.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPlugin+Resources.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/Capacitor/Capacitor/Plugins/DefaultPlugins.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVPluginResult.h"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/node_modules/@capacitor/ios/CapacitorCordova/CapacitorCordova/Classes/Public/CDVAvailability.h"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/usr/include/mach-o/dyld.modulemap"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/ios/App/DerivedData/App/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/Capacitor.build/unextended-module.modulemap"
+- "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/ios/App/DerivedData/App/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/CapacitorCordova.build/module.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/usr/include/mach-o/compact_unwind_encoding.modulemap"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/usr/include/objc/ObjectiveC.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/OpenGLES.framework/Headers/OpenGLES.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreMedia.framework/Headers/CoreMedia.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreImage.framework/Headers/CoreImage.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/apinotes/Dispatch.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Metal.framework/Headers/Metal.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/usr/include/Darwin.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreLocation.framework/Headers/CoreLocation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/AVFoundation.framework/Headers/AVFoundation.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/SafariServices.framework/Headers/SafariServices.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreAudioTypes.framework/Headers/CoreAudioTypes.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/UserNotifications.framework/Headers/UserNotifications.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Photos.framework/Headers/Photos.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/UniformTypeIdentifiers.framework/Headers/UniformTypeIdentifiers.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/WebKit.framework/Headers/WebKit.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/CoreText.framework/Headers/CoreText.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/MediaToolbox.framework/Headers/MediaToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/AudioToolbox.framework/Headers/AudioToolbox.apinotes"
+- "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator14.4.sdk/System/Library/Frameworks/Security.framework/Headers/Security.apinotes"
+interface-hash: "bf788b0bd8e5b7caea1cac659bec6a00"

@@ -1,26 +1,56 @@
-import './User_Input.css';
-import '@ionic/react'
-import { IonItem, IonLabel, IonInput } from '@ionic/react';
-import React, { useRef } from 'react';
-import { InputChangeEventDetail } from '@ionic/core';
+import React, { FC } from "react";
+import { IonItem, IonLabel, IonInput, IonText } from "@ionic/react";
+import {
+  Controller,
+  Control,
+  NestDataObject,
+  FieldError,
+} from "react-hook-form";
 
-interface ContainerProps {
+export interface InputProps {
   name: string;
-  /*value: string;*/
+  control?: Control;
+  label?: string;
+  component?: JSX.Element;
+  errors?: NestDataObject<Record<string, any>, FieldError>;
 }
 
-/*(event: any) => setValue(event.target.value)*/
-
-const User_Input: React.FC<ContainerProps> = ({ name }) => {
-
-  let valueRef = useRef <HTMLIonInputElement>(null);
-
+const User_Input: FC<InputProps> = ({
+  name,
+  control,
+  component,
+  label,
+  errors,
+}) => {
   return (
-    <IonItem className='ionlabel'>
-      <IonLabel position="stacked">{name}</IonLabel>
-      <IonInput id="input" ref={valueRef}> </IonInput>
-    </IonItem>
+    <>
+      <IonItem>
+        {label && <IonLabel position="floating">{label}</IonLabel>}
+        <Controller
+          as={
+            component ?? (
+              <IonInput
+                aria-invalid={errors && errors[name] ? "true" : "false"}
+                aria-describedby={`${name}Error`}
+              />
+            )
+          }
+          name={name}
+          control={control}
+          onChangeName="onIonChange"
+        />
+      </IonItem>
+      {errors && errors[name] && (
+        <IonText color="danger" className="ion-padding-start">
+          <small>
+            <span role="alert" id={`${name}Error`}>
+              {errors[name].message}
+            </span>
+          </small>
+        </IonText>
+      )}
+    </>
   );
-}
+};
 
 export default User_Input;
