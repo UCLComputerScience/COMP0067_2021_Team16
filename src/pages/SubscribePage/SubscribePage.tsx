@@ -39,7 +39,7 @@ const SubscribePage: React.FC = () => {
   ];
 
   const registerUser = (data) => {
-    alert("creating a new user account with: " + data);
+      console.log("creating a new user account with: " + JSON.stringify(data));
   };
 
   return (

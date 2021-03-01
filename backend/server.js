@@ -1,13 +1,12 @@
-let express = require("express");
-let app = express();
+const express = require("express");
+const app = express();
 
-let PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8080;
 
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+app.use(require('cors')())
 
-require("./routes/apiRoutes")(app);
+app.use(express.static(__dirname + '/public'));
 
-app.listen(PORT, function() {
+app.listen(PORT, () => {
   console.log("App listening on PORT: " + PORT);
 });

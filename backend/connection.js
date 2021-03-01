@@ -8,8 +8,8 @@ let connection = mysql.createConnection({
     database: "baby"
 });
 
-connection.connect(function (err) {
+connection.connect((err) => {
     if (err) throw err;
-    console.log("connected as ID " + connection.threadId);
+    console.log("Connected as ID " + connection.threadId);
     afterConnection();
 });
