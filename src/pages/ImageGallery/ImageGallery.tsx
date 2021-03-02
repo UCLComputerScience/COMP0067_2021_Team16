@@ -102,13 +102,13 @@ const EditSlidesPage: React.FC = () => {
       <IonFooter className="bar-footer">
         <AddBar />
       </IonFooter>
-      <form method="post">
+      {/* <form method="post">
         <IonItem>
           <IonLabel>Image</IonLabel>
           <IonInput id="image" />
         </IonItem>
         <IonButton type="submit">Submit</IonButton>
-      </form>
+      </form> */}
     </IonPage>
   );
 };

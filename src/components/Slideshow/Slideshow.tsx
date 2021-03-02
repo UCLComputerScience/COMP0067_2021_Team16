@@ -98,6 +98,34 @@ const images = [
 ];
 
 const Slideshow: React.FC = () => {
+
+  // Promise call
+
+  // $.post_ajax("https://reqres.in/api/users?page=2").then(return "SUCCESS").error( return "FAIL");\
+
+//   public  getProductById(productId: number): Observable<Product> {
+
+// return  this.httpClient
+
+// .get(this.baseUrl + '/products/' + productId)
+
+// .map(response  => {
+
+// return  new  Product(response);
+
+// })
+
+// .catch((err)=>{
+
+// console.error(err);
+
+// });
+
+// }
+
+// baseurl:https://reqres.in/api 
+// products= "/users" ?page=2
+
   return (
       
         <IonSlides pager={false} options={slideOpts}>
