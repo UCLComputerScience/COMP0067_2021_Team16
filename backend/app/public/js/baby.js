@@ -9,7 +9,7 @@ $.get("/api/all", function(data) {
       row.addClass("image");
 
       row.append("<p>" + data[i].name + "</p>");
-      row.append("<p>" + data[i].png + "</p>");
+      row.append("<img class='tableimg' src='/images/" + data[i].png + "'</img>");
 
       $("#image-area").prepend(row);
 
@@ -36,7 +36,7 @@ $("#image-submit").on("click", function(event) {
       row.addClass("image");
 
       row.append("<p>" + newImage.name + "</p>");
-      row.append("<p>" + newImage.png + "</p>");
+      row.append("<img src='/images/" + newImage.png + "'</img>");
 
       $("#image-area").prepend(row);
 

@@ -1,4 +1,7 @@
         /* Bordered form */
+        .tableimg {
+            width: 100px;
+        }
         form {
             border: 3px solid #ebf7fd;
             width: 300px;
