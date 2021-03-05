@@ -1,80 +1,84 @@
-        /* Bordered form */
-        .tableimg {
-            width: 100px;
-        }
-        form {
-            border: 3px solid #ebf7fd;
-            width: 300px;
-            text-align: center;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #63848e;
-        }
+* {
+  font-family: "Quicksand", sans-serif;
+  color: #1d3344;
+}
 
-        /* Full-width inputs */
-        input[type=text],
-        input[type=password] {
-            width: 100%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            display: inline-block;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-        }
+.tableimg {
+  width: 100px;
+}
+form {
+  border: 3px solid #ebf7fd;
+  width: 300px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #63848e;
+}
 
-        /* Set a style for all buttons */
-        button {
-            background-color: #304b5f;
-            color: #ebf7fd;
-            padding: 14px 20px;
-            margin: 8px 0;
-            border: none;
-            cursor: pointer;
-            width: 100%;
-        }
+/* Full-width inputs */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
 
-        label {
-            color: #ebf7fd;
-        }
+/* Set a style for all buttons */
+button {
+  background-color: #304b5f;
+  color: #ebf7fd;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
 
-        /* Add a hover effect for buttons */
-        button:hover {
-            opacity: 0.8;
-        }
+label {
+  color: #ebf7fd;
+}
 
-        /* Center the avatar image inside this container */
-        .imgcontainer {
-            text-align: center;
-            margin: 24px 0 12px 0;
-        }
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.8;
+}
 
-        /* Avatar image */
-        img.avatar {
-            width: 50%;
-            border-radius: 50%;
-        }
+/* Center the avatar image inside this container */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
 
-        /* Add padding to containers */
-        .container {
-            padding: 16px;
-        }
+/* Avatar image */
+img.avatar {
+  width: 50%;
+  border-radius: 50%;
+}
 
-        /* The "Forgot password" text */
-        span.psw {
-            float: right;
-            padding-top: 16px;
-        }
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
 
-        /* Change styles for span and cancel button on extra small screens */
-        @media screen and (max-width: 300px) {
-            span.psw {
-                display: block;
-                float: none;
-            }
+/* The "Forgot password" text */
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
 
-            .cancelbtn {
-                width: 100%;
-            }
-        }
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+
+  .cancelbtn {
+    width: 100%;
+  }
+}
