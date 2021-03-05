@@ -24,8 +24,8 @@ $("#image-submit").on("click", function(event) {
 
   let newImage = {
     type: "default",
-    name: $("#name").val().trim(),
-    png: $("#png").val().trim()
+    name: $("#name").val().trim().toUpperCase(),
+    png: $("#name").val().trim().replace(/[^A-Z\d\s]/gi, '').replace(/\s/g,'').toLowerCase() + ".png"
   };
 
   console.log(newImage);
@@ -43,5 +43,4 @@ $("#image-submit").on("click", function(event) {
     });
 
   $("#name").val("");
-  $("#png").val("");
 });

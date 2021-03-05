@@ -13,7 +13,7 @@ module.exports = function(app) {
   app.post("/api/new", function(req, res) {
     console.log("Image Data:");
     console.log(req.body);
-
+    
     let dbQuery = "INSERT INTO images (type, name, png) VALUES (?,?,?)";
 
     connection.query(dbQuery, [req.body.type, req.body.name, req.body.png], function(err, result) {
