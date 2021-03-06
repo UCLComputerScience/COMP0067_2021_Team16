@@ -3,56 +3,53 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Add Slideshows</title>
+    <title>Add Slideshow</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.16.0/moment.min.js"></script>
-
+    <link rel="shortcut icon" type="image/png" href="../images/cosmic.jpg">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-
+    <link rel="stylesheet" type="text/css" href="../css/addslideshow.css">
 </head>
 
 <body style="background-color: #ebf7fd">
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand">Newborn Baby App</a>
-                <a href="addimages.html">Add Images</a>
-                <a href="editimages.html">Edit Images</a>
-                <a href="addslideshows.html">Add Slideshows</a>
-                <a href="editslideshows.html">Edit Slideshows</a>
+                <a class="navbar-brand">
+                    <h3>Newborn Baby App</h3>
+                </a>
+                <a href="addslideshow.html">Add Slideshow</a>
+                <a href="addimage.html">Add Image</a>
+                <a href="addaudio.html">Add Audio</a>
+                <a href="mailinglist.html">Mailing List</a>
             </div>
     </nav>
     <div class="jumbotron">
-        <h1 class="text-center">Add Slideshows</h1>
+        <h1 class="text-center">Add Slideshow</h1>
+        <form id="form" method="POST" action="/slideshows/new">
+            <label for="name"><b>Name</b></label>
+            <input id="name" type="text" placeholder="Enter slideshow name" name="name" required>
+            <div id="image-area"></div>
+            <button id="slideshow-submit" type="submit">Submit</button>
+        </form>
     </div>
 
-    <div class="container">
-
-        <div class="row">
-            <div class="col-sm-8 col-sm-offset-2">
-                <p class="cool-font">Name</p>
-                <input class="form-control" type="text" id="name" placeholder="Enter Your Name">
-                <br>
-                <button id="image-submit" class="btn btn-lg pull-right">Submit!</button>
-            </div>
+    <div class="row">
+        <div>
+            <h2 style="text-align: center;">Slideshows</h2>
+            <hr>
+            <div id="slideshow-area"></div>
         </div>
-
-        <div class="row">
-            <div class="col-sm-8 col-sm-offset-2">
-                <h2>Images</h2>
-                <hr>
-                <div id="image-area"></div>
-            </div>
-        </div>
-
     </div>
 
-    <script type="text/javascript" src="../js/baby.js"></script>
+    <div class="footer">
+        <p>Copyright © 2016 Cosmic Baby Books - All Rights Reserved.</p>
+    </div>
+    <script type="text/javascript" src="../js/addslideshow.js"></script>
 </body>
 
 </html>
