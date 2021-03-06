@@ -22,4 +22,23 @@ module.exports = function(app) {
       res.end();
     });
   });
+
+  app.delete("/images/delete/:id", function(req, res) {
+    console.log(req.params);
+
+    let dbQuery = "DELETE FROM images WHERE id = ?";
+    connection.query(dbQuery, [req.params.id], function(err, result) {
+      if (err) throw err;
+      console.log("Image deleted from images!");
+      res.end();
+    });
+
+    let dbQuery2 = "DELETE FROM slideshows WHERE images_id = ?";
+    connection.query(dbQuery2, [req.params.id], function(err, result) {
+      if (err) throw err;
+      console.log("Image deleted from slideshows!");
+      res.end();
+    });
+
+  })
 };

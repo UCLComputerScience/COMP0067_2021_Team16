@@ -1,15 +1,29 @@
 * {
   font-family: "Quicksand", sans-serif;
-  color: #1d3344;
 }
 
 .tableimg {
   width: 100px;
 }
 
-a {
-  color: #1d3344;
+.navbar {
+  color: #ebf7fd;
+  background-color: #1d3344;
   padding: 10px 10px;
+}
+
+.navbar-brand {
+  color: #ebf7fd;
+  font-weight: 900;
+}
+
+a {
+  color: #ebf7fd;
+  padding: 10px 10px;
+}
+
+a:hover {
+  color: #63848e;
 }
 
 #login-form {
@@ -119,4 +133,16 @@ span.psw {
   .cancelbtn {
     width: 100%;
   }
+}
+
+.footer {
+  position: relative;
+  top: 75px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #1d3344;
+  color: #ebf7fd;
+  text-align: center;
 }
