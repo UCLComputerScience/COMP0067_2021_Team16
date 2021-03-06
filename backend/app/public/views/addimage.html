@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Add Images</title>
+    <title>Add Image</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -24,16 +24,19 @@
                 <a href="addslideshow.html">Add Slideshow</a>
                 <a href="addimage.html">Add Image</a>
                 <a href="addaudio.html">Add Audio</a>
+                <a href="mailinglist.html">Mailing List</a>
             </div>
     </nav>
     <div class="jumbotron">
-        <h1 class="text-center">Add Images</h1>
-        <form action="action_page.php" method="post">
+        <h1 class="text-center">Add Image</h1>
+        <form action="/views/addimage.html">
             <label for="name"><b>Name</b></label>
-            <input type="text" id="name" placeholder="Enter Your Name" name="name" required>
+            <input id="name" type="text" placeholder="Enter image name" name="name" required>
             <label for="narration"><b>Narration</b></label>
-            <input type="narration" placeholder="Enter Narration" name="narration">
-            <button type="submit" id="image-submit">Submit</button>
+            <input id="narration" type="text" placeholder="Enter the narration script for this image" name="narration">
+            <br><br>
+            <input type="file" id="filetag" required><img src="" style="width: 100px;" id="preview"><br><br>
+            <button id="image-submit" type="submit">Submit</button>
         </form>
     </div>
 

@@ -25,17 +25,19 @@ a {
 
 th {
   border: 0.5px solid #63848e;
-  font-weight: bold;
+  background-color: #63848e;
+  color: #ebf7fd;
   padding: 10px 10px;
-  word-wrap: break-word; 
-  vertical-align: baseline;
 }
 
 td {
   border: 0.5px solid #63848e;
   padding: 10px 10px;
   word-wrap: break-word; 
-  vertical-align: baseline;
+}
+
+td > * {
+  vertical-align : middle;
 }
 
 #image-area {
@@ -50,6 +52,7 @@ td {
 
 .jumbotron {
   background-color: #63848e;
+  padding: 50px 100px;
 }
 
 /* Full-width inputs */
