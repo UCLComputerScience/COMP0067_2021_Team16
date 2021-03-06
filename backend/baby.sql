@@ -7,13 +7,13 @@ CREATE TABLE `users` (
 `password` VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE `carousels` (
+CREATE TABLE `slideshows` (
 `order` INT(100) PRIMARY KEY AUTO_INCREMENT NOT NULL,
-`slideshows_id` INT(100) NOT NULL,
+`slideshow_id` INT(100) NOT NULL,
 `images_id` INT(100) NOT NULL
 );
 
-CREATE TABLE `slideshows` (
+CREATE TABLE `slideshow_category` (
 `id` INT(100) PRIMARY KEY AUTO_INCREMENT NOT NULL,
 `type` VARCHAR(255) NOT NULL,
 `name` VARCHAR(255) NOT NULL
@@ -55,51 +55,51 @@ INSERT INTO images (type,name,text,png,default_mp3,custom_mp3) VALUES ("default"
 
 INSERT INTO images (type,name,text,png,default_mp3,custom_mp3) VALUES ("default","SOLMARIS","This miniature jellyfish is a width of your thumb nail and possesses a truly invisible cloak that is transparent like the water it inhabits. Solmaris wears its stomach like a hula-hoop; as tube that runs around the entire edge of the jellyfish umbrella. The outermost 'skin' of the jellyfish umbrella is named the exumbrella. Solmaris sense organs and exumbrellar are fluorescent. They light up under the blue to ultraviolet light range. The green fluorescent protein gene was first isolated in a jellyfish and since has been introduced into many organisms; from bacteria to fungi, plants, flies and even mammalian and human cells. This gene can also be passed on to the next generation.","solmaris.png","solmaris.mp3","");
 
-INSERT INTO slideshows (type,name) VALUES ("default","All Images");
+INSERT INTO slideshow_category (type,name) VALUES ("default","All Images");
 
-INSERT INTO slideshows (type,name) VALUES ("default","Sea Creatures Skeletons");
+INSERT INTO slideshow_category (type,name) VALUES ("default","Sea Creatures Skeletons");
 
-INSERT INTO slideshows (type,name) VALUES ("default","Floating Sea Animals");
+INSERT INTO slideshow_category (type,name) VALUES ("default","Floating Sea Animals");
 
-INSERT INTO slideshows (type,name) VALUES ("default","Sea Floor Animals");
+INSERT INTO slideshow_category (type,name) VALUES ("default","Sea Floor Animals");
 
-INSERT INTO slideshows (type,name) VALUES ("default","Jellyfish");
+INSERT INTO slideshow_category (type,name) VALUES ("default","Jellyfish");
 
-INSERT INTO carousels (slideshows_id,images_id) VALUES (1,1);
-INSERT INTO carousels (slideshows_id,images_id) VALUES (1,2);
-INSERT INTO carousels (slideshows_id,images_id) VALUES (1,3);
-INSERT INTO carousels (slideshows_id,images_id) VALUES (1,4);
-INSERT INTO carousels (slideshows_id,images_id) VALUES (1,5);
-INSERT INTO carousels (slideshows_id,images_id) VALUES (1,6);
-INSERT INTO carousels (slideshows_id,images_id) VALUES (1,7);
-INSERT INTO carousels (slideshows_id,images_id) VALUES (1,8);
-INSERT INTO carousels (slideshows_id,images_id) VALUES (1,9);
-INSERT INTO carousels (slideshows_id,images_id) VALUES (1,10);
-INSERT INTO carousels (slideshows_id,images_id) VALUES (1,11);
-INSERT INTO carousels (slideshows_id,images_id) VALUES (1,12);
+INSERT INTO slideshows (slideshow_id,images_id) VALUES (1,1);
+INSERT INTO slideshows (slideshow_id,images_id) VALUES (1,2);
+INSERT INTO slideshows (slideshow_id,images_id) VALUES (1,3);
+INSERT INTO slideshows (slideshow_id,images_id) VALUES (1,4);
+INSERT INTO slideshows (slideshow_id,images_id) VALUES (1,5);
+INSERT INTO slideshows (slideshow_id,images_id) VALUES (1,6);
+INSERT INTO slideshows (slideshow_id,images_id) VALUES (1,7);
+INSERT INTO slideshows (slideshow_id,images_id) VALUES (1,8);
+INSERT INTO slideshows (slideshow_id,images_id) VALUES (1,9);
+INSERT INTO slideshows (slideshow_id,images_id) VALUES (1,10);
+INSERT INTO slideshows (slideshow_id,images_id) VALUES (1,11);
+INSERT INTO slideshows (slideshow_id,images_id) VALUES (1,12);
 
-INSERT INTO carousels (slideshows_id,images_id) VALUES (2,1);
-INSERT INTO carousels (slideshows_id,images_id) VALUES (2,8);
-INSERT INTO carousels (slideshows_id,images_id) VALUES (2,9);
-INSERT INTO carousels (slideshows_id,images_id) VALUES (2,7);
-INSERT INTO carousels (slideshows_id,images_id) VALUES (2,6);
-INSERT INTO carousels (slideshows_id,images_id) VALUES (2,3);
+INSERT INTO slideshows (slideshow_id,images_id) VALUES (2,1);
+INSERT INTO slideshows (slideshow_id,images_id) VALUES (2,8);
+INSERT INTO slideshows (slideshow_id,images_id) VALUES (2,9);
+INSERT INTO slideshows (slideshow_id,images_id) VALUES (2,7);
+INSERT INTO slideshows (slideshow_id,images_id) VALUES (2,6);
+INSERT INTO slideshows (slideshow_id,images_id) VALUES (2,3);
 
-INSERT INTO carousels (slideshows_id,images_id) VALUES (3,1);
-INSERT INTO carousels (slideshows_id,images_id) VALUES (3,2);
-INSERT INTO carousels (slideshows_id,images_id) VALUES (3,8);
-INSERT INTO carousels (slideshows_id,images_id) VALUES (3,9);
-INSERT INTO carousels (slideshows_id,images_id) VALUES (3,12);
-INSERT INTO carousels (slideshows_id,images_id) VALUES (3,11);
-INSERT INTO carousels (slideshows_id,images_id) VALUES (3,10);
+INSERT INTO slideshows (slideshow_id,images_id) VALUES (3,1);
+INSERT INTO slideshows (slideshow_id,images_id) VALUES (3,2);
+INSERT INTO slideshows (slideshow_id,images_id) VALUES (3,8);
+INSERT INTO slideshows (slideshow_id,images_id) VALUES (3,9);
+INSERT INTO slideshows (slideshow_id,images_id) VALUES (3,12);
+INSERT INTO slideshows (slideshow_id,images_id) VALUES (3,11);
+INSERT INTO slideshows (slideshow_id,images_id) VALUES (3,10);
 
-INSERT INTO carousels (slideshows_id,images_id) VALUES (4,7);
-INSERT INTO carousels (slideshows_id,images_id) VALUES (4,6);
-INSERT INTO carousels (slideshows_id,images_id) VALUES (4,4);
-INSERT INTO carousels (slideshows_id,images_id) VALUES (4,3);
-INSERT INTO carousels (slideshows_id,images_id) VALUES (4,5);
+INSERT INTO slideshows (slideshow_id,images_id) VALUES (4,7);
+INSERT INTO slideshows (slideshow_id,images_id) VALUES (4,6);
+INSERT INTO slideshows (slideshow_id,images_id) VALUES (4,4);
+INSERT INTO slideshows (slideshow_id,images_id) VALUES (4,3);
+INSERT INTO slideshows (slideshow_id,images_id) VALUES (4,5);
 
-INSERT INTO carousels (slideshows_id,images_id) VALUES (5,5);
-INSERT INTO carousels (slideshows_id,images_id) VALUES (5,12);
-INSERT INTO carousels (slideshows_id,images_id) VALUES (5,11);
-INSERT INTO carousels (slideshows_id,images_id) VALUES (5,10);
+INSERT INTO slideshows (slideshow_id,images_id) VALUES (5,5);
+INSERT INTO slideshows (slideshow_id,images_id) VALUES (5,12);
+INSERT INTO slideshows (slideshow_id,images_id) VALUES (5,11);
+INSERT INTO slideshows (slideshow_id,images_id) VALUES (5,10);

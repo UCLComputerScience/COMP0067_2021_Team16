@@ -6,7 +6,13 @@
 .tableimg {
   width: 100px;
 }
-form {
+
+a {
+  color: #1d3344;
+  padding: 10px 10px;
+}
+
+#login-form {
   border: 3px solid #ebf7fd;
   width: 300px;
   text-align: center;
@@ -14,6 +20,35 @@ form {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background-color: #63848e;
+}
+
+th {
+  border: 0.5px solid #63848e;
+  font-weight: bold;
+  padding: 10px 10px;
+  word-wrap: break-word; 
+  vertical-align: baseline;
+}
+
+td {
+  border: 0.5px solid #63848e;
+  padding: 10px 10px;
+  word-wrap: break-word; 
+  vertical-align: baseline;
+}
+
+#image-area {
+  width: 80%;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ebf7fd;
+}
+
+.jumbotron {
   background-color: #63848e;
 }
 

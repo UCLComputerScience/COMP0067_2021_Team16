@@ -1,8 +1,8 @@
 const connection = require("../config/connection.js");
 
 module.exports = function(app) {
-  app.get("/api/all", function(req, res) {
-    let dbQuery = "SELECT * FROM images ORDER BY id DESC";
+  app.get("/images/all", function(req, res) {
+    let dbQuery = "SELECT * FROM images ORDER BY id ASC";
 
     connection.query(dbQuery, function(err, result) {
       if (err) throw err;
@@ -10,7 +10,7 @@ module.exports = function(app) {
     });
   });
 
-  app.post("/api/new", function(req, res) {
+  app.post("/images/new", function(req, res) {
     console.log("Image Data:");
     console.log(req.body);
     
