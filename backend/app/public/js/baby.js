@@ -8,7 +8,7 @@ $(document).ready(function () {
 
   document.querySelector("#filetag").addEventListener("change", function () {
     const reader = new FileReader();
-    reader.addEventListener("load", () => {
+    document.getElementById('form').addEventListener("submit", () => {
       localStorage.setItem(this.files[0].name, reader.result);
     })
     reader.readAsDataURL(this.files[0]);
