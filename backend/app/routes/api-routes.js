@@ -1,4 +1,3 @@
-const fs = require('fs');
 const connection = require("../config/connection.js");
 
 module.exports = function (app) {
@@ -15,32 +14,23 @@ module.exports = function (app) {
     console.log("Image Data:");
     console.log(req.body);
     let newImage = {
-          type: "default",
-          name: req.body.name.trim().toUpperCase(),
-          text: req.body.narration.trim().replace(/\.\s+([a-z])[^\.]|^(\s*[a-z])[^\.]/g, s => s.replace(/([a-z])/,s => s.toUpperCase())),
-          png: req.body.name.trim().replace(/[^A-Z\d\s]/gi, '').replace(/\s/g, '').toLowerCase() + ".png"
-        };
+      type: "default",
+      name: req.body.name.trim().toUpperCase(),
+      text: req.body.narration.trim().replace(/\.\s+([a-z])[^\.]|^(\s*[a-z])[^\.]/g, s => s.replace(/([a-z])/, s => s.toUpperCase())),
+      png: req.body.image,
+      default_mp3: ""
+    };
 
-    let dbQuery = "INSERT INTO images (type, name, text, png) VALUES (?,?,?,?)";
+    let dbQuery = "INSERT INTO images (type, name, text, png, default_mp3) VALUES (?,?,?,?,?)";
 
-    connection.query(dbQuery, [newImage.type, newImage.name, newImage.text, newImage.png], function (err, result) {
+    connection.query(dbQuery, [newImage.type, newImage.name, newImage.text, newImage.png, newImage.default_mp3], function (err, result) {
       if (err) throw err;
       console.log("Image successfully saved!");
-      res.redirect('/views/addimage.html'); 
+      res.redirect('/views/addimage.html');
     });
   });
 
-  // app.post('/images/upload', function (req, res) {
-  //   fs.readFile(req.files.image.path, function (err, data) {
-  //     if (err) throw err;
-  //     let imageName = req.files.image.name
-  //     let newPath = __dirname + "/images/" + imageName;
-  //     fs.writeFile(newPath, data, function (err) {
-  //       if (err) throw err;
-  //       res.redirect("/images/" + imageName);
-  //     })
-  //   })
-  // })
+
 
   app.delete("/images/delete/:id", function (req, res) {
     console.log(req.params);
