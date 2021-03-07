@@ -138,7 +138,7 @@ module.exports = function (app) {
         { header: 'Date Added', key: 'date', width: 50 }
       ]
       worksheet.addRows(jsonEmails)
-      workbook.xlsx.writeFile("MailingList.xlsx")
+      workbook.xlsx.writeFile("./app/public/views/MailingList.xlsx")
         .then(function () {
           console.log("File saved!");
           res.send("File saved!")

@@ -41,6 +41,6 @@ $(document).ready(function () {
     $.get("/mailinglist/excel", function (data) {
       console.log(data)
     })
-    window.open("../../../baby.sql");
+    window.open("MailingList.xlsx");
   })
 });
