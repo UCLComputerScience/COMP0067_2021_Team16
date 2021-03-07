@@ -59,6 +59,16 @@ td > * {
   padding: 20px 20px;
 }
 
+#images-area2 {
+    width: 80%;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ebf7fd;
+  }
+
 span {
   padding: 0px 5px;
 }

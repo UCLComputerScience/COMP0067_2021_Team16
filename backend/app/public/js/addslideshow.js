@@ -1,9 +1,4 @@
 $(document).ready(function () {
-  // localStorage.clear()
-  // let data = ["asteroblastusstellatus.png", "porpitaprunella.png", "poliopogonamadou.png", "botryllusschlosseri.png", "cassiopeaandromeda.png", "hemipholiscordifera.png", "centrostephanuslongispinus.png", "nautiluspompilius.png", "haeckelianaporcellana.png", "cannorrhizaconnexa.png", "nausithoechallengeri.png", "solmaris.png"]
-  // for (let i = 0; i < data.length; i++) {
-  //   localStorage.setItem(data[i], "/images/" + data[i]);
-  // }
   $.get("/images/all", function (data) {
     if (data.length !== 0) {
       let checkboxes = $("<div id='checkboxes'>")

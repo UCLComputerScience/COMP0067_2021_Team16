@@ -1,9 +1,13 @@
 $(document).ready(function () {
-    // localStorage.clear()
-    // let data = ["asteroblastusstellatus.png", "porpitaprunella.png", "poliopogonamadou.png", "botryllusschlosseri.png", "cassiopeaandromeda.png", "hemipholiscordifera.png", "centrostephanuslongispinus.png", "nautiluspompilius.png", "haeckelianaporcellana.png", "cannorrhizaconnexa.png", "nausithoechallengeri.png", "solmaris.png"]
-    // for (let i = 0; i < data.length; i++) {
-    //   localStorage.setItem(data[i], "/images/" + data[i]);
-    // }
+
+    document.querySelector("#audiotag").addEventListener("change", function () {
+        const reader = new FileReader();
+        document.getElementById('form').addEventListener("submit", () => {
+          localStorage.setItem(this.files[0].name, reader.result);
+        })
+        reader.readAsDataURL(this.files[0]);
+      })
+
     $.get("/images/all", function (data) {
         if (data.length !== 0) {
             let radios = $("<div id='radios'>")
@@ -33,7 +37,7 @@ $(document).ready(function () {
                 row.append("<td>" + data[i].name + "</td>");
                 row.append("<td>" + data[i].text + "</td>");
                 row.append("<td><img class='tableimg' src='" + localStorage.getItem(data[i].png) + "'</img></td>");
-                row.append("<td>" + data[i].default_mp3 + "</td>");
+                row.append("<td>" + data[i].default_mp3 + "<br><br><audio controls><source src='" + localStorage.getItem(data[i].default_mp3) + "'/></audio></td>");
                 row.append("<td><button class='delete' value='" + data[i].id + "' name='" + data[i].png + "'>Delete Audio</button></td>");
                 row.append("</tr>");
                 table.append(row);
