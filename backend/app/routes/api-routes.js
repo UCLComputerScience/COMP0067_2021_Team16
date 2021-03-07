@@ -3,6 +3,34 @@ const excel = require('exceljs');
 
 module.exports = function (app) {
 
+  // Login
+
+  app.post("/login", function (req, res) {
+    let username = req.body.username;
+    let password = req.body.password;
+    let dbQuery = "SELECT * FROM users WHERE username = ? AND password = ?";
+    connection.query(dbQuery, [username, password], function (err, result) {
+      if (err) throw err;
+      if (result.length > 0) {
+        req.session.loggedin = true;
+        req.session.username = username;
+        res.redirect('/views/addslideshow.html');
+      } else {
+        res.send('Incorrect username and/or password.');
+      }
+      res.end();
+    });
+  })
+
+  app.get('/dashboard', function (req, res) {
+    if (req.session.loggedin) {
+      res.send('Welcome back, ' + req.session.username + '!');
+    } else {
+      res.send('Please login to view this page.');
+    }
+    res.end();
+  });
+
   // Slideshows
   app.get("/slideshows/all", function (req, res) {
     let dbQuery = "SELECT sc.name as slideshow_name, sc.id as slideshow_id, i.name as image, i.png as png FROM baby.images i, baby.slideshow_category sc, baby.slideshows s WHERE s.slideshow_id = sc.id AND s.images_id = i.id ORDER BY s.order";
