@@ -3,6 +3,7 @@ const connection = require("../config/connection.js");
 module.exports = function (app) {
 
   // Slideshows
+  
   app.get("/slideshows/all", function (req, res) {
     let dbQuery = "SELECT sc.name as slideshow_name, sc.id as slideshow_id, i.name as image, i.png as png FROM baby.images i, baby.slideshow_category sc, baby.slideshows s WHERE s.slideshow_id = sc.id AND s.images_id = i.id ORDER BY s.order";
     connection.query(dbQuery, function (err, result) {
@@ -10,6 +11,22 @@ module.exports = function (app) {
       res.json(result);
     });
   });
+
+  app.delete("/slideshows/delete/:id", function (req, res) {
+    console.log(req.params);
+    let dbQuery = "DELETE FROM slideshow_category WHERE id = ?";
+    connection.query(dbQuery, [req.params.id], function (err, result) {
+      if (err) throw err;
+      console.log("Slideshow deleted from slideshow_category!");
+      res.end();
+    });
+    let dbQuery2 = "DELETE FROM slideshows WHERE slideshow_id = ?";
+    connection.query(dbQuery2, [req.params.id], function (err, result) {
+      if (err) throw err;
+      console.log("Slideshow deleted from slideshows!");
+      res.end();
+    });
+  })
 
   // Images
 
