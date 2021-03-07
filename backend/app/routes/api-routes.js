@@ -3,13 +3,34 @@ const connection = require("../config/connection.js");
 module.exports = function (app) {
 
   // Slideshows
-  
   app.get("/slideshows/all", function (req, res) {
     let dbQuery = "SELECT sc.name as slideshow_name, sc.id as slideshow_id, i.name as image, i.png as png FROM baby.images i, baby.slideshow_category sc, baby.slideshows s WHERE s.slideshow_id = sc.id AND s.images_id = i.id ORDER BY s.order";
     connection.query(dbQuery, function (err, result) {
       if (err) throw err;
       res.json(result);
     });
+  });
+
+  app.post("/slideshows/new", function (req, res) {
+    console.log("Slideshow Data:");
+    console.log(req.body);
+    let dbQuery = "INSERT INTO slideshow_category (type, name) VALUES (?,?)";
+    connection.query(dbQuery, ["default", req.body.name], function (err, result) {
+      if (err) throw err;
+      console.log("Slideshow successfully saved in slideshow_category!");
+    })
+    let dbQuery2 = "SELECT id FROM slideshow_category WHERE name = ?";
+    connection.query(dbQuery2, [req.body.name], function (err, result) {
+      if (err) throw err;
+      for (let i = 1; i < Object.keys(req.body).length; i++) {
+        let dbQuery3 = "INSERT INTO slideshows (slideshow_id, images_id) VALUES (?,?)";
+        connection.query(dbQuery3, [result[0]["id"], parseInt(req.body[Object.keys(req.body)[i]])], function (err, result) {
+          if (err) throw err;
+        })
+      }
+      console.log("Slideshow successfully saved in slideshows!");
+      res.redirect('/views/addslideshow.html');
+    })
   });
 
   app.delete("/slideshows/delete/:id", function (req, res) {
@@ -29,7 +50,6 @@ module.exports = function (app) {
   })
 
   // Images
-
   app.get("/images/all", function (req, res) {
     let dbQuery = "SELECT * FROM images ORDER BY id ASC";
     connection.query(dbQuery, function (err, result) {

@@ -8,7 +8,7 @@ $(document).ready(function () {
     if (data.length !== 0) {
       let checkboxes = $("<div id='checkboxes'>")
       for (let i = 0; i < data.length; i++) {
-        checkboxes.append("<span><input type='checkbox' id='" + data[i].id + "' name='" + data[i].name + "' value='" + data[i].name + "'>")
+        checkboxes.append("<span><input type='checkbox' id='" + data[i].id + "' name='" + data[i].name + "' value='" + data[i].id + "'>")
         checkboxes.append("<span><label for='" + data[i].id + "'>" + data[i].name + "</label>");
         checkboxes.append("<span><img class='tableimg' src='" + localStorage.getItem(data[i].png) + "'</img>");
       }
