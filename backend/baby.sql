@@ -7,10 +7,10 @@ CREATE TABLE `users` (
 `password` VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE `slideshows` (
-`order` INT(100) PRIMARY KEY AUTO_INCREMENT NOT NULL,
-`slideshow_id` INT(100) NOT NULL,
-`images_id` INT(100) NOT NULL
+CREATE TABLE `emails` (
+`id` INT(100) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+`email` VARCHAR(255) NOT NULL,
+`date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE `slideshow_category` (
@@ -29,7 +29,35 @@ CREATE TABLE `images` (
 `custom_mp3` VARCHAR(255) NULL
 );
 
+CREATE TABLE `slideshows` (
+`order` INT(100) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+`slideshow_id` INT(100) NOT NULL,
+`images_id` INT(100) NOT NULL
+);
+
+CREATE TABLE `music` (
+`id` INT(100) PRIMARY KEY AUTO_INCREMENT NOT NULL,
+`name` VARCHAR(255) NOT NULL,
+`mp3` VARCHAR(255) NOT NULL
+);
+
 INSERT INTO users (username,password) VALUES ("admin","Newborn1!2");
+
+INSERT INTO emails (email) VALUES ("caroline.crandell.20@ucl.ac.uk");
+
+INSERT INTO emails (email) VALUES ("giuseppe.baldini.20@ucl.ac.uk");
+
+INSERT INTO emails (email) VALUES ("chenuka.ratwatte.20@ucl.ac.uk");
+
+INSERT INTO slideshow_category (type,name) VALUES ("default","All Images");
+
+INSERT INTO slideshow_category (type,name) VALUES ("default","Sea Creatures Skeletons");
+
+INSERT INTO slideshow_category (type,name) VALUES ("default","Floating Sea Animals");
+
+INSERT INTO slideshow_category (type,name) VALUES ("default","Sea Floor Animals");
+
+INSERT INTO slideshow_category (type,name) VALUES ("default","Jellyfish");
 
 INSERT INTO images (type,name,text,png,default_mp3,custom_mp3) VALUES ("default","ASTEROBLASTUS STELLATUS","Asteroblastus stellatus is an ancestor of the Sea Lily; the animal that looks like a starfish on a stalk. They were around over 450 million years ago when fish with jaws were about to appear. With this new threat Blastoid creatures evolved the ability to regenerate. Surviving Sea Lilies possess ancestoral skeletal five-sector symmetry and similarly attach themselves to the rocky bottom by a stalk. The Sea Lily mostly eats suspended particles in the water that float by, such as plankton. It uses grooves within its five radiating petals to capture food. These work like tiny conveyors delivering food into its mouth in the centre.","asteroblastusstellatus.png","asteroblastusstellatus.mp3","");
 
@@ -54,16 +82,6 @@ INSERT INTO images (type,name,text,png,default_mp3,custom_mp3) VALUES ("default"
 INSERT INTO images (type,name,text,png,default_mp3,custom_mp3) VALUES ("default","NAUSITHOE CHALLENGERI","This tiny jellyfish, just over 10 mm wide, belongs to a class of immortal beings! This animal can regress to its younger form and regenerate again and again. It is an evolved form of survival. In their mature form they can reproduce through sharing eggs and sperm. However; if life becomes tough and the environment is threatening their survival, they can drop to the floor of the ocean, become younger selves, and grow as a polyp in a colony that looks like long stalks. When the time is right, they just slice or bud themselves off the stalk and swim away to enjoy single life again. The later process is called a reverse ontogeny.","nausithoechallengeri.png","nausithoechallengeri.mp3","");
 
 INSERT INTO images (type,name,text,png,default_mp3,custom_mp3) VALUES ("default","SOLMARIS","This miniature jellyfish is a width of your thumb nail and possesses a truly invisible cloak that is transparent like the water it inhabits. Solmaris wears its stomach like a hula-hoop; as tube that runs around the entire edge of the jellyfish umbrella. The outermost 'skin' of the jellyfish umbrella is named the exumbrella. Solmaris sense organs and exumbrellar are fluorescent. They light up under the blue to ultraviolet light range. The green fluorescent protein gene was first isolated in a jellyfish and since has been introduced into many organisms; from bacteria to fungi, plants, flies and even mammalian and human cells. This gene can also be passed on to the next generation.","solmaris.png","solmaris.mp3","");
-
-INSERT INTO slideshow_category (type,name) VALUES ("default","All Images");
-
-INSERT INTO slideshow_category (type,name) VALUES ("default","Sea Creatures Skeletons");
-
-INSERT INTO slideshow_category (type,name) VALUES ("default","Floating Sea Animals");
-
-INSERT INTO slideshow_category (type,name) VALUES ("default","Sea Floor Animals");
-
-INSERT INTO slideshow_category (type,name) VALUES ("default","Jellyfish");
 
 INSERT INTO slideshows (slideshow_id,images_id) VALUES (1,1);
 INSERT INTO slideshows (slideshow_id,images_id) VALUES (1,2);

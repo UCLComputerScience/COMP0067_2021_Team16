@@ -1,4 +1,5 @@
 const connection = require("../config/connection.js");
+const excel = require('exceljs');
 
 module.exports = function (app) {
 
@@ -113,4 +114,45 @@ module.exports = function (app) {
       res.end();
     });
   });
+
+  // Mailing List
+  app.get("/mailinglist/all", function (req, res) {
+    let dbQuery = "SELECT * FROM emails ORDER BY id ASC";
+    connection.query(dbQuery, function (err, result) {
+      if (err) throw err;
+      res.json(result);
+    });
+  });
+
+  app.get("/mailinglist/excel", function (req, res) {
+    let dbQuery = "SELECT * FROM emails ORDER BY id ASC";
+    connection.query(dbQuery, function (err, result) {
+      if (err) throw err;
+      // res.json(result);
+      const jsonEmails = JSON.parse(JSON.stringify(result))
+      let workbook = new excel.Workbook();
+      let worksheet = workbook.addWorksheet('Mailing List');
+      worksheet.columns = [
+        { header: 'ID', key: 'id', width: 10 },
+        { header: 'Email Address', key: 'email', width: 100 },
+        { header: 'Date Added', key: 'date', width: 50 }
+      ]
+      worksheet.addRows(jsonEmails)
+      workbook.xlsx.writeFile("MailingList.xlsx")
+        .then(function () {
+          console.log("File saved!");
+          res.send("File saved!")
+        })
+    });
+  });
+
+  app.delete("/mailinglist/delete/:id", function (req, res) {
+    console.log(req.params);
+    let dbQuery = "DELETE FROM emails WHERE id = ?";
+    connection.query(dbQuery, [req.params.id], function (err, result) {
+      if (err) throw err;
+      console.log("Email deleted from mailing list!");
+      res.end();
+    });
+  })
 };
