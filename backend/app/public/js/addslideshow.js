@@ -1,4 +1,9 @@
 $(document).ready(function () {
+  // localStorage.clear()
+  // let data = ["asteroblastusstellatus.png", "porpitaprunella.png", "poliopogonamadou.png", "botryllusschlosseri.png", "cassiopeaandromeda.png", "hemipholiscordifera.png", "centrostephanuslongispinus.png", "nautiluspompilius.png", "haeckelianaporcellana.png", "cannorrhizaconnexa.png", "nausithoechallengeri.png", "solmaris.png"]
+  // for (let i = 0; i < data.length; i++) {
+  //   localStorage.setItem(data[i], "/images/" + data[i]);
+  // }
   $.get("/images/all", function (data) {
     if (data.length !== 0) {
       let checkboxes = $("<div id='checkboxes'>")
@@ -15,25 +20,24 @@ $(document).ready(function () {
   $.get("/slideshows/all", function (data) {
     if (data.length !== 0) {
       let table = $("<table><tr><th>Slideshow Name</th><th>Images</th><th>Actions</th></tr>");
-      let slideshows = [];
+      let slideshows = {};
       for (let i = 0; i < data.length; i++) {
-        if (!slideshows.includes(data[i].slideshow)) {
-          slideshows.push(data[i].slideshow);
-        }
+        slideshows[data[i].slideshow_id] = data[i].slideshow_name;
       }
-      for (let i = 0; i < slideshows.length; i++) {
+      for (let i = 0; i < Object.keys(slideshows).length; i++) {
         let row = $("<tr>");
-        row.append("<td>" + slideshows[i] + "</td>");
+        row.append("<td>" + slideshows[i + 1] + "</td>");
         let images = $("<td>");
         for (let j = 0; j < data.length; j++) {
-          if (slideshows[i] == data[j].slideshow) {
+          if (slideshows[i + 1] == data[j].slideshow_name) {
             images.append("<span>" + data[j].image);
             images.append("<img class='tableimg' src='" + localStorage.getItem(data[j].png) + "'</img>");
           }
           images.append("</td>");
           row.append(images);
         }
-        row.append("<td><button class='delete'>Delete</button></td>");
+        console.log(Object.keys(slideshows)[i]);
+        row.append("<td><button class='delete' id='" + Object.keys(slideshows)[i] + "'>Delete</button></td>");
         table.append(row);
       }
       table.append("</table>")
