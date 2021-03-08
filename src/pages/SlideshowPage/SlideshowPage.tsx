@@ -12,19 +12,21 @@ import Slideshow from "../../components/Slideshow/Slideshow";
 import Slider from "../../components/Slider/Slider";
 
 const SlideshowPage: React.FC = () => {
+ 
+  
   return (
     <IonPage>
       <IonContent fullscreen>
         <Slideshow />
       </IonContent>
       <IonFooter>
-        <Slider />
+        {/* <Slider /> */}
         <IonRow className="ion-align-items-center ion-justify-content-center">
           <IonButton
             className="ion-align-items-center ion-justify-content-center"
             routerLink="/SelectionPage"
           >
-            press to unlock
+            Press to Unlock
           </IonButton>
         </IonRow>
       </IonFooter>
