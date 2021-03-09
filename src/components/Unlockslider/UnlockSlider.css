@@ -1,5 +1,5 @@
 .demo{
-    width: 360px;
+    width: 90%;
     border: 1px solid #eee;
     background-color: rgb(88, 88, 88);
     height: 40px;
@@ -33,7 +33,7 @@
     border-left: 1px sold #eee;
     text-align: center;
     line-height: 42px;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
   }
   .s{
     position: absolute;

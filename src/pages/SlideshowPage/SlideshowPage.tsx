@@ -21,7 +21,7 @@ const SlideshowPage: React.FC = () => {
       <IonContent fullscreen>
         <Slideshow />
       </IonContent>
-      <IonFooter>
+      <IonFooter className="footer">
         <IonRow className="ion-align-items-center ion-justify-content-center">
           <UnlockSlider/>
         </IonRow>

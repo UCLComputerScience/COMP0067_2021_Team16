@@ -1,13 +1,4 @@
-.footerrow{
-    align-content: center;
-    text-align: center;
-    align-items: center;
-    align-self: center;
-    justify-content: center;
-    justify-items: center;
-}
-
-.slider{
-    align-self: center;
-    justify-content: center;
+.footer{
+   padding-top: 20px;
+   padding-bottom: 20px;
 }
