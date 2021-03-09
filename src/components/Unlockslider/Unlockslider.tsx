@@ -26,13 +26,20 @@ const UnlockSlider: React.FC = () => {
     SetDragging(false);
     SetX(0);
     SetX(event.pageX || (event.clientX + document.body.scrollLeft - document.body.clientLeft));
-    //slidertrack.innerHTML = '';
+    slidertrack.innerHTML = '';
+    demo.classList.remove('item');
     set_to_zero();
   }
 
   function move_start(event){
     SetDragging(true);
-    SetX(event.pageX || (event.clientX + document.body.scrollLeft - document.body.clientLeft));
+    if(event.type == "mousedown"){
+      SetX(event.pageX || (event.clientX + document.body.scrollLeft - document.body.clientLeft));
+    }
+    else{
+      SetX(event.touches[0].pageX || (event.touches[0].clientX + document.body.scrollLeft - document.body.clientLeft));
+    }
+    
   }
   
   function set_to_zero(){
@@ -45,14 +52,20 @@ const UnlockSlider: React.FC = () => {
     slidertrack.style.width = maxwidthstr;
     demo.classList.add('item')
     slidertrack.innerHTML = 'Unlocked!!';
-    sleep(1000);
+    sleep(500);
     history.push("/SelectionPage");
     reset_slider(event);
   }
   
   function move_handler(event){
     if(dragging){
-      let mousex = event.pageX || (event.clientX + document.body.scrollLeft - document.body.clientLeft);
+      let mousex = null;
+      if(event.type == "mousemove"){
+        mousex = event.pageX || (event.clientX + document.body.scrollLeft - document.body.clientLeft);
+      }
+      else{
+        mousex = event.touches[0].pageX || (event.touches[0].clientX + document.body.scrollLeft - document.body.clientLeft);
+      }
       let leftx = sliderbutton.style.left.replace('px','') as unknown as number;
       if (leftx >= 0 && leftx < slidermaxwidth) {
         sliderbutton.style.left = mousex - x + 'px';
@@ -67,8 +80,6 @@ const UnlockSlider: React.FC = () => {
 
   function move_end(event){
     SetDragging(false)
-    sliderbutton.onmousemove = null;
-    demo.onmousemove = null;
     let leftx = sliderbutton.style.left.replace('px','') as unknown as number;
     if (leftx <= unlockwidth) {
       let timer = setInterval(function(){
@@ -96,7 +107,7 @@ const UnlockSlider: React.FC = () => {
   }
   
   return(
-        <div className="demo" id="demo" onMouseMove={e=>move_handler(e)}>
+        <div className="demo" id="demo" onMouseMove={e=>move_handler(e)} onTouchMove={e=>move_handler(e)}>
             Slide to Unlock
             <div className="slidertrack" id="slidertrack"></div>
             <div 
@@ -105,6 +116,9 @@ const UnlockSlider: React.FC = () => {
               onMouseDown={e=>move_start(e)} 
               onMouseMove={e=>move_handler(e)} 
               onMouseUp={e => move_end(e)}
+              onTouchStart={e=>move_start(e)}
+              onTouchMove={e=>move_handler(e)}
+              onTouchEnd={e => move_end(e)}
             />
         </div>
   );
