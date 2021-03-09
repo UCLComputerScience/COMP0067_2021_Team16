@@ -1,0 +1,184 @@
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Slider Demo</title>
+  <style>
+    .demo{
+      width: 360px;
+      border: 1px solid #eee;
+      background-color: #eee;
+      height: 40px;
+      border-radius: 3px;
+      position: relative;
+      overflow: hidden;
+      line-height: 40px;
+      text-align: center;
+      font-size: 14px;
+    }
+    .slider{
+      height: 40px;
+      width: 40px;
+      background-color: #fff;
+      text-align: center;
+      font-size: 12px;
+      line-height: 40px;
+      cursor: move;
+      position: absolute;
+      border-radius: 3px;
+      top:0;
+      left: 0;
+    }
+    .p{
+      position: absolute;
+      height: 42px;
+      left: 0px;
+      top: -1px;
+      background-color: RGBA(122, 194, 61, 1);
+      border-radius: 3px;
+      border-left: 1px sold #eee;
+      text-align: center;
+      line-height: 42px;
+      color: #fff;
+    }
+    .s{
+      position: absolute;
+      height: 42px;
+      left: 0px;
+      top: -1px;
+      background-color: #5feca5;
+      border-radius: 3px;
+      border-left: 1px sold #eee;
+    }
+    .demo .slider:before{
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-width: 1px 1px 0 0;
+      content: ' ';
+      border-style: solid;
+      border-color: rgba(0,0,0,0.4);
+      display: block;
+      transform: rotate(45deg) translate(-70%, 0%);
+      -webkit-transform: rotate(45deg) translate(-70%, 0%);
+      left: 50%;
+      top: 50%;
+    }
+    .demo .slider:after{
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-width: 1px 1px 0 0;
+      content: ' ';
+      border-style: solid;
+      border-color: rgba(0,0,0,0.4);
+      display: block;
+      transform: rotate(45deg) translate(-60%, -10%);
+      -webkit-transform: rotate(45deg) translate(-60%, -10%);
+      left: 30%;
+      top: 50%;
+    }
+    .item .slider:before{
+      border-radius: 50%;
+      border: 1px solid RGBA(122, 194, 61, 1);
+      background-color: RGBA(122, 194, 61, 1);
+      width: 15px;
+      height: 15px;
+    }
+    .item .slider:after{
+      height: 4px;
+      transform: rotate(120deg) translate(-70%, -50%);
+      -webkit-transform: rotate(120deg) translate(-70%, -50%);
+      left: 25%;
+      border-color: #fff;
+    }
+  </style>
+</head>
+<body><div style="display: none;"></div>
+  <div class="demo" id="demo">
+    Slide to Unlock
+    <div class="p" id="p"></div>
+    <div class="slider" id="slider"></div>
+  </div>
+  <script>
+    let slider = document.getElementById('slider');
+    let p = document.getElementById('p');
+    let demo = document.getElementById('demo');
+    slider.addEventListener('mousedown', function(e) {
+      e.preventDefault();
+      let x = e.pageX || (e.clientX + document.body.scrollLeft - document.body.clientLeft);
+      // this.style.left = '320px';
+      slider.onmousemove = function(event){
+        let mx = event.pageX || (event.clientX + document.body.scrollLeft - document.body.clientLeft);
+        let leftx = slider.style.left.replace('px','');
+        if (leftx >=0 && leftx<320) {
+          slider.style.left = mx - x + 'px';
+          p.style.width = mx - x + 'px';
+        }else if(leftx<0){
+          slider.style.left = '0px';
+          p.style.width = '0px';
+        }  else {
+          slider.style.left = '320px';
+          p.style.width = '320px';
+          // slider.innerHTML = '开'
+          demo.classList.add('item')
+          p.innerHTML = 'IDK what is happening'
+        }
+      }
+      demo.onmousemove = function(event){
+        let mx = event.pageX || (event.clientX + document.body.scrollLeft - document.body.clientLeft);
+        let leftx = slider.style.left.replace('px','');
+        if (leftx >=0 && leftx<320) {
+          slider.style.left = mx - x + 'px';
+          p.style.width = mx - x + 'px';
+        }else if(leftx<0){
+          slider.style.left = '0px';
+          p.style.width = '0px';
+        }  else {
+          slider.style.left = '320px';
+          p.style.width = '320px';
+          // slider.innerHTML = '开'
+          demo.classList.add('item')
+          p.innerHTML = 'Unlocked1!!'
+        }
+      }
+      this.addEventListener('mouseup', function(event){
+        // document.removeEventListener('mousemove', function(){
+        //   return false;
+        // }, false)
+        slider.onmousemove = null;
+        demo.onmousemove = null;
+        let leftx = slider.style.left.replace('px','');
+        if (leftx <= 240) {
+          let timer = setInterval(function(){
+            --leftx
+            if (leftx <=0) {
+              clearInterval(timer)
+              slider.style.left = '0px';
+              p.style.width = '0px';
+            }else{
+              slider.style.left = leftx + 'px';
+              p.style.width = leftx + 'px';
+            }
+          }, 0.5);
+        }else{
+          let timer = setInterval(function(){
+            ++leftx
+            if (leftx >= 320) {
+              clearInterval(timer)
+              slider.style.left = '320px';
+              p.style.width = '320px';
+              // slider.innerHTML = '开'
+              demo.classList.add('item')
+              p.innerHTML = 'Unlocked2!!'
+            }else{
+              slider.style.left = leftx + 'px';
+              p.style.width = leftx + 'px';
+            }
+          }, 0.5);
+        }
+      }, false)
+    }, false)
+  </script>
+
+</body></html>

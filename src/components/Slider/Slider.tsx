@@ -4,14 +4,27 @@ import { sunny } from "ionicons/icons";
 import "./Slider.css";
 
 const Slider: React.FC = () => {
-  const [value, setValue] = useState(0);
+  const rangestart = 0;
+  const rangeend = 100;
+  
+  const [value, setValue] = useState(rangestart);
+
+  function resetfunc(){
+    if(value < rangeend){
+      setValue(rangestart);
+    }
+  }
+
+  function valuehandler(e){
+    const number = e.detail.value as number;
+    setValue(number);
+  }
+  
   return (
-    <div>
-      <IonRange>
+    <IonRange className="slider" min={rangestart} max={rangeend} value={value} onIonChange={e => valuehandler(e)} onMouseUp={resetfunc}>
         <IonIcon size="small" slot="start" icon={sunny} />
         <IonIcon slot="end" icon={sunny} />
-      </IonRange>
-    </div>
+  </IonRange>
   );
 };
 
