@@ -36,6 +36,9 @@ const UnlockSlider: React.FC = () => {
 
   function move_start(event){
     SetDragging(true);
+    sliderbutton = document.getElementById('sliderbutton');
+    slidertrack = document.getElementById('slidertrack');
+    demo = document.getElementById('demo');
     if(event.type == "mousedown"){
       SetX(event.pageX || (event.clientX + document.body.scrollLeft - document.body.clientLeft));
     }
