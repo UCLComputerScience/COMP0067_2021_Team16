@@ -27,8 +27,6 @@ const UnlockSlider: React.FC = () => {
   
   function reset_slider(event){
     SetDragging(false);
-    SetX(0);
-    SetX(event.pageX || (event.clientX + document.body.scrollLeft - document.body.clientLeft));
     slidertrack.innerHTML = '';
     demo.classList.remove('item');
     set_to_zero();
@@ -45,7 +43,6 @@ const UnlockSlider: React.FC = () => {
     else{
       SetX(event.touches[0].pageX || (event.touches[0].clientX + document.body.scrollLeft - document.body.clientLeft));
     }
-    
   }
   
   function set_to_zero(){
@@ -59,8 +56,8 @@ const UnlockSlider: React.FC = () => {
     demo.classList.add('item')
     slidertrack.innerHTML = 'Unlocked!!';
     sleep(500);
-    history.push("/SelectionPage");
     reset_slider(event);
+    history.push("/SelectionPage");
   }
   
   function move_handler(event){
@@ -79,7 +76,7 @@ const UnlockSlider: React.FC = () => {
       }else if(leftx<0){
         set_to_zero()
       }  else {
-          unlock(event);
+        unlock(event);
       }
     }
   }
@@ -120,7 +117,7 @@ const UnlockSlider: React.FC = () => {
   
   return(
         <div className="demo" id="demo" onMouseMove={e=>move_handler(e)} onTouchMove={e=>move_handler(e)}>
-            Slide to Unlock
+            Slide to Unlock (New Test Version)
             <div className="slidertrack" id="slidertrack"></div>
             <div 
               className="sliderbutton" 
