@@ -10,7 +10,7 @@ const UnlockSlider: React.FC = () => {
   const screenwidth = window.screen.width;
   const slidermaxwidth = screenwidth*0.9 - 40;
   const maxwidthstr = slidermaxwidth + 'px';
-  const unlockratio = 0.75;
+  const unlockratio = 0.85;
   const unlockwidth = Math.round(slidermaxwidth*unlockratio);
 
   const [dragging,SetDragging] =useState<boolean>(false);
@@ -89,7 +89,13 @@ const UnlockSlider: React.FC = () => {
     let leftx = sliderbutton.style.left.replace('px','') as unknown as number;
     if (leftx <= unlockwidth) {
       let timer = setInterval(function(){
-        --leftx
+        let skip = 10;
+        if(leftx>skip){
+          leftx -= skip;
+        }
+        else{
+          --leftx
+        } 
         if (leftx <=0) {
           clearInterval(timer);
           set_to_zero();
@@ -97,7 +103,7 @@ const UnlockSlider: React.FC = () => {
           sliderbutton.style.left = leftx + 'px';
           slidertrack.style.width = leftx + 'px';
         }
-      }, 0.01);
+      }, 0);
     }else{
       let timer = setInterval(function(){
         ++leftx
@@ -108,7 +114,7 @@ const UnlockSlider: React.FC = () => {
           sliderbutton.style.left = leftx + 'px';
           slidertrack.style.width = leftx + 'px';
         }
-      }, 0.01);
+      }, 0);
     }
   }
   
