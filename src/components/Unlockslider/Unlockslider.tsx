@@ -3,7 +3,10 @@ import {useState} from 'react';
 import { useHistory } from "react-router-dom";
 
 const UnlockSlider: React.FC = () => {
-
+  
+  let sliderbutton = document.getElementById('sliderbutton');
+  let slidertrack = document.getElementById('slidertrack');
+  let demo = document.getElementById('demo');
   const screenwidth = window.screen.width;
   const slidermaxwidth = screenwidth*0.9 - 40;
   const maxwidthstr = slidermaxwidth + 'px';
