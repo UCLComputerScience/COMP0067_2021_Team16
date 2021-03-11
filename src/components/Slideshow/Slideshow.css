@@ -1,5 +1,7 @@
 .rotate {
   animation: rotate 200.5s linear infinite;
+  width: 100%;
+  border-radius: 50%;
 }
 @keyframes rotate {
   to {

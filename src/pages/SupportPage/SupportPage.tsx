@@ -49,7 +49,7 @@ const SupportPage: React.FC = () => {
               newborns and BABIES’ visual perception and brain development.
               <li>
                 Improve concentration through stimulating and captivating
-                images.{" "}
+                images.
               </li>
               <li>Stimulate further learning and discovery. </li>
               <li>
@@ -89,8 +89,8 @@ const SupportPage: React.FC = () => {
               Grandparents love reading these books too! (Can we include here an
               Amazon symbol or link to amazon page?)
               https://www.amazon.co.uk/Iya-Whiteley/e/B01EX2F9N8
+              cosmicbabybooks.com
             </p>
-            <a href="cosmicbabybooks.com">cosmicbabybooks.com</a>
             <IonButton onClick={() => setShowModal2(false)}>
               Back to Support
             </IonButton>
@@ -124,7 +124,7 @@ const SupportPage: React.FC = () => {
             Dr Iya Whiteley
           </IonButton>
         </IonRow>
-        <RateApp />
+        {/* <RateApp /> */}
       </IonContent>
     </IonPage>
   );
