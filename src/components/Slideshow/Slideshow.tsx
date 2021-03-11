@@ -130,7 +130,7 @@ const Slideshow: React.FC = () => {
       
         <IonSlides pager={false} options={slideOpts}>
           {images.map(({ id, name, image }, i) => (
-            <IonSlide>
+            <IonSlide key={i}>
               <IonGrid>
                 <IonRow className='titlerow'>
                   <TitleBar name={name} />

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Redirect, Route } from 'react-router-dom';
 import {IonRouterOutlet} from '@ionic/react';
 
 //Import all your pages here
@@ -27,8 +27,8 @@ const App_Router: React.FC = () => {
       <Route exact path="/SelectionPage" component={SlideshowListingPage} />
       <Route exact path="/ImageGallery" component={ImageGallery} />
       <Route exact path="/RecordAudio" component={RecordAudio} />
-      <Route path="/slideshowpage" component={SlideshowPage} />
-      <Route exact path="/" component={SlideshowPage} />
+      <Route exact path="/slideshowpage" component={SlideshowPage} />
+      <Redirect exact from="/" to="/slideshowpage"/>
     </IonRouterOutlet>
   );
 }

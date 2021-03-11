@@ -1,0 +1,89 @@
+.demo{
+    width: 90%;
+    border: 1px solid #eee;
+    background-color: rgb(88, 88, 88);
+    height: 40px;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+  }
+  .sliderbutton{
+    height: 40px;
+    width: 40px;
+    background-color: #fff;
+    text-align: center;
+    font-size: 12px;
+    line-height: 40px;
+    cursor: move;
+    position: absolute;
+    border-radius: 3px;
+    top:0;
+    left: 0;
+  }
+  .slidertrack{
+    position: absolute;
+    height: 42px;
+    left: 0px;
+    top: -1px;
+    background-color: rgb(0, 255, 42);
+    border-radius: 3px;
+    border-left: 1px sold #eee;
+    text-align: center;
+    line-height: 42px;
+    color: rgb(0, 0, 0);
+    text-decoration: solid;
+  }
+  .s{
+    position: absolute;
+    height: 42px;
+    left: 0px;
+    top: -1px;
+    background-color: #5feca5;
+    border-radius: 3px;
+    border-left: 1px sold #eee;
+  }
+  .demo .slider:before{
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-width: 1px 1px 0 0;
+    content: ' ';
+    border-style: solid;
+    border-color: rgba(0,0,0,0.4);
+    display: block;
+    transform: rotate(45deg) translate(-70%, 0%);
+    -webkit-transform: rotate(45deg) translate(-70%, 0%);
+    left: 50%;
+    top: 50%;
+  }
+  .demo .slider:after{
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-width: 1px 1px 0 0;
+    content: ' ';
+    border-style: solid;
+    border-color: rgba(0,0,0,0.4);
+    display: block;
+    transform: rotate(45deg) translate(-60%, -10%);
+    -webkit-transform: rotate(45deg) translate(-60%, -10%);
+    left: 30%;
+    top: 50%;
+  }
+  .item .slider:before{
+    border-radius: 50%;
+    border: 1px solid RGBA(122, 194, 61, 1);
+    background-color: RGBA(122, 194, 61, 1);
+    width: 15px;
+    height: 15px;
+  }
+  .item .slider:after{
+    height: 4px;
+    transform: rotate(120deg) translate(-70%, -50%);
+    -webkit-transform: rotate(120deg) translate(-70%, -50%);
+    left: 25%;
+    border-color: #fff;
+}

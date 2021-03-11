@@ -9,25 +9,21 @@ import {
   IonFooter,
 } from "@ionic/react";
 import Slideshow from "../../components/Slideshow/Slideshow";
-import Slider from "../../components/Slider/Slider";
+import "./SlideshowPage.css";
+import UnlockSlider from "../../components/Unlockslider/Unlockslider";
+
 
 const SlideshowPage: React.FC = () => {
- 
+  
   
   return (
     <IonPage>
       <IonContent fullscreen>
         <Slideshow />
       </IonContent>
-      <IonFooter>
-        {/* <Slider /> */}
+      <IonFooter className="footer">
         <IonRow className="ion-align-items-center ion-justify-content-center">
-          <IonButton
-            className="ion-align-items-center ion-justify-content-center"
-            routerLink="/SelectionPage"
-          >
-            Press to Unlock
-          </IonButton>
+          <UnlockSlider/>
         </IonRow>
       </IonFooter>
     </IonPage>
