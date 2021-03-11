@@ -117,7 +117,7 @@ const UnlockSlider: React.FC = () => {
   
   return(
         <div className="demo" id="demo" onMouseMove={e=>move_handler(e)} onTouchMove={e=>move_handler(e)}>
-            Slide to Unlock (New Test Version)
+            Slide to Unlock
             <div className="slidertrack" id="slidertrack"></div>
             <div 
               className="sliderbutton" 
