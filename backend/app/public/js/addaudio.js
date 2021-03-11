@@ -13,7 +13,7 @@ $(document).ready(function () {
             for (let i = 0; i < data.length; i++) {
                 radios.append("<span><input type='radio' id='" + data[i].id + "' name='answer' value='" + data[i].id + "' required>")
                 radios.append("<span><label for='" + data[i].id + "'>" + data[i].name + "</label>");
-                radios.append("<span><img class='tableimg' src='" + localStorage.getItem(data[i].png) + "'</img>");
+                radios.append("<span><img class='tableimg' src='" + data[i].png_URL + "'</img>");
             }
             radios.append("</div>")
             $("#image-area").prepend(radios)
@@ -35,7 +35,7 @@ $(document).ready(function () {
                 row.append("<td>" + data[i].id + "</td>");
                 row.append("<td>" + data[i].name + "</td>");
                 row.append("<td>" + data[i].text + "</td>");
-                row.append("<td><img class='tableimg' src='" + localStorage.getItem(data[i].png) + "'</img></td>");
+                row.append("<td><img class='tableimg' src='" + data[i].png_URL + "'</img></td>");
                 row.append("<td>" + data[i].default_mp3 + "<br><br><audio controls><source src='" + localStorage.getItem(data[i].default_mp3) + "'/></audio></td>");
                 row.append("<td><button class='delete' value='" + data[i].id + "' name='" + data[i].default_mp3 + "'>Delete Audio</button></td>");
                 row.append("</tr>");
@@ -61,7 +61,7 @@ $(document).ready(function () {
                             row.append("<td>" + data[i].id + "</td>");
                             row.append("<td>" + data[i].name + "</td>");
                             row.append("<td>" + data[i].text + "</td>");
-                            row.append("<td><img class='tableimg' src='" + localStorage.getItem(data[i].png) + "'</img></td>");
+                            row.append("<td><img class='tableimg' src='" + data[i].png_URL + "'</img></td>");
                             row.append("<td>" + data[i].default_mp3 + "<br><br><audio controls><source src='" + localStorage.getItem(data[i].default_mp3) + "'/></audio></td>");
                             row.append("<td><button class='delete' value='" + data[i].id + "' name='" + data[i].default_mp3 + "'>Delete Audio</button></td>");
                             row.append("</tr>");

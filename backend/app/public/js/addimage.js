@@ -14,7 +14,7 @@ $(document).ready(function () {
         row.append("<td>" + data[i].id + "</td>");
         row.append("<td>" + data[i].name + "</td>");
         row.append("<td>" + data[i].text + "</td>");
-        row.append("<td><img class='tableimg' src='" + localStorage.getItem(data[i].png) + "'</img></td>");
+        row.append("<td><img class='tableimg' src='" + data[i].png_URL + "'</img></td>");
         row.append("<td>" + data[i].default_mp3 + "</td>");
         row.append("<td><button class='delete' value='" + data[i].id + "' name='" + data[i].png + "'>Delete</button></td>");
         row.append("</tr>");
@@ -40,7 +40,7 @@ $(document).ready(function () {
               row.append("<td>" + data[i].id + "</td>");
               row.append("<td>" + data[i].name + "</td>");
               row.append("<td>" + data[i].text + "</td>");
-              row.append("<td><img class='tableimg' src='" + localStorage.getItem(data[i].png) + "'</img></td>");
+              row.append("<td><img class='tableimg' src='" + data[i].png_URL + "'</img></td>");
               row.append("<td>" + data[i].default_mp3 + "</td>");
               row.append("<td><button class='delete' value='" + data[i].id + "'>Delete</button></td>");
               row.append("</tr>");

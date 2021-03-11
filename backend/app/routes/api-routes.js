@@ -33,7 +33,7 @@ module.exports = function (app) {
 
   // Slideshows
   app.get("/slideshows/all", function (req, res) {
-    let dbQuery = "SELECT sc.name as slideshow_name, sc.id as slideshow_id, i.name as image, i.png as png FROM baby.images i, baby.slideshow_category sc, baby.slideshows s WHERE s.slideshow_id = sc.id AND s.images_id = i.id ORDER BY s.order";
+    let dbQuery = "SELECT sc.name as slideshow_name, sc.id as slideshow_id, i.name as image, i.png as png, i.png_URL as png_URL FROM baby.images i, baby.slideshow_category sc, baby.slideshows s WHERE s.slideshow_id = sc.id AND s.images_id = i.id ORDER BY s.order";
     connection.query(dbQuery, function (err, result) {
       if (err) throw err;
       res.json(result);
