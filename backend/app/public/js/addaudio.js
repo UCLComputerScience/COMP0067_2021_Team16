@@ -36,7 +36,7 @@ $(document).ready(function () {
                 row.append("<td>" + data[i].name + "</td>");
                 row.append("<td>" + data[i].text + "</td>");
                 row.append("<td><img class='tableimg' src='" + data[i].png_URL + "'</img></td>");
-                row.append("<td>" + data[i].default_mp3 + "<br><br><audio controls><source src='" + localStorage.getItem(data[i].default_mp3) + "'/></audio></td>");
+                row.append("<td>" + data[i].default_mp3 + "<br><br><audio controls><source src='" + data[i].default_mp3_URL + "'/></audio></td>");
                 row.append("<td><button class='delete' value='" + data[i].id + "' name='" + data[i].default_mp3 + "'>Delete Audio</button></td>");
                 row.append("</tr>");
                 table.append(row);
@@ -62,7 +62,7 @@ $(document).ready(function () {
                             row.append("<td>" + data[i].name + "</td>");
                             row.append("<td>" + data[i].text + "</td>");
                             row.append("<td><img class='tableimg' src='" + data[i].png_URL + "'</img></td>");
-                            row.append("<td>" + data[i].default_mp3 + "<br><br><audio controls><source src='" + localStorage.getItem(data[i].default_mp3) + "'/></audio></td>");
+                            row.append("<td>" + data[i].default_mp3 + "<br><br><audio controls><source src='" + data[i].default_mp3_URL + "'/></audio></td>");
                             row.append("<td><button class='delete' value='" + data[i].id + "' name='" + data[i].default_mp3 + "'>Delete Audio</button></td>");
                             row.append("</tr>");
                             table.append(row);

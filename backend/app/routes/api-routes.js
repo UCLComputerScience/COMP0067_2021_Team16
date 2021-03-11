@@ -135,7 +135,7 @@ module.exports = function (app) {
 
   app.put("/audios/delete/:id", function (req, res) {
     console.log(req.params);
-    let dbQuery = "UPDATE images SET default_mp3 = '' WHERE id = ?";
+    let dbQuery = "UPDATE images SET default_mp3 = '', default_mp3_URL = '' WHERE id = ?";
     connection.query(dbQuery, [req.params.id], function (err, result) {
       if (err) throw err;
       console.log("Audio deleted from images!");
