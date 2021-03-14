@@ -33,7 +33,7 @@ module.exports = function (app) {
 
   // Slideshows
   app.get("/slideshows/all", function (req, res) {
-    let dbQuery = "SELECT sc.name as slideshow_name, sc.id as slideshow_id, i.name as image, i.png as png, i.png_URL as png_URL FROM baby.images i, baby.slideshow_category sc, baby.slideshows s WHERE s.slideshow_id = sc.id AND s.images_id = i.id ORDER BY s.order";
+    let dbQuery = "SELECT sc.slideshow_name as slideshow_name, sc.slideshow_id as slideshow_id, i.name as image, i.png as png, i.png_URL as png_URL FROM baby.images i, baby.slideshow_category sc, baby.slideshows s WHERE s.slideshow_id = sc.slideshow_id AND s.image_id = i.id ORDER BY s.order";
     connection.query(dbQuery, function (err, result) {
       if (err) throw err;
       res.json(result);
@@ -43,16 +43,16 @@ module.exports = function (app) {
   app.post("/slideshows/new", function (req, res) {
     console.log("Slideshow Data:");
     console.log(req.body);
-    let dbQuery = "INSERT INTO slideshow_category (type, name) VALUES (?,?)";
+    let dbQuery = "INSERT INTO slideshow_category (slideshow_type, slideshow_name) VALUES (?,?)";
     connection.query(dbQuery, ["default", req.body.name], function (err, result) {
       if (err) throw err;
       console.log("Slideshow successfully saved in slideshow_category!");
     })
-    let dbQuery2 = "SELECT id FROM slideshow_category WHERE name = ?";
+    let dbQuery2 = "SELECT slideshow_id FROM slideshow_category WHERE slideshow_name = ?";
     connection.query(dbQuery2, [req.body.name], function (err, result) {
       if (err) throw err;
       for (let i = 1; i < Object.keys(req.body).length; i++) {
-        let dbQuery3 = "INSERT INTO slideshows (slideshow_id, images_id) VALUES (?,?)";
+        let dbQuery3 = "INSERT INTO slideshows (slideshow_id, image_id) VALUES (?,?)";
         connection.query(dbQuery3, [result[0]["id"], parseInt(req.body[Object.keys(req.body)[i]])], function (err, result) {
           if (err) throw err;
         })
@@ -64,7 +64,7 @@ module.exports = function (app) {
 
   app.delete("/slideshows/delete/:id", function (req, res) {
     console.log(req.params);
-    let dbQuery = "DELETE FROM slideshow_category WHERE id = ?";
+    let dbQuery = "DELETE FROM slideshow_category WHERE slideshow_id = ?";
     connection.query(dbQuery, [req.params.id], function (err, result) {
       if (err) throw err;
       console.log("Slideshow deleted from slideshow_category!");
@@ -113,7 +113,7 @@ module.exports = function (app) {
       console.log("Image deleted from images!");
       res.end();
     });
-    let dbQuery2 = "DELETE FROM slideshows WHERE images_id = ?";
+    let dbQuery2 = "DELETE FROM slideshows WHERE image_id = ?";
     connection.query(dbQuery2, [req.params.id], function (err, result) {
       if (err) throw err;
       console.log("Image deleted from slideshows!");
@@ -145,7 +145,7 @@ module.exports = function (app) {
 
   // Mailing List
   app.get("/mailinglist/all", function (req, res) {
-    let dbQuery = "SELECT * FROM emails ORDER BY id ASC";
+    let dbQuery = "SELECT * FROM emails ORDER BY email_id ASC";
     connection.query(dbQuery, function (err, result) {
       if (err) throw err;
       res.json(result);
@@ -153,7 +153,7 @@ module.exports = function (app) {
   });
 
   app.get("/mailinglist/excel", function (req, res) {
-    let dbQuery = "SELECT * FROM emails ORDER BY id ASC";
+    let dbQuery = "SELECT * FROM emails ORDER BY email_id ASC";
     connection.query(dbQuery, function (err, result) {
       if (err) throw err;
       // res.json(result);
@@ -161,9 +161,9 @@ module.exports = function (app) {
       let workbook = new excel.Workbook();
       let worksheet = workbook.addWorksheet('Mailing List');
       worksheet.columns = [
-        { header: 'ID', key: 'id', width: 10 },
-        { header: 'Email Address', key: 'email', width: 100 },
-        { header: 'Date Added', key: 'date', width: 50 }
+        { header: 'ID', key: 'email_id', width: 10 },
+        { header: 'Email Address', key: 'email_address', width: 100 },
+        { header: 'Date Added', key: 'date_registered', width: 50 }
       ]
       worksheet.addRows(jsonEmails)
       workbook.xlsx.writeFile("./app/public/views/MailingList.xlsx")
@@ -176,7 +176,7 @@ module.exports = function (app) {
 
   app.delete("/mailinglist/delete/:id", function (req, res) {
     console.log(req.params);
-    let dbQuery = "DELETE FROM emails WHERE id = ?";
+    let dbQuery = "DELETE FROM emails WHERE email_id = ?";
     connection.query(dbQuery, [req.params.id], function (err, result) {
       if (err) throw err;
       console.log("Email deleted from mailing list!");

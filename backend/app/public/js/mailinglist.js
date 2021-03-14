@@ -5,8 +5,8 @@ $(document).ready(function () {
       let table = $("<table><tr><th>Email</th><th>Actions</th></tr>");
       for (let i = 0; i < data.length; i++) {
         let row = $("<tr>");
-        row.append("<td>" + data[i].email + "</td>");
-        row.append("<td><button class='delete' value='" + data[i].id + "'>Remove from mailing list</button></td>");
+        row.append("<td>" + data[i].email_address + "</td>");
+        row.append("<td><button class='delete' value='" + data[i].email_id + "'>Remove from mailing list</button></td>");
         table.append(row);
       }
       table.append("</table>")
@@ -25,8 +25,8 @@ $(document).ready(function () {
             let table = $("<table><tr><th>Email</th><th>Actions</th></tr>");
             for (let i = 0; i < data.length; i++) {
               let row = $("<tr>");
-              row.append("<td>" + data[i].email + "</td>");
-              row.append("<td><button class='delete' value='" + data[i].id + "'>Remove from mailing list</button></td>");
+              row.append("<td>" + data[i].email_address + "</td>");
+              row.append("<td><button class='delete' value='" + data[i].email_id + "'>Remove from mailing list</button></td>");
               table.append(row);
             }
             table.append("</table>")
