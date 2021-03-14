@@ -33,7 +33,7 @@ module.exports = function (app) {
 
   // Slideshows
   app.get("/slideshows/all", function (req, res) {
-    let dbQuery = "SELECT sc.slideshow_name as slideshow_name, sc.slideshow_id as slideshow_id, i.name as image, i.png as png, i.png_URL as png_URL FROM baby.images i, baby.slideshow_category sc, baby.slideshows s WHERE s.slideshow_id = sc.slideshow_id AND s.image_id = i.id ORDER BY s.order";
+    let dbQuery = "SELECT sc.slideshow_name as slideshow_name, sc.slideshow_id as slideshow_id, i.image_name as image_name, i.image_file_name as image_file_name, i.image_url as image_url FROM baby.images i, baby.slideshow_category sc, baby.slideshows s WHERE s.slideshow_id = sc.slideshow_id AND s.image_id = i.image_id ORDER BY s.order";
     connection.query(dbQuery, function (err, result) {
       if (err) throw err;
       res.json(result);
@@ -53,7 +53,7 @@ module.exports = function (app) {
       if (err) throw err;
       for (let i = 1; i < Object.keys(req.body).length; i++) {
         let dbQuery3 = "INSERT INTO slideshows (slideshow_id, image_id) VALUES (?,?)";
-        connection.query(dbQuery3, [result[0]["id"], parseInt(req.body[Object.keys(req.body)[i]])], function (err, result) {
+        connection.query(dbQuery3, [result[0]["slideshow_id"], parseInt(req.body[Object.keys(req.body)[i]])], function (err, result) {
           if (err) throw err;
         })
       }
@@ -80,7 +80,7 @@ module.exports = function (app) {
 
   // Images
   app.get("/images/all", function (req, res) {
-    let dbQuery = "SELECT * FROM images ORDER BY id ASC";
+    let dbQuery = "SELECT * FROM images ORDER BY image_id ASC";
     connection.query(dbQuery, function (err, result) {
       if (err) throw err;
       res.json(result);
@@ -107,7 +107,7 @@ module.exports = function (app) {
 
   app.delete("/images/delete/:id", function (req, res) {
     console.log(req.params);
-    let dbQuery = "DELETE FROM images WHERE id = ?";
+    let dbQuery = "DELETE FROM images WHERE image_id = ?";
     connection.query(dbQuery, [req.params.id], function (err, result) {
       if (err) throw err;
       console.log("Image deleted from images!");
@@ -125,7 +125,7 @@ module.exports = function (app) {
   app.post("/audios/new", function (req, res) {
     console.log("Audio Data:");
     console.log(req.body);
-    let dbQuery = "UPDATE images SET default_mp3 = ? WHERE id = ?;";
+    let dbQuery = "UPDATE images SET image_audio_file_name = ? WHERE image_id = ?;";
     connection.query(dbQuery, [req.body.audio, req.body.answer], function (err, result) {
       if (err) throw err;
       console.log("Audio successfully saved!");
@@ -135,7 +135,7 @@ module.exports = function (app) {
 
   app.put("/audios/delete/:id", function (req, res) {
     console.log(req.params);
-    let dbQuery = "UPDATE images SET default_mp3 = '', default_mp3_URL = '' WHERE id = ?";
+    let dbQuery = "UPDATE images SET image_audio_file_name = '', image_audio_url= '' WHERE image_id = ?";
     connection.query(dbQuery, [req.params.id], function (err, result) {
       if (err) throw err;
       console.log("Audio deleted from images!");

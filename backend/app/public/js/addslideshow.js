@@ -3,9 +3,9 @@ $(document).ready(function () {
     if (data.length !== 0) {
       let checkboxes = $("<div id='checkboxes'>")
       for (let i = 0; i < data.length; i++) {
-        checkboxes.append("<span><input type='checkbox' id='" + data[i].id + "' name='" + data[i].name + "' value='" + data[i].id + "'>")
-        checkboxes.append("<span><label for='" + data[i].id + "'>" + data[i].name + "</label>");
-        checkboxes.append("<span><img class='tableimg' src='" + data[i].png_URL + "'</img>");
+        checkboxes.append("<span><input type='checkbox' id='" + data[i].image_id + "' name='" + data[i].image_name + "' value='" + data[i].image_id + "'>")
+        checkboxes.append("<span><label for='" + data[i].image_id + "'>" + data[i].image_name + "</label>");
+        checkboxes.append("<span><img class='tableimg' src='" + data[i].image_url + "'</img>");
       }
       checkboxes.append("</div>")
       $("#image-area").prepend(checkboxes)
@@ -25,8 +25,8 @@ $(document).ready(function () {
         let images = $("<td>");
         for (let j = 0; j < data.length; j++) {
           if (slideshows[Object.keys(slideshows)[i]] == data[j].slideshow_name) {
-            images.append("<span>" + data[j].image);
-            images.append("<img class='tableimg' src='" + data[j].png_URL + "'</img>");
+            images.append("<span>" + data[j].image_name);
+            images.append("<img class='tableimg' src='" + data[j].image_url + "'</img>");
           }
           images.append("</td>");
           row.append(images);
@@ -58,8 +58,8 @@ $(document).ready(function () {
               let images = $("<td>");
               for (let j = 0; j < data.length; j++) {
                 if (slideshows[Object.keys(slideshows)[i]] == data[j].slideshow_name) {
-                  images.append("<span>" + data[j].image);
-                  images.append("<img class='tableimg' src='" + data[j].png_URL + "'</img>");
+                  images.append("<span>" + data[j].image_name);
+                  images.append("<img class='tableimg' src='" + data[j].image_url + "'</img>");
                 }
                 images.append("</td>");
                 row.append(images);
