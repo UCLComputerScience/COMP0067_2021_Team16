@@ -1,20 +1,34 @@
 import "./Slideshow.css";
-import { IonGrid, IonRow, IonSlides, IonSlide } from "@ionic/react";
-// import { IonRangeSlider } from 'react-ion-slider'
+import { IonGrid, IonRow, IonSlides, IonSlide, IonImg } from "@ionic/react";
+import axios from "axios";
+import React from "react";
 import TitleBar from "../TitleBar/TitleBar";
 import Copyright from "../Copyright/Copyright";
-import one from "../Image/images/asteroblastusstellatus.png";
-import two from "../Image/images/porpitaprunella.png";
-import three from "../Image/images/poliopogonamadou.png";
-import four from "../Image/images/botryllusschlosseri.png";
-import five from "../Image/images/cassiopeaandromeda.png";
-import six from "../Image/images/hemipholiscordifera.png";
-import seven from "../Image/images/centrostephanuslongispinus.png";
-import eight from "../Image/images/nautiluspompilius.png";
-import nine from "../Image/images/haeckelianaporcellana.png";
-import ten from "../Image/images/cannorrhizaconnexa.png";
-import eleven from "../Image/images/nausithoechallengeri.png";
-import twelve from "../Image/images/solmaris.png";
+import one from "../Copyright/images/asteroblastusstellatus.png";
+import two from "../Copyright/images/porpitaprunella.png";
+import three from "../Copyright/images/poliopogonamadou.png";
+import four from "../Copyright/images/botryllusschlosseri.png";
+import five from "../Copyright/images/cassiopeaandromeda.png";
+import six from "../Copyright/images/hemipholiscordifera.png";
+import seven from "../Copyright/images/centrostephanuslongispinus.png";
+import eight from "../Copyright/images/nautiluspompilius.png";
+import nine from "../Copyright/images/haeckelianaporcellana.png";
+import ten from "../Copyright/images/cannorrhizaconnexa.png";
+import eleven from "../Copyright/images/nausithoechallengeri.png";
+import twelve from "../Copyright/images/solmaris.png";
+
+const apiKEY = "BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9";
+const endpoint = `https://api.giphy.com/v1/gifs/search?q=friends&api_key=${apiKEY}`;
+
+const sendGetRequest = () => {
+  return axios({
+    url: endpoint,
+    method: "GET",
+  }).then((response) => {
+    console.log(response);
+    return response.data;
+  });
+};
 
 const slideOpts = {
   initialSlide: 0,
@@ -98,55 +112,33 @@ const images = [
 ];
 
 const Slideshow: React.FC = () => {
-
-  // Promise call
-
-  // $.post_ajax("https://reqres.in/api/users?page=2").then(return "SUCCESS").error( return "FAIL");\
-
-//   public  getProductById(productId: number): Observable<Product> {
-
-// return  this.httpClient
-
-// .get(this.baseUrl + '/products/' + productId)
-
-// .map(response  => {
-
-// return  new  Product(response);
-
-// })
-
-// .catch((err)=>{
-
-// console.error(err);
-
-// });
-
-// }
-
-// baseurl:https://reqres.in/api 
-// products= "/users" ?page=2
+  const [items, setItems] = React.useState([]);
+  React.useEffect(() => {
+    sendGetRequest().then((data) => setItems(data.data));
+  }, []);
 
   return (
-      
-        <IonSlides pager={false} options={slideOpts}>
-          {images.map(({ id, name, image }, i) => (
-            <IonSlide key={i}>
-              <IonGrid>
-                <IonRow className='titlerow'>
-                  <TitleBar name={name} />
-                </IonRow>
-                <IonRow className='imagerow'>
-                  <img key={i} src={image} className="spinner rotate" />
-                  {/* <Image key={i} id={id} image={image} /> */}
-                  {/* <IonRangeSlider type={"single"} min={10} max={100} from={0} to={10} step={1} values={[]} keyboard={true} /> */}
-                </IonRow>
-                <IonRow className='copyrightrow'>
-                  <Copyright />
-                </IonRow>
-              </IonGrid>
-            </IonSlide>
-          ))}
-        </IonSlides>
+    <IonSlides pager={false} options={slideOpts}>
+      {images.map((item, i) => (
+        <IonSlide key={i}>
+          <IonGrid>
+            <IonRow className="titlerow">
+              <TitleBar name={item.name} />
+            </IonRow>
+            <IonRow className="imagerow">
+              <IonImg
+                key={i}
+                src={item.image}
+                className="spinner rotate"
+              />
+            </IonRow>
+            <IonRow className="copyrightrow">
+              <Copyright />
+            </IonRow>
+          </IonGrid>
+        </IonSlide>
+      ))}
+    </IonSlides>
   );
 };
 
