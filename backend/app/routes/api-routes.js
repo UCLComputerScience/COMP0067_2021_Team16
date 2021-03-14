@@ -91,14 +91,15 @@ module.exports = function (app) {
     console.log("Image Data:");
     console.log(req.body);
     let newImage = {
-      type: "default",
-      name: req.body.name.trim().toUpperCase(),
-      text: req.body.narration.trim().replace(/\.\s+([a-z])[^\.]|^(\s*[a-z])[^\.]/g, s => s.replace(/([a-z])/, s => s.toUpperCase())),
-      png: req.body.image,
-      default_mp3: ""
+      image_name: req.body.name.trim().toUpperCase(),
+      image_text: req.body.narration.trim().replace(/\.\s+([a-z])[^\.]|^(\s*[a-z])[^\.]/g, s => s.replace(/([a-z])/, s => s.toUpperCase())),
+      image_file_name: req.body.image,
+      image_url: "Local Storage",
+      image_audio_file_name: "",
+      image_audio_url: ""
     };
-    let dbQuery = "INSERT INTO images (type, name, text, png, default_mp3) VALUES (?,?,?,?,?)";
-    connection.query(dbQuery, [newImage.type, newImage.name, newImage.text, newImage.png, newImage.default_mp3], function (err, result) {
+    let dbQuery = "INSERT INTO images (image_name,image_text,image_file_name,image_url,image_audio_file_name,image_audio_url) VALUES (?,?,?,?,?,?)";
+    connection.query(dbQuery, [newImage.image_name, newImage.image_text, newImage.image_file_name, newImage.image_url, newImage.image_audio_file_name, newImage.image_audio_url], function (err, result) {
       if (err) throw err;
       console.log("Image successfully saved!");
       res.redirect('/views/addimage.html');
@@ -125,7 +126,7 @@ module.exports = function (app) {
   app.post("/audios/new", function (req, res) {
     console.log("Audio Data:");
     console.log(req.body);
-    let dbQuery = "UPDATE images SET image_audio_file_name = ? WHERE image_id = ?;";
+    let dbQuery = "UPDATE images SET image_audio_file_name = ?, image_audio_url = 'Local Storage' WHERE image_id = ?;";
     connection.query(dbQuery, [req.body.audio, req.body.answer], function (err, result) {
       if (err) throw err;
       console.log("Audio successfully saved!");

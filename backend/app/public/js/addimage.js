@@ -11,12 +11,16 @@ $(document).ready(function () {
       let table = $("<table><tr><th>ID</th><th>Name</th><th>Narration</th><th>Image</th><th>Audio</th><th>Actions</th></tr>");
       for (let i = 0; i < data.length; i++) {
         let row = $("<tr>");
-        row.append("<td>" + data[i].id + "</td>");
-        row.append("<td>" + data[i].name + "</td>");
-        row.append("<td>" + data[i].text + "</td>");
-        row.append("<td><img class='tableimg' src='" + data[i].png_URL + "'</img></td>");
-        row.append("<td>" + data[i].default_mp3 + "</td>");
-        row.append("<td><button class='delete' value='" + data[i].id + "' name='" + data[i].png + "'>Delete</button></td>");
+        row.append("<td>" + data[i].image_id + "</td>");
+        row.append("<td>" + data[i].image_name + "</td>");
+        row.append("<td>" + data[i].image_text + "</td>");
+        if (data[i].image_url == "Local Storage") {
+          row.append("<td><img class='tableimg' src='" + localStorage.getItem(data[i].image_file_name) + "'</img></td>");
+        } else {
+          row.append("<td><img class='tableimg' src='" + data[i].image_url + "'</img></td>");
+        }
+        row.append("<td>" + data[i].image_audio_file_name + "</td>");
+        row.append("<td><button class='delete' value='" + data[i].image_id + "' name='" + data[i].image_file_name + "'>Delete</button></td>");
         row.append("</tr>");
         table.append(row);
       }
@@ -37,12 +41,16 @@ $(document).ready(function () {
             let table = $("<table><tr><th>ID</th><th>Name</th><th>Narration</th><th>Image</th><th>Audio</th><th>Actions</th></tr>");
             for (let i = 0; i < data.length; i++) {
               let row = $("<tr>");
-              row.append("<td>" + data[i].id + "</td>");
-              row.append("<td>" + data[i].name + "</td>");
-              row.append("<td>" + data[i].text + "</td>");
-              row.append("<td><img class='tableimg' src='" + data[i].png_URL + "'</img></td>");
-              row.append("<td>" + data[i].default_mp3 + "</td>");
-              row.append("<td><button class='delete' value='" + data[i].id + "'>Delete</button></td>");
+              row.append("<td>" + data[i].image_id + "</td>");
+              row.append("<td>" + data[i].image_name + "</td>");
+              row.append("<td>" + data[i].image_text + "</td>");
+              if (data[i].image_url == "Local Storage") {
+                row.append("<td><img class='tableimg' src='" + localStorage.getItem(data[i].image_file_name) + "'</img></td>");
+              } else {
+                row.append("<td><img class='tableimg' src='" + data[i].image_url + "'</img></td>");
+              }
+              row.append("<td>" + data[i].image_audio_file_name + "</td>");
+              row.append("<td><button class='delete' value='" + data[i].image_id + "'>Delete</button></td>");
               row.append("</tr>");
               table.append(row);
             }
