@@ -8,7 +8,6 @@ $(document).ready(function () {
     })
 
     $.get("/images/all", function (data) {
-        console.log("Line 11")
         if (data.length !== 0) {
             let radios = $("<div id='radios'>")
             for (let i = 0; i < data.length; i++) {
@@ -33,7 +32,6 @@ $(document).ready(function () {
         reader.readAsDataURL(this.files[0]);
     })
     $.get("/images/all", function (data) {
-        console.log("Line 36")
         if (data.length !== 0) {
             let table = $("<table><tr><th>ID</th><th>Name</th><th>Narration</th><th>Image</th><th>Audio</th><th>Actions</th></tr>");
             for (let i = 0; i < data.length; i++) {
@@ -68,7 +66,6 @@ $(document).ready(function () {
             success: function (result) {
                 $("#images-area2").empty()
                 $.get("/images/all", function (data) {
-                    console.log("Line 71")
                     if (data.length !== 0) {
                         let table = $("<table><tr><th>ID</th><th>Name</th><th>Narration</th><th>Image</th><th>Audio</th><th>Actions</th></tr>");
                         for (let i = 0; i < data.length; i++) {

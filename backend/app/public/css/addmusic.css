@@ -7,7 +7,7 @@
 }
 
 .tableimg {
-  width: 50px;
+  width: 100px;
 }
 
 .navbar {
@@ -58,24 +58,28 @@ td > * {
   vertical-align: middle;
 }
 
-#slideshow-area {
-  width: 80%;
-  text-align: center;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #ebf7fd;
-}
 #image-area {
   background-color: #ebf7fd;
   padding: 20px 20px;
 }
+
+#music-area {
+    width: 80%;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ebf7fd;
+  }
+
 span {
   padding: 0px 5px;
 }
+
 .jumbotron {
   background-color: #63848e;
+  padding: 50px 100px;
 }
 
 /* Full-width inputs */

@@ -144,6 +144,36 @@ module.exports = function (app) {
     });
   });
 
+   // Music
+   app.get("/music/all", function (req, res) {
+    let dbQuery = "SELECT * FROM music ORDER BY music_id ASC";
+    connection.query(dbQuery, function (err, result) {
+      if (err) throw err;
+      res.json(result);
+    });
+  });
+
+   app.post("/music/new", function (req, res) {
+    console.log("Music Data:");
+    console.log(req.body);
+    let dbQuery = "INSERT INTO music (music_name,music_url) VALUES (?,?)";
+    connection.query(dbQuery, [req.body.audio, "Local Storage"], function (err, result) {
+      if (err) throw err;
+      console.log("Music successfully saved!");
+      res.redirect('/views/addmusic.html');
+    });
+  });
+
+  app.delete("/music/delete/:id", function (req, res) {
+    console.log(req.params);
+    let dbQuery = "DELETE FROM music WHERE music_id = ?";
+    connection.query(dbQuery, [req.params.id], function (err, result) {
+      if (err) throw err;
+      console.log("Music deleted!");
+      res.end();
+    });
+  });
+
   // Mailing List
   app.get("/mailinglist/all", function (req, res) {
     let dbQuery = "SELECT * FROM emails ORDER BY email_id ASC";
@@ -157,7 +187,6 @@ module.exports = function (app) {
     let dbQuery = "SELECT * FROM emails ORDER BY email_id ASC";
     connection.query(dbQuery, function (err, result) {
       if (err) throw err;
-      // res.json(result);
       const jsonEmails = JSON.parse(JSON.stringify(result))
       let workbook = new excel.Workbook();
       let worksheet = workbook.addWorksheet('Mailing List');
@@ -167,7 +196,7 @@ module.exports = function (app) {
         { header: 'Date Added', key: 'date_registered', width: 50 }
       ]
       worksheet.addRows(jsonEmails)
-      workbook.xlsx.writeFile("./app/public/views/MailingList.xlsx")
+      workbook.xlsx.writeBuffer("./app/public/views/MailingList.xlsx")
         .then(function () {
           console.log("File saved!");
           res.send("File saved!")

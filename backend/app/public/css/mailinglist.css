@@ -2,6 +2,10 @@
   font-family: "Quicksand", sans-serif;
 }
 
+*:focus {
+  outline: 0 !important;
+}
+
 .navbar {
   color: #ebf7fd;
   background-color: #1d3344;

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Add Slideshow</title>
+    <title>Add Music</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -12,7 +12,7 @@
     <link rel="shortcut icon" type="image/png" href="../images/cosmic.jpg">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../css/addslideshow.css">
+    <link rel="stylesheet" type="text/css" href="../css/addmusic.css">
 </head>
 
 <body style="background-color: #ebf7fd">
@@ -30,27 +30,28 @@
             </div>
     </nav>
     <div class="jumbotron">
-        <h1 class="text-center">Add Slideshow</h1>
-        <form id="form" method="POST" action="/slideshows/new">
-            <label for="name"><b>Name</b></label>
-            <input id="name" type="text" placeholder="Enter slideshow name" name="name" required>
-            <div id="image-area"></div>
-            <button id="slideshow-submit" type="submit">Submit</button>
+        <h1 class="text-center">Add Music</h1>
+        <form id="form" method="POST" action="/music/new">
+            <input type="file" id="audiotag" name='audio' required><br><br>
+            <div id="hide-audio" style="display:none;"><audio id="preview" controls>
+                    <source src="" id="src" />
+                </audio><br><br></div>
+            <button id="audio-submit" type="submit">Submit</button>
         </form>
     </div>
 
     <div class="row">
         <div>
-            <h2 style="text-align: center;">Slideshows</h2>
+            <h2 style="text-align: center;">Music</h2>
             <hr>
-            <div id="slideshow-area"></div>
+            <div id="music-area"></div>
         </div>
     </div>
 
     <div class="footer">
         <p>Copyright © 2016 Cosmic Baby Books - All Rights Reserved.</p>
     </div>
-    <script type="text/javascript" src="../js/addslideshow.js"></script>
+    <script type="text/javascript" src="../js/addmusic.js"></script>
 </body>
 
 </html>
