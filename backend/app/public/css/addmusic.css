@@ -63,13 +63,12 @@ td > * {
   padding: 20px 20px;
 }
 
-#music-area {
-    width: 80%;
+#full-music {
     text-align: center;
     position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
     background-color: #ebf7fd;
   }
 
