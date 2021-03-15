@@ -17,18 +17,18 @@ import ten from "../Copyright/images/cannorrhizaconnexa.png";
 import eleven from "../Copyright/images/nausithoechallengeri.png";
 import twelve from "../Copyright/images/solmaris.png";
 
-const apiKEY = "BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9";
-const endpoint = `https://api.giphy.com/v1/gifs/search?q=friends&api_key=${apiKEY}`;
+// const apiKEY = "BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9";
+// const endpoint = `https://api.giphy.com/v1/gifs/search?q=friends&api_key=${apiKEY}`;
 
-const sendGetRequest = () => {
-  return axios({
-    url: endpoint,
-    method: "GET",
-  }).then((response) => {
-    console.log(response);
-    return response.data;
-  });
-};
+// const sendGetRequest = () => {
+//   return axios({
+//     url: endpoint,
+//     method: "GET",
+//   }).then((response) => {
+//     console.log(response);
+//     return response.data;
+//   });
+// };
 
 const slideOpts = {
   initialSlide: 0,
@@ -112,10 +112,10 @@ const images = [
 ];
 
 const Slideshow: React.FC = () => {
-  const [items, setItems] = React.useState([]);
-  React.useEffect(() => {
-    sendGetRequest().then((data) => setItems(data.data));
-  }, []);
+  // const [items, setItems] = React.useState([]);
+  // React.useEffect(() => {
+  //   sendGetRequest().then((data) => setItems(data.data));
+  // }, []);
 
   return (
     <IonSlides pager={false} options={slideOpts}>

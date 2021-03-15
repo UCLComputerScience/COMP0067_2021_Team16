@@ -8,7 +8,7 @@ import React from 'react';
 import User_Input_Slideshow from '../../components/User_Input Slideshow/User_Input_Slideshow';
 import {useState} from 'react';
 
-//importing images (replace when we have our DB)
+// importing images (replace when we have our DB)
 
 import imgone from "../../components/Image/images/asteroblastusstellatus.png";
 import imgtwo from "../../components/Image/images/porpitaprunella.png";
