@@ -26,11 +26,14 @@ import React from 'react';
 /* Context variables*/
 import {SlideshowProvider} from './contexts/Slideshow_Context';
 import {SettingsProvider} from './contexts/Settings_Context';
+import {DatabaseProvider} from './contexts/Database_Context';
 
 
 const App: React.FC = () => {
+
   return (
     <IonApp>
+      <DatabaseProvider>
       <SettingsProvider>
         <SlideshowProvider>
           <IonReactRouter>
@@ -38,6 +41,7 @@ const App: React.FC = () => {
           </IonReactRouter>
         </SlideshowProvider>
       </SettingsProvider>
+      </DatabaseProvider>
     </IonApp>
   );
 }
