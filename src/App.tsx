@@ -34,13 +34,13 @@ const App: React.FC = () => {
   return (
     <IonApp>
       <DatabaseProvider>
-      <SettingsProvider>
-        <SlideshowProvider>
-          <IonReactRouter>
-            <IonRouterOutlet><App_Router/></IonRouterOutlet>
-          </IonReactRouter>
-        </SlideshowProvider>
-      </SettingsProvider>
+        <SettingsProvider>
+          <SlideshowProvider>
+            <IonReactRouter>
+              <IonRouterOutlet><App_Router/></IonRouterOutlet>
+            </IonReactRouter>
+          </SlideshowProvider>
+        </SettingsProvider>
       </DatabaseProvider>
     </IonApp>
   );
