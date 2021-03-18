@@ -123,6 +123,14 @@ module.exports = function (app) {
   })
 
   // Audios
+  app.get("/audios/all", function (req, res) {
+    let dbQuery = "SELECT * FROM images ORDER BY image_id ASC";
+    connection.query(dbQuery, function (err, result) {
+      if (err) throw err;
+      res.json(result);
+    });
+  });
+
   app.post("/audios/new", function (req, res) {
     console.log("Audio Data:");
     console.log(req.body);
