@@ -13,18 +13,12 @@ export function Update_Selected_Slideshow_Context(){return useContext(Update_Sel
 export function Access_Slideshow_List(){return useContext(Slideshow_List);}
 
 //access default/stored slideshows here
-let one = new Slideshow_Class('one',0,true);
-let two = new Slideshow_Class('two',1,true);
-let three = new Slideshow_Class('three',2,true);
-let four = new Slideshow_Class('four',3,true);
-//let SlideshowList = [one,two,three,four];
+let SlideshowList = async () => {await get_slideshows().then((data)=>{return data});} 
 
 //interface for Provider
 interface ContainerProps{
     children: any;
 }
-
-let SlideshowList = get_slideshows();
 
 //provider
 export const SlideshowProvider: React.FC<ContainerProps> = ({children}) => {

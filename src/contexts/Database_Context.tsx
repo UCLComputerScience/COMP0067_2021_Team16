@@ -9,29 +9,18 @@ export function Access_Database(){
 }
 
 async function is_database_empty(db){
-    
-    let results:Array<any> =[];
-    let result = true;
-    
-    await db.executeSql(`SELECT name FROM sqlite_master WHERE type='table' AND name='Slideshow'`).then((data) =>{
-        
-        console.log("There is data in the information",data);  
-        
-        for (let i = 0; i < data.rows.length; i++) {
-                let item = data.rows.item(i);
-                results.push(item);
-            }
-            
-            if (results.length==0){
-                result = false;
-            }
-        }).catch(e => {
-            console.log(JSON.stringify(e));
-        })
-    
-    console.log("is_database_empty results: ", results," .")
-    console.log("is_database_empty:", result)
-    return result;
+    try{
+        let data = await db.executeSql(`SELECT name FROM sqlite_master WHERE type='table' AND name='Slideshow'`,[]);
+        if (data.rows.item(0).length == 0){
+            return true;
+        }
+        else{
+            return false;
+        }
+    } catch (e) {
+        console.log("Ran into an error: ",JSON.stringify(e));
+        return true;
+    }
 }
 
 async function insert_default_data(db){
@@ -82,8 +71,11 @@ async function insert_default_data(db){
     (12,'../default_images/solmaris.png','Solmaris',NULL,1,NULL);
     COMMIT;`
 
-    await db.executeSql(sql_string).catch(console.log("failed to insert data"));
-    
+    try{
+        await db.executeSql(sql_string,[]);
+    }catch (e) {
+        console.log("failed to insert data. ", JSON.stringify(e));
+    }
 }
 
 async function insert_tables(db){
@@ -125,8 +117,11 @@ async function insert_tables(db){
         PRIMARY KEY("slide_id" AUTOINCREMENT)
     );
     COMMIT;`
-    
-    await db.executeSql(sql_string).catch(console.log("Table creation failed"));
+    try{
+        await db.executeSql(sql_string,[])
+    } catch (e){
+        console.log("Table creation failed. ",JSON.stringify(e))
+    }
 
 }
 
@@ -141,10 +136,13 @@ async function initializeorconnecttoDatabase(){
         
         let new_database = await is_database_empty(db);
 
+        console.log("Is the database new?: ",new_database);
+
         if (new_database){
             await insert_tables(db);
             await insert_default_data(db);
         }
+
         return db;
     }
     catch{
@@ -155,34 +153,30 @@ async function initializeorconnecttoDatabase(){
 const AppDatabase = initializeorconnecttoDatabase();
 
 
-export function get_slideshows(){
-    
+export async function get_slideshows(){ 
     let results = [];
     let SlideshowList =[];
     const query = `SELECT * FROM Slideshow ORDER BY slideshow_order`;
 
-    async function run_queries(){
-        await SQLite.create({
+    try{
+        let db = await SQLite.create({
             name: 'newbornbaby.db',
             location: 'default'
-        }).then((db: SQLiteObject) =>{
-            db.executeSql(query).then(
-                (data) =>{
-                    for (let i = 0; i < data.rows.length; i++) {
-                        let item = data.rows.item(i);
-                        results.push(item);
-                    }
-                }
-            ).catch(e => {
-                console.log(e);
-            })
-        }). catch(e => {console.log(e)});
+        })
+        
+        let data = await db.executeSql(query,[]);
+
+        for (let i = 0; i < data.rows.length; i++) {
+            let item = data.rows.item(i);
+            results.push(item);
+        }
+
+        SlideshowList = results.map((item)=>(new Slideshow_Class(item.slideshow_name,item.slideshow_order,true)));
+
+        return SlideshowList;
+    } catch{
+        return SlideshowList;
     }
-    run_queries();
-    SlideshowList = results.map((item)=>(new Slideshow_Class(item[1],item[2],true)));
-    console.log(results);
-    console.log(SlideshowList);
-    return SlideshowList;
 }
 
 
