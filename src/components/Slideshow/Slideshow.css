@@ -13,12 +13,17 @@
   text-align: center;
   align-content: center;
   justify-content: center;
+  color: black;
 }
 
 .imagerow{
   text-align: center;
   align-content: center;
   justify-content: center;
+}
+
+.background{
+  background-color: antiquewhite;
 }
 
 .copyrightrow{

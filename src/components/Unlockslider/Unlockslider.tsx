@@ -1,8 +1,11 @@
 import "./UnlockSlider.css";
 import {useState} from 'react';
 import { useHistory } from "react-router-dom";
+import {ScreenOrientation} from '@ionic-native/screen-orientation';
 
 const UnlockSlider: React.FC = () => {
+
+  ScreenOrientation.lock(ScreenOrientation.ORIENTATIONS.PORTRAIT);
   
   let sliderbutton = document.getElementById('sliderbutton');
   let slidertrack = document.getElementById('slidertrack');
@@ -57,6 +60,7 @@ const UnlockSlider: React.FC = () => {
     slidertrack.innerHTML = 'Unlocked!!';
     sleep(500);
     reset_slider(event);
+    ScreenOrientation.unlock();
     history.push("/SelectionPage");
   }
   

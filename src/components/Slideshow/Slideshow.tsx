@@ -118,7 +118,7 @@ const Slideshow: React.FC = () => {
   // }, []);
 
   return (
-    <IonSlides pager={false} options={slideOpts}>
+    <IonSlides pager={false} options={slideOpts} className="background">
       {images.map((item, i) => (
         <IonSlide key={i}>
           <IonGrid>

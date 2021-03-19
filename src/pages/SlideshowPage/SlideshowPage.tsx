@@ -17,8 +17,8 @@ const SlideshowPage: React.FC = () => {
   
   
   return (
-    <IonPage>
-      <IonContent fullscreen>
+    <IonPage className="content_background">
+      <IonContent fullscreen className="content_background">
         <Slideshow />
       </IonContent>
       <IonFooter className="footer">
