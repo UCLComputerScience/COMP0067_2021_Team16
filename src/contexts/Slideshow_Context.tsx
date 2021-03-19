@@ -1,6 +1,5 @@
 import Slideshow_Class from '../classes/Slideshow_Class';
 import React,{useState,useContext} from 'react';
-import {get_slideshows} from './Database_Context';
 
 //creating React contexts
 const Selected_Slideshow = React.createContext(null);
@@ -13,7 +12,7 @@ export function Update_Selected_Slideshow_Context(){return useContext(Update_Sel
 export function Access_Slideshow_List(){return useContext(Slideshow_List);}
 
 //access default/stored slideshows here
-let SlideshowList = async () => {await get_slideshows().then((data)=>{return data});} 
+let SlideshowList = [];
 
 //interface for Provider
 interface ContainerProps{

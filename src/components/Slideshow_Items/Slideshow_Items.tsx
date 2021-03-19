@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react';
 import { ItemReorderEventDetail } from '@ionic/core';
 import Slideshow_Item from '../Slideshow_Item/Slideshow_Item';
 import {Access_Slideshow_List} from '../../contexts/Slideshow_Context';
+import {get_slideshows} from '../../contexts/Database_Context';
 
 
 interface EditMode {
@@ -13,11 +14,17 @@ interface EditMode {
 
 const Slideshow_Items: React.FC<EditMode> = (props) => {
 
-  const myitems = Access_Slideshow_List();
+  const [myitems,setmyitems] = useState([]);
 
   const [ReOrderModeDisabled, setReOrderModeDisabled] = useState<boolean>(!props.Editing);
 
-  useEffect(()=>{setReOrderModeDisabled(!props.Editing)},[props.Editing])
+  useEffect(()=>{setReOrderModeDisabled(!props.Editing)},[props.Editing]);
+  useEffect(()=>{
+    async function load_slideshows(){
+      setmyitems(await get_slideshows())
+    }
+    load_slideshows();
+  },[]);  
 
   function doReorder(event: CustomEvent<ItemReorderEventDetail>) {
 

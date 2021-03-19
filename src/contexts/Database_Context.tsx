@@ -155,7 +155,7 @@ const AppDatabase = initializeorconnecttoDatabase();
 
 export async function get_slideshows(){ 
     let results = [];
-    let SlideshowList =[];
+    let SlideshowList:Array<object> =[];
     const query = `SELECT * FROM Slideshow ORDER BY slideshow_order`;
 
     try{
