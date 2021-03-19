@@ -5,11 +5,15 @@ import './SlideshowListingPage.css';
 import Slideshow_Items from '../../components/Slideshow_Items/Slideshow_Items';
 import React, { useState } from 'react';
 import AddNewSlideshow from '../../components/AddNewSlideshow/AddNewSlideshow';
+import {ScreenOrientation} from '@ionic-native/screen-orientation';
 
 
 const SelectionPage: React.FC = () => {
     
+    ScreenOrientation.unlock();
+
     const[editMode,setEditMode] = useState(false);
+
 
     return(
         <IonPage>
