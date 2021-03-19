@@ -9,6 +9,18 @@
   }
 }
 
+.spinner{
+  justify-self: center;
+  max-height:max-content;
+  max-height: 90%;
+  max-width: 90%;
+}
+
+.slide{
+  justify-content: center;
+  justify-self: center;
+}
+
 .titlerow{
   text-align: center;
   align-content: center;
@@ -20,15 +32,22 @@
   text-align: center;
   align-content: center;
   justify-content: center;
+  justify-self: center;
 }
 
 .background{
   background-color: antiquewhite;
+  justify-content: center;
+  justify-self: center;
+  align-content:center;
+  align-self: center;
+  height:100%;
 }
 
 .copyrightrow{
   align-content: center;
   justify-content: flex-end;
+  color: black;
 }
 
 #title {
@@ -41,7 +60,7 @@
 }
 
 #image {
-  position: relative;
+  position: center;
   text-align: center;
   float: clear;
   display: flex;
