@@ -18,11 +18,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  ion-button {
-    width: 400px;
-    margin: 20px;
-    font-size: 30px;
-  }
 
   #buttons {
     text-align: center;

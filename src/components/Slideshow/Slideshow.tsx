@@ -6,7 +6,7 @@ import TitleBar from "../TitleBar/TitleBar";
 import Copyright from "../Copyright/Copyright";
 import {Settings_Context} from "../../contexts/Settings_Context";
 
-const settings_object = Settings_Context();
+// const settings_object = Settings_Context();
 
 const sendGetRequest = () => {
   return axios({
@@ -20,7 +20,7 @@ const sendGetRequest = () => {
 
 const slideOpts = {
   initialSlide: 0,
-  speed: settings_object.duration,
+  speed: 400,
   autoplay: true,
 };
 
