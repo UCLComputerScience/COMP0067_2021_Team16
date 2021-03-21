@@ -11,6 +11,19 @@
   outline: 0 !important;
 }
 
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+label {
+  color: #ebf7fd;
+}
+
 .navbar {
   color: #ebf7fd;
   background-color: #1d3344;

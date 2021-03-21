@@ -5,7 +5,9 @@ USE baby;
 CREATE TABLE `emails` (
 `email_id` INT(100) PRIMARY KEY AUTO_INCREMENT NOT NULL,
 `email_address` VARCHAR(255) NOT NULL,
-`date_registered` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+`email_first_name` VARCHAR(255) NOT NULL,
+`email_last_name` VARCHAR(255) NOT NULL,
+`email_date_registered` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE `slideshow_category` (
@@ -36,11 +38,11 @@ CREATE TABLE `music` (
 `music_url` VARCHAR(255) NOT NULL
 );
 
-INSERT INTO emails (email_address) VALUES ("caroline.crandell.20@ucl.ac.uk");
+INSERT INTO emails (email_address,email_first_name,email_last_name) VALUES ("caroline.crandell.20@ucl.ac.uk","Caroline","Crandell");
 
-INSERT INTO emails (email_address) VALUES ("giuseppe.baldini.20@ucl.ac.uk");
+INSERT INTO emails (email_address,email_first_name,email_last_name) VALUES ("giuseppe.baldini.20@ucl.ac.uk","Giuseppe","Baldini");
 
-INSERT INTO emails (email_address) VALUES ("chenuka.ratwatte.20@ucl.ac.uk");
+INSERT INTO emails (email_address,email_first_name,email_last_name) VALUES ("chenuka.ratwatte.20@ucl.ac.uk","Chenuka","Ratwatte");
 
 INSERT INTO slideshow_category (slideshow_type,slideshow_name) VALUES ("default","All Images");
 

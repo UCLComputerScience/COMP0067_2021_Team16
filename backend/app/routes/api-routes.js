@@ -172,8 +172,10 @@ module.exports = function (app) {
       let worksheet = workbook.addWorksheet('Mailing List');
       worksheet.columns = [
         { header: 'ID', key: 'email_id', width: 10 },
+        { header: 'First Name', key: 'email_first_name', width: 50 },
+        { header: 'Last Name', key: 'email_last_name', width: 50 },
         { header: 'Email Address', key: 'email_address', width: 100 },
-        { header: 'Date Added', key: 'date_registered', width: 50 }
+        { header: 'Date Added', key: 'email_date_registered', width: 50 }
       ]
       worksheet.addRows(jsonEmails)
       workbook.xlsx.writeBuffer("./app/public/views/MailingList.xlsx")
@@ -181,6 +183,17 @@ module.exports = function (app) {
           console.log("File saved!");
           res.send("File saved!")
         })
+    });
+  });
+
+  app.post("/mailinglist/new", function (req, res) {
+    console.log("Mailing List Data:");
+    console.log(req.body);
+    let dbQuery = "INSERT INTO emails (email_address,email_first_name,email_last_name) VALUES (?,?,?)";
+    connection.query(dbQuery, [req.body.email_address, req.body.email_first_name, req.body.email_last_name], function (err, result) {
+      if (err) throw err;
+      console.log("Record successfully saved!");
+      res.redirect('/views/mailinglist.html');
     });
   });
 
