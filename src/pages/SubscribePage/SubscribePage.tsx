@@ -2,7 +2,6 @@ import {
   IonContent,
   IonPage,
   IonText,
-  IonItem,
   IonLabel,
   IonInput,
   IonButton,
@@ -14,34 +13,21 @@ import {
 } from "@ionic/react";
 import React from "react";
 import "./SubscribePage.css";
-import { useForm } from "react-hook-form";
 import BackButton from "../../components/BackButton/BackButton";
 import TitleBar from "../../components/TitleBar/TitleBar";
-import User_Input, { InputProps } from "../../components/User_Input/User_Input";
-import { object, string } from "yup";
+
+const sendPostRequest = () => {
+  console.log("Hi Caroline")
+  // return axios({
+  //   url: "https://0067team16app.azurewebsites.net/",
+  //   method: "POST",
+  // }).then((response) => {
+  //   console.log(response);
+  //   return response.data;
+  // });
+};
 
 const SubscribePage: React.FC = () => {
-  const validationSchema = object().shape({
-    email: string()
-      .required("This is a required field")
-      .email("Please provide a valid email address"),
-  });
-  const { control, handleSubmit, errors } = useForm({
-    validationSchema,
-  });
-
-  const formFields: InputProps[] = [
-    {
-      name: "email",
-      component: <IonInput type="email" />,
-      label: "Email",
-    },
-  ];
-
-  const registerUser = (data) => {
-      console.log("creating a new user account with: " + JSON.stringify(data));
-  };
-
   return (
     <IonPage>
       <IonContent className="ion-padding">
@@ -55,28 +41,16 @@ const SubscribePage: React.FC = () => {
             </IonRow>
           </IonToolbar>
         </IonHeader>
-        <div className="ion-padding">
-          <IonText color="muted">
-            <h5>
-              Please enter your email below to hear more from Cosmic Baby Books.
-            </h5>
-          </IonText>
-          <form onSubmit={handleSubmit(registerUser)}>
-            {formFields.map((field, index) => (
-              <User_Input
-                {...field}
-                control={control}
-                key={index}
-                errors={errors}
-              />
-            ))}
-            <IonItem>
-              <IonLabel>
-                I would like to receive updates about future products
-              </IonLabel>
-              <IonCheckbox slot="start" />
-            </IonItem>
-            <IonButton expand="block" type="submit" className="ion-margin-top">
+        <div id="form">
+          Please enter your details below to hear more from Cosmic Baby Books.
+          <form onSubmit={sendPostRequest()}>
+            <IonInput>Email</IonInput>
+            <IonInput>First Name</IonInput>
+            <IonLabel>
+              I would like to receive updates about future products
+            </IonLabel>
+            <IonCheckbox slot="end" />
+            <IonButton type="submit">
               Submit
             </IonButton>
           </form>
