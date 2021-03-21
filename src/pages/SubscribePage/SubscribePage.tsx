@@ -15,17 +15,6 @@ import "./SubscribePage.css";
 import BackButton from "../../components/BackButton/BackButton";
 import TitleBar from "../../components/TitleBar/TitleBar";
 
-const sendPostRequest = () => {
-  console.log("Hi Caroline");
-  // return axios({
-  //   url: "https://0067team16app.azurewebsites.net/mailinglist/new",
-  //   method: "POST",
-  // }).then((response) => {
-  //   console.log(response);
-  //   return response.data;
-  // });
-};
-
 const SubscribePage: React.FC = () => {
   return (
     <IonPage>
@@ -40,7 +29,11 @@ const SubscribePage: React.FC = () => {
             </IonRow>
           </IonToolbar>
         </IonHeader>
-        <form id="form" method="POST" action="https://0067team16app.azurewebsites.net/mailinglist/new">
+        <form
+          id="form"
+          method="POST"
+          action="https://0067team16app.azurewebsites.net/mailinglist/new"
+        >
           Please enter your details below to hear more from Cosmic Baby Books.
           <div id="input">
             <IonLabel>First Name</IonLabel>
@@ -53,7 +46,7 @@ const SubscribePage: React.FC = () => {
           <IonLabel>
             I would like to receive updates about future products
           </IonLabel>
-          <<IonCheckbox slot="end" />
+          <IonCheckbox slot="end" />
           <IonButton type="submit">Submit</IonButton>
         </form>
       </IonContent>
