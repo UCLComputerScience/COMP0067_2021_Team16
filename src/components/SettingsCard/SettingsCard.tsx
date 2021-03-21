@@ -1,21 +1,34 @@
 import React, { useState } from 'react';
-import {IonInput} from '@ionic/react';
+import {IonInput,IonRange} from '@ionic/react';
+import {Settings_Context} from "../../contexts/Settings_Context";
 
 const SlideDuration: React.FC = () => {
 
-  const [number, setNumber] = useState<number>();
+  const Settings = Settings_Context();
 
   return (
-  <IonInput required min="0" max="20" type="number" value={number} placeholder="Set slide duration (0 - 20s)" onIonChange={e => setNumber(parseInt(e.detail.value!, 10))}></IonInput>
+  <IonRange 
+  pin={true} 
+  min={Settings.min_slide_duration} 
+  max={Settings.max_slide_duration} 
+  value={parseFloat(localStorage.getItem("slide_duration"))} 
+  onIonChange={e=>Settings.set_slide_duration(e.detail.value as number)}
+  ></IonRange>
   )
 };
 
 const AnimationSpeed: React.FC = () => {
 
-  const [number, setNumber] = useState<number>();
+  const Settings = Settings_Context();
 
   return (
-  <IonInput required min="0" max="1.5" type="number" value={number} placeholder="Set animation speed (0 - 1.5x)" onIonChange={e => setNumber(parseInt(e.detail.value!, 10))}></IonInput>
+    <IonRange 
+    pin={true} 
+    min={Settings.min_animation_speed} 
+    max={Settings.max_animation_speed} 
+    value={parseFloat(localStorage.getItem("animation_speed"))} 
+    onIonChange={e=>Settings.set_animation_speed(e.detail.value as number)}
+    ></IonRange>
   )
 };
 
