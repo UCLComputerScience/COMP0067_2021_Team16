@@ -2,11 +2,6 @@ DROP DATABASE IF EXISTS baby;
 CREATE DATABASE baby;
 USE baby;
 
-CREATE TABLE `users` (
-`username` VARCHAR(255) NOT NULL,
-`password` VARCHAR(255) NOT NULL
-);
-
 CREATE TABLE `emails` (
 `email_id` INT(100) PRIMARY KEY AUTO_INCREMENT NOT NULL,
 `email_address` VARCHAR(255) NOT NULL,
@@ -40,8 +35,6 @@ CREATE TABLE `music` (
 `music_name` VARCHAR(255) NOT NULL,
 `music_url` VARCHAR(255) NOT NULL
 );
-
-INSERT INTO users (username,password) VALUES ("admin","Newborn1!2");
 
 INSERT INTO emails (email_address) VALUES ("caroline.crandell.20@ucl.ac.uk");
 
