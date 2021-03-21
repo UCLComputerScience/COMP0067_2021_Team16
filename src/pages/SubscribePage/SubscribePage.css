@@ -1,5 +1,8 @@
 #form {
-    position: relative;
-    margin: 50px 50px;
-    font-size: 30px;
+  position: relative;
+  margin: 50px 50px;
+  font-size: 30px;
+}
+#input {
+  font-weight: bold;
 }

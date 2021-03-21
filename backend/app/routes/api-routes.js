@@ -193,7 +193,6 @@ module.exports = function (app) {
     connection.query(dbQuery, [req.body.email_address, req.body.email_first_name, req.body.email_last_name], function (err, result) {
       if (err) throw err;
       console.log("Record successfully saved!");
-      res.redirect('/views/mailinglist.html');
     });
   });
 

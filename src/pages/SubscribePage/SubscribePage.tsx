@@ -1,15 +1,14 @@
 import {
   IonContent,
   IonPage,
-  IonText,
   IonLabel,
-  IonInput,
-  IonButton,
   IonHeader,
   IonToolbar,
   IonRow,
   IonCol,
   IonCheckbox,
+  IonInput,
+  IonButton,
 } from "@ionic/react";
 import React from "react";
 import "./SubscribePage.css";
@@ -17,9 +16,9 @@ import BackButton from "../../components/BackButton/BackButton";
 import TitleBar from "../../components/TitleBar/TitleBar";
 
 const sendPostRequest = () => {
-  console.log("Hi Caroline")
+  console.log("Hi Caroline");
   // return axios({
-  //   url: "https://0067team16app.azurewebsites.net/",
+  //   url: "https://0067team16app.azurewebsites.net/mailinglist/new",
   //   method: "POST",
   // }).then((response) => {
   //   console.log(response);
@@ -41,20 +40,22 @@ const SubscribePage: React.FC = () => {
             </IonRow>
           </IonToolbar>
         </IonHeader>
-        <div id="form">
+        <form id="form" method="POST" action="https://0067team16app.azurewebsites.net/mailinglist/new">
           Please enter your details below to hear more from Cosmic Baby Books.
-          <form onSubmit={sendPostRequest()}>
-            <IonInput>Email</IonInput>
-            <IonInput>First Name</IonInput>
-            <IonLabel>
-              I would like to receive updates about future products
-            </IonLabel>
-            <IonCheckbox slot="end" />
-            <IonButton type="submit">
-              Submit
-            </IonButton>
-          </form>
-        </div>
+          <div id="input">
+            <IonLabel>First Name</IonLabel>
+            <IonInput name="email_first_name" required></IonInput>
+            <IonLabel>Last Name</IonLabel>
+            <IonInput name="email_last_name" required></IonInput>
+            <IonLabel>Email Address</IonLabel>
+            <IonInput type="email" name="email_address" required></IonInput>
+          </div>
+          <IonLabel>
+            I would like to receive updates about future products
+          </IonLabel>
+          <<IonCheckbox slot="end" />
+          <IonButton type="submit">Submit</IonButton>
+        </form>
       </IonContent>
     </IonPage>
   );
