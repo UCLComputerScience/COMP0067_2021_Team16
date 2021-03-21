@@ -7,14 +7,18 @@ import {
   IonToolbar,
   IonButton,
   IonFooter,
+  useIonViewWillEnter,
+  useIonViewDidLeave
 } from "@ionic/react";
 import Slideshow from "../../components/Slideshow/Slideshow";
 import "./SlideshowPage.css";
 import UnlockSlider from "../../components/Unlockslider/Unlockslider";
-
+import {ScreenOrientation} from '@ionic-native/screen-orientation';
 
 const SlideshowPage: React.FC = () => {
   
+  useIonViewWillEnter(()=>{ScreenOrientation.lock(ScreenOrientation.ORIENTATIONS.PORTRAIT);});
+  useIonViewDidLeave(()=>{ScreenOrientation.unlock()});
   
   return (
     <IonPage className="content_background">
