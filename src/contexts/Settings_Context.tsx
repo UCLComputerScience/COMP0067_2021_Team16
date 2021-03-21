@@ -1,8 +1,11 @@
-import Settings_Class from '../classes/Settings_Class';
+//import Settings_Class from '../classes/Settings_Class';
 import React,{useContext} from 'react';
+import "../classes/Settings_Class";
+import Settings_Class from '../classes/Settings_Class';
+
 
 //put default values below
-const Settings_object = new Settings_Class(null,null,null,null,null)
+const Settings_object = new Settings_Class()
 
 const Settings = React.createContext(null);
 
@@ -19,6 +22,5 @@ export const SettingsProvider: React.FC<ContainerProps> = ({children}) => {
         <Settings.Provider value={Settings_object}>
                 {children}
         </Settings.Provider>
-
     );
 }

@@ -13,7 +13,7 @@ const UnlockSlider: React.FC = () => {
   const unlockratio = 0.85;
   const unlockwidth = Math.round(slidermaxwidth*unlockratio);
 
-  const [dragging,SetDragging] =useState<boolean>(false);
+  const [dragging,SetDragging] = useState<boolean>(false);
   const [x,SetX] = useState<number>(()=>0);
   const history = useHistory();
   

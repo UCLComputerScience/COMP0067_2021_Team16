@@ -14,11 +14,18 @@ import Slideshow from "../../components/Slideshow/Slideshow";
 import "./SlideshowPage.css";
 import UnlockSlider from "../../components/Unlockslider/Unlockslider";
 import {ScreenOrientation} from '@ionic-native/screen-orientation';
+import { Insomnia } from '@ionic-native/insomnia';
 
 const SlideshowPage: React.FC = () => {
   
-  useIonViewWillEnter(()=>{ScreenOrientation.lock(ScreenOrientation.ORIENTATIONS.PORTRAIT);});
-  useIonViewDidLeave(()=>{ScreenOrientation.unlock()});
+  useIonViewWillEnter(()=>{
+    ScreenOrientation.lock(ScreenOrientation.ORIENTATIONS.PORTRAIT);
+    Insomnia.keepAwake();
+  });
+  useIonViewDidLeave(()=>{
+    ScreenOrientation.unlock();
+    Insomnia.allowSleepAgain();
+  });
   
   return (
     <IonPage className="content_background">

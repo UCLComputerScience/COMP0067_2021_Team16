@@ -1,19 +1,103 @@
-let Settings = class{
+let Settings_Class = class{
+    
+    //deafault values
+    default_slide_duration:number = 5;
+    default_animation_speed:number = 400;
+    default_shuffle:boolean = false;
+    default_audio_option:string = "both";
+    default_soundtrack:string = null;
+
+    //ranges
+    min_slide_duration = 0;
+    max_slide_duration = 30;
+    min_animation_speed = 0;
+    max_animation_speed = 1000;
+    audio_option_choices:Array<string> = ["mute","music only","recording only","both"];
+
+    
     slide_duration: number;
     animation_speed: number;
     shuffle: boolean;
     audio_option: string;
-    default_soundtrack: string;
+    background_soundtrack: string;
     
-    constructor(_slide_duration: number,_animation_speed: number,_shuffle: boolean,_audio_option: string,_default_soundtrack: string){
-        this.slide_duration = _slide_duration;
-        this.animation_speed = _animation_speed;
-        this.shuffle = _shuffle;
-        this.audio_option = _audio_option;
-        this.default_soundtrack = _default_soundtrack;
+    constructor(){
+        
+        if(localStorage.getItem("slide_duration")){
+            this.slide_duration = parseFloat(localStorage.getItem("slide_duration"));
+        }
+        else{
+            this.set_slide_duration(this.default_slide_duration);
+        }
+        
+        if(localStorage.getItem("animation_speed")){
+            this.animation_speed = parseFloat(localStorage.getItem("animation_speed"));
+        }
+        else{
+            this.set_animation_speed(this.default_animation_speed);
+        }
+        
+        if(localStorage.getItem("shuffle")){
+            this.shuffle = (localStorage.getItem("shuffle") == "true");
+        }
+        else{
+            this.set_shuffle(this.default_shuffle);
+        }
+
+        if(localStorage.getItem("audio_option")){
+            this.audio_option = localStorage.getItem("audio_option");
+        }else{
+            this.set_audio_option(this.default_audio_option);
+        }
+        
+        if(localStorage.getItem("background_soundtrack")){
+            this.background_soundtrack = localStorage.getItem("background_soundtrack");
+        }else{
+            this.set_background_soundtrack(this.default_soundtrack);
+        }
     }
 
+    set_slide_duration(x:number){
+        if(this.min_slide_duration <= x && x <= this.max_slide_duration){
+            this.slide_duration = x;
+            localStorage.setItem("slide_duration",this.slide_duration.toString());
+        }
+        else{
+            console.log("Slide duration out of bounds");
+        }
+        
+    }
 
+    set_animation_speed(x:number){
+        if(this.min_animation_speed <= x && x <= this.max_animation_speed){
+            this.animation_speed = x;
+            localStorage.setItem("animation_speed",this.animation_speed.toString());
+        }
+        else{
+            console.log("Animation speed out of bounds");
+        }
+        
+    }
+
+    set_shuffle(x:boolean){
+        this.shuffle = x;
+        localStorage.setItem("shuffle",this.shuffle.toString());
+    }
+
+    set_audio_option(x:string){
+        if(this.audio_option_choices.includes(x)){
+            this.audio_option = x;
+            localStorage.setItem("audio_option",this.audio_option);
+        }
+        else{
+            console.log("You need to insert a valid value here. Please refer to the Settings_Class.tsx to see your options")
+        }
+    }
+
+    set_background_soundtrack(x:string){
+        this.background_soundtrack = x;
+        localStorage.setItem("background_soundtrack",this.background_soundtrack);
+    }
 }
 
-export default Settings;
+export default Settings_Class;
