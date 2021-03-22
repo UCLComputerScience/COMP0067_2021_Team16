@@ -36,7 +36,7 @@ const Slideshow: React.FC = () => {
   const [reRender,setReRender] = useState<boolean>(false);
   const [items, setItems] = React.useState([]);
   React.useEffect(() => {
-  sendGetRequest().then((data) => setItems(data.data));}, []);
+  sendGetRequest().then((data) => setItems(data));}, []);
   
   useIonViewWillEnter(()=>{
     console.log("Entering the slideshow page");
