@@ -1,7 +1,8 @@
 import {
   IonContent,
   IonPage,
-  IonButton,
+  IonList,
+  IonItem,
   IonToolbar,
   IonHeader,
   IonRow,
@@ -10,6 +11,8 @@ import {
 import BackButton from "../../components/BackButton/BackButton";
 import TitleBar from "../../components/TitleBar/TitleBar";
 import RadioButton from "../../components/RadioButton/RadioButton";
+import {SlideDuration, AnimationSpeed} from '../../components/SettingsCard/SettingsCard';
+import ToggleButton from '../../components/ShuffleToggle/ShuffleToggle';
 
 const AudioSettingsPage: React.FC = () => {
   return (
@@ -27,12 +30,27 @@ const AudioSettingsPage: React.FC = () => {
         </IonHeader>
         <RadioButton/>
         <IonRow className="ion-align-items-center ion-justify-content-center">
-        <IonButton
-          className="ion-align-items-center ion-justify-content-center"
-          routerLink="/AudioGallery">
-          See Audio Gallery
-        </IonButton>
         </IonRow>
+      </IonContent>
+        <IonToolbar>
+          <IonRow>
+              <IonCol className='ion-align-items-center ion-justify-content-center'>
+                <TitleBar name={"Video Settings"} />
+              </IonCol>
+          </IonRow>
+        </IonToolbar>
+      <IonContent>
+        <IonList>
+          <IonItem>
+            <SlideDuration />
+          </IonItem>
+          <IonItem>
+            <AnimationSpeed />
+          </IonItem>
+          <IonItem>
+            <ToggleButton />
+          </IonItem>
+        </IonList>
       </IonContent>
     </IonPage>
   );

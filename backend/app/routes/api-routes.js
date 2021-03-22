@@ -3,34 +3,6 @@ const excel = require('exceljs');
 
 module.exports = function (app) {
 
-  // Login
-
-  app.post("/login", function (req, res) {
-    let username = req.body.username;
-    let password = req.body.password;
-    let dbQuery = "SELECT * FROM users WHERE username = ? AND password = ?";
-    connection.query(dbQuery, [username, password], function (err, result) {
-      if (err) throw err;
-      if (result.length > 0) {
-        req.session.loggedin = true;
-        req.session.username = username;
-        res.redirect('/views/addslideshow.html');
-      } else {
-        res.send('Incorrect username and/or password.');
-      }
-      res.end();
-    });
-  })
-
-  app.get('/dashboard', function (req, res) {
-    if (req.session.loggedin) {
-      res.send('Welcome back, ' + req.session.username + '!');
-    } else {
-      res.send('Please login to view this page.');
-    }
-    res.end();
-  });
-
   // Slideshows
   app.get("/slideshows/all", function (req, res) {
     let dbQuery = "SELECT sc.slideshow_name as slideshow_name, sc.slideshow_id as slideshow_id, i.image_name as image_name, i.image_file_name as image_file_name, i.image_url as image_url FROM baby.images i, baby.slideshow_category sc, baby.slideshows s WHERE s.slideshow_id = sc.slideshow_id AND s.image_id = i.image_id ORDER BY s.order";
@@ -39,6 +11,24 @@ module.exports = function (app) {
       res.json(result);
     });
   });
+
+  app.get("/slideshows/listings", function (req, res) {
+    let dbQuery = "SELECT * FROM slideshow_category";
+    connection.query(dbQuery, function (err, result) {
+      if (err) throw err;
+      res.json(result);
+    });
+  });
+
+  app.get("/slideshows/:id", function (req, res) {
+    console.log(req.params);
+    let dbQuery = "SELECT cat.slideshow_name, i.image_name, i.image_url, i.image_audio_url FROM slideshow_category cat, images i WHERE i.image_id IN (SELECT image_id FROM slideshows WHERE slideshow_id = ?) AND cat.slideshow_id IN (SELECT slideshow_id FROM slideshows WHERE slideshow_id = ?)"
+    connection.query(dbQuery, [req.params.id, req.params.id], function (err, result) {
+      if (err) throw err;
+      res.json(result);
+      console.log("Slideshow selected!");
+    });
+  })
 
   app.post("/slideshows/new", function (req, res) {
     console.log("Slideshow Data:");
@@ -123,6 +113,14 @@ module.exports = function (app) {
   })
 
   // Audios
+  app.get("/audios/all", function (req, res) {
+    let dbQuery = "SELECT * FROM images ORDER BY image_id ASC";
+    connection.query(dbQuery, function (err, result) {
+      if (err) throw err;
+      res.json(result);
+    });
+  });
+
   app.post("/audios/new", function (req, res) {
     console.log("Audio Data:");
     console.log(req.body);
@@ -144,8 +142,8 @@ module.exports = function (app) {
     });
   });
 
-   // Music
-   app.get("/music/all", function (req, res) {
+  // Music
+  app.get("/music/all", function (req, res) {
     let dbQuery = "SELECT * FROM music ORDER BY music_id ASC";
     connection.query(dbQuery, function (err, result) {
       if (err) throw err;
@@ -153,7 +151,7 @@ module.exports = function (app) {
     });
   });
 
-   app.post("/music/new", function (req, res) {
+  app.post("/music/new", function (req, res) {
     console.log("Music Data:");
     console.log(req.body);
     let dbQuery = "INSERT INTO music (music_name,music_url) VALUES (?,?)";
@@ -192,8 +190,10 @@ module.exports = function (app) {
       let worksheet = workbook.addWorksheet('Mailing List');
       worksheet.columns = [
         { header: 'ID', key: 'email_id', width: 10 },
+        { header: 'First Name', key: 'email_first_name', width: 50 },
+        { header: 'Last Name', key: 'email_last_name', width: 50 },
         { header: 'Email Address', key: 'email_address', width: 100 },
-        { header: 'Date Added', key: 'date_registered', width: 50 }
+        { header: 'Date Added', key: 'email_date_registered', width: 50 }
       ]
       worksheet.addRows(jsonEmails)
       workbook.xlsx.writeBuffer("./app/public/views/MailingList.xlsx")
@@ -201,6 +201,17 @@ module.exports = function (app) {
           console.log("File saved!");
           res.send("File saved!")
         })
+    });
+  });
+
+  app.post("/mailinglist/new", function (req, res) {
+    console.log("Mailing List Data:");
+    console.log(req.body);
+    let dbQuery = "INSERT INTO emails (email_address,email_first_name,email_last_name) VALUES (?,?,?)";
+    connection.query(dbQuery, [req.body.email_address, req.body.email_first_name, req.body.email_last_name], function (err, result) {
+      if (err) throw err;
+      console.log("Record successfully saved!");
+      res.end();
     });
   });
 

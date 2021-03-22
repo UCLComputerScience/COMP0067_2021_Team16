@@ -2,6 +2,10 @@
   font-family: "Quicksand", sans-serif;
 }
 
+.navbar .current {
+  color: #ebf7fd;
+  text-decoration-line: underline;
+}
 *:focus {
   outline: 0 !important;
 }

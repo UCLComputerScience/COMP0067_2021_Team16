@@ -86,4 +86,14 @@ $(document).ready(function () {
       }
     })
   })
+
+  $(document).on('click', '.show', function () {
+    $.ajax({
+      url: "/slideshows/" + this.value,
+      type: 'GET',
+      success: function (result) {
+        console.log(result)
+      }
+    })
+  })
 });

@@ -2,11 +2,23 @@ import './Slideshow_Items.css';
 import '@ionic/react'
 import { IonList, IonReorderGroup } from '@ionic/react';
 import React, { useState, useEffect } from 'react';
+import axios from "axios";
 import { ItemReorderEventDetail } from '@ionic/core';
 import Slideshow_Item from '../Slideshow_Item/Slideshow_Item';
 import {Access_Slideshow_List} from '../../contexts/Slideshow_Context';
 import {get_slideshows} from '../../contexts/Database_Context';
 
+const sendGetRequest = () => {
+  return axios({
+    url: "https://0067team16app.azurewebsites.net/slideshows/listings",
+    method: "GET",
+  }).then((response) => {
+    console.log(response);
+    return response.data;
+  });
+};
+
+sendGetRequest();
 
 interface EditMode {
   Editing: boolean;

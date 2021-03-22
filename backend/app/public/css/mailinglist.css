@@ -2,8 +2,26 @@
   font-family: "Quicksand", sans-serif;
 }
 
+.navbar .current {
+  color: #63848e;
+  background-color: #ebf7fd;
+}
+
 *:focus {
   outline: 0 !important;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+label {
+  color: #ebf7fd;
 }
 
 .navbar {

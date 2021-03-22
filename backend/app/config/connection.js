@@ -1,10 +1,18 @@
 const mysql = require('mysql');
 
+// const connection = mysql.createConnection({
+//     port: 3306,
+//     host: "localhost",
+//     user: "root",
+//     password: "password",
+//     database: "baby"
+// });
+
 const connection = mysql.createConnection({
     port: 3306,
-    host: "localhost",
-    user: "root",
-    password: "password",
+    host: "0067team16app.mysql.database.azure.com",
+    user: "app_admin@0067team16app",
+    password: "Newborn1!2",
     database: "baby"
 });
 
