@@ -28,13 +28,8 @@ const SlideshowPage: React.FC = () => {
   });
   
   return (
-<<<<<<< HEAD
-    <IonPage className="content_background">
-      <IonContent fullscreen className="content_background">
-=======
-    <IonPage className="page">
-      <IonContent fullscreen>
->>>>>>> 624f6375475f0b9e2badb9dbfc6f1d9b235f2c50
+    <IonPage className="content_background page">
+      <IonContent fullscreen className="content_background page">
         <Slideshow />
       </IonContent>
       <IonFooter className="footer">
