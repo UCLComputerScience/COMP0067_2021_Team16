@@ -37,30 +37,26 @@ const SupportPage: React.FC = () => {
           </IonToolbar>
         </IonHeader>
         <div id="buttons">
-          <IonRow className="modalrow ion-align-items-center ion-justify-content-center">
+          <IonRow>
             <IonModal isOpen={showModal} cssClass="my-custom-class">
-              <iframe src="https://www.youtube.com/embed/ylrelG3QQ4s"></iframe>
-              <IonIcon icon={trash} onClick={() => setShowModal(false)} />
-              {/* <BackButton onClick={() => setShowModal(false)} /> */}
-              {/* <IonButton onClick={() => setShowModal(false)}>
-              Back to Support
-            </IonButton> */}
+              <IonButton onClick={() => setShowModal(false)} />
+              <div className="video-container"><iframe src="https://www.youtube.com/embed/ylrelG3QQ4s"></iframe></div>
             </IonModal>
             <IonButton onClick={() => setShowModal(true)}>Tutorial</IonButton>
           </IonRow>
-          <IonRow className="modalrow ion-align-items-center ion-justify-content-center">
+          <IonRow>
             <IonModal isOpen={showModal1} cssClass="my-custom-class">
               <p>
                 Images developed based on the current scientific findings on
-                newborns and BABIES’ visual perception and brain development.
+                newborns and BABIES’ visual perception and brain development:
                 <li>
                   Improve concentration through stimulating and captivating
-                  images.
+                  images
                 </li>
-                <li>Stimulate further learning and discovery. </li>
+                <li>Stimulate further learning and discovery </li>
                 <li>
                   Create and maintain new pathways in the brain through learning
-                  to trace visual patterns.
+                  to trace visual patterns
                 </li>
                 <li>
                   Acquire early life skills essential for successful learning
@@ -80,7 +76,7 @@ const SupportPage: React.FC = () => {
               Science Behind Images
             </IonButton>
           </IonRow>
-          <IonRow className="modalrow ion-align-items-center ion-justify-content-center">
+          <IonRow>
             <IonModal isOpen={showModal2} cssClass="my-custom-class">
               <p>
                 This app is based on the Best Sellers and most gifted books for
@@ -92,10 +88,10 @@ const SupportPage: React.FC = () => {
                 world, our human scientific, architectural and technological
                 achievements and translated them into intricate mathematical
                 design in babies' perceptual language, suitable from birth to
-                100 years old. Grandparents love reading these books too! (Can
-                we include here an Amazon symbol or link to amazon page?)
-                https://www.amazon.co.uk/Iya-Whiteley/e/B01EX2F9N8
-                cosmicbabybooks.com
+                100 years old. Grandparents love reading these books too!
+
+                <a href="https://www.amazon.co.uk/Iya-Whiteley/e/B01EX2F9N8
+                cosmicbabybooks.com" >You can find it on Amazon!</a>
               </p>
               <IonButton onClick={() => setShowModal2(false)}>
                 Back to Support
@@ -105,7 +101,7 @@ const SupportPage: React.FC = () => {
               Cosmic Baby Books
             </IonButton>
           </IonRow>
-          <IonRow className="modalrow ion-align-items-center ion-justify-content-center">
+          <IonRow>
             <IonModal isOpen={showModal3} cssClass="my-custom-class">
               <p>
                 Space Psychologist, Director of the Centre of Space Medicine,
@@ -121,7 +117,7 @@ const SupportPage: React.FC = () => {
                 series with Astronaut Chris Hadfield and Dr Kevin Fong
                 presenter, BBC Astronauts: Do you have what it takes?'. Iya runs
                 workshops for public and academic.
-                <a href="www.iyawhiteley.com">www.iyawhiteley.com</a>
+                <a href="https://cosmicbabybooks.com/">Cosmic Baby Books Website</a>
               </p>
               <IonButton onClick={() => setShowModal3(false)}>
                 Back to Support

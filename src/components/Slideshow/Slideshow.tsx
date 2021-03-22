@@ -6,7 +6,11 @@ import TitleBar from "../TitleBar/TitleBar";
 import Copyright from "../Copyright/Copyright";
 import {Settings_Context} from "../../contexts/Settings_Context";
 
+<<<<<<< HEAD
 //const settings_object = Settings_Context();
+=======
+// const settings_object = Settings_Context();
+>>>>>>> giu
 
 const sendGetRequest = () => {
   return axios({
