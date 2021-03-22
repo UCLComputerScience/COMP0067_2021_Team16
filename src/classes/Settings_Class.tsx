@@ -1,7 +1,7 @@
 let Settings_Class = class{
     
     //default values
-    default_slide_duration:number = 10000;
+    default_slide_duration:number = 5000;
     default_animation_speed:number = 400;
     default_shuffle:boolean = false;
     default_audio_option:string = "Music and Recordings";

@@ -1,5 +1,5 @@
 import "./Slideshow.css";
-import { IonGrid, IonRow, IonSlides, IonSlide, IonImg } from "@ionic/react";
+import { IonGrid, IonRow, IonSlides, IonSlide, IonImg, useIonViewWillEnter } from "@ionic/react";
 import axios from "axios";
 import React from "react";
 import TitleBar from "../TitleBar/TitleBar";
@@ -16,6 +16,7 @@ import nine from "../Copyright/images/haeckelianaporcellana.png";
 import ten from "../Copyright/images/cannorrhizaconnexa.png";
 import eleven from "../Copyright/images/nausithoechallengeri.png";
 import twelve from "../Copyright/images/solmaris.png";
+import {useState} from 'react';
 
 // const apiKEY = "BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9";
 // const endpoint = `https://api.giphy.com/v1/gifs/search?q=friends&api_key=${apiKEY}`;
@@ -120,12 +121,19 @@ const images = [
 ];
 
 const Slideshow: React.FC = () => {
+  const [reRender,setReRender] = useState<boolean>(false);
   // const [items, setItems] = React.useState([]);
   // React.useEffect(() => {
   //   sendGetRequest().then((data) => setItems(data.data));
   // }, []);
+  useIonViewWillEnter(()=>{
+    console.log("Entering the slideshow page");
+    slideOpts.autoplay.delay = parseFloat(localStorage.getItem("slide_duration"));
+    setReRender(!reRender);
+  });
 
   function speed_settings(e){
+    console.log("switched to new slide");
     e.currentTarget.style.animation = "rotate " + 160000/parseFloat(localStorage.getItem("animation_speed")) + "s linear infinite";
   }
 
