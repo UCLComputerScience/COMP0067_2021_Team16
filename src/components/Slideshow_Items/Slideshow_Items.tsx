@@ -18,13 +18,17 @@ const Slideshow_Items: React.FC<EditMode> = (props) => {
 
   const [ReOrderModeDisabled, setReOrderModeDisabled] = useState<boolean>(!props.Editing);
 
+  //setmyitems(Access_Slideshow_List());
+
   useEffect(()=>{setReOrderModeDisabled(!props.Editing)},[props.Editing]);
+  
   useEffect(()=>{
     async function load_slideshows(){
       setmyitems(await get_slideshows())
+      //setmyitems(Access_Slideshow_List());
     }
     load_slideshows();
-  },[]);  
+  },[]);
 
   function doReorder(event: CustomEvent<ItemReorderEventDetail>) {
 
@@ -43,7 +47,6 @@ const Slideshow_Items: React.FC<EditMode> = (props) => {
       </IonReorderGroup>
     </IonList >
   );
-  
 }
 
 export default Slideshow_Items;
