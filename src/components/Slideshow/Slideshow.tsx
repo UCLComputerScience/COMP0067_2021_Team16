@@ -16,6 +16,7 @@ import nine from "../Copyright/images/haeckelianaporcellana.png";
 import ten from "../Copyright/images/cannorrhizaconnexa.png";
 import eleven from "../Copyright/images/nausithoechallengeri.png";
 import twelve from "../Copyright/images/solmaris.png";
+import {Settings_Context} from "../../contexts/Settings_Context";
 
 // const apiKEY = "BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9";
 // const endpoint = `https://api.giphy.com/v1/gifs/search?q=friends&api_key=${apiKEY}`;
@@ -30,10 +31,18 @@ import twelve from "../Copyright/images/solmaris.png";
 //   });
 // };
 
+//const Settings = Settings_Context();
+
 const slideOpts = {
   initialSlide: 0,
   speed: 400,
-  autoplay: true,
+  autoplay: {
+    delay: parseFloat(localStorage.getItem("slide_duration")),
+    disableOnInteraction: false
+  },
+  spaceBetween: 100,
+  loop: true,
+  preloadImages: true
 };
 
 const images = [

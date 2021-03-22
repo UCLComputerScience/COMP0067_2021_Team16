@@ -1,5 +1,5 @@
 .rotate {
-  animation: rotate 200.5s linear infinite;
+  animation: rotate 100s linear infinite;
   width: 100%;
   border-radius: 50%;
 }
