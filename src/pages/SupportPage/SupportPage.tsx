@@ -52,15 +52,15 @@ const SupportPage: React.FC = () => {
             <IonModal isOpen={showModal1} cssClass="my-custom-class">
               <p>
                 Images developed based on the current scientific findings on
-                newborns and BABIES’ visual perception and brain development.
+                newborns and BABIES’ visual perception and brain development:
                 <li>
                   Improve concentration through stimulating and captivating
-                  images.
+                  images
                 </li>
-                <li>Stimulate further learning and discovery. </li>
+                <li>Stimulate further learning and discovery </li>
                 <li>
                   Create and maintain new pathways in the brain through learning
-                  to trace visual patterns.
+                  to trace visual patterns
                 </li>
                 <li>
                   Acquire early life skills essential for successful learning
