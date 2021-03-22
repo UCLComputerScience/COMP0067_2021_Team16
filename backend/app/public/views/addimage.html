@@ -23,7 +23,7 @@
                     <h3>Newborn Baby App</h3>
                 </a>
                 <a href="addslideshow.html">Add Slideshow</a>
-                <a href="addimage.html">Add Image</a>
+                <a class="current" href="addimage.html">Add Image</a>
                 <a href="addaudio.html">Add Audio</a>
                 <a href="addmusic.html">Add Music</a>
                 <a href="mailinglist.html">Mailing List</a>
@@ -38,7 +38,8 @@
             <input id="narration" type="text" placeholder="Enter the narration script for this image" name="narration">
             <br><br>
             <input type="file" id="filetag" name='image' required><img src="" style="width: 100px;"
-                id="preview"><br><br>
+                id="preview"><br><br><label for="filetag"><b>(Only .jpg, .jpeg, and .png image
+                    files are supported. Max size: 5MB)</b></label><br>
             <button id="image-submit" type="submit">Submit</button>
         </form>
     </div>

@@ -7,7 +7,6 @@ import React, { useState } from 'react';
 import AddNewSlideshow from '../../components/AddNewSlideshow/AddNewSlideshow';
 import {settings} from 'ionicons/icons';
 
-
 const SelectionPage: React.FC = () => {
     
     const[editMode,setEditMode] = useState(false);

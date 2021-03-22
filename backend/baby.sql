@@ -2,15 +2,12 @@ DROP DATABASE IF EXISTS baby;
 CREATE DATABASE baby;
 USE baby;
 
-CREATE TABLE `users` (
-`username` VARCHAR(255) NOT NULL,
-`password` VARCHAR(255) NOT NULL
-);
-
 CREATE TABLE `emails` (
 `email_id` INT(100) PRIMARY KEY AUTO_INCREMENT NOT NULL,
 `email_address` VARCHAR(255) NOT NULL,
-`date_registered` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+`email_first_name` VARCHAR(255) NOT NULL,
+`email_last_name` VARCHAR(255) NOT NULL,
+`email_date_registered` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE `slideshow_category` (
@@ -41,13 +38,11 @@ CREATE TABLE `music` (
 `music_url` VARCHAR(255) NOT NULL
 );
 
-INSERT INTO users (username,password) VALUES ("admin","Newborn1!2");
+INSERT INTO emails (email_address,email_first_name,email_last_name) VALUES ("caroline.crandell.20@ucl.ac.uk","Caroline","Crandell");
 
-INSERT INTO emails (email_address) VALUES ("caroline.crandell.20@ucl.ac.uk");
+INSERT INTO emails (email_address,email_first_name,email_last_name) VALUES ("giuseppe.baldini.20@ucl.ac.uk","Giuseppe","Baldini");
 
-INSERT INTO emails (email_address) VALUES ("giuseppe.baldini.20@ucl.ac.uk");
-
-INSERT INTO emails (email_address) VALUES ("chenuka.ratwatte.20@ucl.ac.uk");
+INSERT INTO emails (email_address,email_first_name,email_last_name) VALUES ("chenuka.ratwatte.20@ucl.ac.uk","Chenuka","Ratwatte");
 
 INSERT INTO slideshow_category (slideshow_type,slideshow_name) VALUES ("default","All Images");
 
@@ -58,6 +53,9 @@ INSERT INTO slideshow_category (slideshow_type,slideshow_name) VALUES ("default"
 INSERT INTO slideshow_category (slideshow_type,slideshow_name) VALUES ("default","Sea Floor Animals");
 
 INSERT INTO slideshow_category (slideshow_type,slideshow_name) VALUES ("default","Jellyfish");
+
+INSERT INTO images (image_name,image_text,image_file_name,image_url,image_audio_file_name,image_audio_url) VALUES ("JELLYFISH GIF","","jellyfish.gif","https://babyobjectstorage.blob.core.windows.net/babyblob/jellyfish.gif","jellyfish.mp3","");
+
 
 INSERT INTO images (image_name,image_text,image_file_name,image_url,image_audio_file_name,image_audio_url) VALUES ("ASTEROBLASTUS STELLATUS","Asteroblastus stellatus is an ancestor of the Sea Lily; the animal that looks like a starfish on a stalk. They were around over 450 million years ago when fish with jaws were about to appear. With this new threat Blastoid creatures evolved the ability to regenerate. Surviving Sea Lilies possess ancestoral skeletal five-sector symmetry and similarly attach themselves to the rocky bottom by a stalk. The Sea Lily mostly eats suspended particles in the water that float by, such as plankton. It uses grooves within its five radiating petals to capture food. These work like tiny conveyors delivering food into its mouth in the centre.","asteroblastusstellatus.png","https://babyobjectstorage.blob.core.windows.net/babyblob/asteroblastusstellatus.png","asteroblastusstellatus.mp3","https://babyobjectstorage.blob.core.windows.net/babyblob/asteroblastusstellatus.mp3");
 
