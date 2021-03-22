@@ -37,7 +37,7 @@ const SupportPage: React.FC = () => {
           </IonToolbar>
         </IonHeader>
         <div id="buttons">
-          <IonRow className="modalrow ion-align-items-center ion-justify-content-center">
+          <IonRow>
             <IonModal isOpen={showModal} cssClass="my-custom-class">
               <iframe src="https://www.youtube.com/embed/ylrelG3QQ4s"></iframe>
               <IonButton onClick={() => setShowModal(false)} />
@@ -48,7 +48,7 @@ const SupportPage: React.FC = () => {
             </IonModal>
             <IonButton onClick={() => setShowModal(true)}>Tutorial</IonButton>
           </IonRow>
-          <IonRow className="modalrow ion-align-items-center ion-justify-content-center">
+          <IonRow>
             <IonModal isOpen={showModal1} cssClass="my-custom-class">
               <p>
                 Images developed based on the current scientific findings on
@@ -80,7 +80,7 @@ const SupportPage: React.FC = () => {
               Science Behind Images
             </IonButton>
           </IonRow>
-          <IonRow className="modalrow ion-align-items-center ion-justify-content-center">
+          <IonRow>
             <IonModal isOpen={showModal2} cssClass="my-custom-class">
               <p>
                 This app is based on the Best Sellers and most gifted books for
@@ -105,7 +105,7 @@ const SupportPage: React.FC = () => {
               Cosmic Baby Books
             </IonButton>
           </IonRow>
-          <IonRow className="modalrow ion-align-items-center ion-justify-content-center">
+          <IonRow>
             <IonModal isOpen={showModal3} cssClass="my-custom-class">
               <p>
                 Space Psychologist, Director of the Centre of Space Medicine,
