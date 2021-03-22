@@ -16,7 +16,6 @@ import nine from "../Copyright/images/haeckelianaporcellana.png";
 import ten from "../Copyright/images/cannorrhizaconnexa.png";
 import eleven from "../Copyright/images/nausithoechallengeri.png";
 import twelve from "../Copyright/images/solmaris.png";
-import {Settings_Context} from "../../contexts/Settings_Context";
 
 // const apiKEY = "BkaUZZWcFij6J7AoQj3WtPb1R2p9O6V9";
 // const endpoint = `https://api.giphy.com/v1/gifs/search?q=friends&api_key=${apiKEY}`;
@@ -126,6 +125,10 @@ const Slideshow: React.FC = () => {
   //   sendGetRequest().then((data) => setItems(data.data));
   // }, []);
 
+  function speed_settings(e){
+    e.currentTarget.style.animation = "rotate " + 160000/parseFloat(localStorage.getItem("animation_speed")) + "s linear infinite";
+  }
+
   return (
     <IonSlides pager={false} options={slideOpts} className="background">
       {images.map((item, i) => (
@@ -136,9 +139,11 @@ const Slideshow: React.FC = () => {
             </IonRow>
             <IonRow className="imagerow">
               <IonImg
+                id = "slide image"
                 key={i}
                 src={item.image}
                 className="spinner rotate"
+                onIonImgWillLoad = {(e) => speed_settings(e)}
               />
             </IonRow>
             <IonRow className="copyrightrow">

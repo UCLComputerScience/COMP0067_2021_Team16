@@ -11,7 +11,7 @@ let Settings_Class = class{
     min_slide_duration = 1000;
     max_slide_duration = 20000;
     min_animation_speed = 0;
-    max_animation_speed = 1000;
+    max_animation_speed = 20000;
     audio_option_choices:Array<string> = ["Mute","Music only","Recording only","Music and Recordings"];
 
     
