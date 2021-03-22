@@ -1,10 +1,10 @@
 let Settings_Class = class{
     
-    //deafault values
+    //default values
     default_slide_duration:number = 5;
     default_animation_speed:number = 400;
     default_shuffle:boolean = false;
-    default_audio_option:string = "both";
+    default_audio_option:string = "Music and Recordings";
     default_soundtrack:string = null;
 
     //ranges
@@ -12,7 +12,7 @@ let Settings_Class = class{
     max_slide_duration = 30;
     min_animation_speed = 0;
     max_animation_speed = 1000;
-    audio_option_choices:Array<string> = ["mute","music only","recording only","both"];
+    audio_option_choices:Array<string> = ["Mute","Music only","Recording only","Music and Recordings"];
 
     
     slide_duration: number;
