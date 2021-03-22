@@ -12,6 +12,16 @@ module.exports = function (app) {
     });
   });
 
+  app.get("/slideshows/:id", function (req, res) {
+    console.log(req.params);
+    let dbQuery = "SELECT cat.slideshow_name, i.image_name, i.image_url, i.image_audio_url FROM slideshow_category cat, images i WHERE i.image_id IN (SELECT image_id FROM slideshows WHERE slideshow_id = ?) AND cat.slideshow_id IN (SELECT slideshow_id FROM slideshows WHERE slideshow_id = ?)"
+    connection.query(dbQuery, [req.params.id, req.params.id], function (err, result) {
+      if (err) throw err;
+      res.json(result);
+      console.log("Slideshow selected!");
+    });
+  })
+
   app.post("/slideshows/new", function (req, res) {
     console.log("Slideshow Data:");
     console.log(req.body);
@@ -124,8 +134,8 @@ module.exports = function (app) {
     });
   });
 
-   // Music
-   app.get("/music/all", function (req, res) {
+  // Music
+  app.get("/music/all", function (req, res) {
     let dbQuery = "SELECT * FROM music ORDER BY music_id ASC";
     connection.query(dbQuery, function (err, result) {
       if (err) throw err;
@@ -133,7 +143,7 @@ module.exports = function (app) {
     });
   });
 
-   app.post("/music/new", function (req, res) {
+  app.post("/music/new", function (req, res) {
     console.log("Music Data:");
     console.log(req.body);
     let dbQuery = "INSERT INTO music (music_name,music_url) VALUES (?,?)";
@@ -193,6 +203,7 @@ module.exports = function (app) {
     connection.query(dbQuery, [req.body.email_address, req.body.email_first_name, req.body.email_last_name], function (err, result) {
       if (err) throw err;
       console.log("Record successfully saved!");
+      res.end();
     });
   });
 
