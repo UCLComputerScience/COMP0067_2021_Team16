@@ -14,9 +14,11 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Update_Selected_Slideshow_Context } from "../../contexts/Slideshow_Context";
 
+let slideshowValue = 1;
+
 const sendGetRequest = () => {
   return axios({
-    url: "https://0067team16app.azurewebsites.net/slideshows/all",
+    url: "https://0067team16app.azurewebsites.net/slideshows/" + slideshowValue,
     method: "GET",
   }).then((response) => {
     console.log(response);
