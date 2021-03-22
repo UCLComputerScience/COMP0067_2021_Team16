@@ -5,9 +5,13 @@
 }
 
 .editbutton{
-    justify-content: flex-start;
-    align-items: flex-start;
+    display: flex;
+    justify-content: space-evenly;
+}
 
+.settingsbutton{
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .addbutton{
