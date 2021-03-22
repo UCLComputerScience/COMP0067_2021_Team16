@@ -12,6 +12,14 @@ module.exports = function (app) {
     });
   });
 
+  app.get("/slideshows/listings", function (req, res) {
+    let dbQuery = "SELECT * FROM slideshow_category";
+    connection.query(dbQuery, function (err, result) {
+      if (err) throw err;
+      res.json(result);
+    });
+  });
+
   app.get("/slideshows/:id", function (req, res) {
     console.log(req.params);
     let dbQuery = "SELECT cat.slideshow_name, i.image_name, i.image_url, i.image_audio_url FROM slideshow_category cat, images i WHERE i.image_id IN (SELECT image_id FROM slideshows WHERE slideshow_id = ?) AND cat.slideshow_id IN (SELECT slideshow_id FROM slideshows WHERE slideshow_id = ?)"

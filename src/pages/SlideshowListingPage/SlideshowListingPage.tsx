@@ -4,22 +4,7 @@ import Edit_Button from '../../components/EditButton/EditButton';
 import './SlideshowListingPage.css';
 import Slideshow_Items from '../../components/Slideshow_Items/Slideshow_Items';
 import React, { useState } from 'react';
-import axios from "axios";
 import AddNewSlideshow from '../../components/AddNewSlideshow/AddNewSlideshow';
-
-let slideshowValue = 2;
-
-const sendGetRequest = () => {
-  return axios({
-    url: "https://0067team16app.azurewebsites.net/slideshows/" + slideshowValue,
-    method: "GET",
-  }).then((response) => {
-    console.log(response);
-    return response.data;
-  });
-};
-
-sendGetRequest();
 
 const SelectionPage: React.FC = () => {
     
