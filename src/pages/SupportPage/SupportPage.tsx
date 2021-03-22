@@ -93,9 +93,9 @@ const SupportPage: React.FC = () => {
                 achievements and translated them into intricate mathematical
                 design in babies' perceptual language, suitable from birth to
                 100 years old. Grandparents love reading these books too!
-                
-                https://www.amazon.co.uk/Iya-Whiteley/e/B01EX2F9N8
-                cosmicbabybooks.com
+
+                <a href="https://www.amazon.co.uk/Iya-Whiteley/e/B01EX2F9N8
+                cosmicbabybooks.com" >You can find it on Amazon!</a>
               </p>
               <IonButton onClick={() => setShowModal2(false)}>
                 Back to Support
@@ -121,7 +121,7 @@ const SupportPage: React.FC = () => {
                 series with Astronaut Chris Hadfield and Dr Kevin Fong
                 presenter, BBC Astronauts: Do you have what it takes?'. Iya runs
                 workshops for public and academic.
-                <a href="www.iyawhiteley.com">www.iyawhiteley.com</a>
+                <a href="https://cosmicbabybooks.com/">Cosmic Baby Books Website</a>
               </p>
               <IonButton onClick={() => setShowModal3(false)}>
                 Back to Support
