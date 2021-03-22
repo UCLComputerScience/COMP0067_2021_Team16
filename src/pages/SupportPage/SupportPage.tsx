@@ -40,7 +40,7 @@ const SupportPage: React.FC = () => {
           <IonRow className="modalrow ion-align-items-center ion-justify-content-center">
             <IonModal isOpen={showModal} cssClass="my-custom-class">
               <iframe src="https://www.youtube.com/embed/ylrelG3QQ4s"></iframe>
-              <IonIcon icon={trash} onClick={() => setShowModal(false)} />
+              <IonButton onClick={() => setShowModal(false)} />
               {/* <BackButton onClick={() => setShowModal(false)} /> */}
               {/* <IonButton onClick={() => setShowModal(false)}>
               Back to Support
@@ -92,8 +92,8 @@ const SupportPage: React.FC = () => {
                 world, our human scientific, architectural and technological
                 achievements and translated them into intricate mathematical
                 design in babies' perceptual language, suitable from birth to
-                100 years old. Grandparents love reading these books too! (Can
-                we include here an Amazon symbol or link to amazon page?)
+                100 years old. Grandparents love reading these books too!
+                
                 https://www.amazon.co.uk/Iya-Whiteley/e/B01EX2F9N8
                 cosmicbabybooks.com
               </p>
