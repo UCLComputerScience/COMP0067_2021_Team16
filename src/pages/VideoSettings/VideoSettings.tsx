@@ -25,7 +25,7 @@ const VideoSettings: React.FC = () => {
           <IonItem>
             <AnimationSpeed />
           </IonItem>
-          <IonItem>
+          <IonItem className="shuffle">
             <ShuffleToggleButton/>
           </IonItem>
         </IonList>
