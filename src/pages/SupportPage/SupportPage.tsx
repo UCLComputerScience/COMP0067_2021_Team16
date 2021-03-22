@@ -39,12 +39,8 @@ const SupportPage: React.FC = () => {
         <div id="buttons">
           <IonRow>
             <IonModal isOpen={showModal} cssClass="my-custom-class">
-              <iframe src="https://www.youtube.com/embed/ylrelG3QQ4s"></iframe>
               <IonButton onClick={() => setShowModal(false)} />
-              {/* <BackButton onClick={() => setShowModal(false)} /> */}
-              {/* <IonButton onClick={() => setShowModal(false)}>
-              Back to Support
-            </IonButton> */}
+              <div className="video-container"><iframe src="https://www.youtube.com/embed/ylrelG3QQ4s"></iframe></div>
             </IonModal>
             <IonButton onClick={() => setShowModal(true)}>Tutorial</IonButton>
           </IonRow>
