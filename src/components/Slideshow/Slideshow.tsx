@@ -4,7 +4,7 @@ import axios from "axios";
 import React from "react";
 import TitleBar from "../TitleBar/TitleBar";
 import Copyright from "../Copyright/Copyright";
-import {Settings_Context} from "../../contexts/Settings_Context";
+import { Settings_Context } from "../../contexts/Settings_Context";
 
 //const settings_object = Settings_Context();
 
