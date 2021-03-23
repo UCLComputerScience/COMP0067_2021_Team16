@@ -32,7 +32,7 @@ const slideOpts = {
 };
 
 const Slideshow: React.FC = () => {
-  const [items, setItems] = useState(()=>[]);
+  const [items, setItems] = useState([]);
   useEffect(() => {sendGetRequest().then((data) => setItems(data)).catch(e => console.log("data failed to load :",e))}, []);
 
   useIonViewWillEnter(()=>{
@@ -41,7 +41,7 @@ const Slideshow: React.FC = () => {
   });
 
   function speed_settings(e){
-    console.log("switched to new slide");
+    console.log("switched to new slide.");
     e.currentTarget.style.animation = "rotate " + 160000/parseFloat(localStorage.getItem("animation_speed")) + "s linear infinite";
   }
 
