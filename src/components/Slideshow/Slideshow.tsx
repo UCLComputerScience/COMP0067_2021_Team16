@@ -1,11 +1,9 @@
 import "./Slideshow.css";
 import { IonGrid, IonRow, IonSlides, IonSlide, IonImg, useIonViewWillEnter, IonHeader } from "@ionic/react";
 import axios from "axios";
-import React,{useState, useEffect} from "react";
+import React,{useState, useEffect, useRef} from "react";
 import TitleBar from "../TitleBar/TitleBar";
 import Copyright from "../Copyright/Copyright";
-
-// const settings_object = Settings_Context();
 
 const sendGetRequest = () => {
   return axios({
@@ -16,8 +14,6 @@ const sendGetRequest = () => {
     return response.data;
   });
 };
-
-//const Settings = Settings_Context();
 
 const slideOpts = {
   initialSlide: 0,
@@ -45,6 +41,7 @@ const Slideshow: React.FC = () => {
     e.currentTarget.style.animation = "rotate " + 160000/parseFloat(localStorage.getItem("animation_speed")) + "s linear infinite";
   }
 
+  if(items.length > 0){
   return (
     <IonSlides pager={false} options={slideOpts} className="background">
       {items.map((item, i) => (
@@ -63,7 +60,11 @@ const Slideshow: React.FC = () => {
         </IonSlide>
       ))}
     </IonSlides>
-  );
+  )
+}
+  else{
+    return null
+}
 };
 
 export default Slideshow;
