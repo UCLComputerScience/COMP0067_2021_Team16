@@ -18,7 +18,7 @@ const sendGetRequest = () => {
   });
 };
 
-sendGetRequest();
+//sendGetRequest();
 
 interface EditMode {
   Editing: boolean;
