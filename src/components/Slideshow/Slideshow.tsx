@@ -1,12 +1,9 @@
 import "./Slideshow.css";
-import { IonGrid, IonRow, IonSlides, IonSlide, IonImg, useIonViewWillEnter } from "@ionic/react";
+import { IonGrid, IonRow, IonSlides, IonSlide, IonImg, useIonViewWillEnter, IonHeader } from "@ionic/react";
 import axios from "axios";
-import React,{useState} from "react";
+import React,{useState, useEffect, useRef} from "react";
 import TitleBar from "../TitleBar/TitleBar";
 import Copyright from "../Copyright/Copyright";
-import { Settings_Context } from "../../contexts/Settings_Context";
-
-// const settings_object = Settings_Context();
 
 const sendGetRequest = () => {
   return axios({
@@ -17,8 +14,6 @@ const sendGetRequest = () => {
     return response.data;
   });
 };
-
-//const Settings = Settings_Context();
 
 const slideOpts = {
   initialSlide: 0,
@@ -33,22 +28,20 @@ const slideOpts = {
 };
 
 const Slideshow: React.FC = () => {
-  const [reRender,setReRender] = useState<boolean>(false);
-  const [items, setItems] = React.useState([]);
-  React.useEffect(() => {
-  sendGetRequest().then((data) => setItems(data));}, []);
-  
+  const [items, setItems] = useState([]);
+  useEffect(() => {sendGetRequest().then((data) => setItems(data)).catch(e => console.log("data failed to load :",e))}, []);
+
   useIonViewWillEnter(()=>{
     console.log("Entering the slideshow page");
     slideOpts.autoplay.delay = parseFloat(localStorage.getItem("slide_duration"));
-    setReRender(!reRender);
   });
 
   function speed_settings(e){
-    console.log("switched to new slide");
+    console.log("switched to new slide.");
     e.currentTarget.style.animation = "rotate " + 160000/parseFloat(localStorage.getItem("animation_speed")) + "s linear infinite";
   }
 
+  if(items.length > 0){
   return (
     <IonSlides pager={false} options={slideOpts} className="background">
       {items.map((item, i) => (
@@ -58,7 +51,7 @@ const Slideshow: React.FC = () => {
               <TitleBar name={item.image_name} />
             </IonRow>
             <IonRow className="imagerow">
-              <IonImg key={i} src={item.image_url} className="spinner rotate" onIonImgWillLoad = {(e) => speed_settings(e)}/>
+              <IonImg key={i} src={item.image_url} className="spinner rotate" onIonImgWillLoad = {(e) => speed_settings(e)} onIonError={()=>console.log("image failed to load")}/>
             </IonRow>
             <IonRow className="copyrightrow">
               <Copyright />
@@ -67,7 +60,11 @@ const Slideshow: React.FC = () => {
         </IonSlide>
       ))}
     </IonSlides>
-  );
+  )
+}
+  else{
+    return null
+}
 };
 
 export default Slideshow;

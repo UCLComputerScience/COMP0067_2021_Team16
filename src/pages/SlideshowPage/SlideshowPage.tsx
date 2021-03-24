@@ -1,6 +1,5 @@
 import {
   IonContent,
-  IonHeader,
   IonRow,
   IonPage,
   IonTitle,
@@ -28,8 +27,8 @@ const SlideshowPage: React.FC = () => {
   });
   
   return (
-    <IonPage className="content_background page">
-      <IonContent fullscreen className="content_background page">
+    <IonPage>
+      <IonContent fullscreen>
         <Slideshow />
       </IonContent>
       <IonFooter className="footer">
