@@ -54,7 +54,7 @@ INSERT INTO slideshow_category (slideshow_type,slideshow_name) VALUES ("default"
 
 INSERT INTO slideshow_category (slideshow_type,slideshow_name) VALUES ("default","Jellyfish");
 
-INSERT INTO images (image_name,image_text,image_file_name,image_url,image_audio_file_name,image_audio_url) VALUES ("JELLYFISH GIF","","jellyfish.gif","https://babyobjectstorage.blob.core.windows.net/babyblob/jellyfish.gif","jellyfish.mp3","");
+INSERT INTO images (image_name,image_text,image_file_name,image_url,image_audio_file_name,image_audio_url) VALUES ("FUTAHOSHI GIF","","futahoshi.gif","https://babyobjectstorage.blob.core.windows.net/babyblob/futahoshi.gif","futahoshi.mp3","");
 
 
 INSERT INTO images (image_name,image_text,image_file_name,image_url,image_audio_file_name,image_audio_url) VALUES ("ASTEROBLASTUS STELLATUS","Asteroblastus stellatus is an ancestor of the Sea Lily; the animal that looks like a starfish on a stalk. They were around over 450 million years ago when fish with jaws were about to appear. With this new threat Blastoid creatures evolved the ability to regenerate. Surviving Sea Lilies possess ancestoral skeletal five-sector symmetry and similarly attach themselves to the rocky bottom by a stalk. The Sea Lily mostly eats suspended particles in the water that float by, such as plankton. It uses grooves within its five radiating petals to capture food. These work like tiny conveyors delivering food into its mouth in the centre.","asteroblastusstellatus.png","https://babyobjectstorage.blob.core.windows.net/babyblob/asteroblastusstellatus.png","asteroblastusstellatus.mp3","https://babyobjectstorage.blob.core.windows.net/babyblob/asteroblastusstellatus.mp3");
