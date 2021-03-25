@@ -1,5 +1,6 @@
 const connection = require("../config/connection.js");
 const excel = require('exceljs');
+const { BlobServiceClient } = require('@azure/storage-blob');
 
 module.exports = function (app) {
 
@@ -78,6 +79,20 @@ module.exports = function (app) {
   });
 
   app.post("/images/new", function (req, res) {
+    async function main() {
+      const AZURE_STORAGE_CONNECTION_STRING = "DefaultEndpointsProtocol=https;AccountName=babyobjectstorage;AccountKey=SCbseZIsOhjcb+pwnU+dB1lbsBTRtiY++lLC66Od/Oo75iLrn7Mj+xV3A7StyzOX6wizvTGpWK7l8psJDdMU0Q==;EndpointSuffix=core.windows.net";
+      const blobServiceClient = BlobServiceClient.fromConnectionString(AZURE_STORAGE_CONNECTION_STRING);
+      const containerName = "babyblob"
+      const containerClient = blobServiceClient.getContainerClient(containerName);
+
+      const blobName = req.body.image;
+      const blockBlobClient = containerClient.getBlockBlobClient(blobName);
+
+      const data = req.body.image;
+      const uploadBlobResponse = await blockBlobClient.upload(data, data.length);
+    }
+
+    main().then(() => console.log('Done')).catch((ex) => console.log(ex.message));
     console.log("Image Data:");
     console.log(req.body);
     let newImage = {

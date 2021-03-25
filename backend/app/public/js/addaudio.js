@@ -36,7 +36,7 @@ $(document).ready(function () {
             let table = $("<table><tr><th>ID</th><th>Name</th><th>Narration</th><th>Image</th><th>Audio</th><th>Actions</th></tr>");
             for (let i = 0; i < data.length; i++) {
                 let row = $("<tr>");
-                row.append("<td>" + data[i].image_id + "</td>");
+                row.append("<td>" + (i+1) + "</td>");
                 row.append("<td>" + data[i].image_name + "</td>");
                 row.append("<td>" + data[i].image_text + "</td>");
                 if (data[i].image_url == "Local Storage") {
@@ -70,7 +70,7 @@ $(document).ready(function () {
                         let table = $("<table><tr><th>ID</th><th>Name</th><th>Narration</th><th>Image</th><th>Audio</th><th>Actions</th></tr>");
                         for (let i = 0; i < data.length; i++) {
                             let row = $("<tr>");
-                            row.append("<td>" + data[i].image_id + "</td>");
+                            row.append("<td>" + (i+1) + "</td>");
                             row.append("<td>" + data[i].image_name + "</td>");
                             row.append("<td>" + data[i].image_text + "</td>");
                             if (data[i].image_url == "Local Storage") {

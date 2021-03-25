@@ -12,7 +12,7 @@ $(document).ready(function () {
             let table = $("<table><tr><th>ID</th><th>Music</th><th>Actions</th></tr>");
             for (let i = 0; i < data.length; i++) {
                 let row = $("<tr>");
-                row.append("<td>" + data[i].music_id + "</td>");
+                row.append("<td>" + (i+1) + "</td>");
                 if (data[i].music_url == "Local Storage") {
                     row.append("<td>" + data[i].music_name + "<br><br><audio controls><source src='" + localStorage.getItem(data[i].music_name) + "'/></audio></td>");
                 } else {
@@ -39,7 +39,7 @@ $(document).ready(function () {
                         let table = $("<table><tr><th>ID</th><th>Music</th><th>Actions</th></tr>");
                         for (let i = 0; i < data.length; i++) {
                             let row = $("<tr>");
-                            row.append("<td>" + data[i].music_id + "</td>");
+                            row.append("<td>" + (i+1) + "</td>");
                             if (data[i].music_url == "Local Storage") {
                                 row.append("<td>" + data[i].music_name + "<br><br><audio controls><source src='" + localStorage.getItem(data[i].music_name) + "'/></audio></td>");
                             } else {

@@ -37,7 +37,7 @@
             <label for="narration"><b>Narration</b></label>
             <input id="narration" type="text" placeholder="Enter the narration script for this image" name="narration">
             <br><br>
-            <input type="file" id="filetag" name='image' required><img src="" style="width: 100px;"
+            <input type="file" id="filetag" name='image' accept="image/png, image/jpeg, image/jpg" required><img src="" style="width: 100px;"
                 id="preview"><br><br><label for="filetag"><b>(Only .jpg, .jpeg, and .png image
                     files are supported. Max size: 5MB)</b></label><br>
             <button id="image-submit" type="submit">Submit</button>
@@ -55,7 +55,7 @@
     <div class="footer">
         <p>Copyright © 2016 Cosmic Baby Books - All Rights Reserved.</p>
     </div>
-    <script src=”../js/azure-storage-blob.js” charset=”utf-8"></script>
+    <!-- <script src=”../js/azure-storage-blob.js” charset=”utf-8"></script> -->
     <script type="text/javascript" src="../js/addimage.js"></script>
 </body>
 
