@@ -1,10 +1,10 @@
 let Slideshow = class{
-    name: string;
+    slideshow_name: string;
     position: number;
     enabled: boolean;
 
     constructor(_name,_position,_enabled){
-        this.name = _name;
+        this.slideshow_name = _name;
         this.position = _position;
         this.enabled = _enabled;
     }

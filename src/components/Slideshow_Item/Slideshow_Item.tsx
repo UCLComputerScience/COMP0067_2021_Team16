@@ -50,9 +50,8 @@ const Slideshow_Item: React.FC<ContainerProps> = (props) => {
               <IonButton
                 fill="clear"
                 routerLink={link}
-                onClick={() => slideshow_updater(props.item)}
-              >
-                <h2>{props.item.name}</h2>
+                onClick={() => slideshow_updater(props.item)}>
+                <h2>{props.item.slideshow_name}</h2>
               </IonButton>
             </IonCol>
             <IonCol className="reordergrabber">

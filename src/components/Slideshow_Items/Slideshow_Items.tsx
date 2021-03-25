@@ -5,18 +5,8 @@ import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import { ItemReorderEventDetail } from '@ionic/core';
 import Slideshow_Item from '../Slideshow_Item/Slideshow_Item';
-import {Access_Slideshow_List} from '../../contexts/Slideshow_Context';
 import {get_slideshows} from '../../contexts/Database_Context';
-
-const sendGetRequest = () => {
-  return axios({
-    url: "https://0067team16app.azurewebsites.net/slideshows/listings",
-    method: "GET",
-  }).then((response) => {
-    console.log(response);
-    return response.data;
-  });
-};
+import Slideshow_Class from '../../classes/Slideshow_Class';
 
 //sendGetRequest();
 
@@ -30,14 +20,26 @@ const Slideshow_Items: React.FC<EditMode> = (props) => {
 
   const [ReOrderModeDisabled, setReOrderModeDisabled] = useState<boolean>(!props.Editing);
 
-  //setmyitems(Access_Slideshow_List());
-
   useEffect(()=>{setReOrderModeDisabled(!props.Editing)},[props.Editing]);
+
+  async function load_default_slideshows(){
+    try{
+      let response = await axios.get("https://0067team16app.azurewebsites.net/slideshows/listings");
+      console.log(response.data);
+      return response.data;
+    }
+    catch (e){
+      console.log("Failed to load data :", e);
+      return [];
+    }
+    
+  }
+  
   
   useEffect(()=>{
     async function load_slideshows(){
-      setmyitems(await get_slideshows())
-      //setmyitems(Access_Slideshow_List());
+      let data = await load_default_slideshows();
+      setmyitems(data.map((item,i:number) => new Slideshow_Class(item.slideshow_name,i,true)));
     }
     load_slideshows();
   },[]);
@@ -54,8 +56,8 @@ const Slideshow_Items: React.FC<EditMode> = (props) => {
   return (
     <IonList>
       <IonReorderGroup disabled={ReOrderModeDisabled} onIonItemReorder={doReorder}>
-        {myitems.map(item => item.enabled && !props.Editing ? <Slideshow_Item item={item} key={item.name} editing={props.Editing}/>:null)}
-        {myitems.map(item => props.Editing ? <Slideshow_Item item={item} key={item.name} editing={props.Editing}/>: null)}
+        {myitems.map(item => item.enabled && !props.Editing ? <Slideshow_Item item={item} key={item.slideshow_name} editing={props.Editing}/>:null)}
+        {myitems.map(item => props.Editing ? <Slideshow_Item item={item} key={item.slideshow_name} editing={props.Editing}/>: null)}
       </IonReorderGroup>
     </IonList >
   );
