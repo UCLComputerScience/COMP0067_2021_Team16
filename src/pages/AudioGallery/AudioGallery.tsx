@@ -1,15 +1,20 @@
-import { IonContent, IonHeader, IonItem, IonList, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonContent, IonHeader, IonItem, IonList, IonPage, IonRow, IonCol, IonToolbar } from '@ionic/react';
 import BackButton from '../../components/BackButton/BackButton';
+import TitleBar from "../../components/TitleBar/TitleBar";
 import Audio_Player from '../../components/Audio_Player/Audio_Player';
 
 const AudioGallery: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
-          <IonTitle>Audio Gallery</IonTitle>
-          <BackButton/>
-        </IonToolbar>
+      <IonToolbar>
+            <IonRow>
+              <BackButton />
+              <IonCol className="ion-align-items-center ion-justify-content-center">
+                <TitleBar name={"Support"} />
+              </IonCol>
+            </IonRow>
+      </IonToolbar>
       </IonHeader>
       <IonContent>
         Default voice recordings
