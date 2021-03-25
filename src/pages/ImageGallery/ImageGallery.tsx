@@ -14,8 +14,9 @@ import {
   IonButton,
 } from "@ionic/react";
 import "./ImageGallery.css";
+import TitleBar from "../../components/TitleBar/TitleBar";
 import AddBar from "../../components/AddBar/AddBar";
-import Back_Button from "../../components/BackButton/BackButton";
+import BackButton from "../../components/BackButton/BackButton";
 import Slides from "./Slides_Class";
 import Editableslide from "../../components/EditableSlides/EditableSlides";
 import React from "react";
@@ -72,14 +73,11 @@ const EditSlidesPage: React.FC = () => {
       <IonHeader>
         <IonToolbar>
           <IonGrid>
-            <IonRow>
-              <IonCol className="backbutton">
-                <Back_Button ion-no-padding ion-no-margin />
+          <IonRow>
+              <BackButton />
+              <IonCol className="ion-align-items-center ion-justify-content-center">
+                <TitleBar name={"Image Gallery"} />
               </IonCol>
-              <IonCol className="title">
-                <IonTitle>Image Gallery</IonTitle>
-              </IonCol>
-              <IonCol></IonCol>
             </IonRow>
           </IonGrid>
         </IonToolbar>
