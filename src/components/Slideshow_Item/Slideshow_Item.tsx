@@ -14,7 +14,7 @@ import React, { useState, useEffect } from "react";
 import { Update_Selected_Slideshow_Context } from "../../contexts/Slideshow_Context";
 
 interface ContainerProps {
-  item: object;
+  item;
   editing: boolean;
 }
 
@@ -23,6 +23,11 @@ let itemlinks = ["/slideshowpage", "EditSlidesPage"];
 const Slideshow_Item: React.FC<ContainerProps> = (props) => {
   const [link, setLink] = useState<string>(itemlinks[0]);
   const slideshow_updater = Update_Selected_Slideshow_Context();
+
+  function select_slideshow(){
+    slideshow_updater(props.item);
+    localStorage.setItem("selected_slideshow",JSON.stringify(props.item));
+  }
 
   function toggleslideshow() {
     props.item.enabled = !props.item.enabled;
@@ -50,7 +55,7 @@ const Slideshow_Item: React.FC<ContainerProps> = (props) => {
               <IonButton
                 fill="clear"
                 routerLink={link}
-                onClick={() => slideshow_updater(props.item)}>
+                onClick={select_slideshow}>
                 <h2>{props.item.slideshow_name}</h2>
               </IonButton>
             </IonCol>

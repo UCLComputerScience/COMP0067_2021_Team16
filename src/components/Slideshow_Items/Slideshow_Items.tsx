@@ -39,7 +39,7 @@ const Slideshow_Items: React.FC<EditMode> = (props) => {
   useEffect(()=>{
     async function load_slideshows(){
       let data = await load_default_slideshows();
-      setmyitems(data.map((item,i:number) => new Slideshow_Class(item.slideshow_name,i,true)));
+      setmyitems(data.map((item,i:number) => new Slideshow_Class(item.slideshow_name,i,true,item.slideshow_id)));
     }
     load_slideshows();
   },[]);

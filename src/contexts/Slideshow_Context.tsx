@@ -26,7 +26,7 @@ export const SlideshowProvider: React.FC<ContainerProps> = ({children}) => {
             
         }
         else{
-            return new Slideshow_Class("all",null,true);
+            return new Slideshow_Class("all",null,true,1);
         }
     }
 

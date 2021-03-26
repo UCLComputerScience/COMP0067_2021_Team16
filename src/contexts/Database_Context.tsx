@@ -185,7 +185,7 @@ export async function get_slideshows(){
             results.push(item);
         }
 
-        SlideshowList = results.map((item)=>(new Slideshow_Class(item.slideshow_name,item.slideshow_order,true)));
+        SlideshowList = results.map((item)=>(new Slideshow_Class(item.slideshow_name,item.slideshow_order,true,null)));
 
         return SlideshowList;
     } catch{

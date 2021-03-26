@@ -21,13 +21,12 @@ const slideOpts = {
 const Slideshow: React.FC = () => {
   const [items, setItems] = useState([]);
 
-  let selected_slideshow = Selected_Slideshow_Context();
   let default_slideshow = Default_Slideshow_Context();
 
-  async function get_slides(name:string) {
+  async function get_online_slides(id:string) {
     try{
-      const base_url = "https://0067team16app.azurewebsites.net/images/";
-      const url = base_url + name;
+      const base_url = "https://0067team16app.azurewebsites.net/slideshows/";
+      const url = base_url + id;
       let response = await axios.get(url);
       console.log(response);
       return response.data
@@ -38,21 +37,26 @@ const Slideshow: React.FC = () => {
     }   
   }
 
+  async function load_default_slides(){
+    let slideshow_id:string;
+    let selected_slideshow = JSON.parse(localStorage.getItem("selected_slideshow"));
+    if (selected_slideshow){
+      slideshow_id = selected_slideshow.default_id;
+      localStorage.removeItem("selected_slideshow");
+      console.log("opening the last selected slideshow: ",selected_slideshow);
+    }
+    else{
+      slideshow_id = default_slideshow.default_id;
+      console.log("opening the deafault slideshow: ", slideshow_id)
+    }
+    let slides = await get_online_slides(slideshow_id.toString());
+    setItems(slides);
+  }
+
   useIonViewWillEnter(()=>{
     console.log("Entering the slideshow page");
+    setItems([]);
     slideOpts.autoplay.delay = parseFloat(localStorage.getItem("slide_duration"));
-    async function load_default_slides(){
-      let slideshow_name:string;
-      if (selected_slideshow){
-        slideshow_name = selected_slideshow.slideshow_name;
-      }
-      else{
-        slideshow_name = default_slideshow.slideshow_name;
-      }
-      console.log("The slideshow we are opening is: ", slideshow_name);
-      let slides = await get_slides(slideshow_name);
-      setItems(slides);
-    }
     load_default_slides();
   });
 
