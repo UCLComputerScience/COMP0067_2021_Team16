@@ -77,6 +77,25 @@ const Slideshow: React.FC = () => {
       console.log("opening the default slideshow: ", slideshow_id)
     }
     let slides = await get_online_slides(slideshow_id.toString());
+
+    // define new array to shuffle
+    var random_slides = slides
+
+    // shuffle function
+    function shuffle(random_slides){
+      var currentIndex = random_slides.length, temporaryValue, randomIndex;
+      
+      while (0 !== currentIndex) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+
+        temporaryValue = random_slides[currentIndex];
+        random_slides[currentIndex] = random_slides[randomIndex];
+        random_slides[randomIndex] = temporaryValue;
+      }
+      return random_slides;
+    }
+
     setItems(slides);
   }
 
