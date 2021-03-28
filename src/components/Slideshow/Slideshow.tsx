@@ -1,5 +1,5 @@
 import "./Slideshow.css";
-import { IonGrid, IonRow, IonSlides, IonSlide, IonImg, useIonViewWillEnter, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle,IonCardContent } from "@ionic/react";
+import { IonGrid, IonRow, IonSlides, IonSlide, IonImg, useIonViewWillEnter,useIonViewWillLeave, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle,IonCardContent } from "@ionic/react";
 import axios from "axios";
 import React,{useState, useEffect} from "react";
 import TitleBar from "../TitleBar/TitleBar";
@@ -18,24 +18,51 @@ const slideOpts = {
   preloadImages: true
 };
 
+let current_recording:HTMLAudioElement;
+
+async function get_online_slides(id:string) {
+  try{
+    const base_url = "https://0067team16app.azurewebsites.net/slideshows/";
+    const url = base_url + id;
+    let response = await axios.get(url);
+    console.log(response);
+    return response.data
+  }
+  catch(e){
+    console.log("Error getting slides: ", e);
+    return [];
+  }   
+}
+
+function speed_settings(e){
+  e.currentTarget.style.animation = "rotate " + 160000/parseFloat(localStorage.getItem("animation_speed")) + "s linear infinite";
+  if (e.currentTarget.src.slice(-4) == ".gif"){
+    e.currentTarget.style.animation = "none";
+  }
+}
+
+async function load_recording(items){
+  const audio_setting = localStorage.getItem("audio_option");
+  if(["Recording only","Music and Recordings"].includes(audio_setting)){
+    if(current_recording){current_recording.pause();}
+    const Slideshow = document.getElementById("Slideshow_main");
+    let index = await Slideshow.getActiveIndex()-1;
+    if (index==items.length){
+      index = 0;
+    }
+    const recording = items[index].image_audio_url;
+    if (recording){
+      const audio = new Audio(recording);
+      current_recording = audio;
+      current_recording.play();
+    }
+  }
+}
+
 const Slideshow: React.FC = () => {
   const [items, setItems] = useState([]);
 
   let default_slideshow = Default_Slideshow_Context();
-
-  async function get_online_slides(id:string) {
-    try{
-      const base_url = "https://0067team16app.azurewebsites.net/slideshows/";
-      const url = base_url + id;
-      let response = await axios.get(url);
-      console.log(response);
-      return response.data
-    }
-    catch(e){
-      console.log("Error getting slides: ", e);
-      return [];
-    }   
-  }
 
   async function load_default_slides(){
     let slideshow_id:string;
@@ -47,29 +74,26 @@ const Slideshow: React.FC = () => {
     }
     else{
       slideshow_id = default_slideshow.default_id;
-      console.log("opening the deafault slideshow: ", slideshow_id)
+      console.log("opening the default slideshow: ", slideshow_id)
     }
     let slides = await get_online_slides(slideshow_id.toString());
     setItems(slides);
   }
 
   useIonViewWillEnter(()=>{
-    console.log("Entering the slideshow page");
     setItems([]);
     slideOpts.autoplay.delay = parseFloat(localStorage.getItem("slide_duration"));
     load_default_slides();
+    if(current_recording){current_recording.pause();}
   });
 
-  function speed_settings(e){
-    e.currentTarget.style.animation = "rotate " + 160000/parseFloat(localStorage.getItem("animation_speed")) + "s linear infinite";
-    if (e.currentTarget.src.slice(-4) == ".gif"){
-      e.currentTarget.style.animation = "none";
-    }
-  }
+  useIonViewWillLeave(()=>{
+    if(current_recording){current_recording.pause();}
+  });
 
   if(items.length > 0){
   return (
-    <IonSlides pager={false} options={slideOpts} className="background">
+    <IonSlides id="Slideshow_main" pager={false} options={slideOpts} className="background" onIonSlideDidChange={()=>load_recording(items)}>
       {items.map((item, i) => (
         <IonSlide key={i} className="slide">
           <IonGrid>

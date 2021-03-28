@@ -14,8 +14,10 @@ import "./SlideshowPage.css";
 import UnlockSlider from "../../components/Unlockslider/Unlockslider";
 import {ScreenOrientation} from '@ionic-native/screen-orientation';
 import { Insomnia } from '@ionic-native/insomnia';
+import { isPlatform } from '@ionic/react';
 
 const SlideshowPage: React.FC = () => {
+
   
   useIonViewWillEnter(()=>{
     ScreenOrientation.lock(ScreenOrientation.ORIENTATIONS.PORTRAIT);
