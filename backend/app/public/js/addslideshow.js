@@ -18,23 +18,20 @@ $(document).ready(function () {
 
   $.get("/slideshows/all", function (data) {
     if (data.length !== 0) {
-      let table = $("<table><tr><th>Slideshow Name</th><th>Images</th><th>Actions</th></tr>");
+      let table = $("<table><tr><th>ID</th><<th>Slideshow Name</th><th>Images</th><th>Actions</th></tr>");
       let slideshows = {};
       for (let i = 0; i < data.length; i++) {
         slideshows[data[i].slideshow_id] = data[i].slideshow_name;
       }
       for (let i = 0; i < Object.keys(slideshows).length; i++) {
         let row = $("<tr>");
+        row.append("<td>" + (i + 1) + "</td>");
         row.append("<td>" + slideshows[Object.keys(slideshows)[i]] + "</td>");
         let images = $("<td>");
         for (let j = 0; j < data.length; j++) {
           if (slideshows[Object.keys(slideshows)[i]] == data[j].slideshow_name) {
             images.append("<span>" + data[j].image_name);
-            if (data[j].image_url == "Local Storage") {
-              images.append("<img class='tableimg' src='" + localStorage.getItem(data[j].image_file_name) + "'</img>");
-            } else {
-              images.append("<img class='tableimg' src='" + data[j].image_url + "'</img>");
-            }
+            images.append("<img class='tableimg' src='" + data[j].image_url + "'</img>");
           }
           images.append("</td>");
           row.append(images);
@@ -55,23 +52,20 @@ $(document).ready(function () {
         $("#slideshow-area").empty()
         $.get("/slideshows/all", function (data) {
           if (data.length !== 0) {
-            let table = $("<table><tr><th>Slideshow Name</th><th>Images</th><th>Actions</th></tr>");
+            let table = $("<table><tr><th>ID</th><th>Slideshow Name</th><th>Images</th><th>Actions</th></tr>");
             let slideshows = {};
             for (let i = 0; i < data.length; i++) {
               slideshows[data[i].slideshow_id] = data[i].slideshow_name;
             }
             for (let i = 0; i < Object.keys(slideshows).length; i++) {
               let row = $("<tr>");
+              row.append("<td>" + (i + 1) + "</td>");
               row.append("<td>" + slideshows[Object.keys(slideshows)[i]] + "</td>");
               let images = $("<td>");
               for (let j = 0; j < data.length; j++) {
                 if (slideshows[Object.keys(slideshows)[i]] == data[j].slideshow_name) {
                   images.append("<span>" + data[j].image_name);
-                  if (data[j].image_url == "Local Storage") {
-                    images.append("<img class='tableimg' src='" + localStorage.getItem(data[j].image_file_name) + "'</img>");
-                  } else {
-                    images.append("<img class='tableimg' src='" + data[j].image_url + "'</img>");
-                  }
+                  images.append("<img class='tableimg' src='" + data[j].image_url + "'</img>");
                 }
                 images.append("</td>");
                 row.append(images);

@@ -31,11 +31,13 @@
     </nav>
     <div class="jumbotron">
         <h1 class="text-center">Add Music</h1>
-        <form id="form" method="POST" action="/music/new">
-            <input type="file" id="audiotag" name='audio' required><br><br>
+        <form id="form" method="POST" action="/music/new" enctype="multipart/form-data">
+            <input type="file" id="audiotag" name='audio' accept="audio/mp3, audio/x-m4a" required><br><br>
             <div id="hide-audio" style="display:none;"><audio id="preview" controls>
                     <source src="" id="src" />
                 </audio><br><br></div>
+            <label style="color: #ebf7fd;" for="audiotag"><b>(Only .mp3 and .m4a audio
+                    files are supported. Max size: 5MB)</b></label><br>
             <button id="audio-submit" type="submit">Submit</button>
         </form>
     </div>

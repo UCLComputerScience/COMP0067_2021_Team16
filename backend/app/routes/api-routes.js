@@ -1,8 +1,10 @@
 const connection = require("../config/connection.js");
 const excel = require('exceljs');
 const { BlobServiceClient } = require('@azure/storage-blob');
-const { query } = require("../config/connection.js");
-const { waitFor } = require("@testing-library/dom");
+const AZURE_STORAGE_CONNECTION_STRING = "DefaultEndpointsProtocol=https;AccountName=babyobjectstorage;AccountKey=SCbseZIsOhjcb+pwnU+dB1lbsBTRtiY++lLC66Od/Oo75iLrn7Mj+xV3A7StyzOX6wizvTGpWK7l8psJDdMU0Q==;EndpointSuffix=core.windows.net";
+const blobServiceClient = BlobServiceClient.fromConnectionString(AZURE_STORAGE_CONNECTION_STRING);
+const containerName = "babyblob"
+const containerClient = blobServiceClient.getContainerClient(containerName);
 
 // Citation https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-nodejs
 
@@ -85,10 +87,6 @@ module.exports = function (app) {
   app.post("/images/new", function (req, res) {
     const blobName = req.files[0].originalname;
     async function main() {
-      const AZURE_STORAGE_CONNECTION_STRING = "DefaultEndpointsProtocol=https;AccountName=babyobjectstorage;AccountKey=SCbseZIsOhjcb+pwnU+dB1lbsBTRtiY++lLC66Od/Oo75iLrn7Mj+xV3A7StyzOX6wizvTGpWK7l8psJDdMU0Q==;EndpointSuffix=core.windows.net";
-      const blobServiceClient = BlobServiceClient.fromConnectionString(AZURE_STORAGE_CONNECTION_STRING);
-      const containerName = "babyblob"
-      const containerClient = blobServiceClient.getContainerClient(containerName);
       console.log(blobName);
       const blockBlobClient = containerClient.getBlockBlobClient(blobName);
       const data = req.files[0].path;
@@ -143,14 +141,26 @@ module.exports = function (app) {
   });
 
   app.post("/audios/new", function (req, res) {
+    const blobName = req.files[0].originalname;
+    async function main() {
+      console.log(blobName);
+      const blockBlobClient = containerClient.getBlockBlobClient(blobName);
+      const data = req.files[0].path;
+      console.log(data);
+      const uploadBlobResponse = await blockBlobClient.uploadFile(req.files[0].path, { blobHTTPHeaders: { blobContentType: req.files[0].mimetype } });
+    }
+    main().then(() => waitForFinish()).catch((ex) => console.log(ex.message))
     console.log("Audio Data:");
     console.log(req.body);
-    let dbQuery = "UPDATE images SET image_audio_file_name = ?, image_audio_url = 'Local Storage' WHERE image_id = ?;";
-    connection.query(dbQuery, [req.body.audio, req.body.answer], function (err, result) {
-      if (err) throw err;
-      console.log("Audio successfully saved!");
-      res.redirect('/views/addaudio.html');
-    });
+    async function waitForFinish() {
+      let newAudio = "https://babyobjectstorage.blob.core.windows.net/babyblob/" + blobName.replace(" ", "%20");
+      let dbQuery = "UPDATE images SET image_audio_file_name = ?, image_audio_url = ? WHERE image_id = ?;";
+      connection.query(dbQuery, [req.files[0].originalname, newAudio, req.body.answer], function (err, result) {
+        if (err) throw err;
+        console.log("Audio successfully saved!");
+        res.redirect('/views/addaudio.html');
+      });
+    }
   });
 
   app.put("/audios/delete/:id", function (req, res) {
@@ -173,14 +183,26 @@ module.exports = function (app) {
   });
 
   app.post("/music/new", function (req, res) {
+    const blobName = req.files[0].originalname;
+    async function main() {
+      console.log(blobName);
+      const blockBlobClient = containerClient.getBlockBlobClient(blobName);
+      const data = req.files[0].path;
+      console.log(data);
+      const uploadBlobResponse = await blockBlobClient.uploadFile(req.files[0].path, { blobHTTPHeaders: { blobContentType: req.files[0].mimetype } });
+    }
+    main().then(() => waitForFinish()).catch((ex) => console.log(ex.message))
     console.log("Music Data:");
     console.log(req.body);
-    let dbQuery = "INSERT INTO music (music_name,music_url) VALUES (?,?)";
-    connection.query(dbQuery, [req.body.audio, "Local Storage"], function (err, result) {
-      if (err) throw err;
-      console.log("Music successfully saved!");
-      res.redirect('/views/addmusic.html');
-    });
+    async function waitForFinish() {
+      let newMusic = "https://babyobjectstorage.blob.core.windows.net/babyblob/" + blobName.replace(" ", "%20");
+      let dbQuery = "INSERT INTO music (music_name,music_url) VALUES (?,?)";
+      connection.query(dbQuery, [req.files[0].originalname, newMusic], function (err, result) {
+        if (err) throw err;
+        console.log("Music successfully saved!");
+        res.redirect('/views/addmusic.html');
+      });
+    };
   });
 
   app.delete("/music/delete/:id", function (req, res) {

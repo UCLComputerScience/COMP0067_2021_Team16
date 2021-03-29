@@ -2,10 +2,11 @@ $(document).ready(function () {
 
   $.get("/mailinglist/all", function (data) {
     if (data.length !== 0) {
-      let table = $("<table><tr><th>First Name</th><th>Last Name</th><th>Email Address</th><th>Date Registered</th><th>Actions</th></tr>");
+      let table = $("<table><tr><th>ID</th><th>First Name</th><th>Last Name</th><th>Email Address</th><th>Date Registered</th><th>Actions</th></tr>");
       for (let i = 0; i < data.length; i++) {
         let row = $("<tr>");
         let tempDate = data[i].email_date_registered.split(/[T - :]/);
+        row.append("<td>" + (i + 1) + "</td>");
         row.append("<td>" + data[i].email_first_name + "</td>");
         row.append("<td>" + data[i].email_last_name + "</td>");
         row.append("<td>" + data[i].email_address + "</td>");
@@ -26,11 +27,11 @@ $(document).ready(function () {
         $("#email-area").empty()
         $.get("/mailinglist/all", function (data) {
           if (data.length !== 0) {
-            let table = $("<table><tr><th>First Name</th><th>Last Name</th><th>Email Address</th><th>Date Registered</th><th>Actions</th></tr>");
+            let table = $("<table><tr><th>ID</th><th>First Name</th><th>Last Name</th><th>Email Address</th><th>Date Registered</th><th>Actions</th></tr>");
             for (let i = 0; i < data.length; i++) {
               let row = $("<tr>");
               let tempDate = data[i].email_date_registered.split(/[T - :]/);
-    
+              row.append("<td>" + (i + 1) + "</td>");
               row.append("<td>" + data[i].email_first_name + "</td>");
               row.append("<td>" + data[i].email_last_name + "</td>");
               row.append("<td>" + data[i].email_address + "</td>");

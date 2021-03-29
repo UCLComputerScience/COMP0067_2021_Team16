@@ -1,11 +1,4 @@
 $(document).ready(function () {
-    document.querySelector("#audiotag").addEventListener("change", function () {
-        const reader = new FileReader();
-        document.getElementById('form').addEventListener("submit", () => {
-            localStorage.setItem(this.files[0].name, reader.result);
-        })
-        reader.readAsDataURL(this.files[0]);
-    })
 
     $.get("/images/all", function (data) {
         if (data.length !== 0) {
@@ -13,11 +6,7 @@ $(document).ready(function () {
             for (let i = 0; i < data.length; i++) {
                 radios.append("<span><input type='radio' id='" + data[i].image_id + "' name='answer' value='" + data[i].image_id + "' required>")
                 radios.append("<span><label for='" + data[i].image_id + "'>" + data[i].image_name + "</label>");
-                if (data[i].image_url == "Local Storage") {
-                    radios.append("<span><img class='tableimg' src='" + localStorage.getItem(data[i].image_file_name) + "'</img>");
-                } else {
-                    radios.append("<span><img class='tableimg' src='" + data[i].image_url + "'</img>");
-                }
+                radios.append("<span><img class='tableimg' src='" + data[i].image_url + "'</img>");
             }
             radios.append("</div>")
             $("#image-area").prepend(radios)
@@ -36,19 +25,11 @@ $(document).ready(function () {
             let table = $("<table><tr><th>ID</th><th>Name</th><th>Narration</th><th>Image</th><th>Audio</th><th>Actions</th></tr>");
             for (let i = 0; i < data.length; i++) {
                 let row = $("<tr>");
-                row.append("<td>" + (i+1) + "</td>");
+                row.append("<td>" + (i + 1) + "</td>");
                 row.append("<td>" + data[i].image_name + "</td>");
                 row.append("<td>" + data[i].image_text + "</td>");
-                if (data[i].image_url == "Local Storage") {
-                    row.append("<td><img class='tableimg' src='" + localStorage.getItem(data[i].image_file_name) + "'</img></td>");
-                } else {
-                    row.append("<td><img class='tableimg' src='" + data[i].image_url + "'</img></td>");
-                }
-                if (data[i].image_audio_url == "Local Storage") {
-                    row.append("<td>" + data[i].image_audio_file_name + "<br><br><audio controls><source src='" + localStorage.getItem(data[i].image_audio_file_name) + "'/></audio></td>");
-                } else {
-                    row.append("<td>" + data[i].image_audio_file_name + "<br><br><audio controls><source src='" + data[i].image_audio_url + "'/></audio></td>");
-                }
+                row.append("<td><img class='tableimg' src='" + data[i].image_url + "'</img></td>");
+                row.append("<td>" + data[i].image_audio_file_name + "<br><br><audio controls><source src='" + data[i].image_audio_url + "'/></audio></td>");
                 row.append("<td><button class='delete' value='" + data[i].image_id + "' name='" + data[i].image_audio_file_name + "'>Delete Audio</button></td>");
                 row.append("</tr>");
                 table.append(row);
@@ -70,19 +51,11 @@ $(document).ready(function () {
                         let table = $("<table><tr><th>ID</th><th>Name</th><th>Narration</th><th>Image</th><th>Audio</th><th>Actions</th></tr>");
                         for (let i = 0; i < data.length; i++) {
                             let row = $("<tr>");
-                            row.append("<td>" + (i+1) + "</td>");
+                            row.append("<td>" + (i + 1) + "</td>");
                             row.append("<td>" + data[i].image_name + "</td>");
                             row.append("<td>" + data[i].image_text + "</td>");
-                            if (data[i].image_url == "Local Storage") {
-                                row.append("<td><img class='tableimg' src='" + localStorage.getItem(data[i].image_file_name) + "'</img></td>");
-                            } else {
-                                row.append("<td><img class='tableimg' src='" + data[i].image_url + "'</img></td>");
-                            }
-                            if (data[i].image_audio_url == "Local Storage") {
-                                row.append("<td>" + data[i].image_audio_file_name + "<br><br><audio controls><source src='" + localStorage.getItem(data[i].image_audio_file_name) + "'/></audio></td>");
-                            } else {
-                                row.append("<td>" + data[i].image_audio_file_name + "<br><br><audio controls><source src='" + data[i].image_audio_url + "'/></audio></td>");
-                            }
+                            row.append("<td><img class='tableimg' src='" + data[i].image_url + "'</img></td>");
+                            row.append("<td>" + data[i].image_audio_file_name + "<br><br><audio controls><source src='" + data[i].image_audio_url + "'/></audio></td>");
                             row.append("<td><button class='delete' value='" + data[i].image_id + "' name='" + data[i].image_audio_file_name + "'>Delete Audio</button></td>");
                             row.append("</tr>");
                             table.append(row);
