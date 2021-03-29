@@ -2,6 +2,8 @@ const connection = require("../config/connection.js");
 const excel = require('exceljs');
 const { BlobServiceClient } = require('@azure/storage-blob');
 
+// Citation https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-nodejs
+
 module.exports = function (app) {
 
   // Slideshows
@@ -85,30 +87,30 @@ module.exports = function (app) {
       const containerName = "babyblob"
       const containerClient = blobServiceClient.getContainerClient(containerName);
 
-      const blobName = req.body.image;
+      const blobName = req.files[0].filename;
       const blockBlobClient = containerClient.getBlockBlobClient(blobName);
-
-      const data = req.body.image;
-      const uploadBlobResponse = await blockBlobClient.upload(data, data.length);
+      const data = req.files[0].path;
+      console.log(data);
+      const uploadBlobResponse = await blockBlobClient.uploadFile(data);
     }
 
     main().then(() => console.log('Done')).catch((ex) => console.log(ex.message));
-    console.log("Image Data:");
-    console.log(req.body);
-    let newImage = {
-      image_name: req.body.name.trim().toUpperCase(),
-      image_text: req.body.narration.trim().replace(/\.\s+([a-z])[^\.]|^(\s*[a-z])[^\.]/g, s => s.replace(/([a-z])/, s => s.toUpperCase())),
-      image_file_name: req.body.image,
-      image_url: "Local Storage",
-      image_audio_file_name: "",
-      image_audio_url: ""
-    };
-    let dbQuery = "INSERT INTO images (image_name,image_text,image_file_name,image_url,image_audio_file_name,image_audio_url) VALUES (?,?,?,?,?,?)";
-    connection.query(dbQuery, [newImage.image_name, newImage.image_text, newImage.image_file_name, newImage.image_url, newImage.image_audio_file_name, newImage.image_audio_url], function (err, result) {
-      if (err) throw err;
-      console.log("Image successfully saved!");
-      res.redirect('/views/addimage.html');
-    });
+    // console.log("Image Data:");
+    // console.log(req.body);
+    // let newImage = {
+    //   image_name: req.body.name.trim().toUpperCase(),
+    //   image_text: req.body.narration.trim().replace(/\.\s+([a-z])[^\.]|^(\s*[a-z])[^\.]/g, s => s.replace(/([a-z])/, s => s.toUpperCase())),
+    //   image_file_name: req.body.image,
+    //   image_url: "Local Storage",
+    //   image_audio_file_name: "",
+    //   image_audio_url: ""
+    // };
+    // let dbQuery = "INSERT INTO images (image_name,image_text,image_file_name,image_url,image_audio_file_name,image_audio_url) VALUES (?,?,?,?,?,?)";
+    // connection.query(dbQuery, [newImage.image_name, newImage.image_text, newImage.image_file_name, newImage.image_url, newImage.image_audio_file_name, newImage.image_audio_url], function (err, result) {
+    //   if (err) throw err;
+    //   console.log("Image successfully saved!");
+    //   res.redirect('/views/addimage.html');
+    // });
   });
 
   app.delete("/images/delete/:id", function (req, res) {
