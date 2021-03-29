@@ -7,7 +7,7 @@ CREATE TABLE `emails` (
 `email_address` VARCHAR(255) NOT NULL,
 `email_first_name` VARCHAR(255) NOT NULL,
 `email_last_name` VARCHAR(255) NOT NULL,
-`email_date_registered` TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+`email_date_registered` VARCHAR(255) NULL
 );
 
 CREATE TABLE `slideshow_category` (

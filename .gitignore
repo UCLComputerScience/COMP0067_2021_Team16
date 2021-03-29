@@ -8,6 +8,7 @@
 /ios
 
 /backend/tmp
+/backend/app/public/views/MailingList.xlsx
 
 # testing
 /coverage

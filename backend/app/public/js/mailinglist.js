@@ -5,12 +5,15 @@ $(document).ready(function () {
       let table = $("<table><tr><th>ID</th><th>First Name</th><th>Last Name</th><th>Email Address</th><th>Date Registered</th><th>Actions</th></tr>");
       for (let i = 0; i < data.length; i++) {
         let row = $("<tr>");
-        let tempDate = data[i].email_date_registered.split(/[T - :]/);
         row.append("<td>" + (i + 1) + "</td>");
         row.append("<td>" + data[i].email_first_name + "</td>");
         row.append("<td>" + data[i].email_last_name + "</td>");
         row.append("<td>" + data[i].email_address + "</td>");
-        row.append("<td>" + tempDate[0] + " at " + tempDate[1] + ":" + tempDate[2] + "</td>");
+        if (data[i].email_date_registered != null) {
+          row.append("<td>" + data[i].email_date_registered + "</td>");
+        } else {
+          row.append("<td></td>");
+        }
         row.append("<td><button class='delete' value='" + data[i].email_id + "'>Remove</button></td>");
         table.append(row);
       }
@@ -30,12 +33,15 @@ $(document).ready(function () {
             let table = $("<table><tr><th>ID</th><th>First Name</th><th>Last Name</th><th>Email Address</th><th>Date Registered</th><th>Actions</th></tr>");
             for (let i = 0; i < data.length; i++) {
               let row = $("<tr>");
-              let tempDate = data[i].email_date_registered.split(/[T - :]/);
               row.append("<td>" + (i + 1) + "</td>");
               row.append("<td>" + data[i].email_first_name + "</td>");
               row.append("<td>" + data[i].email_last_name + "</td>");
               row.append("<td>" + data[i].email_address + "</td>");
-              row.append("<td>" + tempDate[0] + " at " + tempDate[1] + ":" + tempDate[2] + "</td>");
+              if (data[i].email_date_registered != null) {
+                row.append("<td>" + data[i].email_date_registered + "</td>");
+              } else {
+                row.append("<td></td>");
+              }
               row.append("<td><button class='delete' value='" + data[i].email_id + "'>Remove</button></td>");
               table.append(row);
             }

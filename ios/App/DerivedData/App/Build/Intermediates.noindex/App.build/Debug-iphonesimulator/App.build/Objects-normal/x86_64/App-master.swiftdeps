@@ -1,5 +1,0 @@
-version: "Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)"
-options: "c751d9341f29e866b76bcf3dd284572b"
-build_time: [1614502688, 683979000]
-inputs:
-  "/Users/carolinecrandell/Desktop/COMP0067_2021_Team16/ios/App/App/AppDelegate.swift": [1614502229, 488417478]

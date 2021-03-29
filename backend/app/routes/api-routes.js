@@ -248,13 +248,15 @@ module.exports = function (app) {
   });
 
   app.post("/mailinglist/new", function (req, res) {
+    let rightNow = new Date().toLocaleString();
+    console.log(rightNow)
     console.log("Mailing List Data:");
     console.log(req.body);
-    let dbQuery = "INSERT INTO emails (email_address,email_first_name,email_last_name) VALUES (?,?,?)";
-    connection.query(dbQuery, [req.body.email_address, req.body.email_first_name, req.body.email_last_name], function (err, result) {
+    let dbQuery = "INSERT INTO emails (email_address,email_first_name,email_last_name,email_date_registered) VALUES (?,?,?,?)";
+    connection.query(dbQuery, [req.body.email_address, req.body.email_first_name, req.body.email_last_name, rightNow], function (err, result) {
       if (err) throw err;
       console.log("Record successfully saved!");
-      res.end();
+      res.redirect('back');
     });
   });
 
