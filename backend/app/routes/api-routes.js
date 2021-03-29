@@ -86,17 +86,17 @@ module.exports = function (app) {
       const blobServiceClient = BlobServiceClient.fromConnectionString(AZURE_STORAGE_CONNECTION_STRING);
       const containerName = "babyblob"
       const containerClient = blobServiceClient.getContainerClient(containerName);
-
-      const blobName = req.files[0].filename;
+      const blobName = req.files[0].originalname;
+      console.log(blobName);
       const blockBlobClient = containerClient.getBlockBlobClient(blobName);
       const data = req.files[0].path;
       console.log(data);
-      const uploadBlobResponse = await blockBlobClient.uploadFile(data);
+      const uploadBlobResponse = await blockBlobClient.uploadFile(req.files[0].path, {blobHTTPHeaders: {blobContentType: req.files[0].mimetype}});
     }
 
     main().then(() => console.log('Done')).catch((ex) => console.log(ex.message));
-    // console.log("Image Data:");
-    // console.log(req.body);
+    console.log("Image Data:");
+    console.log(req.body);
     // let newImage = {
     //   image_name: req.body.name.trim().toUpperCase(),
     //   image_text: req.body.narration.trim().replace(/\.\s+([a-z])[^\.]|^(\s*[a-z])[^\.]/g, s => s.replace(/([a-z])/, s => s.toUpperCase())),

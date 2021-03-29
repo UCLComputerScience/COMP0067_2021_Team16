@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const multer = require('multer');
+// const bodyParser = require('body-parser');
 
 const PORT = process.env.PORT || 8080;
 
@@ -8,6 +9,7 @@ app.use(require('cors')())
 app.use(express.urlencoded({ extended: true }));
 app.use(multer({dest:'./tmp'}).any());
 app.use(express.json());
+// bodyParser.urlencoded({extended: true});
 
 // app.use(express.static(__dirname + 'app/public'));
 app.use(express.static("app/public"));
