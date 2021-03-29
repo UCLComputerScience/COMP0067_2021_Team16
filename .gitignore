@@ -7,6 +7,8 @@
 .pnp.js
 /ios
 
+/backend/tmp
+
 # testing
 /coverage
 
