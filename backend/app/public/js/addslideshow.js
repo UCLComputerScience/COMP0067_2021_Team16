@@ -17,8 +17,9 @@ $(document).ready(function () {
   });
 
   $.get("/slideshows/all", function (data) {
+    $("#slideshow-area").empty()
     if (data.length !== 0) {
-      let table = $("<table><tr><th>ID</th><<th>Slideshow Name</th><th>Images</th><th>Actions</th></tr>");
+      let table = $("<table><tr><th>ID</th><th>Slideshow Name</th><th>Images</th><th>Actions</th></tr>");
       let slideshows = {};
       for (let i = 0; i < data.length; i++) {
         slideshows[data[i].slideshow_id] = data[i].slideshow_name;

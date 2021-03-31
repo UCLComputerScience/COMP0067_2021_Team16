@@ -108,8 +108,15 @@ module.exports = function (app) {
       let dbQuery = "INSERT INTO images (image_name,image_text,image_file_name,image_url,image_audio_file_name,image_audio_url) VALUES (?,?,?,?,?,?)";
       connection.query(dbQuery, [newImage.image_name, newImage.image_text, newImage.image_file_name, newImage.image_url, newImage.image_audio_file_name, newImage.image_audio_url], function (err, result) {
         if (err) throw err;
-        console.log("Image successfully saved!");
-        res.redirect('/views/addimage.html');
+      })
+      let dbQuery2 = "SELECT MAX(image_id) as image_id FROM images";
+      connection.query(dbQuery2, [newImage.image_url], function (err, result) {
+        let chosen = result[0]["image_id"];
+        let dbQuery3 = "INSERT INTO slideshows (slideshow_id, image_id) VALUES (1,?)";
+        connection.query(dbQuery3, chosen, function (err, result) {
+          console.log("Image successfully saved!");
+          res.redirect('/views/addimage.html');
+        })
       });
     }
   }
@@ -256,7 +263,7 @@ module.exports = function (app) {
     connection.query(dbQuery, [req.body.email_address, req.body.email_first_name, req.body.email_last_name, rightNow], function (err, result) {
       if (err) throw err;
       console.log("Record successfully saved!");
-      res.redirect('back');
+      res.reload();
     });
   });
 
