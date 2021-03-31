@@ -2,7 +2,7 @@ $(document).ready(function () {
 
   $.get("/mailinglist/all", function (data) {
     if (data.length !== 0) {
-      let table = $("<table><tr><th>ID</th><th>First Name</th><th>Last Name</th><th>Email Address</th><th>Date Registered</th><th>Actions</th></tr>");
+      let table = $("<table id='table_id'><thead><tr><th>ID</th><th>First Name</th><th>Last Name</th><th>Email Address</th><th>Date Registered</th><th>Actions</th></tr></thead><tbody>");
       for (let i = 0; i < data.length; i++) {
         let row = $("<tr>");
         row.append("<td>" + (i + 1) + "</td>");
@@ -17,8 +17,9 @@ $(document).ready(function () {
         row.append("<td><button class='delete' value='" + data[i].email_id + "'>Remove</button></td>");
         table.append(row);
       }
-      table.append("</table>")
-      $("#email-area").prepend(table)
+      table.append("</tbody></table>")
+      $("#email-area").prepend(table);
+      $("#table_id").DataTable();
     }
   });
 
@@ -30,7 +31,7 @@ $(document).ready(function () {
         $("#email-area").empty()
         $.get("/mailinglist/all", function (data) {
           if (data.length !== 0) {
-            let table = $("<table><tr><th>ID</th><th>First Name</th><th>Last Name</th><th>Email Address</th><th>Date Registered</th><th>Actions</th></tr>");
+            let table = $("<table id='table_id'><thead><tr><th>ID</th><th>First Name</th><th>Last Name</th><th>Email Address</th><th>Date Registered</th><th>Actions</th></tr></thead><tbody>");
             for (let i = 0; i < data.length; i++) {
               let row = $("<tr>");
               row.append("<td>" + (i + 1) + "</td>");
@@ -45,8 +46,9 @@ $(document).ready(function () {
               row.append("<td><button class='delete' value='" + data[i].email_id + "'>Remove</button></td>");
               table.append(row);
             }
-            table.append("</table>")
+            table.append("</tbody></table>")
             $("#email-area").prepend(table)
+            $("#table_id").DataTable();
           }
         });
       }
@@ -57,6 +59,6 @@ $(document).ready(function () {
     $.get("/mailinglist/excel", function (data) {
       console.log(data)
     })
-    window.open("MailingList.xlsx");
+    window.open("MailingList.xls");
   })
 });

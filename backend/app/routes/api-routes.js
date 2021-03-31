@@ -1,5 +1,5 @@
 const connection = require("../config/connection.js");
-const excel = require('exceljs');
+let fs = require('fs');
 const { BlobServiceClient } = require('@azure/storage-blob');
 const AZURE_STORAGE_CONNECTION_STRING = "DefaultEndpointsProtocol=https;AccountName=babyobjectstorage;AccountKey=SCbseZIsOhjcb+pwnU+dB1lbsBTRtiY++lLC66Od/Oo75iLrn7Mj+xV3A7StyzOX6wizvTGpWK7l8psJDdMU0Q==;EndpointSuffix=core.windows.net";
 const blobServiceClient = BlobServiceClient.fromConnectionString(AZURE_STORAGE_CONNECTION_STRING);
@@ -235,22 +235,27 @@ module.exports = function (app) {
     let dbQuery = "SELECT * FROM emails ORDER BY email_id ASC";
     connection.query(dbQuery, function (err, result) {
       if (err) throw err;
-      const jsonEmails = JSON.parse(JSON.stringify(result))
-      let workbook = new excel.Workbook();
-      let worksheet = workbook.addWorksheet('Mailing List');
-      worksheet.columns = [
-        { header: 'ID', key: 'email_id', width: 10 },
-        { header: 'First Name', key: 'email_first_name', width: 50 },
-        { header: 'Last Name', key: 'email_last_name', width: 50 },
-        { header: 'Email Address', key: 'email_address', width: 100 },
-        { header: 'Date Added', key: 'email_date_registered', width: 50 }
-      ]
-      worksheet.addRows(jsonEmails)
-      workbook.xlsx.writeBuffer("./app/public/views/MailingList.xlsx")
-        .then(function () {
-          console.log("File saved!");
-          res.send("File saved!")
-        })
+      let writeStream = fs.createWriteStream("./app/public/views/MailingList.xls");
+      let header = "ID" + "\t" + "First Name" + "\t" + "Last Name" + "\t" + "Email Address" + "\t" + "Date Added" + "\t" + "Consent" + "\n";
+      writeStream.write(header);
+      for (let i = 0; i < result.length; i++) {
+        let row = "";
+        row += result[i]["email_id"] + "\t";
+        row += result[i]["email_address"] + "\t";
+        row += result[i]["email_first_name"] + "\t";
+        row += result[i]["email_last_name"] + "\t";
+        if (result[i]["email_date_registered"] != null) {
+          row += result[i]["email_date_registered"] + "\t";
+        } else {
+          row += "NA \t";
+        } if (result[i]["email_consent"] != null) {
+          row += result[i]["email_consent"] + "\n";
+        } else {
+          row += "NA \t";
+        }
+        writeStream.write(row);
+      }
+      writeStream.close();
     });
   });
 
