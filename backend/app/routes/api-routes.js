@@ -259,11 +259,11 @@ module.exports = function (app) {
     console.log(rightNow)
     console.log("Mailing List Data:");
     console.log(req.body);
-    let dbQuery = "INSERT INTO emails (email_address,email_first_name,email_last_name,email_date_registered) VALUES (?,?,?,?)";
-    connection.query(dbQuery, [req.body.email_address, req.body.email_first_name, req.body.email_last_name, rightNow], function (err, result) {
+    let dbQuery = "INSERT INTO emails (email_address,email_first_name,email_last_name,email_date_registered, email_consent) VALUES (?,?,?,?,?)";
+    connection.query(dbQuery, [req.body.email_address, req.body.email_first_name, req.body.email_last_name, rightNow, "I consent to receiving updates about future products"], function (err, result) {
       if (err) throw err;
       console.log("Record successfully saved!");
-      res.reload();
+      res.end();
     });
   });
 

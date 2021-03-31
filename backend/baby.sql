@@ -7,7 +7,8 @@ CREATE TABLE `emails` (
 `email_address` VARCHAR(255) NOT NULL,
 `email_first_name` VARCHAR(255) NOT NULL,
 `email_last_name` VARCHAR(255) NOT NULL,
-`email_date_registered` VARCHAR(255) NULL
+`email_date_registered` VARCHAR(255) NULL,
+`email_consent` VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE `slideshow_category` (
@@ -38,11 +39,11 @@ CREATE TABLE `music` (
 `music_url` VARCHAR(255) NOT NULL
 );
 
-INSERT INTO emails (email_address,email_first_name,email_last_name) VALUES ("caroline.crandell.20@ucl.ac.uk","Caroline","Crandell");
+INSERT INTO emails (email_address,email_first_name,email_last_name,email_consent) VALUES ("caroline.crandell.20@ucl.ac.uk","Caroline","Crandell","I consent to receiving updates about future products");
 
-INSERT INTO emails (email_address,email_first_name,email_last_name) VALUES ("giuseppe.baldini.20@ucl.ac.uk","Giuseppe","Baldini");
+INSERT INTO emails (email_address,email_first_name,email_last_name,email_consent) VALUES ("giuseppe.baldini.20@ucl.ac.uk","Giuseppe","Baldini","I consent to receiving updates about future products");
 
-INSERT INTO emails (email_address,email_first_name,email_last_name) VALUES ("chenuka.ratwatte.20@ucl.ac.uk","Chenuka","Ratwatte");
+INSERT INTO emails (email_address,email_first_name,email_last_name,email_consent) VALUES ("chenuka.ratwatte.20@ucl.ac.uk","Chenuka","Ratwatte","I consent to receiving updates about future products");
 
 INSERT INTO slideshow_category (slideshow_type,slideshow_name) VALUES ("default","All Images");
 

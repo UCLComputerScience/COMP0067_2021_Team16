@@ -33,6 +33,7 @@ const SubscribePage: React.FC = () => {
           id="form"
           method="POST"
           action="https://0067team16app.azurewebsites.net/mailinglist/new"
+          
         >
           Please enter your details below to hear more from Cosmic Baby Books.
           <div id="input">
@@ -44,9 +45,10 @@ const SubscribePage: React.FC = () => {
             <IonInput type="email" name="email_address" required></IonInput>
           </div>
           <IonLabel>
-            I would like to receive updates about future products
+            By submitting this form, I consent to receiving updates about future
+            products. As a proof of concept, UCL student developers of this
+            application are not liable for any data collected.
           </IonLabel>
-          <IonCheckbox slot="end" />
           <IonButton type="submit">Submit</IonButton>
         </form>
       </IonContent>
