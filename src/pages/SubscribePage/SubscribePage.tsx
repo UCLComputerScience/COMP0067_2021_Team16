@@ -16,6 +16,7 @@ import BackButton from "../../components/BackButton/BackButton";
 import TitleBar from "../../components/TitleBar/TitleBar";
 
 const SubscribePage: React.FC = () => {
+
   return (
     <IonPage>
       <IonContent className="ion-padding">
@@ -33,7 +34,6 @@ const SubscribePage: React.FC = () => {
           id="form"
           method="POST"
           action="https://0067team16app.azurewebsites.net/mailinglist/new"
-          
         >
           Please enter your details below to hear more from Cosmic Baby Books.
           <div id="input">
