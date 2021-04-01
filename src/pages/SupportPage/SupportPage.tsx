@@ -12,7 +12,7 @@ import {
 } from "@ionic/react";
 import BackButton from "../../components/BackButton/BackButton";
 import TitleBar from "../../components/TitleBar/TitleBar";
-import { trash} from 'ionicons/icons';
+import { trash } from "ionicons/icons";
 
 import RateApp from "../../components/RateApp/RateApp";
 import "./SupportPage.css";
@@ -40,7 +40,9 @@ const SupportPage: React.FC = () => {
           <IonRow>
             <IonModal isOpen={showModal} cssClass="my-custom-class">
               <IonButton onClick={() => setShowModal(false)} />
-              <div className="video-container"><iframe src="https://www.youtube.com/embed/ylrelG3QQ4s"></iframe></div>
+              <div className="video-container">
+                <iframe src="https://www.youtube.com/embed/ylrelG3QQ4s"></iframe>
+              </div>
             </IonModal>
             <IonButton onClick={() => setShowModal(true)}>Tutorial</IonButton>
           </IonRow>
@@ -68,6 +70,12 @@ const SupportPage: React.FC = () => {
                   for apps for four developmental stages.
                 </li>
               </p>
+              <div>
+                <a href=" https://cosmicbabybooks.com/books">
+                  Cosmic Baby Books
+                </a>
+              </div>
+
               <IonButton onClick={() => setShowModal1(false)}>
                 Back to Support
               </IonButton>
@@ -89,10 +97,16 @@ const SupportPage: React.FC = () => {
                 achievements and translated them into intricate mathematical
                 design in babies' perceptual language, suitable from birth to
                 100 years old. Grandparents love reading these books too!
-
-                <a href="https://www.amazon.co.uk/Iya-Whiteley/e/B01EX2F9N8
-                cosmicbabybooks.com" >You can find it on Amazon!</a>
               </p>
+              <div>
+                <a
+                  href="https://www.amazon.co.uk/Iya-Whiteley/e/B01EX2F9N8
+                cosmicbabybooks.com"
+                >
+                  You can find it on Amazon!
+                </a>
+              </div>
+
               <IonButton onClick={() => setShowModal2(false)}>
                 Back to Support
               </IonButton>
@@ -117,8 +131,11 @@ const SupportPage: React.FC = () => {
                 series with Astronaut Chris Hadfield and Dr Kevin Fong
                 presenter, BBC Astronauts: Do you have what it takes?'. Iya runs
                 workshops for public and academic.
-                <a href="https://cosmicbabybooks.com/">Cosmic Baby Books Website</a>
               </p>
+              <a href="https://cosmicbabybooks.com/about">
+                More information on Dr Whiteley
+              </a>
+
               <IonButton onClick={() => setShowModal3(false)}>
                 Back to Support
               </IonButton>

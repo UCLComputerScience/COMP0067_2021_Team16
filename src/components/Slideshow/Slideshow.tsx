@@ -50,10 +50,14 @@ async function get_online_slides(id: string) {
 }
 
 function speed_settings(e) {
-  e.currentTarget.style.animation =
-    "rotate " +
-    160000 / parseFloat(localStorage.getItem("animation_speed")) +
-    "s linear infinite";
+  if (localStorage.getItem("animation_speed") == "0") {
+    e.currentTarget.style.animation = "none";
+  } else {
+    e.currentTarget.style.animation =
+      "rotate " +
+      160000 / parseFloat(localStorage.getItem("animation_speed")) +
+      "s linear infinite";
+  }
   if (e.currentTarget.src.slice(-4) == ".gif") {
     e.currentTarget.style.animation = "none";
   }
