@@ -18,7 +18,6 @@ import React, { useState, useEffect } from "react";
 import TitleBar from "../TitleBar/TitleBar";
 import Copyright from "../Copyright/Copyright";
 import {
-  Selected_Slideshow_Context,
   Default_Slideshow_Context,
 } from "../../contexts/Slideshow_Context";
 
@@ -36,6 +35,7 @@ const slideOpts = {
 
 let current_recording: HTMLAudioElement;
 
+//get response from API
 async function get_online_slides(id: string) {
   try {
     const base_url = "https://0067team16app.azurewebsites.net/slideshows/";
@@ -49,6 +49,7 @@ async function get_online_slides(id: string) {
   }
 }
 
+//change animation on image load
 function speed_settings(e) {
   if (localStorage.getItem("animation_speed") == "0") {
     e.currentTarget.style.animation = "none";
@@ -63,14 +64,37 @@ function speed_settings(e) {
   }
 }
 
+async function calculate_index(slides){
+  const Slideshow = document.getElementById("Slideshow_main");
+  let index = (await Slideshow.getActiveIndex()) - 1;
+  if(index>=slides.length){
+    index = index%slides.length
+  }
+  else if (index < 0){
+    index = slides.length + (index%slides.length);
+  }
+  else{
+    index = index;
+  }
+  return index;
+}
+
+//load in sound recording of current slide
 async function load_recording(items) {
+
+  //get the audio option from settings
   const audio_setting = localStorage.getItem("audio_option");
+
+  //only play recording if the right settings in place
   if (["Recording only", "Music and Recordings"].includes(audio_setting)) {
+   
+    //pause any currently playing recording
     if (current_recording) {
       current_recording.pause();
     }
-    const Slideshow = document.getElementById("Slideshow_main");
-    let index = (await Slideshow.getActiveIndex()) - 1;
+    //Find the current index
+    let index = await calculate_index(items);
+
     if (index == items.length) {
       index = 0;
     }
@@ -81,6 +105,23 @@ async function load_recording(items) {
       current_recording.play();
     }
   }
+}
+
+// shuffle function
+function shuffle(random_slides) {
+  var currentIndex = random_slides.length,
+    temporaryValue,
+    randomIndex;
+
+  while (0 !== currentIndex) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    temporaryValue = random_slides[currentIndex];
+    random_slides[currentIndex] = random_slides[randomIndex];
+    random_slides[randomIndex] = temporaryValue;
+  }
+  return random_slides;
 }
 
 const Slideshow: React.FC = () => {
@@ -103,24 +144,8 @@ const Slideshow: React.FC = () => {
     }
     let slides = await get_online_slides(slideshow_id.toString());
 
-    // define new array to shuffle
-    var random_slides = slides;
-
-    // shuffle function
-    function shuffle(random_slides) {
-      var currentIndex = random_slides.length,
-        temporaryValue,
-        randomIndex;
-
-      while (0 !== currentIndex) {
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
-
-        temporaryValue = random_slides[currentIndex];
-        random_slides[currentIndex] = random_slides[randomIndex];
-        random_slides[randomIndex] = temporaryValue;
-      }
-      return random_slides;
+    if(localStorage.getItem("shuffle") == "true"){
+      slides = shuffle(slides);
     }
 
     setItems(slides);
