@@ -21,6 +21,8 @@ import {
   Default_Slideshow_Context,
 } from "../../contexts/Slideshow_Context";
 
+
+//default slide options
 const slideOpts = {
   initialSlide: 0,
   speed: 400,
@@ -64,6 +66,7 @@ function speed_settings(e) {
   }
 }
 
+//need this function because the ionic component does not return a straightforward number for the index
 async function calculate_index(slides){
   const Slideshow = document.getElementById("Slideshow_main");
   let index = (await Slideshow.getActiveIndex()) - 1;
@@ -107,7 +110,7 @@ async function load_recording(items) {
   }
 }
 
-// shuffle function
+// shuffle function to randomise the slides in a slideshow
 function shuffle(random_slides) {
   var currentIndex = random_slides.length,
     temporaryValue,
@@ -124,39 +127,40 @@ function shuffle(random_slides) {
   return random_slides;
 }
 
+//loads in a selected slideshow, or a default slideshow if none is selected.
+async function load_default_slides(default_slideshow,setItems) {
+  let slideshow_id: string;
+  let selected_slideshow = JSON.parse(
+    localStorage.getItem("selected_slideshow")
+  );
+  if (selected_slideshow) {
+    slideshow_id = selected_slideshow.default_id;
+    localStorage.removeItem("selected_slideshow");
+    console.log("opening the last selected slideshow: ", selected_slideshow);
+  } else {
+    slideshow_id = default_slideshow.default_id;
+    console.log("opening the default slideshow: ", slideshow_id);
+  }
+  let slides = await get_online_slides(slideshow_id.toString());
+
+  if(localStorage.getItem("shuffle") == "true"){
+    slides = shuffle(slides);
+  }
+
+  setItems(slides);
+}
+
 const Slideshow: React.FC = () => {
   const [items, setItems] = useState([]);
 
   let default_slideshow = Default_Slideshow_Context();
-
-  async function load_default_slides() {
-    let slideshow_id: string;
-    let selected_slideshow = JSON.parse(
-      localStorage.getItem("selected_slideshow")
-    );
-    if (selected_slideshow) {
-      slideshow_id = selected_slideshow.default_id;
-      localStorage.removeItem("selected_slideshow");
-      console.log("opening the last selected slideshow: ", selected_slideshow);
-    } else {
-      slideshow_id = default_slideshow.default_id;
-      console.log("opening the default slideshow: ", slideshow_id);
-    }
-    let slides = await get_online_slides(slideshow_id.toString());
-
-    if(localStorage.getItem("shuffle") == "true"){
-      slides = shuffle(slides);
-    }
-
-    setItems(slides);
-  }
 
   useIonViewWillEnter(() => {
     setItems([]);
     slideOpts.autoplay.delay = parseFloat(
       localStorage.getItem("slide_duration")
     );
-    load_default_slides();
+    load_default_slides(default_slideshow,setItems);
     if (current_recording) {
       current_recording.pause();
     }
