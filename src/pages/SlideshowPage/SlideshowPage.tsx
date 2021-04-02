@@ -12,7 +12,8 @@ import {
 import Slideshow from "../../components/Slideshow/Slideshow";
 import "./SlideshowPage.css";
 import UnlockSlider from "../../components/Unlockslider/Unlockslider";
-import {ScreenOrientation} from '@ionic-native/screen-orientation';
+import { ScreenOrientation } from '@ionic-native/screen-orientation';
+import { AndroidFullScreen } from '@ionic-native/android-full-screen';
 import { Insomnia } from '@ionic-native/insomnia';
 import { useState } from 'react';
 import axios from "axios";
@@ -50,6 +51,21 @@ function get_soundtrack_url(soundtracks){
   }
 }
 
+async function toggle_full_screen(value:boolean){
+  if(isPlatform("android")){
+    const supported = await AndroidFullScreen.isSupported() == true;
+    const IMsupported = await AndroidFullScreen.isImmersiveModeSupported() == true;
+    if(supported && IMsupported){
+      if (value){
+        AndroidFullScreen.immersiveMode();
+      }
+      else{
+        AndroidFullScreen.showSystemUI();
+      }
+    }
+  }
+}
+
 
 async function start_soundtrack(){
   //just in case the soundtrack is curently already playing, stop it.
@@ -80,11 +96,13 @@ const SlideshowPage: React.FC = () => {
     ScreenOrientation.lock(ScreenOrientation.ORIENTATIONS.PORTRAIT);
     Insomnia.keepAwake();
     start_soundtrack();
+    toggle_full_screen(true);
   });
   useIonViewDidLeave(()=>{
     ScreenOrientation.unlock();
     Insomnia.allowSleepAgain();
     stop_soundtrack();
+    toggle_full_screen(false);
   });
   
   return (
