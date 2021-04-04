@@ -2,3 +2,9 @@
     display: flex;
     justify-content: space-evenly;
 }
+
+.title {
+    text-align: center;
+    align-items: center;
+    align-self: center;
+}
