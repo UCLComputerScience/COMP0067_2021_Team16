@@ -7,7 +7,8 @@ import {
     IonCol,
     IonIcon,
     IonTitle, 
-    IonBackButton} from "@ionic/react";
+    IonBackButton,
+    IonContent} from "@ionic/react";
 import React from "react";
 
 import "./DrIyaWhiteley.css"; 
@@ -32,18 +33,26 @@ const DrIyaWhiteley: React.FC = () => {
               </IonGrid>
             </IonToolbar>
           </IonHeader>
-          <p>
-                This app is based on the Best Sellers and most gifted books for
-                newborns and infants on Amazon UK. Books are sold in Europe, US,
-                Canada, Australia, Japan and India. Images and book concepts are
-                created and hand drawn by Dr Iya Whiteley. Iya was inspired by
-                her own children to introduce newborn babies to our beautiful
-                Earth. Images represent the intricate beauty of our natural
-                world, our human scientific, architectural and technological
-                achievements and translated them into intricate mathematical
-                design in babies' perceptual language, suitable from birth to
-                100 years old. Grandparents love reading these books too!
-              </p>
+
+          <IonContent>
+          <br/>
+          <h4>
+                Space Psychologist, Director of the Centre of Space Medicine,
+                University College London, advising to the UK Space Agency. <br/>She
+                developed training programmes for the astronaut class of Major
+                Tim Peake, while working for European Space Agency at the
+                European Astronaut Centre in Germany. <br/>As a Cognitive Engineer
+                and Clinical Psychologist, she specialises in visual perception
+                and design displays for highly skilled military pilots and
+                astronauts. These top performers need to absorb information
+                instantly and make effective decisions. <br/>Iya is a public speaker
+                and presenter on radio and TV, for example, in BBC Science TV
+                series with Astronaut Chris Hadfield and Dr Kevin Fong
+                presenter, BBC Astronauts: Do you have what it takes?'. <br/>Iya runs
+                workshops for public and academic.
+          </h4>
+          </IonContent>
+
               <div>
                 <a
                   href="https://www.amazon.co.uk/Iya-Whiteley/e/B01EX2F9N8
