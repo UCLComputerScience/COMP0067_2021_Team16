@@ -44,7 +44,7 @@ const SupportPage: React.FC = () => {
                 <iframe src="https://www.youtube.com/embed/ylrelG3QQ4s"></iframe>
               </div>
             </IonModal>
-            <IonButton onClick={() => setShowModal(true)}>Tutorial</IonButton>
+            <IonButton routerLink="/SupportPage/Tutorial"> Tutorial </IonButton>
           </IonRow>
           <IonRow>
             <IonModal isOpen={showModal1} cssClass="my-custom-class">
@@ -80,7 +80,7 @@ const SupportPage: React.FC = () => {
                 Back to Support
               </IonButton>
             </IonModal>
-            <IonButton onClick={() => setShowModal1(true)}>
+            <IonButton routerLink="/SupportPage/ScienceBehindImages"> 
               Science Behind Images
             </IonButton>
           </IonRow>
@@ -111,7 +111,7 @@ const SupportPage: React.FC = () => {
                 Back to Support
               </IonButton>
             </IonModal>
-            <IonButton onClick={() => setShowModal2(true)}>
+            <IonButton routerLink="/SupportPage/CosmicBabyBooks">
               Cosmic Baby Books
             </IonButton>
           </IonRow>
@@ -140,7 +140,7 @@ const SupportPage: React.FC = () => {
                 Back to Support
               </IonButton>
             </IonModal>
-            <IonButton onClick={() => setShowModal3(true)}>
+            <IonButton routerLink="/SupportPage/DrIyaWhiteley">
               Dr Iya Whiteley
             </IonButton>
           </IonRow>

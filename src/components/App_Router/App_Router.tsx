@@ -13,6 +13,10 @@ import SubscribePage from '../../pages/SubscribePage/SubscribePage';
 import VideoSettings from '../../pages/VideoSettings/VideoSettings';
 import ImageGallery from '../../pages/ImageGallery/ImageGallery';
 import RecordAudio from '../../pages/RecordAudio/RecordAudio';
+import Tutorial from '../../pages/SupportPage/Tutorial/Tutorial';
+import CosmicBabyBooks from '../../pages/SupportPage/CosmicBabyBooks/CosmicBabyBooks';
+import DrIyaWhiteley from '../../pages/SupportPage/DrIyaWhiteley/DrIyaWhiteley';
+import ScienceBehindImages from '../../pages/SupportPage/ScienceBehindImages/ScienceBehindImages';
 
 //below are all the routes with their URLs (denoted by 'path') and the actual page component (child to each Route component)
 const App_Router: React.FC = () => {
@@ -28,6 +32,10 @@ const App_Router: React.FC = () => {
       <Route exact path="/ImageGallery" component={ImageGallery} />
       <Route exact path="/RecordAudio" component={RecordAudio} />
       <Route exact path="/slideshowpage" component={SlideshowPage} />
+      <Route exact path="/SupportPage/Tutorial" component={Tutorial} />
+      <Route exact path="/SupportPage/CosmicBabyBooks" component={CosmicBabyBooks} />
+      <Route exact path="/SupportPage/DrIyaWhiteley" component={DrIyaWhiteley} />
+      <Route exact path="/SupportPage/ScienceBehindImages" component={ScienceBehindImages} />
       <Redirect exact from="/" to="/slideshowpage"/>
     </IonRouterOutlet>
   );
