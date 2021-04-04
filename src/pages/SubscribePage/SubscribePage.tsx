@@ -6,7 +6,8 @@ import {
   IonToolbar,
   IonRow,
   IonCol,
-  IonCheckbox,
+  IonGrid,
+  IonTitle,
   IonInput,
   IonButton,
 } from "@ionic/react";
@@ -20,16 +21,23 @@ const SubscribePage: React.FC = () => {
   return (
     <IonPage>
       <IonContent className="ion-padding">
-        <IonHeader>
-          <IonToolbar>
+      <IonHeader>
+        <IonToolbar>
+          <IonGrid>
             <IonRow>
-              <BackButton />
-              <IonCol className="ion-align-items-center ion-justify-content-center">
-                <TitleBar name={"Subscribe"} />
-              </IonCol>
+                <IonCol className="backbutton">
+                  <BackButton/>
+                </IonCol>
+                <IonCol className="title">
+                  <IonTitle>
+                    Support
+                  </IonTitle>
+                </IonCol>
+                <IonCol/>
             </IonRow>
-          </IonToolbar>
-        </IonHeader>
+          </IonGrid>
+        </IonToolbar>
+      </IonHeader>
         <form
           id="form"
           method="POST"
