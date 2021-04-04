@@ -7,7 +7,8 @@ import {
     IonCol,
     IonIcon,
     IonTitle, 
-    IonBackButton} from "@ionic/react";
+    IonBackButton,
+    IonContent} from "@ionic/react";
 import React from "react";
 
 import "./ScienceBehindImages.css"; 
@@ -32,34 +33,48 @@ const ScienceBehindImages: React.FC = () => {
               </IonGrid>
             </IonToolbar>
           </IonHeader>
-          <p>
+
+            <IonContent>
+          <h3>
             Images developed based on the current scientific findings on
-                newborns and BABIES’ visual perception and brain development:
+                newborns and babies’ visual perception and brain development:
+                
+                <ol>    
                 <li>
                   Improve concentration through stimulating and captivating
                   images
                 </li>
-                <li>Stimulate further learning and discovery </li>
+                
+                <li>
+                    Stimulate further learning and discovery 
+                </li>
+
                 <li>
                   Create and maintain new pathways in the brain through learning
                   to trace visual patterns
                 </li>
+                
                 <li>
                   Acquire early life skills essential for successful learning
-                  and interaction. Children have more brain pathways than
+                  and interaction. 
+                </li>
+                </ol>
+                
+                Children have more brain pathways than
                   adults. Brain pathways die way if they are not used. Further
                   research on newborn and infant development is on-going in the
-                  world’s top neonatal unit. Images are designed to assist
+                  world’s top neonatal unit. 
+                  <br/><br/> Images are designed to assist
                   specific stages of development during the first year. Look out
-                  for apps for four developmental stages.
-                </li>
-              </p>
+                  for apps for four developmental stages.   
+                </h3>           
 
-              <div>
+                <h1>
                 <a href=" https://cosmicbabybooks.com/books">
                   Cosmic Baby Books
                 </a>
-              </div>
+                </h1>
+            </IonContent>
 
         </IonPage>);
 }

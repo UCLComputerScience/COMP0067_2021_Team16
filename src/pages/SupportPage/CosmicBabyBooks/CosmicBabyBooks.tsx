@@ -61,6 +61,10 @@ const CosmicBabyBooks: React.FC = () => {
             </a>
             </h1>
           </IonText>
+              
+              <div className="img-container">
+                <img src="../../../../public/assets/icon/icon.png" alt="Icon"></img>
+              </div>
 
               <div className="video-container">
                 <iframe src="https://www.youtube.com/embed/ylrelG3QQ4s"></iframe>
