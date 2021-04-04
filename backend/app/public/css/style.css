@@ -6,6 +6,10 @@
   outline: 0 !important;
 }
 
+h1 {
+  color: #ebf7fd;
+}
+
 .navbar .current {
   color: #ebf7fd;
   text-decoration-line: underline;
@@ -17,16 +21,6 @@
 
 .slideshowimg {
   width: 50px;
-}
-
-#slideshow-area {
-  width: 80%;
-  text-align: center;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #ebf7fd;
 }
 
 .navbar {
@@ -47,15 +41,6 @@ a {
 
 a:hover {
   color: #63848e;
-}
-
-#home-image {
-  width: 50%;
-  text-align: center;
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 th {
@@ -95,6 +80,16 @@ span {
 }
 
 #images-area2 {
+  width: 80%;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ebf7fd;
+}
+
+#slideshow-area {
   width: 80%;
   text-align: center;
   position: relative;
@@ -148,18 +143,18 @@ button:hover {
   opacity: 0.8;
 }
 
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-}
-
 img.avatar {
   width: 50%;
   border-radius: 50%;
 }
 
+#home-image {
+  text-align: center;
+  position: relative;
+}
+
 .container {
-  padding: 16px;
+  width: 100%;
 }
 
 #email-area {
@@ -171,19 +166,9 @@ img.avatar {
 }
 
 .footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #1d3344;
-  color: #ebf7fd;
-  text-align: center;
-}
-
-.results-footer {
   position: relative;
-  top: 75px;
-  right: 0;
+  height: 25px;
+  margin-top: 50px;
   left: 0;
   bottom: 0;
   width: 100%;
