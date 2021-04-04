@@ -8,7 +8,8 @@ import {
   IonRow,
   IonHeader,
   IonToolbar,
-  IonIcon,
+  IonGrid,
+  IonTitle
 } from "@ionic/react";
 import BackButton from "../../components/BackButton/BackButton";
 import TitleBar from "../../components/TitleBar/TitleBar";
@@ -26,16 +27,23 @@ const SupportPage: React.FC = () => {
   return (
     <IonPage>
       <IonContent fullscreen>
-        <IonHeader>
-          <IonToolbar>
-            <IonRow>
-              <BackButton />
-              <IonCol className="ion-align-items-center ion-justify-content-center">
-                <TitleBar name={"Support"} />
-              </IonCol>
-            </IonRow>
-          </IonToolbar>
-        </IonHeader>
+          <IonHeader>
+            <IonToolbar>
+              <IonGrid>
+                <IonRow>
+                  <IonCol className="backbutton">
+                    <BackButton/>
+                  </IonCol>
+                  <IonCol className="title">
+                    <IonTitle>
+                      Support
+                    </IonTitle>
+                  </IonCol>
+                  <IonCol/>
+                </IonRow>
+              </IonGrid>
+            </IonToolbar>
+          </IonHeader>
         <div id="buttons">
           <IonRow>
             <IonModal isOpen={showModal} cssClass="my-custom-class">
