@@ -12,7 +12,7 @@
     <link rel="shortcut icon" type="image/png" href="../images/cosmic.jpg">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../css/addslideshow.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 
 <body style="background-color: #ebf7fd">
@@ -32,9 +32,9 @@
     <div class="jumbotron">
         <h1 class="text-center">Add Slideshow</h1>
         <form id="form" method="POST" action="/slideshows/new">
-            <label for="name"><b>Name</b></label>
+            <label class="dark-label" for="name"><b>Name</b></label>
             <input id="name" type="text" placeholder="Enter slideshow name" name="name" required>
-            <div id="image-area"></div>
+            <div id="top-image-area"></div>
             <button id="slideshow-submit" type="submit">Submit</button>
         </form>
     </div>
@@ -46,7 +46,7 @@
         </div>
     </div>
 
-    <div class="footer">
+    <div class="results-footer">
         <p>Copyright © 2016 Cosmic Baby Books - All Rights Reserved.</p>
     </div>
     <script type="text/javascript" src="../js/addslideshow.js"></script>

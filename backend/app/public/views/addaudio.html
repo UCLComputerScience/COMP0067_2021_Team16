@@ -12,7 +12,7 @@
     <link rel="shortcut icon" type="image/png" href="../images/cosmic.jpg">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../css/addaudio.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 
 <body style="background-color: #ebf7fd">
@@ -32,13 +32,13 @@
     <div class="jumbotron">
         <h1 class="text-center">Add Audio</h1>
         <form id="form" method="POST" action="/audios/new" enctype="multipart/form-data">
-            <div id="image-area"></div><br>
-            <label style="color: #ebf7fd;" for="audio"><b>Audio file for selected image</b></label><br>
+            <div id="top-image-area"></div><br>
+            <label class="dark-label" style="color: #ebf7fd;" for="audio"><b>Audio file for selected image</b></label><br>
             <input type="file" id="audiotag" name='audio' accept="audio/mp3, audio/x-m4a" required><br><br>
             <div id="hide-audio" style="display:none;"><audio id="preview" controls>
                     <source src="" id="src" />
                 </audio><br><br></div>
-            <label style="color: #ebf7fd;" for="audiotag"><b>(Only .mp3 and .m4a audio
+            <label class="dark-label" style="color: #ebf7fd;" for="audiotag"><b>(Only .mp3 and .m4a audio
                     files are supported. Max size: 5MB)</b></label><br>
             <button id="audio-submit" type="submit">Submit</button>
         </form>
@@ -52,7 +52,7 @@
         </div>
     </div>
 
-    <div class="footer">
+    <div class="results-footer">
         <p>Copyright © 2016 Cosmic Baby Books - All Rights Reserved.</p>
     </div>
     <script type="text/javascript" src="../js/addaudio.js"></script>
