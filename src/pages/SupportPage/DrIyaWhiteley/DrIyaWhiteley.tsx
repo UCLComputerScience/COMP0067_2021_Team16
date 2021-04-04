@@ -51,16 +51,14 @@ const DrIyaWhiteley: React.FC = () => {
                 presenter, BBC Astronauts: Do you have what it takes?'. <br/>Iya runs
                 workshops for public and academic.
           </h4>
-          </IonContent>
 
-              <div>
-                <a
-                  href="https://www.amazon.co.uk/Iya-Whiteley/e/B01EX2F9N8
-                cosmicbabybooks.com"
-                >
-                  You can find it on Amazon!
-                </a>
-              </div>
+          <h1>
+              <a href=" https://cosmicbabybooks.com/books">
+              More information on Dr Whiteley
+              </a>
+          </h1>
+
+          </IonContent>
         </IonPage>);
 }
 
