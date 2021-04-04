@@ -5,13 +5,11 @@ import {
     IonGrid, 
     IonRow,
     IonCol,
-    IonIcon,
     IonTitle, 
     IonBackButton,
     IonText,
     IonImg,
     IonContent,
-    IonList,
     IonThumbnail,
     IonItem,
     IonLabel} from "@ionic/react";

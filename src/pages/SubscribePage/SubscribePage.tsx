@@ -20,7 +20,6 @@ const SubscribePage: React.FC = () => {
 
   return (
     <IonPage>
-      <IonContent className="ion-padding">
       <IonHeader>
         <IonToolbar>
           <IonGrid>
@@ -30,7 +29,7 @@ const SubscribePage: React.FC = () => {
                 </IonCol>
                 <IonCol className="title">
                   <IonTitle>
-                    Support
+                    Subscribe Page
                   </IonTitle>
                 </IonCol>
                 <IonCol/>
@@ -38,26 +37,36 @@ const SubscribePage: React.FC = () => {
           </IonGrid>
         </IonToolbar>
       </IonHeader>
+      <IonContent className="ion-padding">
         <form
           id="form"
           method="POST"
           action="https://0067team16app.azurewebsites.net/mailinglist/new"
         >
+          <div>
           Please enter your details below to hear more from Cosmic Baby Books.
+          </div>
+          
           <div id="input">
+            <br/>
             <IonLabel>First Name</IonLabel>
             <IonInput name="email_first_name" required></IonInput>
             <IonLabel>Last Name</IonLabel>
             <IonInput name="email_last_name" required></IonInput>
             <IonLabel>Email Address</IonLabel>
             <IonInput type="email" name="email_address" required></IonInput>
+            <br/>
           </div>
-          <IonLabel>
+
+          <h3>
             By submitting this form, I consent to receiving updates about future
             products. As a proof of concept, UCL student developers of this
             application are not liable for any data collected.
-          </IonLabel>
-          <IonButton type="submit">Submit</IonButton>
+            <br/><br/>
+          </h3>
+          <div>
+          <IonButton size="large" expand="block" type="submit">Submit</IonButton>
+          </div>
         </form>
       </IonContent>
     </IonPage>

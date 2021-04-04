@@ -5,7 +5,7 @@ import {
     IonGrid, 
     IonRow,
     IonCol,
-    IonIcon,
+    IonContent,
     IonTitle, 
     IonBackButton} from "@ionic/react";
 import React from "react";
@@ -32,6 +32,34 @@ const Tutorial: React.FC = () => {
           </IonGrid>
         </IonToolbar>
       </IonHeader>
+        
+        <IonContent>
+          <h3>  
+                <ul>    
+                <li>
+                  Get started with the slideshow!
+                </li>
+                
+                <li>
+                    Select the slideshow you want to play next 
+                </li>
+
+                <li>
+                  Settings (Audio + Video)
+                </li>
+                
+                <li>
+                  Support 
+                </li>
+
+                <li>
+                  Subscribe
+                </li>
+
+                </ul>
+                </h3>           
+        </IonContent>
+
     </IonPage>);
 }
 
