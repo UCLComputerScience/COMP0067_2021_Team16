@@ -34,30 +34,68 @@ const Tutorial: React.FC = () => {
       </IonHeader>
         
         <IonContent>
-          <h3>  
-                <ul>    
-                <li>
-                  Get started with the slideshow!
-                </li>
+          <h3>    
+                  Once you open the app, a slideshow will start automatically.
                 
-                <li>
-                    Select the slideshow you want to play next 
-                </li>
-
-                <li>
-                  Settings (Audio + Video)
-                </li>
+                  <br/>
+                  <br/>
                 
-                <li>
-                  Support 
-                </li>
+                  Slide to unlock the screen. 
+                
+                  <br/>
+                  <br/>
+                
+                  Select the slideshow you want to play next.
+                
+                  <br/>
+                  <br/>
+                
+                  If you want music or recordings to accompany your slideshow, you can choose them here. 
+              
+                  <br/>
+                  <br/>
+                
+                  You can set the duration between each slide. The younger the baby, the better is to have longer intervals. 
+                
+                  <br/>
+                  <br/>
+              
+                  You can set the rotation animation speed. For newborns, we recommend to leave it at 0.  
+                
+                  <br/>
+                  <br/>
+                
+                  In the support page you can find everything you need to learn more about it the app.
+                
+                  <br/>
+                  <br/>
+                
+                  You can come back to "Tutorial" anytime to check how the app works. 
+                
+                  <br/>
+                  <br/>
+                
+                  In "Science behind the images" we introduce the scientific findings associated with using this type of material.
+                
+                  <br/>
+                  <br/>
+                
+                  The "Cosmic Baby Book" section offers more information on the book series this app is based on.
+                
+                  <br/>
+                  <br/>
+                
+                  You can also learn more about the author and her background.
+                
+                  <br/>
+                  <br/>
+                
+                  Finally, don't forget to subscribe to our mailing list to receive the latest updates!
+                
+                
+                </h3>
 
-                <li>
-                  Subscribe
-                </li>
-
-                </ul>
-                </h3>           
+                <h2>We hope you and your baby will enjoy this app!</h2>           
         </IonContent>
 
     </IonPage>);

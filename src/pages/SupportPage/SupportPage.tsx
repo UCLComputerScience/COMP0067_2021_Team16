@@ -68,7 +68,7 @@ const SupportPage: React.FC = () => {
       </IonItem>
 
       <IonItem routerLink="/SupportPage/ScienceBehindImages">
-        <IonLabel class="ion-text-center">Science Behind Images</IonLabel>
+        <IonLabel class="ion-text-center">Science behind the images</IonLabel>
       </IonItem>
 
       <IonItem routerLink="/SupportPage/CosmicBabyBooks">
