@@ -22,7 +22,7 @@ const Tutorial: React.FC = () => {
               <IonCol className="backbutton">
                 <IonBackButton/>
               </IonCol>
-              <IonCol className="title">
+              <IonCol size="8" className="title">
                 <IonTitle>
                   Tutorial
                 </IonTitle>
@@ -35,67 +35,67 @@ const Tutorial: React.FC = () => {
         
         <IonContent>
           <h3>    
-                  Once you open the app, a slideshow will start automatically.
+          Once you open the app, a slideshow will start automatically.
                 
-                  <br/>
-                  <br/>
+          <br/>
+                  
+          <br/>
                 
-                  Slide to unlock the screen. 
+          Slide to unlock the screen. 
                 
-                  <br/>
-                  <br/>
+          <br/>
+          <br/>
                 
-                  Select the slideshow you want to play next.
+          Select the slideshow you want to play next.
                 
-                  <br/>
-                  <br/>
+          <br/>
+          <br/>
                 
-                  If you want music or recordings to accompany your slideshow, you can choose them here. 
+          If you want music or recordings to accompany your slideshow, you can choose them here. 
               
-                  <br/>
-                  <br/>
+          <br/>
+          <br/>
                 
-                  You can set the duration between each slide. The younger the baby, the better is to have longer intervals. 
+          You can set the duration between each slide. The younger the baby, the better is to have longer intervals. 
                 
-                  <br/>
-                  <br/>
+          <br/>
+          <br/>
               
-                  You can set the rotation animation speed. For newborns, we recommend to leave it at 0.  
+          You can set the rotation animation speed. For newborns, we recommend to leave it at 0.  
                 
-                  <br/>
-                  <br/>
+          <br/>
+          <br/>
                 
-                  In the support page you can find everything you need to learn more about it the app.
+          In the support page you can find everything you need to learn more about it the app.
                 
-                  <br/>
-                  <br/>
+          <br/>
+          <br/>
                 
-                  You can come back to "Tutorial" anytime to check how the app works. 
+          You can come back to "Tutorial" anytime to check how the app works. 
                 
-                  <br/>
-                  <br/>
+          <br/>
+          <br/>
                 
-                  In "Science behind the images" we introduce the scientific findings associated with using this type of material.
+          In "Science behind the images" we introduce the scientific findings associated with using this type of material.
                 
-                  <br/>
-                  <br/>
+          <br/>
+          <br/>
                 
-                  The "Cosmic Baby Book" section offers more information on the book series this app is based on.
+          The "Cosmic Baby Book" section offers more information on the book series this app is based on.
                 
-                  <br/>
-                  <br/>
+          <br/>
+          <br/>
                 
-                  You can also learn more about the author and her background.
+          You can also learn more about the author and her background.
                 
-                  <br/>
-                  <br/>
+          <br/>
+          <br/>
                 
-                  Finally, don't forget to subscribe to our mailing list to receive the latest updates!
+          Finally, don't forget to subscribe to our mailing list to receive the latest updates!      
                 
-                
-                </h3>
+          </h3>
 
-                <h2>We hope you and your baby will enjoy this app!</h2>           
+          <h2>We hope you and your baby will enjoy this app!</h2>           
         </IonContent>
 
     </IonPage>);

@@ -29,7 +29,7 @@ const SupportPage: React.FC = () => {
                   <IonCol className="backbutton">
                     <BackButton/>
                   </IonCol>
-                  <IonCol className="title">
+                  <IonCol size="8" className="title">
                     <IonTitle>
                       Support
                     </IonTitle>

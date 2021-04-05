@@ -33,7 +33,7 @@ const SelectionPage: React.FC = () => {
                   // <Edit_Button toggleEdit={setEditMode}/>
                 }
               </IonCol>
-              <IonCol className="title">
+              <IonCol size="8" className="title">
                 <IonTitle>
                   {editMode ? "Edit Slideshows" : "Select Slideshow"}
                 </IonTitle>

@@ -27,7 +27,7 @@ const AudioSettingsPage: React.FC = () => {
                   <IonCol className="backbutton">
                     <BackButton/>
                   </IonCol>
-                  <IonCol className="title">
+                  <IonCol size="8" className="title">
                     <IonTitle>
                       Audio Settings
                     </IonTitle>
@@ -47,7 +47,7 @@ const AudioSettingsPage: React.FC = () => {
                 <IonRow>
                   <IonCol>
                   </IonCol>
-                  <IonCol className="title">
+                  <IonCol size="8" className="title">
                     <IonTitle>
                       Video Settings
                     </IonTitle>
