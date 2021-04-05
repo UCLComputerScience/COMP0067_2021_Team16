@@ -1,3 +1,5 @@
+const { PassThrough } = require("node:stream");
+
 $(document).ready(function () {
   $.get("/images/all", function (data) {
     if (data.length !== 0) {
@@ -78,16 +80,6 @@ $(document).ready(function () {
             $("#slideshow-area").prepend(table)
           }
         });
-      }
-    })
-  })
-
-  $(document).on('click', '.show', function () {
-    $.ajax({
-      url: "/slideshows/" + this.value,
-      type: 'GET',
-      success: function (result) {
-        console.log(result)
       }
     })
   })
