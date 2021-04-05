@@ -1,8 +1,22 @@
 #form {
   position: relative;
   margin: 50px 50px;
+  font-size: 30px;
+}
+
+h3 {
+  margin: 200px;
+}
+
+#button {
+  align-self: center;
+}
+
+/* #form {
+  position: relative;
+  margin: 50px 50px;
 }
 
 input {
   border: 2px;
-}
+} */
