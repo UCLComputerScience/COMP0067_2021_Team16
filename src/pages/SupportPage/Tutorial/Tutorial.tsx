@@ -38,22 +38,37 @@ const Tutorial: React.FC = () => {
           Once you open the app, a slideshow will start automatically.
                 
           <br/>
-                  
+          <a
+              href="https://www.amazon.co.uk/Iya-Whiteley/e/B01EX2F9N8">
+              <img src={process.env.PUBLIC_URL + 'assets/images/amazon_best_seller.png'} alt="Amazon Best Seller" />
+            </a>   
           <br/>
                 
           Slide to unlock the screen. 
                 
           <br/>
+          <a
+              href="https://www.amazon.co.uk/Iya-Whiteley/e/B01EX2F9N8">
+              <img src={process.env.PUBLIC_URL + 'assets/images/amazon_best_seller.png'} alt="Amazon Best Seller" />
+            </a>   
           <br/>
                 
           Select the slideshow you want to play next.
                 
           <br/>
+          <a
+              href="https://www.amazon.co.uk/Iya-Whiteley/e/B01EX2F9N8">
+              <img src={process.env.PUBLIC_URL + 'assets/images/amazon_best_seller.png'} alt="Amazon Best Seller" />
+            </a>   
           <br/>
                 
           If you want music or recordings to accompany your slideshow, you can choose them here. 
               
           <br/>
+          <a
+              href="https://www.amazon.co.uk/Iya-Whiteley/e/B01EX2F9N8">
+              <img src={process.env.PUBLIC_URL + 'assets/images/amazon_best_seller.png'} alt="Amazon Best Seller" />
+            </a>   
           <br/>
                 
           You can set the duration between each slide. The younger the baby, the better is to have longer intervals. 
