@@ -37,7 +37,7 @@ const CosmicBabyBooks: React.FC = () => {
               </IonGrid>
             </IonToolbar>
           </IonHeader>
-          <IonText color="dark">
+          <IonText>
           <h4>This app is based on the Best Sellers and most gifted books for
                 newborns and infants on Amazon UK. <br/> Books are sold in Europe, US,
                 Canada, Australia, Japan and India. Images and book concepts are
@@ -70,22 +70,5 @@ const CosmicBabyBooks: React.FC = () => {
         
         </IonPage>);
 }
-
-type Item = {
-  src: string;
-  text: string;
-};
-const items: Item[] = [{ src: 'http://placekitten.com/g/200/300', text: 'a picture of a cat' }];
-
-export const ImgExample: React.FC = () => (
-  <IonContent>
-        <IonItem>
-          <IonThumbnail>
-            <IonImg src = 'http://placekitten.com/g/200/300' />
-          </IonThumbnail>
-          <IonLabel> Test </IonLabel>
-        </IonItem>
-  </IonContent>
-);
 
 export default CosmicBabyBooks;
