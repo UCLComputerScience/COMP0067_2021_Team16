@@ -2,16 +2,25 @@
   font-family: "Quicksand", sans-serif;
 }
 
-.navbar .current {
-  color: #ebf7fd;
-  text-decoration-line: underline;
-}
 *:focus {
   outline: 0 !important;
 }
 
+h1 {
+  color: #ebf7fd;
+}
+
+.navbar .current {
+  color: #ebf7fd;
+  text-decoration-line: underline;
+}
+
 .tableimg {
   width: 100px;
+}
+
+.slideshowimg {
+  width: 50px;
 }
 
 .navbar {
@@ -34,26 +43,6 @@ a:hover {
   color: #63848e;
 }
 
-#home-image {
-  width: 50%;
-  text-align: center;
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-#login-form {
-  border: 3px solid #ebf7fd;
-  width: 300px;
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #63848e;
-}
-
 th {
   border: 0.5px solid #63848e;
   background-color: #63848e;
@@ -64,11 +53,20 @@ th {
 td {
   border: 0.5px solid #63848e;
   padding: 10px 10px;
-  word-wrap: break-word; 
+  word-wrap: break-word;
 }
 
 td > * {
-  vertical-align : middle;
+  vertical-align: middle;
+}
+
+span {
+  padding: 0px 5px;
+}
+
+#top-image-area {
+  background-color: #ebf7fd;
+  padding: 20px 20px;
 }
 
 #image-area {
@@ -81,14 +79,41 @@ td > * {
   background-color: #ebf7fd;
 }
 
+#images-area2 {
+  width: 80%;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ebf7fd;
+}
+
+#slideshow-area {
+  width: 80%;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ebf7fd;
+}
+
+#full-music {
+  text-align: center;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  background-color: #ebf7fd;
+}
+
 .jumbotron {
   background-color: #63848e;
   padding: 50px 100px;
 }
 
-/* Full-width inputs */
-input[type="text"],
-input[type="password"] {
+input[type="text"] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -97,7 +122,6 @@ input[type="password"] {
   box-sizing: border-box;
 }
 
-/* Set a style for all buttons */
 button {
   background-color: #304b5f;
   color: #ebf7fd;
@@ -111,49 +135,48 @@ button {
 label {
   color: #ebf7fd;
 }
+.dark-label {
+  color: #1d3344;
+}
 
-/* Add a hover effect for buttons */
 button:hover {
   opacity: 0.8;
 }
 
-/* Center the avatar image inside this container */
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-}
-
-/* Avatar image */
 img.avatar {
   width: 50%;
   border-radius: 50%;
 }
 
-/* Add padding to containers */
+#home-image {
+  text-align: center;
+  position: relative;
+}
+
 .container {
-  padding: 16px;
+  width: 100%;
 }
 
-/* The "Forgot password" text */
-span.password {
-  float: right;
-  padding-top: 16px;
+#excel {
+  width: 200px;
+  position: absolute;
+  right: 0;
+  margin-right: 10px;
 }
 
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.password {
-    display: block;
-    float: none;
-  }
-
-  .cancelbtn {
-    width: 100%;
-  }
+#email-area {
+  text-align: center;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 75px;
+  margin-bottom: 50px;
 }
 
 .footer {
-  position: fixed;
+  position: relative;
+  height: 25px;
+  margin-top: 50px;
   left: 0;
   bottom: 0;
   width: 100%;

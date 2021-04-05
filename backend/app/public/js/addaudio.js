@@ -5,11 +5,11 @@ $(document).ready(function () {
             let radios = $("<div id='radios'>")
             for (let i = 0; i < data.length; i++) {
                 radios.append("<span><input type='radio' id='" + data[i].image_id + "' name='answer' value='" + data[i].image_id + "' required>")
-                radios.append("<span><label for='" + data[i].image_id + "'>" + data[i].image_name + "</label>");
+                radios.append("<span><label class='dark-label' for='" + data[i].image_id + "'>" + data[i].image_name + "</label>");
                 radios.append("<span><img class='tableimg' src='" + data[i].image_url + "'</img>");
             }
             radios.append("</div>")
-            $("#image-area").prepend(radios)
+            $("#top-image-area").prepend(radios)
         }
     });
 

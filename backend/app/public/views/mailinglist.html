@@ -12,7 +12,7 @@
     <link rel="shortcut icon" type="image/png" href="../images/cosmic.jpg">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../css/mailinglist.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css" />
     <script type="text/javascript" src="DataTables/datatables.min.js"></script>
 </head>
@@ -34,13 +34,13 @@
     <div class="jumbotron">
         <h1 class="text-center">Mailing List</h1>
         <!-- <form id="form" method="POST" action="/mailinglist/new">
-            <label for="email_first_name"><b>First Name</b></label><br>
+            <label class="dark-label" for="email_first_name"><b>First Name</b></label><br>
             <input id="email_first_name" type="text" placeholder="Enter first name" name="email_first_name" required>
             <br><br>
-            <label for="email_last_name"><b>Last Name</b></label><br>
+            <label class="dark-label" for="email_last_name"><b>Last Name</b></label><br>
             <input id="email_last_name" type="text" placeholder="Enter last name" name="email_last_name" required>
             <br><br>
-            <label for="email_address"><b>Email Address</b></label><br>
+            <label class="dark-label" for="email_address"><b>Email Address</b></label><br>
             <input id="email_address" type="text" placeholder="Enter email address" name="email_address" required>
             <br><br>
             <button id="image-submit" type="submit">Submit</button>
@@ -48,13 +48,13 @@
     </div>
 
     <div class="row">
-        <button id="excel" style="width: 200px; position: absolute; right: 0;">Export to Excel</button>
+        <button id="excel">Export to Excel</button>
     </div>
     <div class="row">
         <div id="email-area"></div>
     </div>
 
-    <div class="footer">
+    <div class="footer" style="height: 25px;">
         <p>Copyright © 2016 Cosmic Baby Books - All Rights Reserved.</p>
     </div>
     <script type="text/javascript" src="../js/mailinglist.js"></script>

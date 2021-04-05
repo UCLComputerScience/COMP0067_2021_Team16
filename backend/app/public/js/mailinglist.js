@@ -56,9 +56,7 @@ $(document).ready(function () {
   })
 
   $("#excel").on('click', function () {
-    $.get("/mailinglist/excel", function (data) {
-      console.log(data)
-    })
+    $.get("/mailinglist/excel")
     window.open("MailingList.xls");
   })
 });
