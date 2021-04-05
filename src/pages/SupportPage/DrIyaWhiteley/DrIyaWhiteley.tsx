@@ -25,7 +25,7 @@ const DrIyaWhiteley: React.FC = () => {
                   </IonCol>
                   <IonCol size="8" className="title">
                     <IonTitle>
-                      About Dr. Iya Whiteley
+                      About Dr Iya Whiteley
                     </IonTitle>
                   </IonCol>
                   <IonCol/>
