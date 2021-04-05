@@ -242,16 +242,15 @@ module.exports = function (app) {
     });
   });
 
-  app.post("/mailinglist/new", function (req, res) {
+  app.post("/mailinglist/new/:first/:last/:address", function (req, res) {
     // SQL injection prevention
-    inj_email = req.body.email_address.replace(";", "").replace("--", "");
-    inj_first = req.body.email_first_name.replace(";", "").replace("--", "");
-    inj_last = req.body.email_last_name.replace(";", "").replace("--", "");
+    inj_email = req.params.first.replace(";", "").replace("--", "");
+    inj_first = req.params.last.replace(";", "").replace("--", "");
+    inj_last = req.params.address.replace(";", "").replace("--", "");
     let rightNow = new Date().toLocaleString();
     let dbQuery = "INSERT INTO emails (email_address,email_first_name,email_last_name,email_date_registered, email_consent) VALUES (?,?,?,?,?)";
     connection.query(dbQuery, [inj_email, inj_first, inj_last, rightNow, "I consent to receiving updates about future products"], function (err, result) {
       if (err) throw err;
-      window.location.assign('/');
       // Record successfully saved.
     });
   });

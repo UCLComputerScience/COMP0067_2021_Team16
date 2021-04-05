@@ -6,16 +6,28 @@ import {
   IonToolbar,
   IonRow,
   IonCol,
-  IonCheckbox,
-  IonInput,
   IonButton,
 } from "@ionic/react";
-import React from "react";
+import React, { useEffect } from "react";
+import { useForm } from "react-hook-form";
 import "./SubscribePage.css";
 import BackButton from "../../components/BackButton/BackButton";
 import TitleBar from "../../components/TitleBar/TitleBar";
 
 const SubscribePage: React.FC = () => {
+  const { register, handleSubmit, setValue } = useForm();
+  const onSubmit = (data) => {
+    const url =
+      "https://0067team16app.azurewebsites.net/mailinglist/new/" + data["email_first_name"] + "/" + data["email_last_name"] + "/" + data["email_address"];
+    console.log(url);
+    // let response = await axios.get(url);
+  };
+
+  useEffect(() => {
+    register("email_first_name", { required: true });
+    register("email_last_name", { required: true });
+    register("email_address", { required: true });
+  }, []);
 
   return (
     <IonPage>
@@ -31,18 +43,30 @@ const SubscribePage: React.FC = () => {
           </IonToolbar>
         </IonHeader>
         <form
+          onSubmit={handleSubmit(onSubmit)}
           id="form"
-          method="POST"
-          action="https://0067team16app.azurewebsites.net/mailinglist/new"
         >
           Please enter your details below to hear more from Cosmic Baby Books.
           <div id="input">
             <IonLabel>First Name</IonLabel>
-            <IonInput name="email_first_name" required></IonInput>
+            <input
+              name="email_first_name"
+              onChange={(e) => setValue("email_first_name", e.target.value)}
+              required
+            ></input>
             <IonLabel>Last Name</IonLabel>
-            <IonInput name="email_last_name" required></IonInput>
+            <input
+              name="email_last_name"
+              onChange={(e) => setValue("email_last_name", e.target.value)}
+              required
+            ></input>
             <IonLabel>Email Address</IonLabel>
-            <IonInput type="email" name="email_address" required></IonInput>
+            <input
+              type="email"
+              name="email_address"
+              onChange={(e) => setValue("email_address", e.target.value)}
+              required
+            ></input>
           </div>
           <IonLabel>
             By submitting this form, I consent to receiving updates about future
