@@ -52,10 +52,9 @@ const CosmicBabyBooks: React.FC = () => {
 
           <IonText><h1>
             <a
-              href="https://www.amazon.co.uk/Iya-Whiteley/e/B01EX2F9N8
-              cosmicbabybooks.com"
+              href="https://www.amazon.co.uk/Iya-Whiteley/e/B01EX2F9N8"
               >
-              You can find it on Amazon!
+              You can find them on Amazon!
             </a>
             </h1>
           </IonText>

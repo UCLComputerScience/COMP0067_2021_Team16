@@ -53,7 +53,7 @@ const DrIyaWhiteley: React.FC = () => {
           </h4>
 
           <h1>
-              <a href=" https://cosmicbabybooks.com/books">
+              <a href="https://cosmicbabybooks.com/about">
               More information on Dr Whiteley
               </a>
           </h1>
