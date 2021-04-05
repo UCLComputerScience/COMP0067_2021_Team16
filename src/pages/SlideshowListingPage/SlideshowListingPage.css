@@ -1,9 +1,3 @@
-.title {
-    text-align: center;
-    align-items: center;
-    align-self: center;
-}
-
 .editbutton{
     display: flex;
     justify-content: space-evenly;

@@ -4,6 +4,12 @@ http://ionicframework.com/docs/theming/ */
 * {
   font-family: "Quicksand", sans-serif;
 }
+
+/** Title **/
+ion-title{
+  font-size: 25px;
+}
+
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
