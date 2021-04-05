@@ -38,27 +38,38 @@ const ScienceBehindImages: React.FC = () => {
           <h3>
             Images developed based on the current scientific findings on
                 newborns and babies’ visual perception and brain development:
-                
-                <ol>    
-                <li>
-                  Improve concentration through stimulating and captivating
-                  images
-                </li>
-                
-                <li>
-                    Stimulate further learning and discovery 
-                </li>
 
-                <li>
-                  Create and maintain new pathways in the brain through learning
+                <IonGrid>
+                  <IonRow>
+                      <IonCol>
+                      <img src={process.env.PUBLIC_URL + 'assets/images/concentration.png'} alt="Improve concentration" />
+                      <b>Improve concentration</b> through stimulating and captivating
+                      images
+                      </IonCol>
+
+                      <IonCol>
+                      <img src={process.env.PUBLIC_URL + 'assets/images/learning.png'} alt="Stimulate learning" />
+                      <b>Stimulate</b> further learning and discovery                       
+                      </IonCol>
+                  </IonRow>
+
+                  <IonRow>
+                  <IonCol>
+                      <img src={process.env.PUBLIC_URL + 'assets/images/pathways.png'} alt="Create new pathways" />
+                      <b>Create and maintain new pathways in the brain</b> through learning
                   to trace visual patterns
-                </li>
-                
-                <li>
-                  Acquire early life skills essential for successful learning
-                  and interaction. 
-                </li>
-                </ol>
+                      </IonCol>
+
+                      <IonCol>
+                      <img src={process.env.PUBLIC_URL + 'assets/images/skills.png'} alt="Acquire early life skills" />
+                      <b>Acquire early life skills</b> essential for successful learning
+                  and interaction.                     
+                      </IonCol>
+                  </IonRow>
+
+                </IonGrid>
+              
+                <br/>
                 
                 Children have more brain pathways than
                   adults. Brain pathways die way if they are not used. Further
@@ -68,12 +79,17 @@ const ScienceBehindImages: React.FC = () => {
                   specific stages of development during the first year. Look out
                   for apps for four developmental stages.   
                 </h3>           
-
+        
+                
                 <h1>
-                <a href=" https://cosmicbabybooks.com/books">
-                  Cosmic Baby Books
+                {/* <a href="https://cosmicbabybooks.com/books">
+                <img src={process.env.PUBLIC_URL + 'assets/images/cosmic_baby_books_logo.png'} alt="Cosmic Baby Books" />
+                </a> */}
+                <a href="https://cosmicbabybooks.com/books">
+                  <b>Learn more about Cosmic Baby Books!</b>
                 </a>
                 </h1>
+
             </IonContent>
 
         </IonPage>);
