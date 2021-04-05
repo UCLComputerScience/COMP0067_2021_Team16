@@ -28,22 +28,19 @@ module.exports = function (app) {
   });
 
   app.get("/slideshows/:id", function (req, res) {
-    console.log(req.params);
     let dbQuery = "SELECT cat.slideshow_name, i.image_name, i.image_url, i.image_audio_url FROM slideshow_category cat, images i WHERE i.image_id IN (SELECT image_id FROM slideshows WHERE slideshow_id = ?) AND cat.slideshow_id IN (SELECT slideshow_id FROM slideshows WHERE slideshow_id = ?)"
     connection.query(dbQuery, [req.params.id, req.params.id], function (err, result) {
       if (err) throw err;
       res.json(result);
-      console.log("Slideshow selected!");
+      // Slideshow selected.
     });
   })
 
   app.post("/slideshows/new", function (req, res) {
-    console.log("Slideshow Data:");
-    console.log(req.body);
     let dbQuery = "INSERT INTO slideshow_category (slideshow_type, slideshow_name) VALUES (?,?)";
     connection.query(dbQuery, ["default", req.body.name], function (err, result) {
       if (err) throw err;
-      console.log("Slideshow successfully saved in slideshow_category!");
+      // Slideshow successfully saved in slideshow_category.
     })
     let dbQuery2 = "SELECT slideshow_id FROM slideshow_category WHERE slideshow_name = ?";
     connection.query(dbQuery2, [req.body.name], function (err, result) {
@@ -54,23 +51,22 @@ module.exports = function (app) {
           if (err) throw err;
         })
       }
-      console.log("Slideshow successfully saved in slideshows!");
+      // Slideshow successfully saved in slideshows.
       res.redirect('/views/addslideshow.html');
     })
   });
 
   app.delete("/slideshows/delete/:id", function (req, res) {
-    console.log(req.params);
     let dbQuery = "DELETE FROM slideshow_category WHERE slideshow_id = ?";
     connection.query(dbQuery, [req.params.id], function (err, result) {
       if (err) throw err;
-      console.log("Slideshow deleted from slideshow_category!");
+      // Slideshow deleted from slideshow_category.
       res.end();
     });
     let dbQuery2 = "DELETE FROM slideshows WHERE slideshow_id = ?";
     connection.query(dbQuery2, [req.params.id], function (err, result) {
       if (err) throw err;
-      console.log("Slideshow deleted from slideshows!");
+      // Slideshow deleted from slideshows.
       res.end();
     });
   })
@@ -87,15 +83,11 @@ module.exports = function (app) {
   app.post("/images/new", function (req, res) {
     const blobName = req.files[0].originalname;
     async function main() {
-      console.log(blobName);
       const blockBlobClient = containerClient.getBlockBlobClient(blobName);
       const data = req.files[0].path;
-      console.log(data);
       const uploadBlobResponse = await blockBlobClient.uploadFile(req.files[0].path, { blobHTTPHeaders: { blobContentType: req.files[0].mimetype } });
     }
     main().then(() => waitForFinish()).catch((ex) => console.log(ex.message))
-    console.log("Image Data:");
-    console.log(req.body);
     let newImage = {
       image_name: req.body.name.trim().toUpperCase(),
       image_text: req.body.narration.trim().replace(/\.\s+([a-z])[^\.]|^(\s*[a-z])[^\.]/g, s => s.replace(/([a-z])/, s => s.toUpperCase())),
@@ -114,7 +106,7 @@ module.exports = function (app) {
         let chosen = result[0]["image_id"];
         let dbQuery3 = "INSERT INTO slideshows (slideshow_id, image_id) VALUES (1,?)";
         connection.query(dbQuery3, chosen, function (err, result) {
-          console.log("Image successfully saved!");
+          // Image successfully saved.
           res.redirect('/views/addimage.html');
         })
       });
@@ -123,17 +115,16 @@ module.exports = function (app) {
   );
 
   app.delete("/images/delete/:id", function (req, res) {
-    console.log(req.params);
     let dbQuery = "DELETE FROM images WHERE image_id = ?";
     connection.query(dbQuery, [req.params.id], function (err, result) {
       if (err) throw err;
-      console.log("Image deleted from images!");
+      // Image deleted from images.
       res.end();
     });
     let dbQuery2 = "DELETE FROM slideshows WHERE image_id = ?";
     connection.query(dbQuery2, [req.params.id], function (err, result) {
       if (err) throw err;
-      console.log("Image deleted from slideshows!");
+      // Image deleted from slideshows.
       res.end();
     });
   })
@@ -150,32 +141,28 @@ module.exports = function (app) {
   app.post("/audios/new", function (req, res) {
     const blobName = req.files[0].originalname;
     async function main() {
-      console.log(blobName);
       const blockBlobClient = containerClient.getBlockBlobClient(blobName);
       const data = req.files[0].path;
-      console.log(data);
       const uploadBlobResponse = await blockBlobClient.uploadFile(req.files[0].path, { blobHTTPHeaders: { blobContentType: req.files[0].mimetype } });
     }
     main().then(() => waitForFinish()).catch((ex) => console.log(ex.message))
-    console.log("Audio Data:");
-    console.log(req.body);
+
     async function waitForFinish() {
       let newAudio = "https://babyobjectstorage.blob.core.windows.net/babyblob/" + blobName.replace(" ", "%20");
       let dbQuery = "UPDATE images SET image_audio_file_name = ?, image_audio_url = ? WHERE image_id = ?;";
       connection.query(dbQuery, [req.files[0].originalname, newAudio, req.body.answer], function (err, result) {
         if (err) throw err;
-        console.log("Audio successfully saved!");
+        // Audio successfully saved.
         res.redirect('/views/addaudio.html');
       });
     }
   });
 
   app.put("/audios/delete/:id", function (req, res) {
-    console.log(req.params);
     let dbQuery = "UPDATE images SET image_audio_file_name = '', image_audio_url= '' WHERE image_id = ?";
     connection.query(dbQuery, [req.params.id], function (err, result) {
       if (err) throw err;
-      console.log("Audio deleted from images!");
+      // Audio deleted from images.
       res.end();
     });
   });
@@ -192,32 +179,28 @@ module.exports = function (app) {
   app.post("/music/new", function (req, res) {
     const blobName = req.files[0].originalname;
     async function main() {
-      console.log(blobName);
       const blockBlobClient = containerClient.getBlockBlobClient(blobName);
       const data = req.files[0].path;
-      console.log(data);
       const uploadBlobResponse = await blockBlobClient.uploadFile(req.files[0].path, { blobHTTPHeaders: { blobContentType: req.files[0].mimetype } });
     }
     main().then(() => waitForFinish()).catch((ex) => console.log(ex.message))
-    console.log("Music Data:");
-    console.log(req.body);
+    // "Music Data:");
     async function waitForFinish() {
       let newMusic = "https://babyobjectstorage.blob.core.windows.net/babyblob/" + blobName.replace(" ", "%20");
       let dbQuery = "INSERT INTO music (music_name,music_url) VALUES (?,?)";
       connection.query(dbQuery, [req.files[0].originalname, newMusic], function (err, result) {
         if (err) throw err;
-        console.log("Music successfully saved!");
+        // Music successfully saved.
         res.redirect('/views/addmusic.html');
       });
     };
   });
 
   app.delete("/music/delete/:id", function (req, res) {
-    console.log(req.params);
     let dbQuery = "DELETE FROM music WHERE music_id = ?";
     connection.query(dbQuery, [req.params.id], function (err, result) {
       if (err) throw err;
-      console.log("Music deleted!");
+      // Music deleted.
       res.end();
     });
   });
@@ -260,23 +243,23 @@ module.exports = function (app) {
   });
 
   app.post("/mailinglist/new", function (req, res) {
+    // SQL injection prevention
+    inj_email = req.body.email_address.replace(";", "").replace("--", "");
+    inj_first = req.body.email_first_name.replace(";", "").replace("--", "");
+    inj_last = req.body.email_last_name.replace(";", "").replace("--", "");
     let rightNow = new Date().toLocaleString();
-    console.log(rightNow)
-    console.log("Mailing List Data:");
-    console.log(req.body);
     let dbQuery = "INSERT INTO emails (email_address,email_first_name,email_last_name,email_date_registered, email_consent) VALUES (?,?,?,?,?)";
-    connection.query(dbQuery, [req.body.email_address, req.body.email_first_name, req.body.email_last_name, rightNow, "I consent to receiving updates about future products"], function (err, result) {
+    connection.query(dbQuery, [inj_email, inj_first, inj_last, rightNow, "I consent to receiving updates about future products"], function (err, result) {
       if (err) throw err;
-      console.log("Record successfully saved!");
+      // Record successfully saved.
     });
   });
 
   app.delete("/mailinglist/delete/:id", function (req, res) {
-    console.log(req.params);
     let dbQuery = "DELETE FROM emails WHERE email_id = ?";
     connection.query(dbQuery, [req.params.id], function (err, result) {
       if (err) throw err;
-      console.log("Email deleted from mailing list!");
+      // Email deleted from mailing list.
       res.end();
     });
   })
