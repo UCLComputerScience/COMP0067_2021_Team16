@@ -11,10 +11,12 @@ import {
   IonTitle,
   IonItem,
   IonLabel,
-  IonList
+  IonList,
+  IonIcon
 } from "@ionic/react";
 
 import BackButton from "../../components/BackButton/BackButton";
+import {informationCircle, images, book, person} from 'ionicons/icons';
 
 import "./SupportPage.css";
 
@@ -65,18 +67,22 @@ const SupportPage: React.FC = () => {
       <IonList lines="inset">
       <IonItem routerLink="/SupportPage/Tutorial">
         <IonLabel class="ion-text-center">Tutorial</IonLabel>
+        <IonIcon icon={informationCircle} color="primary" size="large" slot="start" />
       </IonItem>
 
       <IonItem routerLink="/SupportPage/ScienceBehindImages">
         <IonLabel class="ion-text-center">Science behind the images</IonLabel>
+        <IonIcon icon={images} color="primary" size="large" slot="start" />
       </IonItem>
 
       <IonItem routerLink="/SupportPage/CosmicBabyBooks">
         <IonLabel class="ion-text-center">Cosmic Baby Books</IonLabel>
+        <IonIcon icon={book} color="primary" size="large" slot="start" />
       </IonItem>
 
       <IonItem routerLink="/SupportPage/DrIyaWhiteley">
         <IonLabel class="ion-text-center">Dr Iya Whiteley</IonLabel>
+        <IonIcon icon={person} color="primary" size="large" slot="start" />
       </IonItem>
 
       </IonList>
