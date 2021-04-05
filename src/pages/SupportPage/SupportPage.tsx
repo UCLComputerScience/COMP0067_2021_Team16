@@ -64,24 +64,24 @@ const SupportPage: React.FC = () => {
         </div>
       </IonContent> */}
 
-      <IonList lines="inset">
-      <IonItem routerLink="/SupportPage/Tutorial">
-        <IonLabel class="ion-text-center">Tutorial</IonLabel>
+      <IonList lines="inset" >
+      <IonItem className="item" routerLink="/SupportPage/Tutorial">
+        <IonLabel class="ion-text-center"><h1><b>Tutorial</b></h1></IonLabel>
         <IonIcon icon={informationCircle} color="primary" size="large" slot="start" />
       </IonItem>
 
-      <IonItem routerLink="/SupportPage/ScienceBehindImages">
-        <IonLabel class="ion-text-center">Science behind the images</IonLabel>
+      <IonItem className="item" routerLink="/SupportPage/ScienceBehindImages">
+        <IonLabel class="ion-text-center"><h1><b>Science behind the images</b></h1></IonLabel>
         <IonIcon icon={images} color="primary" size="large" slot="start" />
       </IonItem>
 
-      <IonItem routerLink="/SupportPage/CosmicBabyBooks">
-        <IonLabel class="ion-text-center">Cosmic Baby Books</IonLabel>
+      <IonItem className="item" routerLink="/SupportPage/CosmicBabyBooks">
+        <IonLabel class="ion-text-center"><h1><b>Cosmic Baby Books</b></h1></IonLabel>
         <IonIcon icon={book} color="primary" size="large" slot="start" />
       </IonItem>
 
-      <IonItem routerLink="/SupportPage/DrIyaWhiteley">
-        <IonLabel class="ion-text-center">Dr Iya Whiteley</IonLabel>
+      <IonItem className="item" routerLink="/SupportPage/DrIyaWhiteley">
+        <IonLabel class="ion-text-center"><h1><b>Dr Iya Whiteley</b></h1> </IonLabel>
         <IonIcon icon={person} color="primary" size="large" slot="start" />
       </IonItem>
 
