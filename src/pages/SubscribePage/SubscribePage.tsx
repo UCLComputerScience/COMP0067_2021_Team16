@@ -8,6 +8,7 @@ import {
   IonCol,
   IonButton,
 } from "@ionic/react";
+import axios from "axios";
 import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import "./SubscribePage.css";
@@ -18,9 +19,16 @@ const SubscribePage: React.FC = () => {
   const { register, handleSubmit, setValue } = useForm();
   const onSubmit = (data) => {
     const url =
-      "https://0067team16app.azurewebsites.net/mailinglist/new/" + data["email_first_name"] + "/" + data["email_last_name"] + "/" + data["email_address"];
+      "https://0067team16app.azurewebsites.net/mailinglist/new/" +
+      data["email_first_name"] +
+      "/" +
+      data["email_last_name"] +
+      "/" +
+      data["email_address"];
     console.log(url);
-    // let response = await axios.get(url);
+    let response = axios
+      .post(url)
+      .then(console.log("HELP ME CHENKS AND GIUSEPPE!!!!!!"));
   };
 
   useEffect(() => {
@@ -42,10 +50,7 @@ const SubscribePage: React.FC = () => {
             </IonRow>
           </IonToolbar>
         </IonHeader>
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          id="form"
-        >
+        <form onSubmit={handleSubmit(onSubmit)} id="form">
           Please enter your details below to hear more from Cosmic Baby Books.
           <div id="input">
             <IonLabel>First Name</IonLabel>
