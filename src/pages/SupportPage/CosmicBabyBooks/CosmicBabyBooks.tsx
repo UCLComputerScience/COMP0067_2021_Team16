@@ -27,7 +27,7 @@ const CosmicBabyBooks: React.FC = () => {
                   <IonCol className="backbutton">
                     <IonBackButton/>
                   </IonCol>
-                  <IonCol className="title">
+                  <IonCol size="8" className="title">
                     <IonTitle>
                       Cosmic Baby Books
                     </IonTitle>
@@ -50,23 +50,31 @@ const CosmicBabyBooks: React.FC = () => {
                 100 years old. <br/> Grandparents love reading these books too!</h4>
           </IonText>
 
-          <IonText><h1>
-            <a
-              href="https://www.amazon.co.uk/Iya-Whiteley/e/B01EX2F9N8"
-              >
-              You can find them on Amazon!
-            </a>
-            </h1>
-          </IonText>
-              
-              <div className="img-container">
-                <img src="../../../../public/assets/icon/icon.png" alt="Icon"></img>
-              </div>
+          <IonGrid className="grid">
+            <IonRow>
 
+            <IonCol>
+            <a
+              href="https://www.amazon.co.uk/Iya-Whiteley/e/B01EX2F9N8">
+              <img src={process.env.PUBLIC_URL + 'assets/images/amazon.png'} alt="Buy it on Amazon!" />
+            </a>
+            </IonCol>
+
+            <IonCol>
+            <a
+              href="https://www.amazon.co.uk/Iya-Whiteley/e/B01EX2F9N8">
+              <img src={process.env.PUBLIC_URL + 'assets/images/amazon_best_seller.png'} alt="Amazon Best Seller" />
+            </a>
+            </IonCol>
+
+            </IonRow>
+          </IonGrid>
+
+          <IonContent className="video">
               <div className="video-container">
                 <iframe src="https://www.youtube.com/embed/ylrelG3QQ4s"></iframe>
               </div>
-        
+          </IonContent>
         </IonPage>);
 }
 
