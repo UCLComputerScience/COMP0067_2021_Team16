@@ -157,11 +157,19 @@ img.avatar {
   width: 100%;
 }
 
+#excel {
+  width: 200px;
+  position: absolute;
+  right: 0;
+  margin-right: 10px;
+}
+
 #email-area {
   text-align: center;
   position: relative;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 75px;
   margin-bottom: 50px;
 }
 

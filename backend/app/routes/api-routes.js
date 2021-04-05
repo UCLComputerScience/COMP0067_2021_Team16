@@ -251,6 +251,7 @@ module.exports = function (app) {
     let dbQuery = "INSERT INTO emails (email_address,email_first_name,email_last_name,email_date_registered, email_consent) VALUES (?,?,?,?,?)";
     connection.query(dbQuery, [inj_email, inj_first, inj_last, rightNow, "I consent to receiving updates about future products"], function (err, result) {
       if (err) throw err;
+      window.location.assign('/');
       // Record successfully saved.
     });
   });
