@@ -29,7 +29,7 @@ const SubscribePage: React.FC = () => {
                 </IonCol>
                 <IonCol size="8" className="title">
                   <IonTitle>
-                    Subscribe Page
+                    Subscribe
                   </IonTitle>
                 </IonCol>
                 <IonCol/>

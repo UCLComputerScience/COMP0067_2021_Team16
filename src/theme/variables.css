@@ -4,6 +4,12 @@ http://ionicframework.com/docs/theming/ */
 * {
   font-family: "Quicksand", sans-serif;
 }
+
+/** Title **/
+ion-title{
+  font-size: 25px;
+}
+
 /** Ionic CSS Variables **/
 :root {
   /** primary **/
@@ -79,7 +85,7 @@ http://ionicframework.com/docs/theming/ */
   --ion-color-light-tint: #f5f6f9;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   /*
    * Dark Colors
    * -------------------------------------------

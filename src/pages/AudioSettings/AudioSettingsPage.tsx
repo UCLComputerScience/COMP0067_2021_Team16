@@ -5,6 +5,8 @@ import {
   IonItem,
   IonToolbar,
   IonHeader,
+  IonTitle,
+  IonGrid,
   IonRow,
   IonCol,
 } from "@ionic/react";
@@ -18,27 +20,42 @@ const AudioSettingsPage: React.FC = () => {
   return (
     <IonPage>
       <IonContent fullscreen>
-        <IonHeader>
-          <IonToolbar>
-            <IonRow>
-              <BackButton />
-              <IonCol className="ion-align-items-center ion-justify-content-center">
-                <TitleBar name={"Audio Settings"} />
-              </IonCol>
-            </IonRow>
-          </IonToolbar>
-        </IonHeader>
-        <RadioButton/>
-        <IonRow className="ion-align-items-center ion-justify-content-center">
-        </IonRow>
+      <IonHeader>
+            <IonToolbar>
+              <IonGrid>
+                <IonRow>
+                  <IonCol className="backbutton">
+                    <BackButton/>
+                  </IonCol>
+                  <IonCol size="8" className="title">
+                    <IonTitle>
+                      Audio Settings
+                    </IonTitle>
+                  </IonCol>
+                  <IonCol/>
+                </IonRow>
+              </IonGrid>
+            </IonToolbar>
+      </IonHeader>
+      
+      <RadioButton/>
+      <IonRow className="ion-align-items-center ion-justify-content-center">
+      </IonRow>
       </IonContent>
-        <IonToolbar>
-          <IonRow>
-              <IonCol className='ion-align-items-center ion-justify-content-center'>
-                <TitleBar name={"Video Settings"} />
-              </IonCol>
-          </IonRow>
-        </IonToolbar>
+      <IonToolbar>
+              <IonGrid>
+                <IonRow>
+                  <IonCol>
+                  </IonCol>
+                  <IonCol size="8" className="title">
+                    <IonTitle>
+                      Video Settings
+                    </IonTitle>
+                  </IonCol>
+                  <IonCol/>
+                </IonRow>
+              </IonGrid>
+      </IonToolbar>
       <IonContent>
         <IonList>
           <IonItem>
