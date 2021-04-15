@@ -1,3 +1,11 @@
+$light: #ebf7fd;
+$medlight: #63848e;
+$meddark: #304b5f;
+$dark: #1d3344;
+$c: center;
+$r: relative;
+$a: auto;
+
 * {
   font-family: "Quicksand", sans-serif;
   font-size: 1vw;
@@ -8,11 +16,11 @@
 }
 
 h1, label {
-  color: #ebf7fd;
+  color: $light;
 }
 
 .navbar .current {
-  color: #ebf7fd;
+  color: $light;
   text-decoration-line: underline;
 }
 
@@ -25,29 +33,29 @@ h1, label {
 }
 
 .navbar {
-  color: #ebf7fd;
-  background-color: #1d3344;
+  color: $light;
+  background-color: $dark;
   padding: 10px 10px;
 }
 
 a {
-  color: #ebf7fd;
+  color: $light;
   padding: 10px 10px;
 }
 
 a:hover {
-  color: #63848e;
+  color: $medlight;
 }
 
 th {
-  border: 0.5px solid #63848e;
-  background-color: #63848e;
-  color: #ebf7fd;
+  border: 0.5px solid $medlight;
+  background-color: $medlight;
+  color: $light;
   padding: 10px 10px;
 }
 
 td {
-  border: 0.5px solid #63848e;
+  border: 0.5px solid $medlight;
   padding: 10px 10px;
   word-wrap: break-word;
 }
@@ -61,35 +69,35 @@ span {
 }
 
 #top-image-area {
-  background-color: #ebf7fd;
+  background-color: $light;
   padding: 20px 20px;
 }
 
 #image-area, #images-area2, #slideshow-area {
   width: 80%;
-  text-align: center;
-  position: relative;
+  text-align: $c;
+  position: $r;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #ebf7fd;
+  background-color: $light;
 }
 
 #full-music {
-  text-align: center;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  justify-content: center;
-  background-color: #ebf7fd;
+  text-align: $c;
+  position: $r;
+  margin-left: $a;
+  margin-right: $a;
+  justify-content: $c;
+  background-color: $light;
 }
 
 .jumbotron {
-  background-color: #63848e;
+  background-color: $medlight;
   padding: 50px 100px;
 }
 
-input[type=text] {
+input[type="text"] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -99,8 +107,8 @@ input[type=text] {
 }
 
 button {
-  background-color: #304b5f;
-  color: #ebf7fd;
+  background-color: $meddark;
+  color: $light;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
@@ -109,7 +117,7 @@ button {
 }
 
 .dark-label {
-  color: #1d3344;
+  color: $dark;
 }
 
 button:hover {
@@ -122,8 +130,8 @@ img.avatar {
 }
 
 #home-image {
-  text-align: center;
-  position: relative;
+  text-align: $c;
+  position: $r;
 }
 
 .container {
@@ -138,24 +146,22 @@ img.avatar {
 }
 
 #email-area {
-  text-align: center;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: $c;
+  position: $r;
+  margin-left: $a;
+  margin-right: $a;
   margin-top: 75px;
   margin-bottom: 50px;
 }
 
 .footer {
-  position: relative;
+  position: $r;
   height: 25px;
   margin-top: 50px;
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #1d3344;
-  color: #ebf7fd;
-  text-align: center;
+  background-color: $dark;
+  color: $light;
+  text-align: $c;
 }
-
-/*# sourceMappingURL=style.css.map */
