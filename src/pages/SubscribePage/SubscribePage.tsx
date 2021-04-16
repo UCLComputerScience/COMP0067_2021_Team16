@@ -62,7 +62,6 @@ const SubscribePage: React.FC = () => {
           <div>
             Please enter your details below to hear more from Cosmic Baby Books.
           </div>
-
           <div id="input">
             <br />
             <IonLabel>First Name</IonLabel>
@@ -92,14 +91,11 @@ const SubscribePage: React.FC = () => {
             </div>
             <br />
           </div>
-
-          <h3>
-            By submitting this form, I consent to receiving updates about future
-            products. As a proof of concept, UCL student developers of this
-            application are not liable for any data collected.
-            <br />
-            <br />
-          </h3>
+          By submitting this form, I consent to receiving updates about future
+          products. As a proof of concept, UCL student developers of this
+          application are not liable for any data collected.
+          <br />
+          <br />
           <div>
             <IonButton size="large" expand="block" type="submit">
               Submit
