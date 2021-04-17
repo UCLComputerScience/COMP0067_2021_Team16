@@ -2,9 +2,6 @@ import {
   IonContent,
   IonRow,
   IonPage,
-  IonTitle,
-  IonToolbar,
-  IonButton,
   IonFooter,
   useIonViewWillEnter,
   useIonViewDidLeave
@@ -15,11 +12,10 @@ import UnlockSlider from "../../components/Unlockslider/Unlockslider";
 import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { AndroidFullScreen } from '@ionic-native/android-full-screen';
 import { Insomnia } from '@ionic-native/insomnia';
-import { useState } from 'react';
 import axios from "axios";
 import { isPlatform } from '@ionic/react';
 
-let default_soundtrack_id:number = 1
+let default_soundtrack_id:number = 1;
 let selected_soundtrack_id:number = null;
 let playing_soundtrack: HTMLAudioElement;
 
@@ -90,7 +86,6 @@ function stop_soundtrack(){
 }
 
 const SlideshowPage: React.FC = () => {
-  const[soundtrackUrl,SetSoundtrackURL] = useState<string>(null);
   
   useIonViewWillEnter(()=>{
     ScreenOrientation.lock(ScreenOrientation.ORIENTATIONS.PORTRAIT);
