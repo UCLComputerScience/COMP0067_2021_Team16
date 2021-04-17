@@ -9,6 +9,7 @@
 
 /backend/tmp
 /backend/app/public/views/MailingList.xls
+/backend/app/public/css/style.css.map
 
 # testing
 /coverage

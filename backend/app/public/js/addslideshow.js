@@ -1,5 +1,3 @@
-const { PassThrough } = require("node:stream");
-
 $(document).ready(function () {
   $.get("/images/all", function (data) {
     if (data.length !== 0) {
