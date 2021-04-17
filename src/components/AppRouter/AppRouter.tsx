@@ -19,7 +19,7 @@ import DrIyaWhiteley from '../../pages/SupportPage/DrIyaWhiteley/DrIyaWhiteley';
 import ScienceBehindImages from '../../pages/SupportPage/ScienceBehindImages/ScienceBehindImages';
 
 //below are all the routes with their URLs (denoted by 'path') and the actual page component (child to each Route component)
-const App_Router: React.FC = () => {
+const AppRouter: React.FC = () => {
   return (
     <IonRouterOutlet>
       <Route exact path="/VideoSettings" component={VideoSettings} />
@@ -42,4 +42,4 @@ const App_Router: React.FC = () => {
 }
 
 
-export default App_Router;
+export default AppRouter;

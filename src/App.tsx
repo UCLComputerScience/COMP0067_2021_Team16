@@ -1,5 +1,5 @@
 import {IonApp, IonRouterOutlet} from '@ionic/react';
-import App_Router from './components/App_Router/App_Router';
+import AppRouter from './components/AppRouter/AppRouter';
 import { IonReactRouter } from '@ionic/react-router';
 
 
@@ -37,7 +37,7 @@ const App: React.FC = () => {
         <SettingsProvider>
           <SlideshowProvider>
             <IonReactRouter>
-              <IonRouterOutlet><App_Router/></IonRouterOutlet>
+              <IonRouterOutlet><AppRouter/></IonRouterOutlet>
             </IonReactRouter>
           </SlideshowProvider>
         </SettingsProvider>

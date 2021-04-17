@@ -11,14 +11,14 @@ import {
   IonCol,
 } from "@ionic/react";
 import BackButton from "../../components/BackButton/BackButton";
-import TitleBar from "../../components/TitleBar/TitleBar";
+import MusicList from "../../components/MusicList/MusicList";
 import RadioButton from "../../components/RadioButton/RadioButton";
 import {
   SlideDuration,
   AnimationSpeed,
 } from "../../components/SettingsCard/SettingsCard";
 import ToggleButton from "../../components/ShuffleToggle/ShuffleToggle";
-import "./AudioSettingsPage.css"
+import "./AudioSettingsPage.css";
 
 const AudioSettingsPage: React.FC = () => {
   return (
@@ -39,22 +39,33 @@ const AudioSettingsPage: React.FC = () => {
             </IonGrid>
           </IonToolbar>
         </IonHeader>
-
         <RadioButton />
-        <IonRow className="ion-align-items-center ion-justify-content-center"></IonRow>
-        {/* </IonContent> */}
-        <IonToolbar>
-          <IonGrid>
-            <IonRow>
-              <IonCol></IonCol>
-              <IonCol size="8" className="title">
-                <IonTitle>Video Settings</IonTitle>
-              </IonCol>
-              <IonCol />
-            </IonRow>
-          </IonGrid>
-        </IonToolbar>
-        {/* <IonContent> */}
+        <IonHeader>
+          <IonToolbar>
+            <IonGrid>
+              <IonRow>
+                <IonCol>
+                  <IonTitle>
+                    <h4>Select Default Music</h4>
+                  </IonTitle>
+                </IonCol>
+              </IonRow>
+            </IonGrid>
+          </IonToolbar>
+        </IonHeader>
+        <MusicList />
+        <IonHeader>
+          <IonToolbar>
+            <IonGrid>
+              <IonRow>
+                <IonCol size="8" className="title">
+                  <IonTitle>Video Settings</IonTitle>
+                </IonCol>
+                <IonCol />
+              </IonRow>
+            </IonGrid>
+          </IonToolbar>
+        </IonHeader>
         <IonList>
           <IonItem>
             <SlideDuration />
