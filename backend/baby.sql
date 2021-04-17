@@ -118,8 +118,13 @@ INSERT INTO slideshows (slideshow_id,image_id) VALUES (5,12);
 INSERT INTO slideshows (slideshow_id,image_id) VALUES (5,11);
 INSERT INTO slideshows (slideshow_id,image_id) VALUES (5,10);
 
+INSERT INTO music (music_name,music_url) VALUES ("waves.mp3","https://babyobjectstorage.blob.core.windows.net/babyblob/waves.mp3");
 
-INSERT INTO music (music_name,music_url) VALUES ("background_sounds.mp3","https://babyobjectstorage.blob.core.windows.net/babyblob/background_sounds.mp3");
+INSERT INTO music (music_name,music_url) VALUES ("seagull.mp3","https://babyobjectstorage.blob.core.windows.net/babyblob/seagull.mp3");
+
+INSERT INTO music (music_name,music_url) VALUES ("stream.mp3","https://babyobjectstorage.blob.core.windows.net/babyblob/stream.mp3");
+
+-- INSERT INTO music (music_name,music_url) VALUES ("background_sounds.mp3","https://babyobjectstorage.blob.core.windows.net/babyblob/background_sounds.mp3");
 
 -- INSERT INTO music (music_name,music_url) VALUES ("Ambience, Lighthouse, Iceland, 19232, 01.wav","https://babyobjectstorage.blob.core.windows.net/babyblob/Ambience, Lighthouse, Ocean, Coast, Birds, Seagulls, Arctic Terns, Calm Wind, Iceland, 19232, 01.wav");
 
