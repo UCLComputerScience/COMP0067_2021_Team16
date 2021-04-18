@@ -46,7 +46,7 @@ const AudioSettingsPage: React.FC = () => {
               <IonRow>
                 <IonCol>
                   <IonTitle>
-                    <h4>Select Default Music</h4>
+                    <h4>Select Background Music</h4>
                   </IonTitle>
                 </IonCol>
               </IonRow>
