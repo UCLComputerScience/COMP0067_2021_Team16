@@ -1,6 +1,6 @@
 import { IonButton, IonGrid, IonRow, IonCol, IonIcon } from "@ionic/react";
 import "./Nav_Bar.css";
-import { mail, musicalNotes, images, informationCircle } from "ionicons/icons";
+import { mail, informationCircle } from "ionicons/icons";
 
 const Nav_Bar_New: React.FC = () => (
   <IonGrid className="ion-grid">

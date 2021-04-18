@@ -1,5 +1,4 @@
 import {IonButton, IonIcon} from "@ionic/react";
-import "./EditButton.css";
 import {create, arrowBack} from 'ionicons/icons';
 import React, { useState } from 'react';
 

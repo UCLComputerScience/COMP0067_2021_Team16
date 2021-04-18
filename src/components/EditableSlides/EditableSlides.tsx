@@ -1,6 +1,5 @@
 import {IonIcon, IonCheckbox} from '@ionic/react';
 import {musicalNotes} from 'ionicons/icons';
-import {useEffect} from 'react';
 
 interface ContainerProps {
     slide: object;

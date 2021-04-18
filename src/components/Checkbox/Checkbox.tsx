@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonCheckbox, IonList, IonItem, IonLabel, IonItemDivider } from '@ionic/react';
+import { IonCheckbox, IonList, IonItem, IonLabel } from '@ionic/react';
 
 const checkboxList = [
   { val: 'All Images', isChecked: true },

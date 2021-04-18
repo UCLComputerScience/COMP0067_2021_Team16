@@ -8,7 +8,6 @@ import {
   IonCol,
   IonGrid,
   IonTitle,
-  IonInput,
   IonButton,
 } from "@ionic/react";
 import axios from "axios";

@@ -1,5 +1,5 @@
 import React from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonSegment, IonSegmentButton, IonLabel, IonIcon } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonSegment, IonSegmentButton, IonIcon } from '@ionic/react';
 import {checkmarkCircle, mic, trash} from 'ionicons/icons';
 
 export const AudioTab: React.FC = () => {

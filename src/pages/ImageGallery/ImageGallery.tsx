@@ -73,7 +73,7 @@ const EditSlidesPage: React.FC = () => {
       <IonHeader>
         <IonToolbar>
           <IonGrid>
-          <IonRow>
+            <IonRow>
               <BackButton />
               <IonCol className="ion-align-items-center ion-justify-content-center">
                 <TitleBar name={"Image Gallery"} />
@@ -100,13 +100,6 @@ const EditSlidesPage: React.FC = () => {
       <IonFooter className="bar-footer">
         <AddBar />
       </IonFooter>
-      {/* <form method="post">
-        <IonItem>
-          <IonLabel>Image</IonLabel>
-          <IonInput id="image" />
-        </IonItem>
-        <IonButton type="submit">Submit</IonButton>
-      </form> */}
     </IonPage>
   );
 };

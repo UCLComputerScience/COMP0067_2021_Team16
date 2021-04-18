@@ -1,11 +1,9 @@
-import './Slideshow_Items.css';
 import '@ionic/react'
 import { IonList, IonReorderGroup } from '@ionic/react';
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import { ItemReorderEventDetail } from '@ionic/core';
 import Slideshow_Item from '../Slideshow_Item/Slideshow_Item';
-import {get_slideshows} from '../../contexts/Database_Context';
 import Slideshow_Class from '../../classes/Slideshow_Class';
 
 //sendGetRequest();

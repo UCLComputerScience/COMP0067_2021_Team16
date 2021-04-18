@@ -4,19 +4,19 @@ import {
   IonPage,
   IonFooter,
   useIonViewWillEnter,
-  useIonViewDidLeave
+  useIonViewDidLeave,
 } from "@ionic/react";
 import Slideshow from "../../components/Slideshow/Slideshow";
 import "./SlideshowPage.css";
 import UnlockSlider from "../../components/Unlockslider/Unlockslider";
-import { ScreenOrientation } from '@ionic-native/screen-orientation';
-import { AndroidFullScreen } from '@ionic-native/android-full-screen';
-import { Insomnia } from '@ionic-native/insomnia';
+import { ScreenOrientation } from "@ionic-native/screen-orientation";
+import { AndroidFullScreen } from "@ionic-native/android-full-screen";
+import { Insomnia } from "@ionic-native/insomnia";
 import axios from "axios";
-import { isPlatform } from '@ionic/react';
+import { isPlatform } from "@ionic/react";
 
-let default_soundtrack_id:number = 1;
-let selected_soundtrack_id:number = null;
+let default_soundtrack_id: number = 1;
+let selected_soundtrack_id: number = null;
 let playing_soundtrack: HTMLAudioElement;
 
 async function get_music() {
@@ -30,42 +30,40 @@ async function get_music() {
   }
 }
 
-function get_soundtrack_url(soundtracks){
-  function check_and_loop(id:number){
+function get_soundtrack_url(soundtracks) {
+  function check_and_loop(id: number) {
     for (var i = 0; i < soundtracks.length; i++) {
-      if (soundtracks[i].music_id == id){
+      if (soundtracks[i].music_id == id) {
         return soundtracks[i].music_url;
       }
     }
   }
-  
-  if (selected_soundtrack_id){
-    return check_and_loop(selected_soundtrack_id);  
-  }
-  else{
+
+  if (selected_soundtrack_id) {
+    return check_and_loop(selected_soundtrack_id);
+  } else {
     return check_and_loop(default_soundtrack_id);
   }
 }
 
-async function toggle_full_screen(value:boolean){
-  if(isPlatform("android")){
-    const supported = await AndroidFullScreen.isSupported() == true;
-    const IMsupported = await AndroidFullScreen.isImmersiveModeSupported() == true;
-    if(supported && IMsupported){
-      if (value){
+async function toggle_full_screen(value: boolean) {
+  if (isPlatform("android")) {
+    const supported = (await AndroidFullScreen.isSupported()) == true;
+    const IMsupported =
+      (await AndroidFullScreen.isImmersiveModeSupported()) == true;
+    if (supported && IMsupported) {
+      if (value) {
         AndroidFullScreen.immersiveMode();
-      }
-      else{
+      } else {
         AndroidFullScreen.showSystemUI();
       }
     }
   }
 }
 
-
-async function start_soundtrack(){
+async function start_soundtrack() {
   //just in case the soundtrack is curently already playing, stop it.
-  stop_soundtrack(); 
+  stop_soundtrack();
   //get the audio option from settings
   const audio_setting = localStorage.getItem("audio_option");
   //only play background music if the right settings in place
@@ -79,27 +77,26 @@ async function start_soundtrack(){
   }
 }
 
-function stop_soundtrack(){
+function stop_soundtrack() {
   if (playing_soundtrack) {
     playing_soundtrack.pause();
   }
 }
 
 const SlideshowPage: React.FC = () => {
-  
-  useIonViewWillEnter(()=>{
+  useIonViewWillEnter(() => {
     ScreenOrientation.lock(ScreenOrientation.ORIENTATIONS.PORTRAIT);
     Insomnia.keepAwake();
     start_soundtrack();
     toggle_full_screen(true);
   });
-  useIonViewDidLeave(()=>{
+  useIonViewDidLeave(() => {
     ScreenOrientation.unlock();
     Insomnia.allowSleepAgain();
     stop_soundtrack();
     toggle_full_screen(false);
   });
-  
+
   return (
     <IonPage>
       <IonContent fullscreen>
@@ -107,7 +104,7 @@ const SlideshowPage: React.FC = () => {
       </IonContent>
       <IonFooter className="footer">
         <IonRow className="ion-align-items-center ion-justify-content-center">
-          <UnlockSlider/>
+          <UnlockSlider />
         </IonRow>
       </IonFooter>
     </IonPage>

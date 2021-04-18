@@ -17,10 +17,7 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import TitleBar from "../TitleBar/TitleBar";
 import Copyright from "../Copyright/Copyright";
-import {
-  Default_Slideshow_Context,
-} from "../../contexts/Slideshow_Context";
-
+import { Default_Slideshow_Context } from "../../contexts/Slideshow_Context";
 
 //default slide options
 const slideOpts = {
@@ -67,16 +64,14 @@ function speed_settings(e) {
 }
 
 //need this function because the ionic component does not return a straightforward number for the index
-async function calculate_index(slides){
+async function calculate_index(slides) {
   const Slideshow = document.getElementById("Slideshow_main");
   let index = (await Slideshow.getActiveIndex()) - 1;
-  if(index>=slides.length){
-    index = index%slides.length
-  }
-  else if (index < 0){
-    index = slides.length + (index%slides.length);
-  }
-  else{
+  if (index >= slides.length) {
+    index = index % slides.length;
+  } else if (index < 0) {
+    index = slides.length + (index % slides.length);
+  } else {
     index = index;
   }
   return index;
@@ -84,13 +79,11 @@ async function calculate_index(slides){
 
 //load in sound recording of current slide
 async function load_recording(items) {
-
   //get the audio option from settings
   const audio_setting = localStorage.getItem("audio_option");
 
   //only play recording if the right settings in place
   if (["Recording only", "Music and Recordings"].includes(audio_setting)) {
-   
     //pause any currently playing recording
     if (current_recording) {
       current_recording.pause();
@@ -128,7 +121,7 @@ function shuffle(random_slides) {
 }
 
 //loads in a selected slideshow, or a default slideshow if none is selected.
-async function load_default_slides(default_slideshow,setItems) {
+async function load_default_slides(default_slideshow, setItems) {
   let slideshow_id: string;
   let selected_slideshow = JSON.parse(
     localStorage.getItem("selected_slideshow")
@@ -143,7 +136,7 @@ async function load_default_slides(default_slideshow,setItems) {
   }
   let slides = await get_online_slides(slideshow_id.toString());
 
-  if(localStorage.getItem("shuffle") == "true"){
+  if (localStorage.getItem("shuffle") == "true") {
     slides = shuffle(slides);
   }
 
@@ -160,7 +153,7 @@ const Slideshow: React.FC = () => {
     slideOpts.autoplay.delay = parseFloat(
       localStorage.getItem("slide_duration")
     );
-    load_default_slides(default_slideshow,setItems);
+    load_default_slides(default_slideshow, setItems);
     if (current_recording) {
       current_recording.pause();
     }

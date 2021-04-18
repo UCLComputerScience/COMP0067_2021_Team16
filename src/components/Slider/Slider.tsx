@@ -1,7 +1,6 @@
 import { IonRange, IonIcon } from "@ionic/react";
 import React, { useState } from "react";
 import { sunny } from "ionicons/icons";
-import "./Slider.css";
 
 const Slider: React.FC = () => {
   const rangestart = 0;
