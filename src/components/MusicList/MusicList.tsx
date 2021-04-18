@@ -7,7 +7,7 @@ import {
   useIonViewWillEnter,
 } from "@ionic/react";
 import axios from "axios";
-// import {Settings_Context} from "../../contexts/Settings_Context";
+import {Settings_Context} from "../../contexts/Settings_Context";
 
 async function get_music() {
   try {
@@ -26,20 +26,18 @@ async function load_music(setItems) {
 }
 
 const MusicList: React.FC = () => {
+  
   const [items, setItems] = useState([]);
+
+  const Settings = Settings_Context();
+  
   useIonViewWillEnter(() => {
     setItems([]);
     load_music(setItems);
   });
 
-  // const Settings = Settings_Context();
-
   return (
-    <IonRadioGroup
-    value=""
-    // value={localStorage.getItem("audio_option")}
-    // onIonChange={(e) => Settings.set_audio_option(e.detail.value)}
-    >
+    <IonRadioGroup value={localStorage.getItem("background_soundtrack")} onIonChange={(e) => Settings.set_background_soundtrack(e.detail.value)}>
       {items.map((item, i) => (
         <IonItem>
           <IonLabel>
@@ -47,10 +45,7 @@ const MusicList: React.FC = () => {
               .replace(".mp3", "")
               .replace(/\b\w/g, (c) => c.toUpperCase())} Music`}
           </IonLabel>
-          <IonRadio 
-          slot="start" 
-          // value={Settings.audio_option_choices[0]} 
-          />
+          <IonRadio slot="start" value={item.music_id.toString()}/>
         </IonItem>
       ))}
     </IonRadioGroup>
