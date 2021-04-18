@@ -11,7 +11,7 @@ export function Access_Database(){
 async function is_database_empty(db:SQLiteObject){
     try{
         let data = await db.executeSql(`SELECT name FROM sqlite_master WHERE type='table' AND name='Slideshow'`,[]);
-        if (data.rows.item(0).length == 0){
+        if (data.rows.item(0).length === 0){
             return true;
         }
         else{

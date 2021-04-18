@@ -74,7 +74,7 @@ const CosmicBabyBooks: React.FC = () => {
 
       <IonContent className="video">
         <div className="video-container">
-          <iframe src="https://www.youtube.com/embed/ylrelG3QQ4s"></iframe>
+          <iframe title="YouTube" src="https://www.youtube.com/embed/ylrelG3QQ4s"></iframe>
         </div>
       </IonContent>
     </IonPage>

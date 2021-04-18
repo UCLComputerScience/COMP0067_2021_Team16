@@ -33,7 +33,7 @@ async function get_music() {
 function get_soundtrack_url(soundtracks) {
   function check_and_loop(id: number) {
     for (var i = 0; i < soundtracks.length; i++) {
-      if (soundtracks[i].music_id == id) {
+      if (soundtracks[i].music_id === id) {
         return soundtracks[i].music_url;
       }
     }
@@ -48,9 +48,9 @@ function get_soundtrack_url(soundtracks) {
 
 async function toggle_full_screen(value: boolean) {
   if (isPlatform("android")) {
-    const supported = (await AndroidFullScreen.isSupported()) == true;
+    const supported = (await AndroidFullScreen.isSupported()) === true;
     const IMsupported =
-      (await AndroidFullScreen.isImmersiveModeSupported()) == true;
+      (await AndroidFullScreen.isImmersiveModeSupported()) === true;
     if (supported && IMsupported) {
       if (value) {
         AndroidFullScreen.immersiveMode();

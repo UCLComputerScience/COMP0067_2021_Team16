@@ -19,7 +19,7 @@ import AddNewSlideshow from "../../components/AddNewSlideshow/AddNewSlideshow";
 import { settings } from "ionicons/icons";
 
 const SelectionPage: React.FC = () => {
-  const [editMode, setEditMode] = useState(false);
+  const [editMode] = useState(false);
 
   return (
     <IonPage>

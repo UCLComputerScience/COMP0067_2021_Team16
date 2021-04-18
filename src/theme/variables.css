@@ -165,7 +165,7 @@ ion-title {
    */
 
   .ios body {
-    --ion-background-color: #000000;
+    /* --ion-background-color: #000000;
     --ion-background-color-rgb: 0, 0, 0;
 
     --ion-text-color: #ffffff;
@@ -195,7 +195,7 @@ ion-title {
 
     --ion-item-background: #000000;
 
-    --ion-card-background: #1c1c1d;
+    --ion-card-background: #1c1c1d; */
   }
 
   .ios ion-modal {

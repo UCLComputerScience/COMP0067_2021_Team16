@@ -14,7 +14,7 @@ import {
   IonCardContent,
 } from "@ionic/react";
 import axios from "axios";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import TitleBar from "../TitleBar/TitleBar";
 import Copyright from "../Copyright/Copyright";
 import { Default_Slideshow_Context } from "../../contexts/Slideshow_Context";
@@ -40,7 +40,6 @@ async function get_online_slides(id: string) {
     const base_url = "https://0067team16app.azurewebsites.net/slideshows/";
     const url = base_url + id;
     let response = await axios.get(url);
-    console.log(response);
     return response.data;
   } catch (e) {
     console.log("Error getting slides: ", e);
@@ -50,7 +49,7 @@ async function get_online_slides(id: string) {
 
 //change animation on image load
 function speed_settings(e) {
-  if (localStorage.getItem("animation_speed") == "0") {
+  if (localStorage.getItem("animation_speed") === "0") {
     e.currentTarget.style.animation = "none";
   } else {
     e.currentTarget.style.animation =
@@ -58,7 +57,7 @@ function speed_settings(e) {
       160000 / parseFloat(localStorage.getItem("animation_speed")) +
       "s linear infinite";
   }
-  if (e.currentTarget.src.slice(-4) == ".gif") {
+  if (e.currentTarget.src.slice(-4) === ".gif") {
     e.currentTarget.style.animation = "none";
   }
 }
@@ -91,7 +90,7 @@ async function load_recording(items) {
     //Find the current index
     let index = await calculate_index(items);
 
-    if (index == items.length) {
+    if (index === items.length) {
       index = 0;
     }
     const recording = items[index].image_audio_url;
@@ -136,7 +135,7 @@ async function load_default_slides(default_slideshow, setItems) {
   }
   let slides = await get_online_slides(slideshow_id.toString());
 
-  if (localStorage.getItem("shuffle") == "true") {
+  if (localStorage.getItem("shuffle") === "true") {
     slides = shuffle(slides);
   }
 

@@ -9,7 +9,7 @@ const ToggleButton: React.FC = () => {
   return (
         <IonItem>
             <IonLabel>Shuffle</IonLabel>  
-            <IonToggle checked={localStorage.getItem("shuffle")=="true"} onIonChange={e=>Settings.set_shuffle(e.detail.checked)}></IonToggle>  
+            <IonToggle checked={localStorage.getItem("shuffle")==="true"} onIonChange={e=>Settings.set_shuffle(e.detail.checked)}></IonToggle>  
         </IonItem>
   );
 }; 

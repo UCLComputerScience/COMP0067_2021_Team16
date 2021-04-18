@@ -6,12 +6,7 @@ import {
   IonHeader,
   IonPage,
   IonRow,
-  IonTitle,
   IonToolbar,
-  IonInput,
-  IonLabel,
-  IonItem,
-  IonButton,
 } from "@ionic/react";
 import "./ImageGallery.css";
 import TitleBar from "../../components/TitleBar/TitleBar";

@@ -37,7 +37,7 @@ const UnlockSlider: React.FC = () => {
     sliderbutton = document.getElementById('sliderbutton');
     slidertrack = document.getElementById('slidertrack');
     demo = document.getElementById('demo');
-    if(event.type == "mousedown"){
+    if(event.type === "mousedown"){
       SetX(event.pageX || (event.clientX + document.body.scrollLeft - document.body.clientLeft));
     }
     else{
@@ -63,7 +63,7 @@ const UnlockSlider: React.FC = () => {
   function move_handler(event){
     if(dragging){
       let mousex = null;
-      if(event.type == "mousemove"){
+      if(event.type === "mousemove"){
         mousex = event.pageX || (event.clientX + document.body.scrollLeft - document.body.clientLeft);
       }
       else{

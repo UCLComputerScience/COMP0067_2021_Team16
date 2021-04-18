@@ -23,7 +23,6 @@ async function get_music() {
 async function load_music(setItems) {
   let music = await get_music();
   setItems(music);
-  console.log(music);
 }
 
 const MusicList: React.FC = () => {
@@ -37,6 +36,7 @@ const MusicList: React.FC = () => {
 
   return (
     <IonRadioGroup
+    value=""
     // value={localStorage.getItem("audio_option")}
     // onIonChange={(e) => Settings.set_audio_option(e.detail.value)}
     >

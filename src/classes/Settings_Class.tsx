@@ -38,7 +38,7 @@ let Settings_Class = class{
         }
         
         if(localStorage.getItem("shuffle")){
-            this.shuffle = (localStorage.getItem("shuffle") == "true");
+            this.shuffle = (localStorage.getItem("shuffle") === "true");
         }
         else{
             this.set_shuffle(this.default_shuffle);
