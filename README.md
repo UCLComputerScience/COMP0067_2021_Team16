@@ -97,6 +97,6 @@ If you would like to install the mobile application directly onto your device, p
 
 **Developers** 
 
-Caroline Crandell - cecrandell - caroline.crandell.20@ucl.ac.uk 
-Giuseppe Baldini - GiuseppeBaldini - giuseppe.baldini.20@ucl.ac.uk 
-Chenuka Ratwatte - ucabcnd - chenuka.ratwatte.20@ucl.ac.uk 
+* Caroline Crandell - cecrandell - caroline.crandell.20@ucl.ac.uk 
+* Giuseppe Baldini - GiuseppeBaldini - giuseppe.baldini.20@ucl.ac.uk 
+* Chenuka Ratwatte - ucabcnd - chenuka.ratwatte.20@ucl.ac.uk 
