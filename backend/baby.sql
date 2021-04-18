@@ -39,11 +39,11 @@ CREATE TABLE `music` (
 `music_url` VARCHAR(255) NOT NULL
 );
 
-INSERT INTO emails (email_address,email_first_name,email_last_name,email_consent) VALUES ("caroline.crandell.20@ucl.ac.uk","Caroline","Crandell","I consent to receiving updates about future products");
+INSERT INTO emails (email_address,email_first_name,email_last_name,email_date_registered,email_consent) VALUES ("caroline.crandell.20@ucl.ac.uk","Caroline","Crandell","1/11/2021, 11:00:00 AM","I consent to receiving updates about future products");
 
-INSERT INTO emails (email_address,email_first_name,email_last_name,email_consent) VALUES ("giuseppe.baldini.20@ucl.ac.uk","Giuseppe","Baldini","I consent to receiving updates about future products");
+INSERT INTO emails (email_address,email_first_name,email_last_name,email_date_registered,email_consent) VALUES ("giuseppe.baldini.20@ucl.ac.uk","Giuseppe","Baldini","1/11/2021, 11:00:00 AM","I consent to receiving updates about future products");
 
-INSERT INTO emails (email_address,email_first_name,email_last_name,email_consent) VALUES ("chenuka.ratwatte.20@ucl.ac.uk","Chenuka","Ratwatte","I consent to receiving updates about future products");
+INSERT INTO emails (email_address,email_first_name,email_last_name,email_date_registered,email_consent) VALUES ("chenuka.ratwatte.20@ucl.ac.uk","Chenuka","Ratwatte","1/11/2021, 11:00:00 AM","I consent to receiving updates about future products");
 
 INSERT INTO slideshow_category (slideshow_type,slideshow_name) VALUES ("default","All Images");
 
