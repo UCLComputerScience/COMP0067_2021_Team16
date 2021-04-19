@@ -39,7 +39,7 @@ const MusicList: React.FC = () => {
   return (
     <IonRadioGroup value={localStorage.getItem("background_soundtrack")} onIonChange={(e) => Settings.set_background_soundtrack(e.detail.value)}>
       {items.map((item, i) => (
-        <IonItem>
+        <IonItem key={i}>
           <IonLabel>
             {`${item.music_name
               .replace(".mp3", "")

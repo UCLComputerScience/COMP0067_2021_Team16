@@ -1,3 +1,7 @@
+// The code written below is unused in the current version of the application. It has been left in the repository because it is intended for future features.
+
+// This component is intended to change the name of user-created slideshows.
+
 import './User_Input_Slideshow.css';
 import '@ionic/react'
 import { IonItem, IonLabel, IonInput } from '@ionic/react';

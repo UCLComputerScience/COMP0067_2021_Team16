@@ -1,3 +1,7 @@
+// The code written below is unused in the current version of the application. It has been left in the repository because it is intended for future features.
+
+// This is for locally storing recordings, user-uploaded images, and user-created slideshows.
+
 import React,{useContext} from 'react';
 import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
 import Slideshow_Class from '../classes/Slideshow_Class';

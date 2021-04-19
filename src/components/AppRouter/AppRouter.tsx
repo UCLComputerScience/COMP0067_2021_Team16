@@ -6,12 +6,11 @@ import {IonRouterOutlet} from '@ionic/react';
 import AudioGallery from '../../pages/AudioGallery/AudioGallery';
 import SlideshowPage from '../../pages/SlideshowPage/SlideshowPage';
 import SlideshowListingPage from '../../pages/SlideshowListingPage/SlideshowListingPage';
-import EditSlidesPage from '../../pages/EditSlidesPage/EditSlidesPage';
+// import EditSlidesPage from '../../pages/EditSlidesPage/EditSlidesPage';
 import SupportPage from '../../pages/SupportPage/SupportPage';
 import AudioSettings from '../../pages/AudioSettings/AudioSettingsPage';
 import SubscribePage from '../../pages/SubscribePage/SubscribePage';
-import VideoSettings from '../../pages/VideoSettings/VideoSettings';
-import ImageGallery from '../../pages/ImageGallery/ImageGallery';
+// import ImageGallery from '../../pages/ImageGallery/ImageGallery';
 import RecordAudio from '../../pages/RecordAudio/RecordAudio';
 import Tutorial from '../../pages/SupportPage/Tutorial/Tutorial';
 import CosmicBabyBooks from '../../pages/SupportPage/CosmicBabyBooks/CosmicBabyBooks';
@@ -22,14 +21,13 @@ import ScienceBehindImages from '../../pages/SupportPage/ScienceBehindImages/Sci
 const AppRouter: React.FC = () => {
   return (
     <IonRouterOutlet>
-      <Route exact path="/VideoSettings" component={VideoSettings} />
       <Route exact path="/AudioGallery" component={AudioGallery} />
       <Route exact path="/SubscribePage" component={SubscribePage} />
       <Route exact path="/AudioSettings" component={AudioSettings} />
       <Route exact path="/SupportPage" component={SupportPage} />
-      <Route exact path="/EditSlidesPage" component={EditSlidesPage} />
+      {/* <Route exact path="/EditSlidesPage" component={EditSlidesPage} /> */}
       <Route exact path="/SelectionPage" component={SlideshowListingPage} />
-      <Route exact path="/ImageGallery" component={ImageGallery} />
+      {/* <Route exact path="/ImageGallery" component={ImageGallery} /> */}
       <Route exact path="/RecordAudio" component={RecordAudio} />
       <Route exact path="/slideshowpage" component={SlideshowPage} />
       <Route exact path="/SupportPage/Tutorial" component={Tutorial} />

@@ -1,3 +1,7 @@
+// The code written below is unused in the current version of the application. It has been left in the repository because it is intended for future features.
+
+// This component is to be used in the recording audio page.
+
 import React from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonSegment, IonSegmentButton, IonIcon } from '@ionic/react';
 import {checkmarkCircle, mic, trash} from 'ionicons/icons';

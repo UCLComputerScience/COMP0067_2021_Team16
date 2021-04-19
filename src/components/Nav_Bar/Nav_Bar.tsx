@@ -15,6 +15,8 @@ const Nav_Bar_New: React.FC = () => (
         </IonButton>
       </IonCol>
       {
+        // The code written below is unused in the current version of the application. It has been left in the repository because it is intended for future features.
+        // These columns include menu options for the media galleries.
         // <IonCol className="ion-column"><IonButton fill="clear" routerLink="/AudioGallery"><IonIcon icon={musicalNotes} size="large" /></IonButton></IonCol>
         // <IonCol className="ion-column"><IonButton fill="clear" routerLink='/ImageGallery'><IonIcon icon={images} size="large" /></IonButton></IonCol>
       }

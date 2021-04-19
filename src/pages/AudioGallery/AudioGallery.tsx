@@ -1,3 +1,7 @@
+// The code written below is unused in the current version of the application. It has been left in the repository because it is intended for future features.
+
+// This audio gallery is intended to store audio files recorded by the user.
+
 import { IonContent, IonHeader, IonItem, IonList, IonPage, IonRow, IonCol, IonToolbar } from '@ionic/react';
 import BackButton from '../../components/BackButton/BackButton';
 import TitleBar from "../../components/TitleBar/TitleBar";

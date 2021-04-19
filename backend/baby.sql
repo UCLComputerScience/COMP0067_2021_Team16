@@ -123,15 +123,3 @@ INSERT INTO music (music_name,music_url) VALUES ("waves.mp3","https://babyobject
 INSERT INTO music (music_name,music_url) VALUES ("seagull.mp3","https://babyobjectstorage.blob.core.windows.net/babyblob/seagull.mp3");
 
 INSERT INTO music (music_name,music_url) VALUES ("stream.mp3","https://babyobjectstorage.blob.core.windows.net/babyblob/stream.mp3");
-
--- INSERT INTO music (music_name,music_url) VALUES ("background_sounds.mp3","https://babyobjectstorage.blob.core.windows.net/babyblob/background_sounds.mp3");
-
--- INSERT INTO music (music_name,music_url) VALUES ("Ambience, Lighthouse, Iceland, 19232, 01.wav","https://babyobjectstorage.blob.core.windows.net/babyblob/Ambience, Lighthouse, Ocean, Coast, Birds, Seagulls, Arctic Terns, Calm Wind, Iceland, 19232, 01.wav");
-
--- INSERT INTO music (music_name,music_url) VALUES ("Hydrophone, Underwater, Hot Pot, Iceland, 19232, 02.WAV","https://babyobjectstorage.blob.core.windows.net/babyblob/Hydrophone, Underwater, Hot Pot, Bubbles, Pool, Iceland, 19232, 02.WAV");
-
--- INSERT INTO music (music_name,music_url) VALUES ("Hydrophone, Underwater, Stream, Cyprus, Zoom F8n, LimpetMics, 14.wav","https://babyobjectstorage.blob.core.windows.net/babyblob/Hydrophone, Underwater, Stream, Waterfall, Floating, Flowing, Water, Creek, Strong, Nature, Forest, Spring, Caledonia Waterfall, Cyprus, Zoom F8n, LimpetMics, 14.wav");
-
--- INSERT INTO music (music_name,music_url) VALUES ("Nature, Ocean, Cyprus, Zoom H3 VR, 9624,Stereo Export.WAV","https://babyobjectstorage.blob.core.windows.net/babyblob/Nature, Ocean, Ocean Waves, Sea, Mediterranean Sea, Calm, Relaxing, Beach, Rocky Beach, Pissouri Beach, Cyprus, Zoom H3 VR, 9624,Stereo Export.WAV");
-
--- INSERT INTO music (music_name,music_url) VALUES ("Ocean, Calm Waves, Iceland, 19232, 02.wav","https://babyobjectstorage.blob.core.windows.net/babyblob/Ocean, Calm Waves, Rocky Beach, Splash, Nighttime, Relaxing, Bubbling, Westfjords, Iceland, 19232, 02.wav");

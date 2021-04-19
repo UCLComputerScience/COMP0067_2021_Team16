@@ -1,3 +1,7 @@
+// The code written below is unused in the current version of the application. It has been left in the repository because it is intended for future features.
+
+// This component is to be used in the media galleries.
+
 import React, { useState } from 'react';
 import { IonCheckbox, IonList, IonItem, IonLabel } from '@ionic/react';
 
