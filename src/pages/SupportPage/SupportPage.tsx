@@ -12,9 +12,23 @@ import {
   IonLabel,
   IonList,
   IonIcon,
+  IonFab,
+  IonFabButton,
+  IonFabList,
 } from "@ionic/react";
+import './SupportPage.css'
 import BackButton from "../../components/BackButton/BackButton";
-import { informationCircle, images, book, person } from "ionicons/icons";
+import {
+  informationCircle,
+  images,
+  book,
+  person,
+  share,
+  logoPinterest,
+  logoFacebook,
+  logoInstagram,
+  logoTwitter,
+} from "ionicons/icons";
 
 const SupportPage: React.FC = () => {
   return (
@@ -69,6 +83,32 @@ const SupportPage: React.FC = () => {
             <IonIcon icon={person} color="primary" size="large" slot="start" />
           </IonItem>
         </IonList>
+        <IonFab className="ion-fabulous" vertical="bottom" horizontal="center" slot="fixed">
+          <IonFabButton>
+            <IonIcon icon={share} />
+          </IonFabButton>
+          <IonFabList side="top">
+            <IonFabButton>
+              <IonIcon icon={logoPinterest} />
+            </IonFabButton>
+          </IonFabList>
+          <IonFabList side="bottom">
+            <IonFabButton>
+              <IonIcon icon={logoFacebook} />
+            </IonFabButton>
+          </IonFabList>
+          <IonFabList side="start">
+            <IonFabButton>
+              <IonIcon icon={logoInstagram} />
+            </IonFabButton>
+          </IonFabList>
+          <IonFabList side="end">
+            <IonFabButton>
+              <IonIcon icon={logoTwitter} />
+            </IonFabButton>
+          </IonFabList>
+        </IonFab>
+        {/* https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin#5-web-share-api */}
       </IonContent>
     </IonPage>
   );
