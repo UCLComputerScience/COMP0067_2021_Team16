@@ -22,8 +22,8 @@ const Tutorial: React.FC = () => {
               <IonCol className="backbutton">
                 <IonBackButton />
               </IonCol>
-              <IonCol size="8" className="title">
-                <IonTitle>Tutorial</IonTitle>
+              <IonCol>
+                <IonTitle class="ion-no-padding">Tutorial</IonTitle>
               </IonCol>
               <IonCol />
             </IonRow>
@@ -80,28 +80,84 @@ const Tutorial: React.FC = () => {
           You can set the duration between each slide. The younger the baby, the
           better is to have longer intervals.
           <br />
+          <a href="https://www.amazon.co.uk/Iya-Whiteley/e/B01EX2F9N8">
+            <img
+              src={
+                process.env.PUBLIC_URL + "assets/images/amazon_best_seller.png"
+              }
+              alt="Amazon Best Seller"
+            />
+          </a>
           <br />
           You can set the rotation animation speed. For newborns, we recommend
           to leave it at 0.
           <br />
+          <a href="https://www.amazon.co.uk/Iya-Whiteley/e/B01EX2F9N8">
+            <img
+              src={
+                process.env.PUBLIC_URL + "assets/images/amazon_best_seller.png"
+              }
+              alt="Amazon Best Seller"
+            />
+          </a>
           <br />
           In the support page you can find everything you need to learn more
           about it the app.
           <br />
+          <a href="https://www.amazon.co.uk/Iya-Whiteley/e/B01EX2F9N8">
+            <img
+              src={
+                process.env.PUBLIC_URL + "assets/images/amazon_best_seller.png"
+              }
+              alt="Amazon Best Seller"
+            />
+          </a>
           <br />
           You can come back to "Tutorial" anytime to check how the app works.
           <br />
+          <a href="https://www.amazon.co.uk/Iya-Whiteley/e/B01EX2F9N8">
+            <img
+              src={
+                process.env.PUBLIC_URL + "assets/images/amazon_best_seller.png"
+              }
+              alt="Amazon Best Seller"
+            />
+          </a>
           <br />
-          In "Science behind the images" we introduce the scientific findings
-          associated with using this type of material.
+          In "The Science" we introduce the scientific findings associated with
+          using this type of material.
           <br />
+          <a href="https://www.amazon.co.uk/Iya-Whiteley/e/B01EX2F9N8">
+            <img
+              src={
+                process.env.PUBLIC_URL + "assets/images/amazon_best_seller.png"
+              }
+              alt="Amazon Best Seller"
+            />
+          </a>
           <br />
           The "Cosmic Baby Book" section offers more information on the book
           series this app is based on.
           <br />
+          <a href="https://www.amazon.co.uk/Iya-Whiteley/e/B01EX2F9N8">
+            <img
+              src={
+                process.env.PUBLIC_URL + "assets/images/amazon_best_seller.png"
+              }
+              alt="Amazon Best Seller"
+            />
+          </a>
           <br />
           You can also learn more about the author and her background.
           <br />
+          <a href="https://www.amazon.co.uk/Iya-Whiteley/e/B01EX2F9N8">
+            <img
+              src={
+                process.env.PUBLIC_URL + "assets/images/amazon_best_seller.png"
+              }
+              alt="Amazon Best Seller"
+            />
+          </a>
           <br />
           Finally, don't forget to subscribe to our mailing list to receive the
           latest updates!

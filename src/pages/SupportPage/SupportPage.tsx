@@ -16,7 +16,7 @@ import {
   IonFabButton,
   IonFabList,
 } from "@ionic/react";
-import './SupportPage.css'
+import "./SupportPage.css";
 import BackButton from "../../components/BackButton/BackButton";
 import {
   informationCircle,
@@ -41,8 +41,8 @@ const SupportPage: React.FC = () => {
                 <IonCol className="backbutton">
                   <BackButton />
                 </IonCol>
-                <IonCol size="8" className="title">
-                  <IonTitle>Support</IonTitle>
+                <IonCol>
+                  <IonTitle class="ion-no-padding">Support</IonTitle>
                 </IonCol>
                 <IonCol />
               </IonRow>
@@ -61,12 +61,9 @@ const SupportPage: React.FC = () => {
               slot="start"
             />
           </IonItem>
-          <IonItem
-            className="item"
-            routerLink="/SupportPage/ScienceBehindImages"
-          >
+          <IonItem className="item" routerLink="/SupportPage/TheScience">
             <IonLabel color="primary" class="ion-text-center">
-              <h1>Science behind the images</h1>
+              <h1>The Science</h1>
             </IonLabel>
             <IonIcon icon={images} color="primary" size="large" slot="start" />
           </IonItem>
@@ -83,7 +80,12 @@ const SupportPage: React.FC = () => {
             <IonIcon icon={person} color="primary" size="large" slot="start" />
           </IonItem>
         </IonList>
-        <IonFab className="ion-fab-social" vertical="bottom" horizontal="center" slot="fixed">
+        <IonFab
+          className="ion-fab-social"
+          vertical="bottom"
+          horizontal="center"
+          slot="fixed"
+        >
           <IonFabButton>
             <IonIcon icon={share} />
           </IonFabButton>

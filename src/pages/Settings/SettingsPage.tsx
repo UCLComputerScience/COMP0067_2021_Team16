@@ -23,7 +23,7 @@ import "./SettingsPage.css";
 const SettingsPage: React.FC = () => {
   return (
     <IonPage>
-      <IonContent fullscreen>
+      <IonContent>
         <IonHeader>
           <IonToolbar>
             <IonGrid>
@@ -31,8 +31,8 @@ const SettingsPage: React.FC = () => {
                 <IonCol className="backbutton">
                   <BackButton />
                 </IonCol>
-                <IonCol size="8" className="title">
-                  <IonTitle>Audio Settings</IonTitle>
+                <IonCol>
+                  <IonTitle class="ion-no-padding">Audio Settings</IonTitle>
                 </IonCol>
                 <IonCol />
               </IonRow>
@@ -45,7 +45,7 @@ const SettingsPage: React.FC = () => {
             <IonGrid>
               <IonRow>
                 <IonCol>
-                  <IonTitle>
+                  <IonTitle class="ion-no-padding">
                     <h4>Select Background Music</h4>
                   </IonTitle>
                 </IonCol>
@@ -57,11 +57,10 @@ const SettingsPage: React.FC = () => {
         <IonHeader>
           <IonToolbar>
             <IonGrid>
-              <IonRow>
-                <IonCol size="8" className="title">
-                  <IonTitle>Video Settings</IonTitle>
+              <IonRow className="ion-align-items-center ion-justify-content-center">
+                <IonCol>
+                  <IonTitle class="ion-no-padding">Video Settings</IonTitle>
                 </IonCol>
-                <IonCol />
               </IonRow>
             </IonGrid>
           </IonToolbar>

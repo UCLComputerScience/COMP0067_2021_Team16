@@ -10,9 +10,9 @@ import {
   IonContent,
 } from "@ionic/react";
 import React from "react";
-import "./ScienceBehindImages.css";
+import "./TheScience.css";
 
-const ScienceBehindImages: React.FC = () => {
+const TheScience: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
@@ -23,7 +23,7 @@ const ScienceBehindImages: React.FC = () => {
                 <IonBackButton />
               </IonCol>
               <IonCol size="8" className="title">
-                <IonTitle>Science behind the images</IonTitle>
+                <IonTitle>The Science</IonTitle>
               </IonCol>
               <IonCol />
             </IonRow>
@@ -83,9 +83,6 @@ const ScienceBehindImages: React.FC = () => {
           stages.
         </h3>
         <h1>
-          {/* <a href="https://cosmicbabybooks.com/books">
-                <img src={process.env.PUBLIC_URL + 'assets/images/cosmic_baby_books_logo.png'} alt="Cosmic Baby Books" />
-                </a> */}
           <a href="https://cosmicbabybooks.com/books">
             <b>Learn more about Cosmic Baby Books!</b>
           </a>
@@ -95,4 +92,4 @@ const ScienceBehindImages: React.FC = () => {
   );
 };
 
-export default ScienceBehindImages;
+export default TheScience;

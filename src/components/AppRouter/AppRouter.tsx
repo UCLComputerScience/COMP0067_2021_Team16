@@ -15,7 +15,7 @@ import RecordAudio from '../../pages/RecordAudio/RecordAudio';
 import Tutorial from '../../pages/SupportPage/Tutorial/Tutorial';
 import CosmicBabyBooks from '../../pages/SupportPage/CosmicBabyBooks/CosmicBabyBooks';
 import DrIyaWhiteley from '../../pages/SupportPage/DrIyaWhiteley/DrIyaWhiteley';
-import ScienceBehindImages from '../../pages/SupportPage/ScienceBehindImages/ScienceBehindImages';
+import TheScience from '../../pages/SupportPage/TheScience/TheScience';
 
 //below are all the routes with their URLs (denoted by 'path') and the actual page component (child to each Route component)
 const AppRouter: React.FC = () => {
@@ -33,7 +33,7 @@ const AppRouter: React.FC = () => {
       <Route exact path="/SupportPage/Tutorial" component={Tutorial} />
       <Route exact path="/SupportPage/CosmicBabyBooks" component={CosmicBabyBooks} />
       <Route exact path="/SupportPage/DrIyaWhiteley" component={DrIyaWhiteley} />
-      <Route exact path="/SupportPage/ScienceBehindImages" component={ScienceBehindImages} />
+      <Route exact path="/SupportPage/TheScience" component={TheScience} />
       <Redirect exact from="/" to="/slideshowpage"/>
     </IonRouterOutlet>
   );

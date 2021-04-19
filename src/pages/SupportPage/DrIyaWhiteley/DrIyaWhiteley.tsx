@@ -22,8 +22,10 @@ const DrIyaWhiteley: React.FC = () => {
               <IonCol className="backbutton">
                 <IonBackButton />
               </IonCol>
-              <IonCol size="8" className="title">
-                <IonTitle>About Dr Iya Whiteley</IonTitle>
+              <IonCol size="9">
+                <IonTitle class="ion-no-padding">
+                  About Dr Iya Whiteley
+                </IonTitle>
               </IonCol>
               <IonCol />
             </IonRow>
