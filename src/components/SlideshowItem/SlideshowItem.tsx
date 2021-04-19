@@ -1,4 +1,4 @@
-import "./Slideshow_Item.css";
+import "./SlideshowItem.css";
 import "@ionic/react";
 import {
   IonItem,
@@ -11,7 +11,7 @@ import {
   IonButton,
 } from "@ionic/react";
 import React, { useState, useEffect } from "react";
-import { Update_Selected_Slideshow_Context } from "../../contexts/Slideshow_Context";
+import { UpdateSelectedSlideshowContext } from "../../contexts/SlideshowContext";
 
 interface ContainerProps {
   item;
@@ -20,9 +20,9 @@ interface ContainerProps {
 
 let itemlinks = ["/slideshowpage", "EditSlidesPage"];
 
-const Slideshow_Item: React.FC<ContainerProps> = (props) => {
+const SlideshowItem: React.FC<ContainerProps> = (props) => {
   const [link, setLink] = useState<string>(itemlinks[0]);
-  const slideshow_updater = Update_Selected_Slideshow_Context();
+  const slideshow_updater = UpdateSelectedSlideshowContext();
 
   function select_slideshow(){
     slideshow_updater(props.item);
@@ -69,4 +69,4 @@ const Slideshow_Item: React.FC<ContainerProps> = (props) => {
   );
 };
 
-export default Slideshow_Item;
+export default SlideshowItem;

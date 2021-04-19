@@ -4,7 +4,7 @@
 
 import React,{useContext} from 'react';
 import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
-import Slideshow_Class from '../classes/Slideshow_Class';
+import SlideshowClass from '../classes/SlideshowClass';
 
 const Database = React.createContext(null);
 
@@ -85,9 +85,7 @@ async function insert_default_data(db){
     }
 }
 
-async function insert_tables(db:SQLiteObject){
-    console.log("attempting to create tables");
-    
+async function insert_tables(db:SQLiteObject){    
     const slideshow_sql =`
     CREATE TABLE IF NOT EXISTS "Slideshow" (
         "slideshow_id"	INTEGER NOT NULL,
@@ -128,15 +126,10 @@ async function insert_tables(db:SQLiteObject){
     )`;
 
     try{
-        console.log("starting to execute table creation...");
         await db.executeSql(slideshow_sql,[]);
-        console.log("Slideshow table created");
         await db.executeSql(recording_sql,[]);
-        console.log("recording table created");
         await db.executeSql(slide_sql,[]);
-        console.log("slide table created");
         await db.executeSql(slideshow_slide_sql,[]);
-        console.log("slideshow-slide table created");
     } catch (e){
         console.log("Table creation failed. ",JSON.stringify(e))
     }
@@ -148,14 +141,8 @@ async function initializeorconnecttoDatabase(){
         let db = await SQLite.create({
             name: 'newbornbaby.db',
             location: 'default'
-        });
-        console.log("Sucessfully connected to database");
-        console.log("Version 1.05");
-        
+        });        
         let new_database = await is_database_empty(db);
-
-        console.log("Is the database new?: ",new_database);
-
         if (new_database){
             await insert_tables(db);
             await insert_default_data(db);
@@ -189,7 +176,7 @@ export async function get_slideshows(){
             results.push(item);
         }
 
-        SlideshowList = results.map((item)=>(new Slideshow_Class(item.slideshow_name,item.slideshow_order,true,null)));
+        SlideshowList = results.map((item)=>(new SlideshowClass(item.slideshow_name,item.slideshow_order,true,null)));
 
         return SlideshowList;
     } catch{

@@ -8,7 +8,7 @@ import SlideshowPage from '../../pages/SlideshowPage/SlideshowPage';
 import SlideshowListingPage from '../../pages/SlideshowListingPage/SlideshowListingPage';
 // import EditSlidesPage from '../../pages/EditSlidesPage/EditSlidesPage';
 import SupportPage from '../../pages/SupportPage/SupportPage';
-import AudioSettings from '../../pages/AudioSettings/AudioSettingsPage';
+import Settings from '../../pages/Settings/SettingsPage';
 import SubscribePage from '../../pages/SubscribePage/SubscribePage';
 // import ImageGallery from '../../pages/ImageGallery/ImageGallery';
 import RecordAudio from '../../pages/RecordAudio/RecordAudio';
@@ -23,7 +23,7 @@ const AppRouter: React.FC = () => {
     <IonRouterOutlet>
       <Route exact path="/AudioGallery" component={AudioGallery} />
       <Route exact path="/SubscribePage" component={SubscribePage} />
-      <Route exact path="/AudioSettings" component={AudioSettings} />
+      <Route exact path="/Settings" component={Settings} />
       <Route exact path="/SupportPage" component={SupportPage} />
       {/* <Route exact path="/EditSlidesPage" component={EditSlidesPage} /> */}
       <Route exact path="/SelectionPage" component={SlideshowListingPage} />

@@ -1,4 +1,4 @@
-import Slideshow_Class from '../classes/Slideshow_Class';
+import SlideshowClass from '../classes/SlideshowClass';
 import React,{useState,useContext} from 'react';
 
 //creating React contexts
@@ -8,10 +8,10 @@ const Default_Slideshow = React.createContext(null);
 const Update_Default_Slideshow = React.createContext(null);
 
 //exporting those React contexts
-export function Selected_Slideshow_Context(){return useContext(Selected_Slideshow)}
-export function Update_Selected_Slideshow_Context(){return useContext(Update_Selected_Slideshow)}
-export function Default_Slideshow_Context(){return useContext(Default_Slideshow)}
-export function Update_Default_Slideshow_Context(){return useContext(Update_Default_Slideshow)}
+export function SelectedSlideshowContext(){return useContext(Selected_Slideshow)}
+export function UpdateSelectedSlideshowContext(){return useContext(Update_Selected_Slideshow)}
+export function DefaultSlideshowContext(){return useContext(Default_Slideshow)}
+export function UpdateDefaultSlideshowContext(){return useContext(Update_Default_Slideshow)}
 
 //interface for Provider
 interface ContainerProps{
@@ -26,7 +26,7 @@ export const SlideshowProvider: React.FC<ContainerProps> = ({children}) => {
             
         }
         else{
-            return new Slideshow_Class("all",null,true,1);
+            return new SlideshowClass("all",null,true,1);
         }
     }
 

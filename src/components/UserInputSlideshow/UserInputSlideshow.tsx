@@ -2,20 +2,20 @@
 
 // This component is intended to change the name of user-created slideshows.
 
-import './User_Input_Slideshow.css';
+import './UserInputSlideshow.css';
 import '@ionic/react'
 import { IonItem, IonLabel, IonInput } from '@ionic/react';
 import React, { useRef } from 'react';
-import {Selected_Slideshow_Context} from '../../contexts/Slideshow_Context';
+import {SelectedSlideshowContext} from '../../contexts/SlideshowContext';
 
 interface ContainerProps {
   name: string;
 }
 
 
-const User_Input_Slideshow: React.FC<ContainerProps> = (props) => {
+const UserInputSlideshow: React.FC<ContainerProps> = (props) => {
   
-  const Slideshow_current_name = Selected_Slideshow_Context();
+  const Slideshow_current_name = SelectedSlideshowContext();
 
   let valueRef = useRef <HTMLIonInputElement>(null);
 
@@ -31,4 +31,4 @@ const User_Input_Slideshow: React.FC<ContainerProps> = (props) => {
   );
 }
 
-export default User_Input_Slideshow;
+export default UserInputSlideshow;

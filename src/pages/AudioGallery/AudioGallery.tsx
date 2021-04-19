@@ -5,7 +5,7 @@
 import { IonContent, IonHeader, IonItem, IonList, IonPage, IonRow, IonCol, IonToolbar } from '@ionic/react';
 import BackButton from '../../components/BackButton/BackButton';
 import TitleBar from "../../components/TitleBar/TitleBar";
-import Audio_Player from '../../components/Audio_Player/Audio_Player';
+import AudioPlayer from '../../components/AudioPlayer/AudioPlayer';
 
 const AudioGallery: React.FC = () => {
   return (
@@ -24,7 +24,7 @@ const AudioGallery: React.FC = () => {
         Default voice recordings
         <IonList>
           <IonItem>
-             Audio 1 <Audio_Player name="test" />
+             Audio 1 <AudioPlayer name="test" />
           </IonItem>
         </IonList>
       </IonContent>
@@ -32,7 +32,7 @@ const AudioGallery: React.FC = () => {
       <IonContent>
         <IonList>
           <IonItem>
-             Audio 2 <Audio_Player name="test" />
+             Audio 2 <AudioPlayer name="test" />
           </IonItem>
         </IonList>
       </IonContent>
@@ -40,7 +40,7 @@ const AudioGallery: React.FC = () => {
         Uploaded voice recordings
         <IonList>
           <IonItem>
-             Audio 3 <Audio_Player name="test" />
+             Audio 3 <AudioPlayer name="test" />
           </IonItem>
         </IonList>
       </IonContent>
@@ -48,10 +48,10 @@ const AudioGallery: React.FC = () => {
       <IonContent>
         <IonList>
           <IonItem>
-             Audio 4 <Audio_Player name="test" />
+             Audio 4 <AudioPlayer name="test" />
           </IonItem>
           <IonItem>
-             Audio 5 <Audio_Player name="test" />
+             Audio 5 <AudioPlayer name="test" />
           </IonItem>
         </IonList>
       </IonContent>

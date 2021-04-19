@@ -7,7 +7,7 @@ import {
   useIonViewWillEnter,
 } from "@ionic/react";
 import axios from "axios";
-import {Settings_Context} from "../../contexts/Settings_Context";
+import {SettingsContext} from "../../contexts/SettingsContext";
 
 async function get_music() {
   try {
@@ -29,7 +29,7 @@ const MusicList: React.FC = () => {
   
   const [items, setItems] = useState([]);
 
-  const Settings = Settings_Context();
+  const Settings = SettingsContext();
   
   useIonViewWillEnter(() => {
     setItems([]);

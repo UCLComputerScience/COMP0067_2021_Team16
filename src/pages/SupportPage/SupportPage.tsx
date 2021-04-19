@@ -83,7 +83,7 @@ const SupportPage: React.FC = () => {
             <IonIcon icon={person} color="primary" size="large" slot="start" />
           </IonItem>
         </IonList>
-        <IonFab className="ion-fabulous" vertical="bottom" horizontal="center" slot="fixed">
+        <IonFab className="ion-fab-social" vertical="bottom" horizontal="center" slot="fixed">
           <IonFabButton>
             <IonIcon icon={share} />
           </IonFabButton>

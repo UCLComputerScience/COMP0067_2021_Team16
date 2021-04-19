@@ -3,8 +3,8 @@ import { IonList, IonReorderGroup } from '@ionic/react';
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import { ItemReorderEventDetail } from '@ionic/core';
-import Slideshow_Item from '../Slideshow_Item/Slideshow_Item';
-import Slideshow_Class from '../../classes/Slideshow_Class';
+import SlideshowItem from '../SlideshowItem/SlideshowItem';
+import SlideshowClass from '../../classes/SlideshowClass';
 
 //sendGetRequest();
 
@@ -12,7 +12,7 @@ interface EditMode {
   Editing: boolean;
 }
 
-const Slideshow_Items: React.FC<EditMode> = (props) => {
+const SlideshowItems: React.FC<EditMode> = (props) => {
 
   const [myitems,setmyitems] = useState([]);
 
@@ -37,7 +37,7 @@ const Slideshow_Items: React.FC<EditMode> = (props) => {
   useEffect(()=>{
     async function load_slideshows(){
       let data = await load_default_slideshows();
-      setmyitems(data.map((item,i:number) => new Slideshow_Class(item.slideshow_name,i,true,item.slideshow_id)));
+      setmyitems(data.map((item,i:number) => new SlideshowClass(item.slideshow_name,i,true,item.slideshow_id)));
     }
     load_slideshows();
   },[]);
@@ -54,11 +54,11 @@ const Slideshow_Items: React.FC<EditMode> = (props) => {
   return (
     <IonList>
       <IonReorderGroup disabled={ReOrderModeDisabled} onIonItemReorder={doReorder}>
-        {myitems.map(item => item.enabled && !props.Editing ? <Slideshow_Item item={item} key={item.slideshow_name} editing={props.Editing}/>:null)}
-        {myitems.map(item => props.Editing ? <Slideshow_Item item={item} key={item.slideshow_name} editing={props.Editing}/>: null)}
+        {myitems.map(item => item.enabled && !props.Editing ? <SlideshowItem item={item} key={item.slideshow_name} editing={props.Editing}/>:null)}
+        {myitems.map(item => props.Editing ? <SlideshowItem item={item} key={item.slideshow_name} editing={props.Editing}/>: null)}
       </IonReorderGroup>
     </IonList >
   );
 }
 
-export default Slideshow_Items;
+export default SlideshowItems;

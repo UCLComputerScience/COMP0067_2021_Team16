@@ -1,4 +1,4 @@
-let Slideshow = class{
+let SlideshowClass = class{
     slideshow_name: string;
     position: number;
     enabled: boolean;
@@ -12,4 +12,4 @@ let Slideshow = class{
     }
 }
 
-export default Slideshow;
+export default SlideshowClass;

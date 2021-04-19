@@ -11,7 +11,7 @@ import {
   IonAlert,
   IonActionSheet,
 } from "@ionic/react";
-import "./Edit_Bar.css";
+import "./EditBar.css";
 import {
   addCircleSharp,
   trash,
@@ -28,7 +28,7 @@ interface ContainerProps {
   uncheck_all: Function;
 }
 
-const Edit_Bar: React.FC<ContainerProps> = (props) => {
+const EditBar: React.FC<ContainerProps> = (props) => {
   const [deletealert, setDeleteAlert] = useState(false);
   const [showAddMenu, setShowAddMenu] = useState(false);
 
@@ -102,4 +102,4 @@ const Edit_Bar: React.FC<ContainerProps> = (props) => {
   );
 };
 
-export default Edit_Bar;
+export default EditBar;

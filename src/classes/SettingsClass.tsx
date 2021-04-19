@@ -1,4 +1,4 @@
-let Settings_Class = class{
+let SettingsClass = class{
     
     //default values
     default_slide_duration:number = 20000;
@@ -90,7 +90,7 @@ let Settings_Class = class{
             localStorage.setItem("audio_option",this.audio_option);
         }
         else{
-            console.log("You need to insert a valid value here. Please refer to the Settings_Class.tsx to see your options")
+            console.log("You need to insert a valid value here. Please refer to the SettingsClass.tsx to see your options")
         }
     }
 
@@ -100,4 +100,4 @@ let Settings_Class = class{
     }
 }
 
-export default Settings_Class;
+export default SettingsClass;

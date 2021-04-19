@@ -24,9 +24,9 @@ import './theme/variables.css';
 import React from 'react';
 
 /* Context variables*/
-import {SlideshowProvider} from './contexts/Slideshow_Context';
-import {SettingsProvider} from './contexts/Settings_Context';
-import {DatabaseProvider} from './contexts/Database_Context';
+import {SlideshowProvider} from './contexts/SlideshowContext';
+import {SettingsProvider} from './contexts/SettingsContext';
+import {DatabaseProvider} from './contexts/DatabaseContext';
 
 
 const App: React.FC = () => {

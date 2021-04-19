@@ -1,10 +1,10 @@
 import React from 'react';
 import {IonToggle, IonItem, IonLabel} from '@ionic/react';
-import {Settings_Context} from "../../contexts/Settings_Context";
+import {SettingsContext} from "../../contexts/SettingsContext";
 
 const ToggleButton: React.FC = () => {
 
-  const Settings = Settings_Context();
+  const Settings = SettingsContext();
 
   return (
         <IonItem>

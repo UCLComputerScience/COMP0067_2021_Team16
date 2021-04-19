@@ -6,10 +6,10 @@
 // import './EditSlidesPage.css';
 // import Edit_Bar from '../../components/Edit_Bar/Edit_Bar';
 // import Back_Button from '../../components/BackButton/BackButton';
-// import Slides from '../../classes/Slides_Class';
+// import Slides from '../../classes/SlidesClass';
 // import Editableslide from '../../components/EditableSlides/EditableSlides';
 // import React from 'react';
-// import User_Input_Slideshow from '../../components/User_Input Slideshow/User_Input_Slideshow';
+// import UserInputSlideshow from '../../components/User_Input Slideshow/UserInputSlideshow';
 // import {useState} from 'react';
 
 // // importing images (replace when we have our DB)
@@ -77,7 +77,7 @@
 //                         </IonRow>
 //                         <IonRow>
 //                             <IonToolbar className='userinput'>
-//                                 <User_Input_Slideshow name='Please enter a slideshow name:'/>
+//                                 <UserInputSlideshow name='Please enter a slideshow name:'/>
 //                             </IonToolbar>
 //                         </IonRow>
 //                     </IonGrid>

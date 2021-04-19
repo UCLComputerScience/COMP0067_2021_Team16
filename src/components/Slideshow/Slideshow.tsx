@@ -17,7 +17,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import TitleBar from "../TitleBar/TitleBar";
 import Copyright from "../Copyright/Copyright";
-import { Default_Slideshow_Context } from "../../contexts/Slideshow_Context";
+import { DefaultSlideshowContext } from "../../contexts/SlideshowContext";
 
 //default slide options
 const slideOpts = {
@@ -145,7 +145,7 @@ async function load_default_slides(default_slideshow, setItems) {
 const Slideshow: React.FC = () => {
   const [items, setItems] = useState([]);
 
-  let default_slideshow = Default_Slideshow_Context();
+  let default_slideshow = DefaultSlideshowContext();
 
   useIonViewWillEnter(() => {
     setItems([]);

@@ -1,8 +1,8 @@
 import { IonButton, IonGrid, IonRow, IonCol, IonIcon } from "@ionic/react";
-import "./Nav_Bar.css";
+import "./NavBar.css";
 import { mail, informationCircle } from "ionicons/icons";
 
-const Nav_Bar_New: React.FC = () => (
+const NavBarNew: React.FC = () => (
   <IonGrid className="ion-grid">
     <IonRow>
       <IonCol className="ion-column">
@@ -29,4 +29,4 @@ const Nav_Bar_New: React.FC = () => (
   </IonGrid>
 );
 
-export default Nav_Bar_New;
+export default NavBarNew;

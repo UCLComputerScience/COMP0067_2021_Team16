@@ -18,9 +18,9 @@ import {
   AnimationSpeed,
 } from "../../components/SettingsCard/SettingsCard";
 import ToggleButton from "../../components/ShuffleToggle/ShuffleToggle";
-import "./AudioSettingsPage.css";
+import "./SettingsPage.css";
 
-const AudioSettingsPage: React.FC = () => {
+const SettingsPage: React.FC = () => {
   return (
     <IonPage>
       <IonContent fullscreen>
@@ -82,4 +82,4 @@ const AudioSettingsPage: React.FC = () => {
   );
 };
 
-export default AudioSettingsPage;
+export default SettingsPage;

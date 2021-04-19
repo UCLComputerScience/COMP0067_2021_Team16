@@ -11,10 +11,10 @@ import {
   IonTitle,
   IonToolbar,
 } from "@ionic/react";
-import Nav_Bar from "../../components/Nav_Bar/Nav_Bar";
+import NavBar from "../../components/NavBar/NavBar";
 import { settings } from "ionicons/icons";
 import "./SlideshowListingPage.css";
-import Slideshow_Items from "../../components/Slideshow_Items/Slideshow_Items";
+import SlideshowItems from "../../components/SlideshowItems/SlideshowItems";
 import React, { useState } from "react";
 import AddNewSlideshow from "../../components/AddNewSlideshow/AddNewSlideshow";
 
@@ -38,7 +38,7 @@ const SelectionPage: React.FC = () => {
                 </IonTitle>
               </IonCol>
               <IonCol className="settingsbutton">
-                <IonButton fill="clear" routerLink="/AudioSettings">
+                <IonButton fill="clear" routerLink="/Settings">
                   <IonIcon icon={settings} size="large" />
                 </IonButton>
               </IonCol>
@@ -47,7 +47,7 @@ const SelectionPage: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
-        <Slideshow_Items Editing={editMode} />
+        <SlideshowItems Editing={editMode} />
       </IonContent>
       );
       <IonFooter className="bar-footer">
@@ -59,7 +59,7 @@ const SelectionPage: React.FC = () => {
           ) : null}
           {editMode ? null : (
             <IonRow>
-              <Nav_Bar />
+              <NavBar />
             </IonRow>
           )}
         </IonGrid>

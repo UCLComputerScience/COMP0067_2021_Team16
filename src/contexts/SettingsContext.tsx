@@ -1,11 +1,11 @@
-//import Settings_Class from '../classes/Settings_Class';
+//import SettingsClass from '../classes/SettingsClass';
 import React,{useContext} from 'react';
-import "../classes/Settings_Class";
-import Settings_Class from '../classes/Settings_Class';
+import "../classes/SettingsClass";
+import SettingsClass from '../classes/SettingsClass';
 
 
 //put default values below
-const Settings_object = new Settings_Class()
+const Settings_object = new SettingsClass()
 
 const Settings = React.createContext(null);
 
@@ -13,7 +13,7 @@ interface ContainerProps{
     children: any;
 }
 
-export function Settings_Context(){
+export function SettingsContext(){
     return useContext(Settings);
 }
 

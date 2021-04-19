@@ -1,11 +1,11 @@
 import React from 'react';
 import {IonLabel,IonRange} from '@ionic/react';
-import {Settings_Context} from "../../contexts/Settings_Context";
+import {SettingsContext} from "../../contexts/SettingsContext";
 import "./SettingsCard.css";
 
 const SlideDuration: React.FC = () => {
 
-  const Settings = Settings_Context();
+  const Settings = SettingsContext();
 
   return (
     <div className="slide_duration">
@@ -24,7 +24,7 @@ const SlideDuration: React.FC = () => {
 
 const AnimationSpeed: React.FC = () => {
 
-  const Settings = Settings_Context();
+  const Settings = SettingsContext();
 
   return (
     <div className="animation_speed">
