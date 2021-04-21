@@ -5,5 +5,7 @@
 input {
   width: 75%;
   border-bottom: 1.5px solid darkgray;
+  background-color: white;
+  color: black;
 }
 
