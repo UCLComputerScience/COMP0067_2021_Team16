@@ -37,8 +37,10 @@ function get_soundtrack_url(soundtracks) {
       }
     }
   }
-  
-  let selected_soundtrack_id = parseInt(localStorage.getItem("background_soundtrack"));
+
+  let selected_soundtrack_id = parseInt(
+    localStorage.getItem("background_soundtrack")
+  );
 
   if (selected_soundtrack_id) {
     return check_and_loop(selected_soundtrack_id);
@@ -85,14 +87,13 @@ function stop_soundtrack() {
 }
 
 const SlideshowPage: React.FC = () => {
-  
   useIonViewWillEnter(() => {
     ScreenOrientation.lock(ScreenOrientation.ORIENTATIONS.PORTRAIT);
     Insomnia.keepAwake();
     start_soundtrack();
     toggle_full_screen(true);
   });
-  
+
   useIonViewDidLeave(() => {
     ScreenOrientation.unlock();
     Insomnia.allowSleepAgain();

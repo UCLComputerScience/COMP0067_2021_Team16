@@ -48,7 +48,7 @@ const SubscribePage: React.FC = () => {
               <IonCol className="backbutton">
                 <BackButton />
               </IonCol>
-              <IonCol>
+              <IonCol size="8">
                 <IonTitle class="ion-no-padding">Subscribe</IonTitle>
               </IonCol>
               <IonCol />

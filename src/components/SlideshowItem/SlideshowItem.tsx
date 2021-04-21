@@ -56,7 +56,7 @@ const SlideshowItem: React.FC<ContainerProps> = (props) => {
                 fill="clear"
                 routerLink={link}
                 onClick={select_slideshow}>
-                <h2>{props.item.slideshow_name}</h2>
+                <h1 className="slideshow-name-listings"><b>{props.item.slideshow_name}</b></h1>
               </IonButton>
             </IonCol>
             <IonCol className="reordergrabber">
