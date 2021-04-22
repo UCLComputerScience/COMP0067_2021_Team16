@@ -6,8 +6,6 @@ const blobServiceClient = BlobServiceClient.fromConnectionString(AZURE_STORAGE_C
 const containerName = "babyblob"
 const containerClient = blobServiceClient.getContainerClient(containerName);
 
-// Citation https://docs.microsoft.com/en-us/azure/storage/blobs/storage-quickstart-blobs-nodejs
-
 module.exports = function (app) {
 
   // Slideshows

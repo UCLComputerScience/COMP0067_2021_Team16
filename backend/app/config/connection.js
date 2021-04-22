@@ -1,13 +1,5 @@
 const mysql = require('mysql');
 
-// const connection = mysql.createConnection({
-//     port: 3306,
-//     host: "localhost",
-//     user: "root",
-//     password: "password",
-//     database: "baby"
-// });
-
 const connection = mysql.createConnection({
     port: 3306,
     host: "0067team16app.mysql.database.azure.com",
@@ -21,7 +13,7 @@ connection.connect(function (err) {
         console.error("There was an error connecting: " + err.stack);
         return;
     }
-    console.log("Your are connected as ID: " + connection.threadId);
+    console.log("You are connected as ID: " + connection.threadId);
 });
 
 module.exports = connection;
