@@ -2,6 +2,8 @@ import "./UnlockSlider.css";
 import {useState} from 'react';
 import { useHistory } from "react-router-dom";
 
+//this code is adapted from kk_slider_unlock please see the original crator's work here: https://www.npmjs.com/package/kk-slider-unlock
+
 const UnlockSlider: React.FC = () => {
   
   let sliderbutton = document.getElementById('sliderbutton');
