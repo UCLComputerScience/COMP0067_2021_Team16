@@ -51,7 +51,7 @@ const SupportPage: React.FC = () => {
         </IonHeader>
         <IonList lines="inset">
           <IonItem className="item" routerLink="/SupportPage/Tutorial">
-            <IonLabel color="primary" class="ion-text-center">
+            <IonLabel class="ion-text-center">
               <h1>Tutorial</h1>
             </IonLabel>
             <IonIcon
@@ -62,19 +62,19 @@ const SupportPage: React.FC = () => {
             />
           </IonItem>
           <IonItem className="item" routerLink="/SupportPage/TheScience">
-            <IonLabel color="primary" class="ion-text-center">
+            <IonLabel class="ion-text-center">
               <h1>The Science</h1>
             </IonLabel>
             <IonIcon icon={images} color="primary" size="large" slot="start" />
           </IonItem>
           <IonItem className="item" routerLink="/SupportPage/CosmicBabyBooks">
-            <IonLabel color="primary" class="ion-text-center">
+            <IonLabel class="ion-text-center">
               <h1>Cosmic Baby Books</h1>
             </IonLabel>
             <IonIcon icon={book} color="primary" size="large" slot="start" />
           </IonItem>
           <IonItem className="item" routerLink="/SupportPage/DrIyaWhiteley">
-            <IonLabel color="primary" class="ion-text-center">
+            <IonLabel class="ion-text-center">
               <h1>Dr Iya Whiteley</h1>{" "}
             </IonLabel>
             <IonIcon icon={person} color="primary" size="large" slot="start" />
