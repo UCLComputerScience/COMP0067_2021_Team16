@@ -32,9 +32,20 @@ const SettingsPage: React.FC = () => {
                   <BackButton />
                 </IonCol>
                 <IonCol>
-                  <IonTitle class="ion-no-padding">Audio Settings</IonTitle>
+                  <IonTitle class="ion-no-padding">Settings</IonTitle>
                 </IonCol>
                 <IonCol />
+              </IonRow>
+            </IonGrid>
+          </IonToolbar>
+        </IonHeader>
+        <IonHeader>
+          <IonToolbar>
+            <IonGrid>
+              <IonRow className="ion-align-items-center ion-justify-content-center">
+                <IonCol>
+                  <IonTitle class="ion-no-padding">Audio Settings</IonTitle>
+                </IonCol>
               </IonRow>
             </IonGrid>
           </IonToolbar>
@@ -46,7 +57,7 @@ const SettingsPage: React.FC = () => {
               <IonRow>
                 <IonCol>
                   <IonTitle class="ion-no-padding">
-                    <h4>Select Background Music</h4>
+                    Background Music
                   </IonTitle>
                 </IonCol>
               </IonRow>
