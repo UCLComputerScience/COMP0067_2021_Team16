@@ -14,6 +14,7 @@ const Tutorial: React.FC = () => {
           <img
             src={process.env.PUBLIC_URL + "assets/images/1.png"}
             alt="Tutorial Image 1"
+            className = "tutimg"
           />
           <br />
           Slide to unlock the screen.
@@ -21,6 +22,7 @@ const Tutorial: React.FC = () => {
           <img
             src={process.env.PUBLIC_URL + "assets/images/2.png"}
             alt="Tutorial Image 2"
+            className = "tutimg"
           />
           <br />
           Select the slideshow you want to play next.
@@ -28,6 +30,7 @@ const Tutorial: React.FC = () => {
           <img
             src={process.env.PUBLIC_URL + "assets/images/3.png"}
             alt="Tutorial Image 3"
+            className = "tutimg"
           />
           <br />
           If you want music or recordings to accompany your slideshow, you can
@@ -36,6 +39,7 @@ const Tutorial: React.FC = () => {
           <img
             src={process.env.PUBLIC_URL + "assets/images/4.png"}
             alt="Tutorial Image 4"
+            className = "tutimg"
           />
           <br />
           You can set the duration between each slide. The younger the baby, the
@@ -44,6 +48,7 @@ const Tutorial: React.FC = () => {
           <img
             src={process.env.PUBLIC_URL + "assets/images/5.png"}
             alt="Tutorial Image 5"
+            className = "tutimg"
           />
           <br />
           You can set the rotation animation speed. For newborns, we recommend
@@ -52,6 +57,7 @@ const Tutorial: React.FC = () => {
           <img
             src={process.env.PUBLIC_URL + "assets/images/6.png"}
             alt="Tutorial Image 6"
+            className = "tutimg"
           />
           <br />
           In the support page you can find everything you need to learn more
@@ -60,6 +66,7 @@ const Tutorial: React.FC = () => {
           <img
             src={process.env.PUBLIC_URL + "assets/images/7.png"}
             alt="Tutorial Image 7"
+            className = "tutimg"
           />
           <br />
           You can come back to "Tutorial" anytime to check how the app works.
@@ -67,6 +74,7 @@ const Tutorial: React.FC = () => {
           <img
             src={process.env.PUBLIC_URL + "assets/images/8.png"}
             alt="Tutorial Image 8"
+            className = "tutimg"
           />
           <br />
           In "The Science" we introduce the scientific findings associated with
@@ -75,6 +83,7 @@ const Tutorial: React.FC = () => {
           <img
             src={process.env.PUBLIC_URL + "assets/images/9.png"}
             alt="Tutorial Image 9"
+            className = "tutimg"
           />
           <br />
           The "Cosmic Baby Book" section offers more information on the book
@@ -83,6 +92,7 @@ const Tutorial: React.FC = () => {
           <img
             src={process.env.PUBLIC_URL + "assets/images/10.png"}
             alt="Tutorial Image 10"
+            className = "tutimg"
           />
           <br />
           You can also learn more about the author and her background.
@@ -90,6 +100,7 @@ const Tutorial: React.FC = () => {
           <img
             src={process.env.PUBLIC_URL + "assets/images/11.png"}
             alt="Tutorial Image 11"
+            className = "tutimg"
           />
           <br />
           Finally, don't forget to subscribe to our mailing list to receive the
@@ -97,6 +108,7 @@ const Tutorial: React.FC = () => {
           <img
             src={process.env.PUBLIC_URL + "assets/images/12.png"}
             alt="Tutorial Image 12"
+            className = "tutimg"
           />
           <br />
         </h3>
