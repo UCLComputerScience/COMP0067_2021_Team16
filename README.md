@@ -82,7 +82,6 @@ If you would like to install the mobile application directly onto your device, p
 * Sass
 * Typescript
 * TSUN
-* Bootstrap
 * jQuery
 * Axios
 * Google Analytics
