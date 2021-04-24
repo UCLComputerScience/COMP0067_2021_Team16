@@ -1,8 +1,13 @@
-.backbutton{
-    justify-content: self-start;
-    justify-self: self-start;
-    justify-items: self-start;
-    align-items: left;
-    align-content: left;
+.backbutton {
+  justify-content: self-start;
+  justify-self: self-start;
+  justify-items: self-start;
+  align-items: left;
+  align-content: left;
 }
 
+.settings-individual-titles {
+  color: black;
+  font-size: 100%;
+  text-align: left !important;
+}

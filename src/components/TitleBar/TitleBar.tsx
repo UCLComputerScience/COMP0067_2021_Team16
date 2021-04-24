@@ -1,4 +1,4 @@
-import "./TitleBar.css";
+import { IonHeader, IonToolbar, IonTitle, IonBackButton } from "@ionic/react";
 
 interface ContainerProps {
   name: string;
@@ -6,7 +6,12 @@ interface ContainerProps {
 
 const TitleBar: React.FC<ContainerProps> = ({ name }) => {
   return (
-      <h1>{name}</h1>
+    <IonHeader>
+      <IonToolbar className="title-bar">
+        <IonBackButton defaultHref="./slideshowpage" slot="start"> </IonBackButton>
+        <IonTitle>{name}</IonTitle>
+      </IonToolbar>
+    </IonHeader>
   );
 };
 

@@ -12,26 +12,13 @@ import {
 } from "@ionic/react";
 import React from "react";
 import "./CosmicBabyBooks.css";
+import TitleBar from "../../../components/TitleBar/TitleBar";
 
 const CosmicBabyBooks: React.FC = () => {
   return (
     <IonPage>
       <IonContent>
-        <IonHeader>
-          <IonToolbar>
-            <IonGrid>
-              <IonRow>
-                <IonCol>
-                  <IonBackButton />
-                </IonCol>
-                <IonCol size="8">
-                  <IonTitle class="ion-no-padding">Cosmic Baby Books</IonTitle>
-                </IonCol>
-                <IonCol />
-              </IonRow>
-            </IonGrid>
-          </IonToolbar>
-        </IonHeader>
+        <TitleBar name="Cosmic Baby Books" />
         <IonText>
           <h4>
             This app is based on the Best Sellers and most gifted books for

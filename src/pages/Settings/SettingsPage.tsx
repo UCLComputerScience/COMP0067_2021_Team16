@@ -10,7 +10,7 @@ import {
   IonRow,
   IonCol,
 } from "@ionic/react";
-import BackButton from "../../components/BackButton/BackButton";
+import TitleBar from "../../components/TitleBar/TitleBar";
 import MusicList from "../../components/MusicList/MusicList";
 import RadioButton from "../../components/RadioButton/RadioButton";
 import {
@@ -24,27 +24,13 @@ const SettingsPage: React.FC = () => {
   return (
     <IonPage>
       <IonContent>
-        <IonHeader>
-          <IonToolbar>
-            <IonGrid>
-              <IonRow>
-                <IonCol className="backbutton">
-                  <BackButton />
-                </IonCol>
-                <IonCol>
-                  <IonTitle class="ion-no-padding">Settings</IonTitle>
-                </IonCol>
-                <IonCol />
-              </IonRow>
-            </IonGrid>
-          </IonToolbar>
-        </IonHeader>
+        <TitleBar name="Settings" />
         <IonHeader>
           <IonToolbar>
             <IonGrid>
               <IonRow className="ion-align-items-center ion-justify-content-center">
                 <IonCol>
-                  <IonTitle class="ion-no-padding">Audio Settings</IonTitle>
+                  <IonTitle class="settings-individual-titles">Audio Settings</IonTitle>
                 </IonCol>
               </IonRow>
             </IonGrid>
@@ -56,9 +42,7 @@ const SettingsPage: React.FC = () => {
             <IonGrid>
               <IonRow>
                 <IonCol>
-                  <IonTitle class="ion-no-padding">
-                    Background Music
-                  </IonTitle>
+                  <IonTitle class="settings-individual-titles">Background Music</IonTitle>
                 </IonCol>
               </IonRow>
             </IonGrid>
@@ -70,13 +54,13 @@ const SettingsPage: React.FC = () => {
             <IonGrid>
               <IonRow className="ion-align-items-center ion-justify-content-center">
                 <IonCol>
-                  <IonTitle class="ion-no-padding">Video Settings</IonTitle>
+                  <IonTitle class="settings-individual-titles">Video Settings</IonTitle>
                 </IonCol>
               </IonRow>
             </IonGrid>
           </IonToolbar>
         </IonHeader>
-        <IonList>
+        <IonList lines="none">
           <IonItem>
             <SlideDuration />
           </IonItem>

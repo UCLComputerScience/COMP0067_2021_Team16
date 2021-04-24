@@ -1,5 +1,4 @@
 import {
-  IonCol,
   IonButton,
   IonIcon,
   IonContent,
@@ -17,33 +16,24 @@ import "./SlideshowListingPage.css";
 import SlideshowItems from "../../components/SlideshowItems/SlideshowItems";
 import React, { useState } from "react";
 import AddNewSlideshow from "../../components/AddNewSlideshow/AddNewSlideshow";
+// import EditButton from "../../components/EditButton/EditButton";
 
 const SelectionPage: React.FC = () => {
-  const [editMode] = useState(false);
+  const [editMode,
+    // setEditMode
+  ] = useState(false);
 
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonGrid>
-            <IonRow>
-              <IonCol className="editbutton">
-                {
-                  // <Edit_Button toggleEdit={setEditMode}/>
-                }
-              </IonCol>
-              <IonCol size="8" className="title">
-                <IonTitle>
-                  {editMode ? "Edit Slideshows" : "Select Slideshow"}
-                </IonTitle>
-              </IonCol>
-              <IonCol className="settingsbutton">
-                <IonButton fill="clear" routerLink="/Settings">
-                  <IonIcon icon={settings} size="large" />
-                </IonButton>
-              </IonCol>
-            </IonRow>
-          </IonGrid>
+          {/* <EditButton toggleEdit={setEditMode} slot="start" /> */}
+          <IonTitle>
+            {editMode ? "Edit Slideshows" : "Select Slideshow"}
+          </IonTitle>
+          <IonButton fill="clear" routerLink="/Settings" slot="end">
+            <IonIcon icon={settings} size="large" />
+          </IonButton>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>

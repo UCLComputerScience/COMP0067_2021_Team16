@@ -15,7 +15,6 @@ import {
 } from "@ionic/react";
 import axios from "axios";
 import React, { useState } from "react";
-import TitleBar from "../TitleBar/TitleBar";
 import Copyright from "../Copyright/Copyright";
 import { DefaultSlideshowContext } from "../../contexts/SlideshowContext";
 
@@ -178,7 +177,7 @@ const Slideshow: React.FC = () => {
             <IonSlide key={i} className="slide">
               <IonGrid>
                 <IonRow className="titlerow">
-                  <TitleBar name={item.image_name} />
+                  <h1>{item.image_name}</h1>
                 </IonRow>
                 <IonRow className="imagerow">
                   <IonImg
@@ -202,10 +201,12 @@ const Slideshow: React.FC = () => {
     return (
       <IonCard>
         <IonCardHeader>
-          <IonCardTitle>Loading your Slideshow.</IonCardTitle>
-          <IonCardSubtitle>Please be patient!</IonCardSubtitle>
+          <IonCardTitle className="loading-slideshow-title">
+            Loading your Slideshow.
+          </IonCardTitle>
+          <IonCardSubtitle className="loading-slideshow-subtitle">Please be patient!</IonCardSubtitle>
         </IonCardHeader>
-        <IonCardContent>
+        <IonCardContent className="loading-slideshow-card-title">
           If your content is taking too long please ensure you are connected to
           the internet.
         </IonCardContent>

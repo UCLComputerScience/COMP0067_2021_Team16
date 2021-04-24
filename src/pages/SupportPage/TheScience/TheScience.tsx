@@ -1,35 +1,18 @@
 import {
   IonPage,
-  IonHeader,
-  IonToolbar,
   IonGrid,
   IonRow,
   IonCol,
-  IonTitle,
-  IonBackButton,
   IonContent,
 } from "@ionic/react";
 import React from "react";
 import "./TheScience.css";
+import TitleBar from "../../../components/TitleBar/TitleBar";
 
 const TheScience: React.FC = () => {
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonGrid>
-            <IonRow>
-              <IonCol className="backbutton">
-                <IonBackButton />
-              </IonCol>
-              <IonCol size="8" className="title">
-                <IonTitle>The Science</IonTitle>
-              </IonCol>
-              <IonCol />
-            </IonRow>
-          </IonGrid>
-        </IonToolbar>
-      </IonHeader>
+      <TitleBar name="The Science" />
       <IonContent>
         <h3>
           Images developed based on the current scientific findings on newborns

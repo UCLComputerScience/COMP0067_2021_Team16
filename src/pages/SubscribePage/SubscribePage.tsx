@@ -2,12 +2,6 @@ import {
   IonContent,
   IonPage,
   IonLabel,
-  IonHeader,
-  IonToolbar,
-  IonRow,
-  IonCol,
-  IonGrid,
-  IonTitle,
   IonButton,
 } from "@ionic/react";
 import axios from "axios";
@@ -15,7 +9,7 @@ import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useHistory } from "react-router-dom";
 import "./SubscribePage.css";
-import BackButton from "../../components/BackButton/BackButton";
+import TitleBar from "../../components/TitleBar/TitleBar";
 
 const SubscribePage: React.FC = () => {
   const { register, handleSubmit, setValue } = useForm();
@@ -41,21 +35,7 @@ const SubscribePage: React.FC = () => {
 
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonGrid>
-            <IonRow>
-              <IonCol className="backbutton">
-                <BackButton />
-              </IonCol>
-              <IonCol size="8">
-                <IonTitle class="ion-no-padding">Subscribe</IonTitle>
-              </IonCol>
-              <IonCol />
-            </IonRow>
-          </IonGrid>
-        </IonToolbar>
-      </IonHeader>
+      <TitleBar name="Subscribe" />
       <IonContent className="ion-padding">
         <form onSubmit={handleSubmit(onSubmit)} id="form">
           <h3>

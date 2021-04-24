@@ -1,36 +1,15 @@
 import {
   IonPage,
-  IonHeader,
-  IonToolbar,
-  IonGrid,
-  IonRow,
-  IonCol,
-  IonTitle,
-  IonBackButton,
   IonContent,
 } from "@ionic/react";
 import React from "react";
 import "./DrIyaWhiteley.css";
+import TitleBar from "../../../components/TitleBar/TitleBar";
 
 const DrIyaWhiteley: React.FC = () => {
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonGrid>
-            <IonRow>
-              <IonCol className="backbutton">
-                <IonBackButton />
-              </IonCol>
-              <IonCol size="9">
-                <IonTitle class="ion-no-padding">Dr Iya Whiteley</IonTitle>
-              </IonCol>
-              <IonCol />
-            </IonRow>
-          </IonGrid>
-        </IonToolbar>
-      </IonHeader>
-
+      <TitleBar name="Dr Iya Whiteley" />
       <IonContent>
         <img
           src={process.env.PUBLIC_URL + "assets/images/authors.png"}

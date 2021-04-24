@@ -1,58 +1,26 @@
 import React from "react";
 import {
-  IonCol,
   IonContent,
   IonPage,
-  IonRow,
-  IonHeader,
-  IonToolbar,
-  IonGrid,
-  IonTitle,
   IonItem,
   IonLabel,
   IonList,
   IonIcon,
-  IonFab,
-  IonFabButton,
-  IonFabList,
 } from "@ionic/react";
-import "./SupportPage.css";
-import BackButton from "../../components/BackButton/BackButton";
-import {
-  informationCircle,
-  images,
-  book,
-  person,
-  share,
-  logoPinterest,
-  logoFacebook,
-  logoInstagram,
-  logoTwitter,
-} from "ionicons/icons";
+import TitleBar from "../../components/TitleBar/TitleBar";
+import { informationCircle, images, book, person } from "ionicons/icons";
 
 const SupportPage: React.FC = () => {
   return (
     <IonPage>
       <IonContent>
-        <IonHeader>
-          <IonToolbar>
-            <IonGrid>
-              <IonRow>
-                <IonCol className="backbutton">
-                  <BackButton />
-                </IonCol>
-                <IonCol>
-                  <IonTitle class="ion-no-padding">Support</IonTitle>
-                </IonCol>
-                <IonCol />
-              </IonRow>
-            </IonGrid>
-          </IonToolbar>
-        </IonHeader>
-        <IonList lines="inset">
-          <IonItem className="item" routerLink="/SupportPage/Tutorial">
-            <IonLabel class="ion-text-center">
-              <h1><b>Tutorial</b></h1>
+        <TitleBar name="Support" />
+        <IonList lines="none">
+          <IonItem routerLink="/SupportPage/Tutorial">
+            <IonLabel  no-lines>
+              <h1 className="support-item">
+                <b>Tutorial</b>
+              </h1>
             </IonLabel>
             <IonIcon
               icon={informationCircle}
@@ -61,56 +29,31 @@ const SupportPage: React.FC = () => {
               slot="start"
             />
           </IonItem>
-          <IonItem className="item" routerLink="/SupportPage/TheScience">
-            <IonLabel class="ion-text-center">
-              <h1><b>The Science</b></h1>
+          <IonItem routerLink="/SupportPage/TheScience">
+            <IonLabel>
+              <h1 className="support-item">
+                <b>The Science</b>
+              </h1>
             </IonLabel>
             <IonIcon icon={images} color="primary" size="large" slot="start" />
           </IonItem>
-          <IonItem className="item" routerLink="/SupportPage/CosmicBabyBooks">
-            <IonLabel class="ion-text-center">
-              <h1><b>Cosmic Baby Books</b></h1>
+          <IonItem routerLink="/SupportPage/CosmicBabyBooks">
+            <IonLabel>
+              <h1 className="support-item">
+                <b>Cosmic Baby Books</b>
+              </h1>
             </IonLabel>
             <IonIcon icon={book} color="primary" size="large" slot="start" />
           </IonItem>
-          <IonItem className="item" routerLink="/SupportPage/DrIyaWhiteley">
-            <IonLabel class="ion-text-center">
-              <h1><b>Dr Iya Whiteley</b></h1>{" "}
+          <IonItem routerLink="/SupportPage/DrIyaWhiteley">
+            <IonLabel>
+              <h1 className="support-item">
+                <b>Dr Iya Whiteley</b>
+              </h1>{" "}
             </IonLabel>
             <IonIcon icon={person} color="primary" size="large" slot="start" />
           </IonItem>
         </IonList>
-        <IonFab
-          className="ion-fab-social"
-          vertical="bottom"
-          horizontal="center"
-          slot="fixed"
-        >
-          <IonFabButton>
-            <IonIcon icon={share} />
-          </IonFabButton>
-          <IonFabList side="top">
-            <IonFabButton>
-              <IonIcon icon={logoPinterest} />
-            </IonFabButton>
-          </IonFabList>
-          <IonFabList side="bottom">
-            <IonFabButton>
-              <IonIcon icon={logoFacebook} />
-            </IonFabButton>
-          </IonFabList>
-          <IonFabList side="start">
-            <IonFabButton>
-              <IonIcon icon={logoInstagram} />
-            </IonFabButton>
-          </IonFabList>
-          <IonFabList side="end">
-            <IonFabButton>
-              <IonIcon icon={logoTwitter} />
-            </IonFabButton>
-          </IonFabList>
-        </IonFab>
-        {/* https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin#5-web-share-api */}
       </IonContent>
     </IonPage>
   );

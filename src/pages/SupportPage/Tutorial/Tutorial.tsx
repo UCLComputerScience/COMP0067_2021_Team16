@@ -1,35 +1,15 @@
 import {
   IonPage,
-  IonHeader,
-  IonToolbar,
-  IonGrid,
-  IonRow,
-  IonCol,
   IonContent,
-  IonTitle,
-  IonBackButton,
 } from "@ionic/react";
 import React from "react";
 import "./Tutorial.css";
+import TitleBar from "../../../components/TitleBar/TitleBar";
 
 const Tutorial: React.FC = () => {
   return (
     <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonGrid>
-            <IonRow>
-              <IonCol className="backbutton">
-                <IonBackButton />
-              </IonCol>
-              <IonCol>
-                <IonTitle class="ion-no-padding">Tutorial</IonTitle>
-              </IonCol>
-              <IonCol />
-            </IonRow>
-          </IonGrid>
-        </IonToolbar>
-      </IonHeader>
+      <TitleBar name="Tutorial" />
       <IonContent>
         <h3>
           Once you open the app, a slideshow will start automatically.
