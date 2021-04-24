@@ -3,7 +3,6 @@
 // This audio gallery is intended to store audio files recorded by the user.
 
 import { IonContent, IonHeader, IonItem, IonList, IonPage, IonRow, IonCol, IonToolbar } from '@ionic/react';
-import BackButton from '../../components/BackButton/BackButton';
 import TitleBar from "../../components/TitleBar/TitleBar";
 import AudioPlayer from '../../components/AudioPlayer/AudioPlayer';
 
@@ -13,7 +12,6 @@ const AudioGallery: React.FC = () => {
       <IonHeader>
       <IonToolbar>
             <IonRow>
-              <BackButton />
               <IonCol className="ion-align-items-center ion-justify-content-center">
                 <TitleBar name={"Support"} />
               </IonCol>
