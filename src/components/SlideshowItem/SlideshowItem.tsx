@@ -38,7 +38,7 @@ const SlideshowItem: React.FC<ContainerProps> = (props) => {
   }, [props.editing]);
 
   return (
-    <IonItem>
+    <IonItem lines="full">
       <IonLabel>
         <IonGrid>
           <IonRow>
